@@ -1,0 +1,1535 @@
+JBMC version 5.54.0 (cbmc-5.54.0) 64-bit x86_64 linux
+Parsing ...
+Trying to load Java main class: ArithmeticErrors.Division
+Found Java main class: ArithmeticErrors.Division
+Converting
+Java: added 2263 String or Class constant symbols
+Generating GOTO Program
+Running GOTO functions transformation passes
+Running with 16 object bits, 48 offset bits (default)
+Starting Bounded Model Checking
+Unwinding loop __CPROVER__start.0 iteration 1  thread 0
+Unwinding loop __CPROVER__start.0 iteration 2  thread 0
+Unwinding loop __CPROVER__start.0 iteration 3  thread 0
+Unwinding loop __CPROVER__start.0 iteration 4  thread 0
+Unwinding loop __CPROVER__start.0 iteration 5  thread 0
+Unwinding recursion java::java.lang.Integer.<clinit_wrapper> iteration 1
+Runtime Symex: 0.0303378s
+size of program expression: 2014 steps
+simple slicing removed 1 assignments
+Generated 99 VCC(s), 14 remaining after simplification
+Runtime Postprocess Equation: 0.00011963s
+Passing problem to string refinement loop with MiniSAT 2.2.1 without simplifier
+converting SSA
+Runtime Convert SSA: 0.00278595s
+Running string refinement loop with MiniSAT 2.2.1 without simplifier
+BV-Refinement: post-processing
+BV-Refinement: iteration 1
+42902 variables, 98967 clauses
+SAT checker: instance is SATISFIABLE
+BV-Refinement: got SAT, and it simulates => SAT
+Total iterations: 1
+Runtime Solver: 0.0216698s
+Runtime decision procedure: 0.0265747s
+Building error trace
+Counterexample:
+
+State 3 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  __CPROVER_rounding_mode=0 (00000000 00000000 00000000 00000000)
+
+State 5 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  TYPE=null (?)
+
+State 6 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  java_lang_Integer__CPROVER_clinit_state=(byte)0 (00000000)
+
+State 7 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  java_lang_Integer__CPROVER_clinit_threadlocal_state=(byte)0 (00000000)
+
+State 8 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  CASE_INSENSITIVE_ORDER=null (?)
+
+State 9 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 10 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 11 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX.length=33 (00000000 00000000 00000000 00100001)
+
+State 12 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX.data=_20greater_20than_20Character_2eMAX__RADIX_constarray (?)
+
+State 13 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray={ ' ', 'g', 'r', 'e', 'a', 't', 'e', 'r', ' ', 't', 'h', 'a', 'n', ' ', 'C', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', '.', 'M', 'A', 'X', '_', 'R', 'A', 'D', 'I', 'X' } ({ 00000000 00100000, 00000000 01100111, 00000000 01110010, 00000000 01100101, 00000000 01100001, 00000000 01110100, 00000000 01100101, 00000000 01110010, 00000000 00100000, 00000000 01110100, 00000000 01101000, 00000000 01100001, 00000000 01101110, 00000000 00100000, 00000000 01000011, 00000000 01101000, 00000000 01100001, 00000000 01110010, 00000000 01100001, 00000000 01100011, 00000000 01110100, 00000000 01100101, 00000000 01110010, 00000000 00101110, 00000000 01001101, 00000000 01000001, 00000000 01011000, 00000000 01011111, 00000000 01010010, 00000000 01000001, 00000000 01000100, 00000000 01001001, 00000000 01011000 })
+
+State 14 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[0L]=' ' (00000000 00100000)
+
+State 15 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[1L]='g' (00000000 01100111)
+
+State 16 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[2L]='r' (00000000 01110010)
+
+State 17 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[3L]='e' (00000000 01100101)
+
+State 18 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[4L]='a' (00000000 01100001)
+
+State 19 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[5L]='t' (00000000 01110100)
+
+State 20 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[6L]='e' (00000000 01100101)
+
+State 21 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[7L]='r' (00000000 01110010)
+
+State 22 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[8L]=' ' (00000000 00100000)
+
+State 23 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[9L]='t' (00000000 01110100)
+
+State 24 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[10L]='h' (00000000 01101000)
+
+State 25 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[11L]='a' (00000000 01100001)
+
+State 26 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[12L]='n' (00000000 01101110)
+
+State 27 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[13L]=' ' (00000000 00100000)
+
+State 28 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[14L]='C' (00000000 01000011)
+
+State 29 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[15L]='h' (00000000 01101000)
+
+State 30 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[16L]='a' (00000000 01100001)
+
+State 31 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[17L]='r' (00000000 01110010)
+
+State 32 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[18L]='a' (00000000 01100001)
+
+State 33 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[19L]='c' (00000000 01100011)
+
+State 34 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[20L]='t' (00000000 01110100)
+
+State 35 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[21L]='e' (00000000 01100101)
+
+State 36 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[22L]='r' (00000000 01110010)
+
+State 37 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[23L]='.' (00000000 00101110)
+
+State 38 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[24L]='M' (00000000 01001101)
+
+State 39 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[25L]='A' (00000000 01000001)
+
+State 40 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[26L]='X' (00000000 01011000)
+
+State 41 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[27L]='_' (00000000 01011111)
+
+State 42 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[28L]='R' (00000000 01010010)
+
+State 43 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[29L]='A' (00000000 01000001)
+
+State 44 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[30L]='D' (00000000 01000100)
+
+State 45 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[31L]='I' (00000000 01001001)
+
+State 46 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_constarray[32L]='X' (00000000 01011000)
+
+State 47 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20greater_20than_20Character_2eMAX__RADIX_return_value=0 (00000000 00000000 00000000 00000000)
+
+State 48 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 49 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 50 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer.length=22 (00000000 00000000 00000000 00010110)
+
+State 51 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer.data=_20isn_27t_20a_20valid_20integer_constarray (?)
+
+State 52 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer_constarray={ ' ', 'i', 's', 'n', '\'', 't', ' ', 'a', ' ', 'v', 'a', 'l', 'i', 'd', ' ', 'i', 'n', 't', 'e', 'g', 'e', 'r' } ({ 00000000 00100000, 00000000 01101001, 00000000 01110011, 00000000 01101110, 00000000 00100111, 00000000 01110100, 00000000 00100000, 00000000 01100001, 00000000 00100000, 00000000 01110110, 00000000 01100001, 00000000 01101100, 00000000 01101001, 00000000 01100100, 00000000 00100000, 00000000 01101001, 00000000 01101110, 00000000 01110100, 00000000 01100101, 00000000 01100111, 00000000 01100101, 00000000 01110010 })
+
+State 53 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer_constarray[0L]=' ' (00000000 00100000)
+
+State 54 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer_constarray[1L]='i' (00000000 01101001)
+
+State 55 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer_constarray[2L]='s' (00000000 01110011)
+
+State 56 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer_constarray[3L]='n' (00000000 01101110)
+
+State 57 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer_constarray[4L]='\'' (00000000 00100111)
+
+State 58 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer_constarray[5L]='t' (00000000 01110100)
+
+State 59 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer_constarray[6L]=' ' (00000000 00100000)
+
+State 60 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer_constarray[7L]='a' (00000000 01100001)
+
+State 61 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer_constarray[8L]=' ' (00000000 00100000)
+
+State 62 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer_constarray[9L]='v' (00000000 01110110)
+
+State 63 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer_constarray[10L]='a' (00000000 01100001)
+
+State 64 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer_constarray[11L]='l' (00000000 01101100)
+
+State 65 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer_constarray[12L]='i' (00000000 01101001)
+
+State 66 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer_constarray[13L]='d' (00000000 01100100)
+
+State 67 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer_constarray[14L]=' ' (00000000 00100000)
+
+State 68 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer_constarray[15L]='i' (00000000 01101001)
+
+State 69 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer_constarray[16L]='n' (00000000 01101110)
+
+State 70 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer_constarray[17L]='t' (00000000 01110100)
+
+State 71 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer_constarray[18L]='e' (00000000 01100101)
+
+State 72 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer_constarray[19L]='g' (00000000 01100111)
+
+State 73 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer_constarray[20L]='e' (00000000 01100101)
+
+State 74 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer_constarray[21L]='r' (00000000 01110010)
+
+State 75 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20isn_27t_20a_20valid_20integer_return_value=0 (00000000 00000000 00000000 00000000)
+
+State 76 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 77 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 78 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX.length=30 (00000000 00000000 00000000 00011110)
+
+State 79 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX.data=_20less_20than_20Character_2eMIN__RADIX_constarray (?)
+
+State 80 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray={ ' ', 'l', 'e', 's', 's', ' ', 't', 'h', 'a', 'n', ' ', 'C', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', '.', 'M', 'I', 'N', '_', 'R', 'A', 'D', 'I', 'X' } ({ 00000000 00100000, 00000000 01101100, 00000000 01100101, 00000000 01110011, 00000000 01110011, 00000000 00100000, 00000000 01110100, 00000000 01101000, 00000000 01100001, 00000000 01101110, 00000000 00100000, 00000000 01000011, 00000000 01101000, 00000000 01100001, 00000000 01110010, 00000000 01100001, 00000000 01100011, 00000000 01110100, 00000000 01100101, 00000000 01110010, 00000000 00101110, 00000000 01001101, 00000000 01001001, 00000000 01001110, 00000000 01011111, 00000000 01010010, 00000000 01000001, 00000000 01000100, 00000000 01001001, 00000000 01011000 })
+
+State 81 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[0L]=' ' (00000000 00100000)
+
+State 82 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[1L]='l' (00000000 01101100)
+
+State 83 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[2L]='e' (00000000 01100101)
+
+State 84 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[3L]='s' (00000000 01110011)
+
+State 85 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[4L]='s' (00000000 01110011)
+
+State 86 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[5L]=' ' (00000000 00100000)
+
+State 87 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[6L]='t' (00000000 01110100)
+
+State 88 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[7L]='h' (00000000 01101000)
+
+State 89 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[8L]='a' (00000000 01100001)
+
+State 90 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[9L]='n' (00000000 01101110)
+
+State 91 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[10L]=' ' (00000000 00100000)
+
+State 92 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[11L]='C' (00000000 01000011)
+
+State 93 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[12L]='h' (00000000 01101000)
+
+State 94 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[13L]='a' (00000000 01100001)
+
+State 95 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[14L]='r' (00000000 01110010)
+
+State 96 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[15L]='a' (00000000 01100001)
+
+State 97 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[16L]='c' (00000000 01100011)
+
+State 98 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[17L]='t' (00000000 01110100)
+
+State 99 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[18L]='e' (00000000 01100101)
+
+State 100 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[19L]='r' (00000000 01110010)
+
+State 101 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[20L]='.' (00000000 00101110)
+
+State 102 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[21L]='M' (00000000 01001101)
+
+State 103 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[22L]='I' (00000000 01001001)
+
+State 104 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[23L]='N' (00000000 01001110)
+
+State 105 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[24L]='_' (00000000 01011111)
+
+State 106 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[25L]='R' (00000000 01010010)
+
+State 107 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[26L]='A' (00000000 01000001)
+
+State 108 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[27L]='D' (00000000 01000100)
+
+State 109 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[28L]='I' (00000000 01001001)
+
+State 110 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_constarray[29L]='X' (00000000 01011000)
+
+State 111 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  _20less_20than_20Character_2eMIN__RADIX_return_value=0 (00000000 00000000 00000000 00000000)
+
+State 112 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  boolean.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 113 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  boolean.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 114 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  boolean.length=7 (00000000 00000000 00000000 00000111)
+
+State 115 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  boolean.data=boolean_constarray (?)
+
+State 116 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  boolean_constarray={ 'b', 'o', 'o', 'l', 'e', 'a', 'n' } ({ 00000000 01100010, 00000000 01101111, 00000000 01101111, 00000000 01101100, 00000000 01100101, 00000000 01100001, 00000000 01101110 })
+
+State 117 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  boolean_constarray[0L]='b' (00000000 01100010)
+
+State 118 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  boolean_constarray[1L]='o' (00000000 01101111)
+
+State 119 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  boolean_constarray[2L]='o' (00000000 01101111)
+
+State 120 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  boolean_constarray[3L]='l' (00000000 01101100)
+
+State 121 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  boolean_constarray[4L]='e' (00000000 01100101)
+
+State 122 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  boolean_constarray[5L]='a' (00000000 01100001)
+
+State 123 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  boolean_constarray[6L]='n' (00000000 01101110)
+
+State 124 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  boolean_return_value=0 (00000000 00000000 00000000 00000000)
+
+State 125 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  byte.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 126 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  byte.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 127 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  byte.length=4 (00000000 00000000 00000000 00000100)
+
+State 128 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  byte.data=byte_constarray (?)
+
+State 129 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  byte_constarray={ 'b', 'y', 't', 'e' } ({ 00000000 01100010, 00000000 01111001, 00000000 01110100, 00000000 01100101 })
+
+State 130 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  byte_constarray[0L]='b' (00000000 01100010)
+
+State 131 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  byte_constarray[1L]='y' (00000000 01111001)
+
+State 132 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  byte_constarray[2L]='t' (00000000 01110100)
+
+State 133 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  byte_constarray[3L]='e' (00000000 01100101)
+
+State 134 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  byte_return_value=0 (00000000 00000000 00000000 00000000)
+
+State 135 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  char.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 136 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  char.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 137 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  char.length=4 (00000000 00000000 00000000 00000100)
+
+State 138 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  char.data=char_constarray (?)
+
+State 139 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  char_constarray={ 'c', 'h', 'a', 'r' } ({ 00000000 01100011, 00000000 01101000, 00000000 01100001, 00000000 01110010 })
+
+State 140 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  char_constarray[0L]='c' (00000000 01100011)
+
+State 141 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  char_constarray[1L]='h' (00000000 01101000)
+
+State 142 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  char_constarray[2L]='a' (00000000 01100001)
+
+State 143 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  char_constarray[3L]='r' (00000000 01110010)
+
+State 144 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  char_return_value=0 (00000000 00000000 00000000 00000000)
+
+State 145 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  double.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 146 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  double.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 147 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  double.length=6 (00000000 00000000 00000000 00000110)
+
+State 148 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  double.data=double_constarray (?)
+
+State 149 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  double_constarray={ 'd', 'o', 'u', 'b', 'l', 'e' } ({ 00000000 01100100, 00000000 01101111, 00000000 01110101, 00000000 01100010, 00000000 01101100, 00000000 01100101 })
+
+State 150 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  double_constarray[0L]='d' (00000000 01100100)
+
+State 151 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  double_constarray[1L]='o' (00000000 01101111)
+
+State 152 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  double_constarray[2L]='u' (00000000 01110101)
+
+State 153 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  double_constarray[3L]='b' (00000000 01100010)
+
+State 154 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  double_constarray[4L]='l' (00000000 01101100)
+
+State 155 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  double_constarray[5L]='e' (00000000 01100101)
+
+State 156 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  double_return_value=0 (00000000 00000000 00000000 00000000)
+
+State 157 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  float.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 158 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  float.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 159 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  float.length=5 (00000000 00000000 00000000 00000101)
+
+State 160 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  float.data=float_constarray (?)
+
+State 161 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  float_constarray={ 'f', 'l', 'o', 'a', 't' } ({ 00000000 01100110, 00000000 01101100, 00000000 01101111, 00000000 01100001, 00000000 01110100 })
+
+State 162 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  float_constarray[0L]='f' (00000000 01100110)
+
+State 163 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  float_constarray[1L]='l' (00000000 01101100)
+
+State 164 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  float_constarray[2L]='o' (00000000 01101111)
+
+State 165 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  float_constarray[3L]='a' (00000000 01100001)
+
+State 166 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  float_constarray[4L]='t' (00000000 01110100)
+
+State 167 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  float_return_value=0 (00000000 00000000 00000000 00000000)
+
+State 168 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  int.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 169 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  int.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 170 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  int.length=3 (00000000 00000000 00000000 00000011)
+
+State 171 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  int.data=int_constarray (?)
+
+State 172 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  int_constarray={ 'i', 'n', 't' } ({ 00000000 01101001, 00000000 01101110, 00000000 01110100 })
+
+State 173 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  int_constarray[0L]='i' (00000000 01101001)
+
+State 174 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  int_constarray[1L]='n' (00000000 01101110)
+
+State 175 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  int_constarray[2L]='t' (00000000 01110100)
+
+State 176 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  int_return_value=0 (00000000 00000000 00000000 00000000)
+
+State 177 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  long.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 178 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  long.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 179 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  long.length=4 (00000000 00000000 00000000 00000100)
+
+State 180 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  long.data=long_constarray (?)
+
+State 181 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  long_constarray={ 'l', 'o', 'n', 'g' } ({ 00000000 01101100, 00000000 01101111, 00000000 01101110, 00000000 01100111 })
+
+State 182 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  long_constarray[0L]='l' (00000000 01101100)
+
+State 183 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  long_constarray[1L]='o' (00000000 01101111)
+
+State 184 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  long_constarray[2L]='n' (00000000 01101110)
+
+State 185 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  long_constarray[3L]='g' (00000000 01100111)
+
+State 186 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  long_return_value=0 (00000000 00000000 00000000 00000000)
+
+State 187 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  null.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 188 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  null.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 189 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  null.length=4 (00000000 00000000 00000000 00000100)
+
+State 190 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  null.data=null_constarray (?)
+
+State 191 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  null_constarray={ 'n', 'u', 'l', 'l' } ({ 00000000 01101110, 00000000 01110101, 00000000 01101100, 00000000 01101100 })
+
+State 192 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  null_constarray[0L]='n' (00000000 01101110)
+
+State 193 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  null_constarray[1L]='u' (00000000 01110101)
+
+State 194 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  null_constarray[2L]='l' (00000000 01101100)
+
+State 195 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  null_constarray[3L]='l' (00000000 01101100)
+
+State 196 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  null_return_value=0 (00000000 00000000 00000000 00000000)
+
+State 197 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  radix_20.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 198 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  radix_20.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 199 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  radix_20.length=6 (00000000 00000000 00000000 00000110)
+
+State 200 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  radix_20.data=radix_20_constarray (?)
+
+State 201 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  radix_20_constarray={ 'r', 'a', 'd', 'i', 'x', ' ' } ({ 00000000 01110010, 00000000 01100001, 00000000 01100100, 00000000 01101001, 00000000 01111000, 00000000 00100000 })
+
+State 202 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  radix_20_constarray[0L]='r' (00000000 01110010)
+
+State 203 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  radix_20_constarray[1L]='a' (00000000 01100001)
+
+State 204 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  radix_20_constarray[2L]='d' (00000000 01100100)
+
+State 205 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  radix_20_constarray[3L]='i' (00000000 01101001)
+
+State 206 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  radix_20_constarray[4L]='x' (00000000 01111000)
+
+State 207 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  radix_20_constarray[5L]=' ' (00000000 00100000)
+
+State 208 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  radix_20_return_value=0 (00000000 00000000 00000000 00000000)
+
+State 209 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  short.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 210 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  short.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 211 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  short.length=5 (00000000 00000000 00000000 00000101)
+
+State 212 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  short.data=short_constarray (?)
+
+State 213 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  short_constarray={ 's', 'h', 'o', 'r', 't' } ({ 00000000 01110011, 00000000 01101000, 00000000 01101111, 00000000 01110010, 00000000 01110100 })
+
+State 214 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  short_constarray[0L]='s' (00000000 01110011)
+
+State 215 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  short_constarray[1L]='h' (00000000 01101000)
+
+State 216 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  short_constarray[2L]='o' (00000000 01101111)
+
+State 217 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  short_constarray[3L]='r' (00000000 01110010)
+
+State 218 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  short_constarray[4L]='t' (00000000 01110100)
+
+State 219 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  short_return_value=0 (00000000 00000000 00000000 00000000)
+
+State 220 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  void.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 221 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  void.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 222 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  void.length=4 (00000000 00000000 00000000 00000100)
+
+State 223 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  void.data=void_constarray (?)
+
+State 224 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  void_constarray={ 'v', 'o', 'i', 'd' } ({ 00000000 01110110, 00000000 01101111, 00000000 01101001, 00000000 01100100 })
+
+State 225 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  void_constarray[0L]='v' (00000000 01110110)
+
+State 226 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  void_constarray[1L]='o' (00000000 01101111)
+
+State 227 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  void_constarray[2L]='i' (00000000 01101001)
+
+State 228 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  void_constarray[3L]='d' (00000000 01100100)
+
+State 229 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  void_return_value=0 (00000000 00000000 00000000 00000000)
+
+State 230 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  cproverInternPool=null (?)
+
+State 231 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  cproverInternPoolSize=0 (00000000 00000000 00000000 00000000)
+
+State 232 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  java_lang_String__CPROVER_clinit_state=(byte)0 (00000000)
+
+State 233 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  java_lang_String__CPROVER_clinit_threadlocal_state=(byte)0 (00000000)
+
+State 234 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  in=null (?)
+
+State 235 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  java_lang_System__CPROVER_clinit_state=(byte)0 (00000000)
+
+State 236 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  java_lang_System__CPROVER_clinit_threadlocal_state=(byte)0 (00000000)
+
+Assumption:
+  nondet_array_length >= 0
+
+Assumption:
+  nondet_array_length <= 5
+
+State 250 file ArithmeticErrors/Division.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1={ .@java.lang.Object={ .@class_identifier="java::java.lang.String",
+    .cproverMonitorCount=0 },
+    .length=0, .data=null, .@element_class_identifier="java::java.lang.String",
+    .@array_dimensions=0 } ({ { ?, 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000000 00000000, ?, ?, 00000000 00000000 00000000 00000000 })
+
+State 251 file ArithmeticErrors/Division.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 252 file ArithmeticErrors/Division.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 253 file ArithmeticErrors/Division.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1.length=0 (00000000 00000000 00000000 00000000)
+
+State 254 file ArithmeticErrors/Division.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1.data=null (?)
+
+State 255 file ArithmeticErrors/Division.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1.@element_class_identifier="java::java.lang.String" (?)
+
+State 256 file ArithmeticErrors/Division.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1.@array_dimensions=0 (00000000 00000000 00000000 00000000)
+
+State 258 file ArithmeticErrors/Division.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.@class_identifier="java::array[reference]" (?)
+
+State 259 file ArithmeticErrors/Division.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 260 file ArithmeticErrors/Division.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1.length=0 (00000000 00000000 00000000 00000000)
+
+State 261 file ArithmeticErrors/Division.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1.data=null (?)
+
+State 262 file ArithmeticErrors/Division.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1.@element_class_identifier="" (?)
+
+State 263 file ArithmeticErrors/Division.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1.@array_dimensions=0 (00000000 00000000 00000000 00000000)
+
+State 264 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object1.@array_dimensions=1 (00000000 00000000 00000000 00000001)
+
+State 265 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object1.@element_class_identifier="java::java.lang.String" (?)
+
+State 266 file ArithmeticErrors/Division.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1.length=0 (00000000 00000000 00000000 00000000)
+
+State 269 file ArithmeticErrors/Division.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1.data=&((void *)dynamic_2_array[0L]) (?)
+
+State 270 file ArithmeticErrors/Division.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_2_array={ null, null, null, null, null } ({ ?, ?, ?, ?, ? })
+
+State 271 file ArithmeticErrors/Division.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_2_array[0L]=null (?)
+
+State 272 file ArithmeticErrors/Division.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_2_array[1L]=null (?)
+
+State 273 file ArithmeticErrors/Division.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_2_array[2L]=null (?)
+
+State 274 file ArithmeticErrors/Division.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_2_array[3L]=null (?)
+
+State 275 file ArithmeticErrors/Division.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_2_array[4L]=null (?)
+
+State 279 file ArithmeticErrors/Division.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  INPUT arg0a: &dynamic_object1 (?)
+
+State 282 file ArithmeticErrors/Division.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  arg0a=&dynamic_object1 (?)
+
+State 283 function ArithmeticErrors.Division.main(java.lang.String[]) thread 0
+----------------------------------------------------
+  anonlocal::5i=0 (00000000 00000000 00000000 00000000)
+
+State 284 function ArithmeticErrors.Division.main(java.lang.String[]) thread 0
+----------------------------------------------------
+  anonlocal::4i=0 (00000000 00000000 00000000 00000000)
+
+State 285 function ArithmeticErrors.Division.main(java.lang.String[]) thread 0
+----------------------------------------------------
+  anonlocal::3i=0 (00000000 00000000 00000000 00000000)
+
+State 286 function ArithmeticErrors.Division.main(java.lang.String[]) thread 0
+----------------------------------------------------
+  anonlocal::2a=null (?)
+
+State 287 function ArithmeticErrors.Division.main(java.lang.String[]) thread 0
+----------------------------------------------------
+  anonlocal::1a=null (?)
+
+State 294 file ArithmeticErrors/Division.java function ArithmeticErrors.Division.main(java.lang.String[]) line 8 thread 0
+----------------------------------------------------
+  dynamic_object13={ .@class_identifier="java::java.lang.String" } ({ ? })
+
+State 295 file ArithmeticErrors/Division.java function ArithmeticErrors.Division.main(java.lang.String[]) line 8 thread 0
+----------------------------------------------------
+  dynamic_object13.@class_identifier="java::java.lang.String" (?)
+
+State 297 file ArithmeticErrors/Division.java function ArithmeticErrors.Division.main(java.lang.String[]) line 8 thread 0
+----------------------------------------------------
+  dynamic_object13.@class_identifier="java::java.util.Scanner" (?)
+
+State 300 function java::java.lang.System.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$java_lang_System__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 302 function java::java.lang.System.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java_lang_System__CPROVER_clinit_threadlocal_state=(byte)2 (00000010)
+
+State 304 function java::java.lang.System.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java_lang_System__CPROVER_clinit_state=(byte)1 (00000001)
+
+State 305 function java::java.lang.System.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$java_lang_System__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 311 function java::java.lang.System.<clinit>:()V thread 0
+----------------------------------------------------
+  dynamic_object14={ .@class_identifier="java::java.lang.String" } ({ ? })
+
+State 312 function java::java.lang.System.<clinit>:()V thread 0
+----------------------------------------------------
+  dynamic_object14.@class_identifier="java::java.lang.String" (?)
+
+State 314 function java::java.lang.System.<clinit>:()V thread 0
+----------------------------------------------------
+  in=&dynamic_object14 (?)
+
+State 315 function java::java.lang.System.<clinit>:()V thread 0
+----------------------------------------------------
+  dynamic_object14.@class_identifier="java::java.io.InputStream" (?)
+
+State 317 function java::java.lang.System.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java_lang_System__CPROVER_clinit_state=(byte)2 (00000010)
+
+State 321 file ArithmeticErrors/Division.java function ArithmeticErrors.Division.main(java.lang.String[]) line 8 thread 0
+----------------------------------------------------
+  this=&dynamic_object13 (?)
+
+State 322 file ArithmeticErrors/Division.java function ArithmeticErrors.Division.main(java.lang.String[]) line 8 thread 0
+----------------------------------------------------
+  stub_ignored_arg1=&dynamic_object14 (?)
+
+State 325 file ArithmeticErrors/Division.java function ArithmeticErrors.Division.main(java.lang.String[]) line 8 thread 0
+----------------------------------------------------
+  anonlocal::1a=(void *)&dynamic_object13.@class_identifier (?)
+
+State 326 file ArithmeticErrors/Division.java function ArithmeticErrors.Division.main(java.lang.String[]) line 9 thread 0
+----------------------------------------------------
+  dynamic_object15={ .@java.lang.Object={ .@class_identifier="java::java.lang.String",
+    .cproverMonitorCount=0 },
+    .length=0, .data=null, .@element_class_identifier="java::java.lang.String",
+    .@array_dimensions=0 } ({ { ?, 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000000 00000000, ?, ?, 00000000 00000000 00000000 00000000 })
+
+State 327 file ArithmeticErrors/Division.java function ArithmeticErrors.Division.main(java.lang.String[]) line 9 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 328 file ArithmeticErrors/Division.java function ArithmeticErrors.Division.main(java.lang.String[]) line 9 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 329 file ArithmeticErrors/Division.java function ArithmeticErrors.Division.main(java.lang.String[]) line 9 thread 0
+----------------------------------------------------
+  dynamic_object15.length=0 (00000000 00000000 00000000 00000000)
+
+State 330 file ArithmeticErrors/Division.java function ArithmeticErrors.Division.main(java.lang.String[]) line 9 thread 0
+----------------------------------------------------
+  dynamic_object15.data=null (?)
+
+State 331 file ArithmeticErrors/Division.java function ArithmeticErrors.Division.main(java.lang.String[]) line 9 thread 0
+----------------------------------------------------
+  dynamic_object15.@element_class_identifier="java::java.lang.String" (?)
+
+State 332 file ArithmeticErrors/Division.java function ArithmeticErrors.Division.main(java.lang.String[]) line 9 thread 0
+----------------------------------------------------
+  dynamic_object15.@array_dimensions=0 (00000000 00000000 00000000 00000000)
+
+State 334 file ArithmeticErrors/Division.java function ArithmeticErrors.Division.main(java.lang.String[]) line 9 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Object.@class_identifier="java::array[reference]" (?)
+
+State 335 file ArithmeticErrors/Division.java function ArithmeticErrors.Division.main(java.lang.String[]) line 9 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 336 file ArithmeticErrors/Division.java function ArithmeticErrors.Division.main(java.lang.String[]) line 9 thread 0
+----------------------------------------------------
+  dynamic_object15.length=0 (00000000 00000000 00000000 00000000)
+
+State 337 file ArithmeticErrors/Division.java function ArithmeticErrors.Division.main(java.lang.String[]) line 9 thread 0
+----------------------------------------------------
+  dynamic_object15.data=null (?)
+
+State 338 file ArithmeticErrors/Division.java function ArithmeticErrors.Division.main(java.lang.String[]) line 9 thread 0
+----------------------------------------------------
+  dynamic_object15.@element_class_identifier="" (?)
+
+State 339 file ArithmeticErrors/Division.java function ArithmeticErrors.Division.main(java.lang.String[]) line 9 thread 0
+----------------------------------------------------
+  dynamic_object15.@array_dimensions=0 (00000000 00000000 00000000 00000000)
+
+State 340 function ArithmeticErrors.Division.main(java.lang.String[]) thread 0
+----------------------------------------------------
+  dynamic_object15.@array_dimensions=1 (00000000 00000000 00000000 00000001)
+
+State 341 function ArithmeticErrors.Division.main(java.lang.String[]) thread 0
+----------------------------------------------------
+  dynamic_object15.@element_class_identifier="java::java.lang.String" (?)
+
+State 342 file ArithmeticErrors/Division.java function ArithmeticErrors.Division.main(java.lang.String[]) line 9 thread 0
+----------------------------------------------------
+  dynamic_object15.length=2 (00000000 00000000 00000000 00000010)
+
+State 345 file ArithmeticErrors/Division.java function ArithmeticErrors.Division.main(java.lang.String[]) line 9 thread 0
+----------------------------------------------------
+  dynamic_object15.data=&((void *)dynamic_16_array[0L]) (?)
+
+State 346 file ArithmeticErrors/Division.java function ArithmeticErrors.Division.main(java.lang.String[]) line 9 thread 0
+----------------------------------------------------
+  dynamic_16_array={ null, null } ({ ?, ? })
+
+State 347 file ArithmeticErrors/Division.java function ArithmeticErrors.Division.main(java.lang.String[]) line 9 thread 0
+----------------------------------------------------
+  dynamic_16_array[0L]=null (?)
+
+State 348 file ArithmeticErrors/Division.java function ArithmeticErrors.Division.main(java.lang.String[]) line 9 thread 0
+----------------------------------------------------
+  dynamic_16_array[1L]=null (?)
+
+State 349 file ArithmeticErrors/Division.java function ArithmeticErrors.Division.main(java.lang.String[]) line 9 thread 0
+----------------------------------------------------
+  anonlocal::2a=(void *)&dynamic_object15.@java.lang.Object.@class_identifier (?)
+
+State 352 file ArithmeticErrors/Division.java function ArithmeticErrors.Division.main(java.lang.String[]) line 10 thread 0
+----------------------------------------------------
+  this=&dynamic_object13 (?)
+
+State 363 function java::java.lang.Integer.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$java_lang_Integer__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 365 function java::java.lang.Integer.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java_lang_Integer__CPROVER_clinit_threadlocal_state=(byte)2 (00000010)
+
+State 367 function java::java.lang.Integer.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java_lang_Integer__CPROVER_clinit_state=(byte)1 (00000001)
+
+State 368 function java::java.lang.Integer.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$java_lang_Integer__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 376 file java/lang/Integer.java function java.lang.Integer.<clinit>() line 77 thread 0
+----------------------------------------------------
+  i=4 (00000000 00000000 00000000 00000100)
+
+State 385 file java/lang/Class.java function java.lang.Class.getPrimitiveClass(int) line 364 thread 0
+----------------------------------------------------
+  className=&int (?)
+
+State 387 function java.lang.Class.forName(java.lang.String) thread 0
+----------------------------------------------------
+  c=null (?)
+
+State 388 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+----------------------------------------------------
+  dynamic_object19={ .@java.lang.Object={ .@class_identifier="java::java.lang.String",
+    .cproverMonitorCount=0 },
+    .name=null, .cproverIsAnnotation=false,
+    .cproverIsArray=false, .cproverIsInterface=false,
+    .cproverIsSynthetic=false, .cproverIsLocalClass=false,
+    .cproverIsMemberClass=false, .cproverIsEnum=false,
+    .enumConstantDirectory=null } ({ { ?, 00000000 00000000 00000000 00000000 }, ?, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, ? })
+
+State 389 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+----------------------------------------------------
+  dynamic_object19.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 390 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+----------------------------------------------------
+  dynamic_object19.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 391 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+----------------------------------------------------
+  dynamic_object19.name=null (?)
+
+State 392 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+----------------------------------------------------
+  dynamic_object19.cproverIsAnnotation=false (00000000)
+
+State 393 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+----------------------------------------------------
+  dynamic_object19.cproverIsArray=false (00000000)
+
+State 394 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+----------------------------------------------------
+  dynamic_object19.cproverIsInterface=false (00000000)
+
+State 395 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+----------------------------------------------------
+  dynamic_object19.cproverIsSynthetic=false (00000000)
+
+State 396 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+----------------------------------------------------
+  dynamic_object19.cproverIsLocalClass=false (00000000)
+
+State 397 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+----------------------------------------------------
+  dynamic_object19.cproverIsMemberClass=false (00000000)
+
+State 398 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+----------------------------------------------------
+  dynamic_object19.cproverIsEnum=false (00000000)
+
+State 399 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+----------------------------------------------------
+  dynamic_object19.enumConstantDirectory=null (?)
+
+State 401 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+----------------------------------------------------
+  dynamic_object19.@java.lang.Object.@class_identifier="java::java.lang.Class" (?)
+
+State 402 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+----------------------------------------------------
+  dynamic_object19.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 403 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+----------------------------------------------------
+  dynamic_object19.name=null (?)
+
+State 404 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+----------------------------------------------------
+  dynamic_object19.cproverIsAnnotation=false (00000000)
+
+State 405 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+----------------------------------------------------
+  dynamic_object19.cproverIsArray=false (00000000)
+
+State 406 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+----------------------------------------------------
+  dynamic_object19.cproverIsInterface=false (00000000)
+
+State 407 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+----------------------------------------------------
+  dynamic_object19.cproverIsSynthetic=false (00000000)
+
+State 408 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+----------------------------------------------------
+  dynamic_object19.cproverIsLocalClass=false (00000000)
+
+State 409 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+----------------------------------------------------
+  dynamic_object19.cproverIsMemberClass=false (00000000)
+
+State 410 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+----------------------------------------------------
+  dynamic_object19.cproverIsEnum=false (00000000)
+
+State 411 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+----------------------------------------------------
+  dynamic_object19.enumConstantDirectory=null (?)
+
+State 414 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+----------------------------------------------------
+  this=&dynamic_object19 (?)
+
+State 417 file java/lang/Class.java function java.lang.Class() line 44 thread 0
+----------------------------------------------------
+  this=&dynamic_object19.@java.lang.Object (?)
+
+State 418 file java/lang/Object.java function java.lang.Object() line 40 thread 0
+----------------------------------------------------
+  dynamic_object19.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 420 file java/lang/Class.java function java.lang.Class() line 387 thread 0
+----------------------------------------------------
+  dynamic_object19.enumConstantDirectory=null (?)
+
+State 422 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+----------------------------------------------------
+  c=&dynamic_object19 (?)
+
+State 423 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 115 thread 0
+----------------------------------------------------
+  dynamic_object19.name=&int (?)
+
+State 433 function java::java.lang.Integer.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$java_lang_Integer__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 437 file java/lang/Integer.java function java.lang.Integer.<clinit>() line 77 thread 0
+----------------------------------------------------
+  TYPE=(struct java.lang.Class *)&dynamic_object19 (?)
+
+State 439 function java::java.lang.Integer.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java_lang_Integer__CPROVER_clinit_state=(byte)2 (00000010)
+
+State 443 file ArithmeticErrors/Division.java function ArithmeticErrors.Division.main(java.lang.String[]) line 10 thread 0
+----------------------------------------------------
+  s=null (?)
+
+State 447 function java::java.lang.Integer.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$java_lang_Integer__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 453 file java/lang/Integer.java function java.lang.Integer.parseInt(java.lang.String) line 438 thread 0
+----------------------------------------------------
+  s=null (?)
+
+State 454 file java/lang/Integer.java function java.lang.Integer.parseInt(java.lang.String) line 438 thread 0
+----------------------------------------------------
+  radix=10 (00000000 00000000 00000000 00001010)
+
+State 457 file java/lang/Integer.java function java.lang.Integer.parseInt(java.lang.String, int) line 400 thread 0
+----------------------------------------------------
+  dynamic_object20={ .@java.lang.IllegalArgumentException={ .@java.lang.RuntimeException={ .@java.lang.Exception={ .@java.lang.Throwable={ .@java.lang.Object={ .@class_identifier="java::java.lang.String",
+    .cproverMonitorCount=0 },
+    .detailMessage=null, .cause=null } } } } } ({ { { { { { ?, 00000000 00000000 00000000 00000000 }, ?, ? } } } } })
+
+State 458 file java/lang/Integer.java function java.lang.Integer.parseInt(java.lang.String, int) line 400 thread 0
+----------------------------------------------------
+  dynamic_object20.@java.lang.IllegalArgumentException.@java.lang.RuntimeException.@java.lang.Exception.@java.lang.Throwable.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 459 file java/lang/Integer.java function java.lang.Integer.parseInt(java.lang.String, int) line 400 thread 0
+----------------------------------------------------
+  dynamic_object20.@java.lang.IllegalArgumentException.@java.lang.RuntimeException.@java.lang.Exception.@java.lang.Throwable.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 460 file java/lang/Integer.java function java.lang.Integer.parseInt(java.lang.String, int) line 400 thread 0
+----------------------------------------------------
+  dynamic_object20.@java.lang.IllegalArgumentException.@java.lang.RuntimeException.@java.lang.Exception.@java.lang.Throwable.detailMessage=null (?)
+
+State 461 file java/lang/Integer.java function java.lang.Integer.parseInt(java.lang.String, int) line 400 thread 0
+----------------------------------------------------
+  dynamic_object20.@java.lang.IllegalArgumentException.@java.lang.RuntimeException.@java.lang.Exception.@java.lang.Throwable.cause=null (?)
+
+State 463 file java/lang/Integer.java function java.lang.Integer.parseInt(java.lang.String, int) line 400 thread 0
+----------------------------------------------------
+  dynamic_object20.@java.lang.IllegalArgumentException.@java.lang.RuntimeException.@java.lang.Exception.@java.lang.Throwable.@java.lang.Object.@class_identifier="java::java.lang.NumberFormatException" (?)
+
+State 464 file java/lang/Integer.java function java.lang.Integer.parseInt(java.lang.String, int) line 400 thread 0
+----------------------------------------------------
+  dynamic_object20.@java.lang.IllegalArgumentException.@java.lang.RuntimeException.@java.lang.Exception.@java.lang.Throwable.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 465 file java/lang/Integer.java function java.lang.Integer.parseInt(java.lang.String, int) line 400 thread 0
+----------------------------------------------------
+  dynamic_object20.@java.lang.IllegalArgumentException.@java.lang.RuntimeException.@java.lang.Exception.@java.lang.Throwable.detailMessage=null (?)
+
+State 466 file java/lang/Integer.java function java.lang.Integer.parseInt(java.lang.String, int) line 400 thread 0
+----------------------------------------------------
+  dynamic_object20.@java.lang.IllegalArgumentException.@java.lang.RuntimeException.@java.lang.Exception.@java.lang.Throwable.cause=null (?)
+
+State 469 file java/lang/Integer.java function java.lang.Integer.parseInt(java.lang.String, int) line 400 thread 0
+----------------------------------------------------
+  this=&dynamic_object20 (?)
+
+State 470 file java/lang/Integer.java function java.lang.Integer.parseInt(java.lang.String, int) line 400 thread 0
+----------------------------------------------------
+  s=&null (?)
+
+State 473 file java/lang/NumberFormatException.java function java.lang.NumberFormatException(java.lang.String) line 37 thread 0
+----------------------------------------------------
+  this=&dynamic_object20.@java.lang.IllegalArgumentException (?)
+
+State 474 file java/lang/NumberFormatException.java function java.lang.NumberFormatException(java.lang.String) line 37 thread 0
+----------------------------------------------------
+  s=&null (?)
+
+State 477 file java/lang/IllegalArgumentException.java function java.lang.IllegalArgumentException(java.lang.String) line 35 thread 0
+----------------------------------------------------
+  this=&dynamic_object20.@java.lang.IllegalArgumentException.@java.lang.RuntimeException (?)
+
+State 478 file java/lang/IllegalArgumentException.java function java.lang.IllegalArgumentException(java.lang.String) line 35 thread 0
+----------------------------------------------------
+  message=&null (?)
+
+State 481 file java/lang/RuntimeException.java function java.lang.RuntimeException(java.lang.String) line 36 thread 0
+----------------------------------------------------
+  this=&dynamic_object20.@java.lang.IllegalArgumentException.@java.lang.RuntimeException.@java.lang.Exception (?)
+
+State 482 file java/lang/RuntimeException.java function java.lang.RuntimeException(java.lang.String) line 36 thread 0
+----------------------------------------------------
+  message=&null (?)
+
+State 485 file java/lang/Exception.java function java.lang.Exception(java.lang.String) line 66 thread 0
+----------------------------------------------------
+  this=&dynamic_object20.@java.lang.IllegalArgumentException.@java.lang.RuntimeException.@java.lang.Exception.@java.lang.Throwable (?)
+
+State 486 file java/lang/Exception.java function java.lang.Exception(java.lang.String) line 66 thread 0
+----------------------------------------------------
+  message=&null (?)
+
+State 489 file java/lang/Throwable.java function java.lang.Throwable(java.lang.String) line 280 thread 0
+----------------------------------------------------
+  this=&dynamic_object20.@java.lang.IllegalArgumentException.@java.lang.RuntimeException.@java.lang.Exception.@java.lang.Throwable.@java.lang.Object (?)
+
+State 490 file java/lang/Object.java function java.lang.Object() line 40 thread 0
+----------------------------------------------------
+  dynamic_object20.@java.lang.IllegalArgumentException.@java.lang.RuntimeException.@java.lang.Exception.@java.lang.Throwable.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 492 file java/lang/Throwable.java function java.lang.Throwable(java.lang.String) line 201 thread 0
+----------------------------------------------------
+  dynamic_object20.@java.lang.IllegalArgumentException.@java.lang.RuntimeException.@java.lang.Exception.@java.lang.Throwable.cause=&dynamic_object20.@java.lang.IllegalArgumentException.@java.lang.RuntimeException.@java.lang.Exception.@java.lang.Throwable (?)
+
+State 493 file java/lang/Throwable.java function java.lang.Throwable(java.lang.String) line 282 thread 0
+----------------------------------------------------
+  dynamic_object20.@java.lang.IllegalArgumentException.@java.lang.RuntimeException.@java.lang.Exception.@java.lang.Throwable.detailMessage=&null (?)
+
+State 512 file ArithmeticErrors/Division.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  OUTPUT arg0a: &dynamic_object1 (?)
+
+State 513 file ArithmeticErrors/Division.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  OUTPUT uncaught_exception': (void *)&dynamic_object20.@java.lang.IllegalArgumentException.@java.lang.RuntimeException.@java.lang.Exception.@java.lang.Throwable.@java.lang.Object.@class_identifier (?)
+
+Violated property:
+  file ArithmeticErrors/Division.java function __CPROVER__start line 8 thread 0
+  no uncaught exception
+  uncaught_exception' == null
+
+
+VERIFICATION FAILED

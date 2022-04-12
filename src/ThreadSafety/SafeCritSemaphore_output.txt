@@ -1,0 +1,1355 @@
+JBMC version 5.54.0 (cbmc-5.54.0) 64-bit x86_64 linux
+Parsing ...
+Trying to load Java main class: ThreadSafety.SafeCritSemaphore
+Found Java main class: ThreadSafety.SafeCritSemaphore
+Converting
+Java: added 2264 String or Class constant symbols
+Generating GOTO Program
+Running GOTO functions transformation passes
+Running with 16 object bits, 48 offset bits (default)
+Starting Bounded Model Checking
+Unwinding loop __CPROVER__start.0 iteration 1  thread 0
+Unwinding loop __CPROVER__start.0 iteration 2  thread 0
+Unwinding loop __CPROVER__start.0 iteration 3  thread 0
+Unwinding loop __CPROVER__start.0 iteration 4  thread 0
+Unwinding loop __CPROVER__start.0 iteration 5  thread 0
+Unwinding recursion java::ThreadSafety.SafeCritSemaphore$MySafeThread.<clinit_wrapper> iteration 1
+Unwinding recursion java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> iteration 1
+Unwinding recursion java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> iteration 1
+Unwinding recursion java::ThreadSafety.SafeCritSemaphore$MySafeThread.<clinit_wrapper> iteration 1
+aborting path on assume(false) at file ThreadSafety/SafeCritSemaphore.java line 23 function java::ThreadSafety.SafeCritSemaphore$MySafeThread.run:()V bytecode-index 27 thread 1
+Unwinding recursion java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> iteration 1
+Unwinding recursion java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> iteration 1
+Unwinding recursion java::ThreadSafety.SafeCritSemaphore$MySafeThread.<clinit_wrapper> iteration 1
+aborting path on assume(false) at file ThreadSafety/SafeCritSemaphore.java line 23 function java::ThreadSafety.SafeCritSemaphore$MySafeThread.run:()V bytecode-index 27 thread 2
+Unwinding recursion java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> iteration 1
+Unwinding recursion java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> iteration 1
+Unwinding recursion java::ThreadSafety.SafeCritSemaphore$MySafeThread.<clinit_wrapper> iteration 1
+aborting path on assume(false) at file ThreadSafety/SafeCritSemaphore.java line 23 function java::ThreadSafety.SafeCritSemaphore$MySafeThread.run:()V bytecode-index 27 thread 3
+Runtime Symex: 0.0453358s
+Adding SC constraints
+Shared java::ThreadSafety.SafeCritSemaphore.inCritical: 147R/4W
+Shared java::ThreadSafety.SafeCritSemaphore.semaphore: 6R/4W
+Shared java::ThreadSafety.SafeCritSemaphore$MySafeThread.$assertionsDisabled: 3R/5W
+Shared java::ThreadSafety.SafeCritSemaphore__CPROVER_clinit_state: 3R/7W
+Shared java::ThreadSafety.SafeCritSemaphore$MySafeThread__CPROVER_clinit_state: 3R/9W
+Shared __CPROVER__next_thread_id: 3R/4W
+Shared symex_dynamic::dynamic_object13..@java.lang.Thread..@java.lang.Object..@class_identifier: 1R/2W
+Shared symex_dynamic::dynamic_object13..@java.lang.Thread..target: 3R/3W
+Shared symex_dynamic::dynamic_object13..id: 12R/3W
+Shared symex_dynamic::dynamic_object14..@java.lang.Thread..@java.lang.Object..@class_identifier: 1R/2W
+Shared symex_dynamic::dynamic_object14..@java.lang.Thread..target: 3R/3W
+Shared symex_dynamic::dynamic_object14..id: 12R/3W
+Shared symex_dynamic::dynamic_object15..@java.lang.Thread..@java.lang.Object..@class_identifier: 1R/2W
+Shared symex_dynamic::dynamic_object15..@java.lang.Thread..target: 3R/3W
+Shared symex_dynamic::dynamic_object15..id: 12R/3W
+Shared symex_dynamic::dynamic_object16..length: 36R/4W
+Shared symex_dynamic::dynamic_object16..data: 34R/4W
+Shared symex_dynamic::dynamic_17_array[[0]]: 16R/9W
+Shared symex_dynamic::dynamic_17_array[[1]]: 16R/9W
+Shared symex_dynamic::dynamic_17_array[[2]]: 16R/9W
+Shared symex_dynamic::dynamic_object20..length: 26R/4W
+Shared symex_dynamic::dynamic_object20..data: 27R/4W
+Shared symex_dynamic::dynamic_21_array[[0]]: 11R/7W
+Shared symex_dynamic::dynamic_21_array[[1]]: 11R/7W
+Shared symex_dynamic::dynamic_21_array[[2]]: 11R/7W
+Shared symex_dynamic::dynamic_object24..length: 16R/4W
+Shared symex_dynamic::dynamic_object24..data: 18R/4W
+Shared symex_dynamic::dynamic_25_array[[0]]: 6R/5W
+Shared symex_dynamic::dynamic_25_array[[1]]: 6R/5W
+Shared symex_dynamic::dynamic_25_array[[2]]: 6R/5W
+size of program expression: 14974 steps
+no slicing due to threads
+Generated 165 VCC(s), 63 remaining after simplification
+Runtime Postprocess Equation: 0.310903s
+Passing problem to string refinement loop with MiniSAT 2.2.1 without simplifier
+converting SSA
+Runtime Convert SSA: 0.018905s
+Running string refinement loop with MiniSAT 2.2.1 without simplifier
+BV-Refinement: post-processing
+BV-Refinement: iteration 1
+198262 variables, 952292 clauses
+SAT checker: instance is SATISFIABLE
+BV-Refinement: got SAT, and it simulates => SAT
+Total iterations: 1
+Runtime Solver: 2.92634s
+Runtime decision procedure: 2.9481s
+Building error trace
+Counterexample:
+
+State 1 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  __CPROVER__next_thread_id=0 (00000000 00000000 00000000 00000000)
+
+State 2 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  __CPROVER__thread_id=0 (00000000 00000000 00000000 00000000)
+
+State 4 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  $assertionsDisabled=false (00000000)
+
+State 5 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_SafeCritSemaphore$MySafeThread__CPROVER_clinit_state=(byte)0 (00000000)
+
+State 6 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_SafeCritSemaphore$MySafeThread__CPROVER_clinit_threadlocal_state=(byte)0 (00000000)
+
+State 7 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  inCritical=null (?)
+
+State 8 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  semaphore=null (?)
+
+State 9 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety.SafeCritSemaphore@class_model.@java.lang.Object.@class_identifier="java::java.lang.Class" (?)
+
+State 10 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety.SafeCritSemaphore@class_model.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 11 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety.SafeCritSemaphore@class_model.name=null (?)
+
+State 12 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety.SafeCritSemaphore@class_model.cproverIsAnnotation=false (00000000)
+
+State 13 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety.SafeCritSemaphore@class_model.cproverIsArray=false (00000000)
+
+State 14 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety.SafeCritSemaphore@class_model.cproverIsInterface=false (00000000)
+
+State 15 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety.SafeCritSemaphore@class_model.cproverIsSynthetic=false (00000000)
+
+State 16 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety.SafeCritSemaphore@class_model.cproverIsLocalClass=false (00000000)
+
+State 17 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety.SafeCritSemaphore@class_model.cproverIsMemberClass=false (00000000)
+
+State 18 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety.SafeCritSemaphore@class_model.cproverIsEnum=false (00000000)
+
+State 19 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety.SafeCritSemaphore@class_model.enumConstantDirectory=null (?)
+
+State 22 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  this=&ThreadSafety.SafeCritSemaphore@class_model (?)
+
+State 23 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  name=&ThreadSafety_2eSafeCritSemaphore (?)
+
+State 24 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isAnnotation=false (00000000)
+
+State 25 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isArray=false (00000000)
+
+State 26 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isInterface=false (00000000)
+
+State 27 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isSynthetic=false (00000000)
+
+State 28 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isLocalClass=false (00000000)
+
+State 29 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isMemberClass=false (00000000)
+
+State 30 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isEnum=false (00000000)
+
+State 31 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 473 thread 0
+----------------------------------------------------
+  ThreadSafety.SafeCritSemaphore@class_model.name=&ThreadSafety_2eSafeCritSemaphore (?)
+
+State 32 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 474 thread 0
+----------------------------------------------------
+  ThreadSafety.SafeCritSemaphore@class_model.cproverIsAnnotation=false (00000000)
+
+State 33 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 475 thread 0
+----------------------------------------------------
+  ThreadSafety.SafeCritSemaphore@class_model.cproverIsArray=false (00000000)
+
+State 34 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 476 thread 0
+----------------------------------------------------
+  ThreadSafety.SafeCritSemaphore@class_model.cproverIsInterface=false (00000000)
+
+State 35 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 477 thread 0
+----------------------------------------------------
+  ThreadSafety.SafeCritSemaphore@class_model.cproverIsSynthetic=false (00000000)
+
+State 36 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 478 thread 0
+----------------------------------------------------
+  ThreadSafety.SafeCritSemaphore@class_model.cproverIsLocalClass=false (00000000)
+
+State 37 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 479 thread 0
+----------------------------------------------------
+  ThreadSafety.SafeCritSemaphore@class_model.cproverIsMemberClass=false (00000000)
+
+State 38 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 480 thread 0
+----------------------------------------------------
+  ThreadSafety.SafeCritSemaphore@class_model.cproverIsEnum=false (00000000)
+
+State 40 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_SafeCritSemaphore__CPROVER_clinit_state=(byte)0 (00000000)
+
+State 41 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_SafeCritSemaphore__CPROVER_clinit_threadlocal_state=(byte)0 (00000000)
+
+State 42 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  threadSeqNumber=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 43 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 44 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 45 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore.length=30 (00000000 00000000 00000000 00011110)
+
+State 46 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore.data=ThreadSafety_2eSafeCritSemaphore_constarray (?)
+
+State 47 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray={ 'T', 'h', 'r', 'e', 'a', 'd', 'S', 'a', 'f', 'e', 't', 'y', '.', 'S', 'a', 'f', 'e', 'C', 'r', 'i', 't', 'S', 'e', 'm', 'a', 'p', 'h', 'o', 'r', 'e' } ({ 00000000 01010100, 00000000 01101000, 00000000 01110010, 00000000 01100101, 00000000 01100001, 00000000 01100100, 00000000 01010011, 00000000 01100001, 00000000 01100110, 00000000 01100101, 00000000 01110100, 00000000 01111001, 00000000 00101110, 00000000 01010011, 00000000 01100001, 00000000 01100110, 00000000 01100101, 00000000 01000011, 00000000 01110010, 00000000 01101001, 00000000 01110100, 00000000 01010011, 00000000 01100101, 00000000 01101101, 00000000 01100001, 00000000 01110000, 00000000 01101000, 00000000 01101111, 00000000 01110010, 00000000 01100101 })
+
+State 48 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[0L]='T' (00000000 01010100)
+
+State 49 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[1L]='h' (00000000 01101000)
+
+State 50 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[2L]='r' (00000000 01110010)
+
+State 51 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[3L]='e' (00000000 01100101)
+
+State 52 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[4L]='a' (00000000 01100001)
+
+State 53 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[5L]='d' (00000000 01100100)
+
+State 54 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[6L]='S' (00000000 01010011)
+
+State 55 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[7L]='a' (00000000 01100001)
+
+State 56 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[8L]='f' (00000000 01100110)
+
+State 57 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[9L]='e' (00000000 01100101)
+
+State 58 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[10L]='t' (00000000 01110100)
+
+State 59 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[11L]='y' (00000000 01111001)
+
+State 60 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[12L]='.' (00000000 00101110)
+
+State 61 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[13L]='S' (00000000 01010011)
+
+State 62 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[14L]='a' (00000000 01100001)
+
+State 63 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[15L]='f' (00000000 01100110)
+
+State 64 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[16L]='e' (00000000 01100101)
+
+State 65 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[17L]='C' (00000000 01000011)
+
+State 66 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[18L]='r' (00000000 01110010)
+
+State 67 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[19L]='i' (00000000 01101001)
+
+State 68 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[20L]='t' (00000000 01110100)
+
+State 69 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[21L]='S' (00000000 01010011)
+
+State 70 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[22L]='e' (00000000 01100101)
+
+State 71 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[23L]='m' (00000000 01101101)
+
+State 72 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[24L]='a' (00000000 01100001)
+
+State 73 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[25L]='p' (00000000 01110000)
+
+State 74 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[26L]='h' (00000000 01101000)
+
+State 75 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[27L]='o' (00000000 01101111)
+
+State 76 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[28L]='r' (00000000 01110010)
+
+State 77 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_constarray[29L]='e' (00000000 01100101)
+
+State 78 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eSafeCritSemaphore_return_value=0 (00000000 00000000 00000000 00000000)
+
+Assumption:
+  nondet_array_length >= 0
+
+Assumption:
+  nondet_array_length <= 5
+
+State 92 file ThreadSafety/SafeCritSemaphore.java function __CPROVER__start line 30 thread 0
+----------------------------------------------------
+  dynamic_object1={ .@java.lang.Object={ .@class_identifier="java::ThreadSafety.SafeCritSemaphore$MySafeThread",
+    .cproverMonitorCount=0 },
+    .length=0, .data=null, .@element_class_identifier="java::ThreadSafety.SafeCritSemaphore$MySafeThread",
+    .@array_dimensions=0 } ({ { ?, 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000000 00000000, ?, ?, 00000000 00000000 00000000 00000000 })
+
+State 93 file ThreadSafety/SafeCritSemaphore.java function __CPROVER__start line 30 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.@class_identifier="java::ThreadSafety.SafeCritSemaphore$MySafeThread" (?)
+
+State 94 file ThreadSafety/SafeCritSemaphore.java function __CPROVER__start line 30 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 95 file ThreadSafety/SafeCritSemaphore.java function __CPROVER__start line 30 thread 0
+----------------------------------------------------
+  dynamic_object1.length=0 (00000000 00000000 00000000 00000000)
+
+State 96 file ThreadSafety/SafeCritSemaphore.java function __CPROVER__start line 30 thread 0
+----------------------------------------------------
+  dynamic_object1.data=null (?)
+
+State 97 file ThreadSafety/SafeCritSemaphore.java function __CPROVER__start line 30 thread 0
+----------------------------------------------------
+  dynamic_object1.@element_class_identifier="java::ThreadSafety.SafeCritSemaphore$MySafeThread" (?)
+
+State 98 file ThreadSafety/SafeCritSemaphore.java function __CPROVER__start line 30 thread 0
+----------------------------------------------------
+  dynamic_object1.@array_dimensions=0 (00000000 00000000 00000000 00000000)
+
+State 100 file ThreadSafety/SafeCritSemaphore.java function __CPROVER__start line 30 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.@class_identifier="java::array[reference]" (?)
+
+State 101 file ThreadSafety/SafeCritSemaphore.java function __CPROVER__start line 30 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 102 file ThreadSafety/SafeCritSemaphore.java function __CPROVER__start line 30 thread 0
+----------------------------------------------------
+  dynamic_object1.length=0 (00000000 00000000 00000000 00000000)
+
+State 103 file ThreadSafety/SafeCritSemaphore.java function __CPROVER__start line 30 thread 0
+----------------------------------------------------
+  dynamic_object1.data=null (?)
+
+State 104 file ThreadSafety/SafeCritSemaphore.java function __CPROVER__start line 30 thread 0
+----------------------------------------------------
+  dynamic_object1.@element_class_identifier="" (?)
+
+State 105 file ThreadSafety/SafeCritSemaphore.java function __CPROVER__start line 30 thread 0
+----------------------------------------------------
+  dynamic_object1.@array_dimensions=0 (00000000 00000000 00000000 00000000)
+
+State 106 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object1.@array_dimensions=1 (00000000 00000000 00000000 00000001)
+
+State 107 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object1.@element_class_identifier="java::java.lang.String" (?)
+
+State 108 file ThreadSafety/SafeCritSemaphore.java function __CPROVER__start line 30 thread 0
+----------------------------------------------------
+  dynamic_object1.length=0 (00000000 00000000 00000000 00000000)
+
+State 111 file ThreadSafety/SafeCritSemaphore.java function __CPROVER__start line 30 thread 0
+----------------------------------------------------
+  dynamic_object1.data=&((void *)dynamic_2_array[0L]) (?)
+
+State 112 file ThreadSafety/SafeCritSemaphore.java function __CPROVER__start line 30 thread 0
+----------------------------------------------------
+  dynamic_2_array={ null, null, null, null, null } ({ ?, ?, ?, ?, ? })
+
+State 113 file ThreadSafety/SafeCritSemaphore.java function __CPROVER__start line 30 thread 0
+----------------------------------------------------
+  dynamic_2_array[0L]=null (?)
+
+State 114 file ThreadSafety/SafeCritSemaphore.java function __CPROVER__start line 30 thread 0
+----------------------------------------------------
+  dynamic_2_array[1L]=null (?)
+
+State 115 file ThreadSafety/SafeCritSemaphore.java function __CPROVER__start line 30 thread 0
+----------------------------------------------------
+  dynamic_2_array[2L]=null (?)
+
+State 116 file ThreadSafety/SafeCritSemaphore.java function __CPROVER__start line 30 thread 0
+----------------------------------------------------
+  dynamic_2_array[3L]=null (?)
+
+State 117 file ThreadSafety/SafeCritSemaphore.java function __CPROVER__start line 30 thread 0
+----------------------------------------------------
+  dynamic_2_array[4L]=null (?)
+
+State 121 file ThreadSafety/SafeCritSemaphore.java function __CPROVER__start line 30 thread 0
+----------------------------------------------------
+  INPUT arg0a: &dynamic_object1 (?)
+
+State 124 file ThreadSafety/SafeCritSemaphore.java function __CPROVER__start line 30 thread 0
+----------------------------------------------------
+  arg0a=&dynamic_object1 (?)
+
+State 125 function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) thread 0
+----------------------------------------------------
+  anonlocal::3a=null (?)
+
+State 126 function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) thread 0
+----------------------------------------------------
+  anonlocal::2a=null (?)
+
+State 127 function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) thread 0
+----------------------------------------------------
+  anonlocal::1a=null (?)
+
+State 133 function java::ThreadSafety.SafeCritSemaphore$MySafeThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore$MySafeThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 135 function java::ThreadSafety.SafeCritSemaphore$MySafeThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  ThreadSafety_SafeCritSemaphore$MySafeThread__CPROVER_clinit_threadlocal_state=(byte)2 (00000010)
+
+State 137 function java::ThreadSafety.SafeCritSemaphore$MySafeThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  ThreadSafety_SafeCritSemaphore$MySafeThread__CPROVER_clinit_state=(byte)1 (00000001)
+
+State 138 function java::ThreadSafety.SafeCritSemaphore$MySafeThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore$MySafeThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 147 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.<clinit>() line 9 thread 0
+----------------------------------------------------
+  this=&ThreadSafety.SafeCritSemaphore@class_model (?)
+
+State 148 function java.lang.Class.desiredAssertionStatus() thread 0
+----------------------------------------------------
+  loader=null (?)
+
+State 152 file java/lang/Class.java function java.lang.Class.desiredAssertionStatus() line 421 thread 0
+----------------------------------------------------
+  this=&ThreadSafety.SafeCritSemaphore@class_model (?)
+
+State 153 function java.lang.Class.getClassLoader() thread 0
+----------------------------------------------------
+  cl=null (?)
+
+State 157 file java/lang/Class.java function java.lang.Class.getClassLoader() line 191 thread 0
+----------------------------------------------------
+  this=&ThreadSafety.SafeCritSemaphore@class_model (?)
+
+State 161 file java/lang/Class.java function java.lang.Class.getClassLoader() line 191 thread 0
+----------------------------------------------------
+  cl=null (?)
+
+State 167 file java/lang/Class.java function java.lang.Class.desiredAssertionStatus() line 421 thread 0
+----------------------------------------------------
+  loader=null (?)
+
+State 172 file java/lang/Class.java function java.lang.Class.desiredAssertionStatus() line 424 thread 0
+----------------------------------------------------
+  clazz=&ThreadSafety.SafeCritSemaphore@class_model (?)
+
+State 186 function java::ThreadSafety.SafeCritSemaphore$MySafeThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore$MySafeThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 191 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.<clinit>() line 9 thread 0
+----------------------------------------------------
+  $assertionsDisabled=false (00000000)
+
+State 194 function java::ThreadSafety.SafeCritSemaphore$MySafeThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  ThreadSafety_SafeCritSemaphore$MySafeThread__CPROVER_clinit_state=(byte)2 (00000010)
+
+State 197 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object13={ .@java.lang.Thread={ .@java.lang.Object={ .@class_identifier="java::java.lang.Class",
+    .cproverMonitorCount=0 },
+    .target=(struct java.lang.Runnable *)((byte *)&dynamic_object11 + 4096L),
+    .tid=0L },
+    .id=262144 } ({ { { ?, 00000000 00000000 00000000 00000000 }, ?, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 }, 00000000 00000100 00000000 00000000 })
+
+State 198 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Thread.@java.lang.Object.@class_identifier="java::java.lang.Class" (?)
+
+State 199 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 200 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Thread.target=(struct java.lang.Runnable *)((byte *)&dynamic_object11 + 4096L) (?)
+
+State 201 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Thread.tid=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 202 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object13.id=262144 (00000000 00000100 00000000 00000000)
+
+State 204 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Thread.@java.lang.Object.@class_identifier="java::ThreadSafety.SafeCritSemaphore$MySafeThread" (?)
+
+State 205 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 206 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Thread.target=null (?)
+
+State 207 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Thread.tid=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 208 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object13.id=0 (00000000 00000000 00000000 00000000)
+
+State 211 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  this=&dynamic_object13 (?)
+
+State 212 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  arg1i=0 (00000000 00000000 00000000 00000000)
+
+State 215 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread(int) line 10 thread 0
+----------------------------------------------------
+  this=&dynamic_object13.@java.lang.Thread (?)
+
+State 219 file java/lang/Thread.java function java.lang.Thread() line 399 thread 0
+----------------------------------------------------
+  this=&dynamic_object13.@java.lang.Thread.@java.lang.Object (?)
+
+State 220 file java/lang/Object.java function java.lang.Object() line 40 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 222 file java/lang/Thread.java function java.lang.Thread() line 400 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Thread.target=(struct java.lang.Runnable *)&dynamic_object13.@java.lang.Thread.@java.lang.Object (?)
+
+State 226 function java.lang.Thread.nextThreadID() thread 0
+----------------------------------------------------
+  result=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 228 file java/lang/Thread.java function java.lang.Thread.nextThreadID() line 208 thread 0
+----------------------------------------------------
+  threadSeqNumber=1L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001)
+
+State 229 file java/lang/Thread.java function java.lang.Thread.nextThreadID() line 208 thread 0
+----------------------------------------------------
+  result=1L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001)
+
+State 233 file java/lang/Thread.java function java.lang.Thread() line 401 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Thread.tid=1L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001)
+
+State 235 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread(int) line 11 thread 0
+----------------------------------------------------
+  dynamic_object13.id=0 (00000000 00000000 00000000 00000000)
+
+State 237 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  anonlocal::1a=(void *)&dynamic_object13.@java.lang.Thread.@java.lang.Object.@class_identifier (?)
+
+State 240 function java::ThreadSafety.SafeCritSemaphore$MySafeThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore$MySafeThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 245 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object14={ .@java.lang.Thread={ .@java.lang.Object={ .@class_identifier="java::ThreadSafety.SafeCritSemaphore$MySafeThread",
+    .cproverMonitorCount=0 },
+    .target=(struct java.lang.Runnable *)((byte *)&dynamic_object14 + 32L),
+    .tid=0L },
+    .id=8193 } ({ { { ?, 00000000 00000000 00000000 00000000 }, ?, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 }, 00000000 00000000 00100000 00000001 })
+
+State 246 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object14.@java.lang.Thread.@java.lang.Object.@class_identifier="java::ThreadSafety.SafeCritSemaphore$MySafeThread" (?)
+
+State 247 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object14.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 248 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object14.@java.lang.Thread.target=(struct java.lang.Runnable *)((byte *)&dynamic_object14 + 32L) (?)
+
+State 249 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object14.@java.lang.Thread.tid=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 250 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object14.id=8193 (00000000 00000000 00100000 00000001)
+
+State 252 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object14.@java.lang.Thread.@java.lang.Object.@class_identifier="java::ThreadSafety.SafeCritSemaphore$MySafeThread" (?)
+
+State 253 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object14.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 254 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object14.@java.lang.Thread.target=null (?)
+
+State 255 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object14.@java.lang.Thread.tid=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 256 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object14.id=0 (00000000 00000000 00000000 00000000)
+
+State 259 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  this=&dynamic_object14 (?)
+
+State 260 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  arg1i=1 (00000000 00000000 00000000 00000001)
+
+State 263 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread(int) line 10 thread 0
+----------------------------------------------------
+  this=&dynamic_object14.@java.lang.Thread (?)
+
+State 267 file java/lang/Thread.java function java.lang.Thread() line 399 thread 0
+----------------------------------------------------
+  this=&dynamic_object14.@java.lang.Thread.@java.lang.Object (?)
+
+State 268 file java/lang/Object.java function java.lang.Object() line 40 thread 0
+----------------------------------------------------
+  dynamic_object14.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 270 file java/lang/Thread.java function java.lang.Thread() line 400 thread 0
+----------------------------------------------------
+  dynamic_object14.@java.lang.Thread.target=(struct java.lang.Runnable *)&dynamic_object14.@java.lang.Thread.@java.lang.Object (?)
+
+State 274 function java.lang.Thread.nextThreadID() thread 0
+----------------------------------------------------
+  result=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 276 file java/lang/Thread.java function java.lang.Thread.nextThreadID() line 208 thread 0
+----------------------------------------------------
+  threadSeqNumber=2L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000010)
+
+State 277 file java/lang/Thread.java function java.lang.Thread.nextThreadID() line 208 thread 0
+----------------------------------------------------
+  result=2L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000010)
+
+State 281 file java/lang/Thread.java function java.lang.Thread() line 401 thread 0
+----------------------------------------------------
+  dynamic_object14.@java.lang.Thread.tid=2L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000010)
+
+State 283 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread(int) line 11 thread 0
+----------------------------------------------------
+  dynamic_object14.id=1 (00000000 00000000 00000000 00000001)
+
+State 285 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  anonlocal::2a=(void *)&dynamic_object14.@java.lang.Thread.@java.lang.Object.@class_identifier (?)
+
+State 288 function java::ThreadSafety.SafeCritSemaphore$MySafeThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore$MySafeThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 293 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object15={ .@java.lang.Thread={ .@java.lang.Object={ .@class_identifier="java::ThreadSafety.SafeCritSemaphore$MySafeThread",
+    .cproverMonitorCount=0 },
+    .target=(struct java.lang.Runnable *)&dynamic_object7.@java.lang.Object,
+    .tid=0L },
+    .id=2 } ({ { { ?, 00000000 00000000 00000000 00000000 }, ?, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000000 00000010 })
+
+State 294 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.@java.lang.Object.@class_identifier="java::ThreadSafety.SafeCritSemaphore$MySafeThread" (?)
+
+State 295 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 296 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.target=(struct java.lang.Runnable *)&dynamic_object7.@java.lang.Object (?)
+
+State 297 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.tid=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 298 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object15.id=2 (00000000 00000000 00000000 00000010)
+
+State 300 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.@java.lang.Object.@class_identifier="java::ThreadSafety.SafeCritSemaphore$MySafeThread" (?)
+
+State 301 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 302 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.target=null (?)
+
+State 303 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.tid=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 304 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object15.id=0 (00000000 00000000 00000000 00000000)
+
+State 307 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  this=&dynamic_object15 (?)
+
+State 308 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  arg1i=2 (00000000 00000000 00000000 00000010)
+
+State 311 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread(int) line 10 thread 0
+----------------------------------------------------
+  this=&dynamic_object15.@java.lang.Thread (?)
+
+State 315 file java/lang/Thread.java function java.lang.Thread() line 399 thread 0
+----------------------------------------------------
+  this=&dynamic_object15.@java.lang.Thread.@java.lang.Object (?)
+
+State 316 file java/lang/Object.java function java.lang.Object() line 40 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 318 file java/lang/Thread.java function java.lang.Thread() line 400 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.target=(struct java.lang.Runnable *)&dynamic_object15.@java.lang.Thread.@java.lang.Object (?)
+
+State 322 function java.lang.Thread.nextThreadID() thread 0
+----------------------------------------------------
+  result=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 324 file java/lang/Thread.java function java.lang.Thread.nextThreadID() line 208 thread 0
+----------------------------------------------------
+  threadSeqNumber=3L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000011)
+
+State 325 file java/lang/Thread.java function java.lang.Thread.nextThreadID() line 208 thread 0
+----------------------------------------------------
+  result=3L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000011)
+
+State 329 file java/lang/Thread.java function java.lang.Thread() line 401 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.tid=3L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000011)
+
+State 331 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread(int) line 11 thread 0
+----------------------------------------------------
+  dynamic_object15.id=2 (00000000 00000000 00000000 00000010)
+
+State 333 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  anonlocal::3a=(void *)&dynamic_object15.@java.lang.Thread.@java.lang.Object.@class_identifier (?)
+
+State 336 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  this=&dynamic_object13.@java.lang.Thread (?)
+
+State 366 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 32 thread 0
+----------------------------------------------------
+  this=&dynamic_object14.@java.lang.Thread (?)
+
+State 396 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 33 thread 0
+----------------------------------------------------
+  this=&dynamic_object15.@java.lang.Thread (?)
+
+State 427 file ThreadSafety/SafeCritSemaphore.java function __CPROVER__start line 30 thread 0
+----------------------------------------------------
+  OUTPUT arg0a: &dynamic_object1 (?)
+
+State 428 file ThreadSafety/SafeCritSemaphore.java function __CPROVER__start line 30 thread 0
+----------------------------------------------------
+  OUTPUT uncaught_exception': null (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 430 function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) thread 2
+----------------------------------------------------
+  __CPROVER__next_thread_id=1 (00000000 00000000 00000000 00000001)
+
+State 431 function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) thread 2
+----------------------------------------------------
+  __CPROVER__thread_id=1 (00000000 00000000 00000000 00000001)
+
+State 438 file java/lang/Thread.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 663 thread 2
+----------------------------------------------------
+  this=&dynamic_object14 (?)
+
+State 442 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore__CPROVER_clinit_wrapper$$init_complete=true (1)
+
+State 444 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 2
+----------------------------------------------------
+  ThreadSafety_SafeCritSemaphore__CPROVER_clinit_threadlocal_state=(byte)2 (00000010)
+
+State 446 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 2
+----------------------------------------------------
+  ThreadSafety_SafeCritSemaphore__CPROVER_clinit_state=(byte)1 (00000001)
+
+State 447 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 454 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.<clinit>() line 6 thread 2
+----------------------------------------------------
+  dynamic_object20={ .@java.lang.Object={ .@class_identifier="java::ThreadSafety.SafeCritSemaphore$MySafeThread",
+    .cproverMonitorCount=0 },
+    .length=11, .data=dynamic_21_array + 1073741824L } ({ { ?, 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000000 00001011, ? })
+
+State 455 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.<clinit>() line 6 thread 2
+----------------------------------------------------
+  dynamic_object20.@java.lang.Object.@class_identifier="java::ThreadSafety.SafeCritSemaphore$MySafeThread" (?)
+
+State 456 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.<clinit>() line 6 thread 2
+----------------------------------------------------
+  dynamic_object20.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 457 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.<clinit>() line 6 thread 2
+----------------------------------------------------
+  dynamic_object20.length=11 (00000000 00000000 00000000 00001011)
+
+State 458 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.<clinit>() line 6 thread 2
+----------------------------------------------------
+  dynamic_object20.data=dynamic_21_array + 1073741824L (?)
+
+State 460 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.<clinit>() line 6 thread 2
+----------------------------------------------------
+  dynamic_object20.@java.lang.Object.@class_identifier="java::array[boolean]" (?)
+
+State 461 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.<clinit>() line 6 thread 2
+----------------------------------------------------
+  dynamic_object20.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 462 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.<clinit>() line 6 thread 2
+----------------------------------------------------
+  dynamic_object20.length=0 (00000000 00000000 00000000 00000000)
+
+State 463 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.<clinit>() line 6 thread 2
+----------------------------------------------------
+  dynamic_object20.data=null (?)
+
+State 464 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.<clinit>() line 6 thread 2
+----------------------------------------------------
+  dynamic_object20.length=3 (00000000 00000000 00000000 00000011)
+
+State 467 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.<clinit>() line 6 thread 2
+----------------------------------------------------
+  dynamic_object20.data=dynamic_21_array (?)
+
+State 468 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.<clinit>() line 6 thread 2
+----------------------------------------------------
+  dynamic_21_array={ false, false, false } ({ 00000000, 00000000, 00000000 })
+
+State 469 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.<clinit>() line 6 thread 2
+----------------------------------------------------
+  dynamic_21_array[0L]=false (00000000)
+
+State 470 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.<clinit>() line 6 thread 2
+----------------------------------------------------
+  dynamic_21_array[1L]=false (00000000)
+
+State 471 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.<clinit>() line 6 thread 2
+----------------------------------------------------
+  dynamic_21_array[2L]=false (00000000)
+
+State 473 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.<clinit>() line 6 thread 2
+----------------------------------------------------
+  dynamic_21_array[0L]=false (00000000)
+
+State 475 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.<clinit>() line 6 thread 2
+----------------------------------------------------
+  dynamic_21_array[1L]=false (00000000)
+
+State 477 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.<clinit>() line 6 thread 2
+----------------------------------------------------
+  dynamic_21_array[2L]=false (00000000)
+
+State 480 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 484 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.<clinit>() line 6 thread 2
+----------------------------------------------------
+  inCritical=&dynamic_object20 (?)
+
+State 485 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.<clinit>() line 7 thread 2
+----------------------------------------------------
+  dynamic_object22={ .@class_identifier="java::ThreadSafety.SafeCritSemaphore$MySafeThread" } ({ ? })
+
+State 486 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.<clinit>() line 7 thread 2
+----------------------------------------------------
+  dynamic_object22.@class_identifier="java::ThreadSafety.SafeCritSemaphore$MySafeThread" (?)
+
+State 488 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.<clinit>() line 7 thread 2
+----------------------------------------------------
+  dynamic_object22.@class_identifier="java::java.util.concurrent.Semaphore" (?)
+
+State 491 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.<clinit>() line 7 thread 2
+----------------------------------------------------
+  this=&dynamic_object22 (?)
+
+State 492 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.<clinit>() line 7 thread 2
+----------------------------------------------------
+  stub_ignored_arg1=1 (00000000 00000000 00000000 00000001)
+
+State 497 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 501 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore.<clinit>() line 7 thread 2
+----------------------------------------------------
+  semaphore=&dynamic_object22 (?)
+
+State 503 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 2
+----------------------------------------------------
+  ThreadSafety_SafeCritSemaphore__CPROVER_clinit_state=(byte)2 (00000010)
+
+State 509 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 519 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 18 thread 2
+----------------------------------------------------
+  this=&dynamic_object22 (?)
+
+State 524 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 533 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 22 thread 2
+----------------------------------------------------
+  dynamic_21_array[POINTER_OFFSET(dynamic_21_array + 1L)]={ false, true, false }[POINTER_OFFSET(dynamic_21_array + 1L)] (?)
+
+State 534 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 22 thread 2
+----------------------------------------------------
+  dynamic_21_array[0L]=false (00000000)
+
+State 535 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 22 thread 2
+----------------------------------------------------
+  dynamic_21_array[1L]=true (00000001)
+
+State 536 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 22 thread 2
+----------------------------------------------------
+  dynamic_21_array[2L]=false (00000000)
+
+State 537 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 22 thread 2
+----------------------------------------------------
+  dynamic_17_array[0L]=true (10001001)
+
+State 540 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  __CPROVER_rounding_mode=0 (00000000 00000000 00000000 00000000)
+
+State 541 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 22 thread 2
+----------------------------------------------------
+  dynamic_17_array[1L]=false (00000000)
+
+State 542 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 22 thread 2
+----------------------------------------------------
+  dynamic_17_array[2L]=true (00000100)
+
+State 545 function java::ThreadSafety.SafeCritSemaphore$MySafeThread.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore$MySafeThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 547 function java::ThreadSafety.SafeCritSemaphore$MySafeThread.<clinit_wrapper> thread 2
+----------------------------------------------------
+  ThreadSafety_SafeCritSemaphore$MySafeThread__CPROVER_clinit_threadlocal_state=(byte)2 (00000010)
+
+State 548 function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) thread 3
+----------------------------------------------------
+  __CPROVER__next_thread_id=2 (00000000 00000000 00000000 00000010)
+
+State 549 function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) thread 3
+----------------------------------------------------
+  __CPROVER__thread_id=2 (00000000 00000000 00000000 00000010)
+
+State 552 function java::ThreadSafety.SafeCritSemaphore$MySafeThread.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore$MySafeThread__CPROVER_clinit_wrapper$$init_complete=true (1)
+
+State 563 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 570 file java/lang/Thread.java function ThreadSafety.SafeCritSemaphore.main(java.lang.String[]) line 663 thread 3
+----------------------------------------------------
+  this=&dynamic_object15 (?)
+
+State 574 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 3
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 576 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 3
+----------------------------------------------------
+  ThreadSafety_SafeCritSemaphore__CPROVER_clinit_threadlocal_state=(byte)2 (00000010)
+
+State 583 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 589 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 3
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore__CPROVER_clinit_wrapper$$init_complete=true (1)
+
+State 597 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 3
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 606 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 24 thread 2
+----------------------------------------------------
+  dynamic_21_array[POINTER_OFFSET(dynamic_21_array + 1L)]={ false, false, false }[POINTER_OFFSET(dynamic_21_array + 1L)] (?)
+
+State 613 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 18 thread 3
+----------------------------------------------------
+  this=&dynamic_object22 (?)
+
+State 618 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 3
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 627 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 22 thread 3
+----------------------------------------------------
+  dynamic_25_array[0L]=false (00000000)
+
+State 628 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 22 thread 3
+----------------------------------------------------
+  dynamic_25_array[1L]=false (00000000)
+
+State 629 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 22 thread 3
+----------------------------------------------------
+  dynamic_25_array[2L]=false (00000000)
+
+State 630 function __CPROVER__start thread 1
+----------------------------------------------------
+  __CPROVER__next_thread_id=3 (00000000 00000000 00000000 00000011)
+
+State 631 function __CPROVER__start thread 1
+----------------------------------------------------
+  __CPROVER__thread_id=3 (00000000 00000000 00000000 00000011)
+
+State 638 file java/lang/Thread.java function __CPROVER__start line 663 thread 1
+----------------------------------------------------
+  this=&dynamic_object13 (?)
+
+State 642 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 1
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 644 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 1
+----------------------------------------------------
+  ThreadSafety_SafeCritSemaphore__CPROVER_clinit_threadlocal_state=(byte)2 (00000010)
+
+State 647 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 1
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore__CPROVER_clinit_wrapper$$init_complete=true (1)
+
+State 655 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 1
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 659 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 24 thread 2
+----------------------------------------------------
+  dynamic_21_array[0L]=false (00000000)
+
+State 660 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 24 thread 2
+----------------------------------------------------
+  dynamic_21_array[1L]=false (00000000)
+
+State 661 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 24 thread 2
+----------------------------------------------------
+  dynamic_21_array[2L]=false (00000000)
+
+State 662 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 22 thread 3
+----------------------------------------------------
+  dynamic_21_array[POINTER_OFFSET(dynamic_21_array + 2L)]={ false, false, true }[POINTER_OFFSET(dynamic_21_array + 2L)] (?)
+
+State 663 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 22 thread 3
+----------------------------------------------------
+  dynamic_21_array[0L]=false (00000000)
+
+State 664 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 22 thread 3
+----------------------------------------------------
+  dynamic_21_array[1L]=false (00000000)
+
+State 665 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 22 thread 3
+----------------------------------------------------
+  dynamic_21_array[2L]=true (00000001)
+
+State 666 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 24 thread 2
+----------------------------------------------------
+  dynamic_17_array[0L]=true (10001001)
+
+State 667 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 24 thread 2
+----------------------------------------------------
+  dynamic_17_array[1L]=false (00000000)
+
+State 668 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 22 thread 3
+----------------------------------------------------
+  dynamic_17_array[0L]=true (10001001)
+
+State 669 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 22 thread 3
+----------------------------------------------------
+  dynamic_17_array[1L]=false (00000000)
+
+State 670 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 22 thread 3
+----------------------------------------------------
+  dynamic_17_array[2L]=true (00000100)
+
+State 673 function java::ThreadSafety.SafeCritSemaphore$MySafeThread.<clinit_wrapper> thread 3
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore$MySafeThread__CPROVER_clinit_wrapper$$init_complete=true (1)
+
+State 675 function java::ThreadSafety.SafeCritSemaphore$MySafeThread.<clinit_wrapper> thread 3
+----------------------------------------------------
+  ThreadSafety_SafeCritSemaphore$MySafeThread__CPROVER_clinit_threadlocal_state=(byte)2 (00000010)
+
+State 678 function java::ThreadSafety.SafeCritSemaphore$MySafeThread.<clinit_wrapper> thread 3
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore$MySafeThread__CPROVER_clinit_wrapper$$init_complete=true (1)
+
+State 686 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 3
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 696 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 3
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 706 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 18 thread 1
+----------------------------------------------------
+  this=&dynamic_object22 (?)
+
+State 711 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 1
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 720 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 22 thread 1
+----------------------------------------------------
+  dynamic_17_array[0L]=true (10001001)
+
+State 721 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 22 thread 1
+----------------------------------------------------
+  dynamic_17_array[1L]=false (00000000)
+
+State 722 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 22 thread 1
+----------------------------------------------------
+  dynamic_17_array[2L]=true (00000100)
+
+State 726 function java::ThreadSafety.SafeCritSemaphore$MySafeThread.<clinit_wrapper> thread 1
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore$MySafeThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 728 function java::ThreadSafety.SafeCritSemaphore$MySafeThread.<clinit_wrapper> thread 1
+----------------------------------------------------
+  ThreadSafety_SafeCritSemaphore$MySafeThread__CPROVER_clinit_threadlocal_state=(byte)2 (00000010)
+
+State 731 function java::ThreadSafety.SafeCritSemaphore$MySafeThread.<clinit_wrapper> thread 1
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore$MySafeThread__CPROVER_clinit_wrapper$$init_complete=true (1)
+
+State 739 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 1
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 743 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 24 thread 2
+----------------------------------------------------
+  dynamic_17_array[2L]=true (00000100)
+
+State 746 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 754 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 766 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 1
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 776 function java::ThreadSafety.SafeCritSemaphore.<clinit_wrapper> thread 1
+----------------------------------------------------
+  java$$ThreadSafety_SafeCritSemaphore__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 784 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 23 thread 1
+----------------------------------------------------
+  dynamic_object19={ .@java.lang.Error={ .@java.lang.Throwable={ .@java.lang.Object={ .@class_identifier="java::ThreadSafety.SafeCritSemaphore$MySafeThread",
+    .cproverMonitorCount=0 },
+    .detailMessage=null, .cause=null } } } ({ { { { ?, 00000000 00000000 00000000 00000000 }, ?, ? } } })
+
+State 785 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 23 thread 1
+----------------------------------------------------
+  dynamic_object19.@java.lang.Error.@java.lang.Throwable.@java.lang.Object.@class_identifier="java::ThreadSafety.SafeCritSemaphore$MySafeThread" (?)
+
+State 786 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 23 thread 1
+----------------------------------------------------
+  dynamic_object19.@java.lang.Error.@java.lang.Throwable.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 787 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 23 thread 1
+----------------------------------------------------
+  dynamic_object19.@java.lang.Error.@java.lang.Throwable.detailMessage=null (?)
+
+State 788 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 23 thread 1
+----------------------------------------------------
+  dynamic_object19.@java.lang.Error.@java.lang.Throwable.cause=null (?)
+
+State 790 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 23 thread 1
+----------------------------------------------------
+  dynamic_object19.@java.lang.Error.@java.lang.Throwable.@java.lang.Object.@class_identifier="java::java.lang.AssertionError" (?)
+
+State 791 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 23 thread 1
+----------------------------------------------------
+  dynamic_object19.@java.lang.Error.@java.lang.Throwable.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 792 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 23 thread 1
+----------------------------------------------------
+  dynamic_object19.@java.lang.Error.@java.lang.Throwable.detailMessage=null (?)
+
+State 793 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 23 thread 1
+----------------------------------------------------
+  dynamic_object19.@java.lang.Error.@java.lang.Throwable.cause=null (?)
+
+State 796 file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 23 thread 1
+----------------------------------------------------
+  this=&dynamic_object19 (?)
+
+State 799 file java/lang/AssertionError.java function java.lang.AssertionError() line 49 thread 1
+----------------------------------------------------
+  this=&dynamic_object19.@java.lang.Error (?)
+
+State 802 file java/lang/Error.java function java.lang.Error() line 58 thread 1
+----------------------------------------------------
+  this=&dynamic_object19.@java.lang.Error.@java.lang.Throwable (?)
+
+State 805 file java/lang/Throwable.java function java.lang.Throwable() line 264 thread 1
+----------------------------------------------------
+  this=&dynamic_object19.@java.lang.Error.@java.lang.Throwable.@java.lang.Object (?)
+
+State 806 file java/lang/Object.java function java.lang.Object() line 40 thread 1
+----------------------------------------------------
+  dynamic_object19.@java.lang.Error.@java.lang.Throwable.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 809 file java/lang/Throwable.java function java.lang.Throwable() line 201 thread 1
+----------------------------------------------------
+  dynamic_object19.@java.lang.Error.@java.lang.Throwable.cause=&dynamic_object19.@java.lang.Error.@java.lang.Throwable (?)
+
+State 810 file java/lang/Throwable.java function java.lang.Throwable() line 266 thread 1
+----------------------------------------------------
+  dynamic_object19.@java.lang.Error.@java.lang.Throwable.detailMessage=null (?)
+
+Violated property:
+  file ThreadSafety/SafeCritSemaphore.java function ThreadSafety.SafeCritSemaphore$MySafeThread.run() line 23 thread 1
+  assertion at file ThreadSafety/SafeCritSemaphore.java line 23 function java::ThreadSafety.SafeCritSemaphore$MySafeThread.run:()V bytecode-index 27
+  false
+
+
+VERIFICATION FAILED

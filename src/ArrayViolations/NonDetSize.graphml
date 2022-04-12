@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <key attr.name="originFileName" attr.type="string" for="edge" id="originfile">
+    <default>&lt;command-line&gt;</default>
+  </key>
+  <key attr.name="invariant" attr.type="string" for="node" id="invariant"/>
+  <key attr.name="invariant.scope" attr.type="string" for="node" id="invariant.scope"/>
+  <key attr.name="isViolationNode" attr.type="boolean" for="node" id="violation">
+    <default>false</default>
+  </key>
+  <key attr.name="isEntryNode" attr.type="boolean" for="node" id="entry">
+    <default>false</default>
+  </key>
+  <key attr.name="isSinkNode" attr.type="boolean" for="node" id="sink">
+    <default>false</default>
+  </key>
+  <key attr.name="enterLoopHead" attr.type="boolean" for="edge" id="enterLoopHead">
+    <default>false</default>
+  </key>
+  <key attr.name="cyclehead" attr.type="boolean" for="node" id="cyclehead">
+    <default>false</default>
+  </key>
+  <key attr.name="threadId" attr.type="int" for="edge" id="threadId">
+    <default>0</default>
+  </key>
+  <key attr.name="createThread" attr.type="int" for="edge" id="createThread">
+    <default>0</default>
+  </key>
+  <key attr.name="sourcecodeLanguage" attr.type="string" for="graph" id="sourcecodelang"/>
+  <key attr.name="programFile" attr.type="string" for="graph" id="programfile"/>
+  <key attr.name="programHash" attr.type="string" for="graph" id="programhash"/>
+  <key attr.name="specification" attr.type="string" for="graph" id="specification"/>
+  <key attr.name="architecture" attr.type="string" for="graph" id="architecture"/>
+  <key attr.name="producer" attr.type="string" for="graph" id="producer"/>
+  <key attr.name="creationtime" attr.type="string" for="graph" id="creationtime"/>
+  <key attr.name="startline" attr.type="int" for="edge" id="startline"/>
+  <key attr.name="control" attr.type="string" for="edge" id="control"/>
+  <key attr.name="assumption" attr.type="string" for="edge" id="assumption"/>
+  <key attr.name="assumption.resultfunction" attr.type="string" for="edge" id="assumption.resultfunction"/>
+  <key attr.name="assumption.scope" attr.type="string" for="edge" id="assumption.scope"/>
+  <key attr.name="enterFunction" attr.type="string" for="edge" id="enterFunction"/>
+  <key attr.name="returnFromFunction" attr.type="string" for="edge" id="returnFrom"/>
+  <key attr.name="witness-type" attr.type="string" for="graph" id="witness-type"/>
+  <graph edgedefault="directed">
+    <data key="sourcecodelang">C</data>
+    <node id="sink"/>
+    <node id="257.18">
+      <data key="entry">true</data>
+    </node>
+    <edge source="257.18" target="13.154">
+      <data key="originfile">ArrayViolations/NonDetSize.java</data>
+      <data key="startline">9</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="13.154"/>
+    <edge source="13.154" target="17.160">
+      <data key="originfile">ArrayViolations/NonDetSize.java</data>
+      <data key="startline">9</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="17.160"/>
+    <edge source="17.160" target="20.165">
+      <data key="originfile">ArrayViolations/NonDetSize.java</data>
+      <data key="startline">9</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="20.165"/>
+    <edge source="20.165" target="23.171">
+      <data key="originfile">ArrayViolations/NonDetSize.java</data>
+      <data key="startline">9</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="23.171"/>
+    <edge source="23.171" target="27.178">
+      <data key="originfile">ArrayViolations/NonDetSize.java</data>
+      <data key="startline">9</data>
+      <data key="threadId">0</data>
+      <data key="assumption">anonlocal::1i = -2147483647;</data>
+      <data key="assumption.scope">java::ArrayViolations.NonDetSize.main:([Ljava/lang/String;)V</data>
+    </edge>
+    <node id="27.178"/>
+    <edge source="27.178" target="43.184">
+      <data key="originfile">ArrayViolations/NonDetSize.java</data>
+      <data key="startline">10</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="43.184"/>
+    <edge source="43.184" target="44.185">
+      <data key="originfile">ArrayViolations/NonDetSize.java</data>
+      <data key="startline">10</data>
+      <data key="threadId">0</data>
+      <data key="assumption">anonlocal::2i = -2147483647;</data>
+      <data key="assumption.scope">java::ArrayViolations.NonDetSize.main:([Ljava/lang/String;)V</data>
+    </edge>
+    <node id="44.185">
+      <data key="violation">true</data>
+    </node>
+  </graph>
+</graphml>

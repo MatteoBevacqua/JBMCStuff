@@ -1,0 +1,429 @@
+JBMC version 5.54.0 (cbmc-5.54.0) 64-bit x86_64 windows
+Parsing ...
+Trying to load Java main class: OOPFeatures.IllegalCasting
+Found Java main class: OOPFeatures.IllegalCasting
+Converting
+Java: added 1 String or Class constant symbols
+Generating GOTO Program
+Running GOTO functions transformation passes
+Running with 16 object bits, 48 offset bits (default)
+Starting Bounded Model Checking
+Unwinding loop __CPROVER__start.0 iteration 1  thread 0
+Unwinding loop __CPROVER__start.0 iteration 2  thread 0
+Unwinding loop __CPROVER__start.0 iteration 3  thread 0
+Unwinding loop __CPROVER__start.0 iteration 4  thread 0
+Unwinding loop __CPROVER__start.0 iteration 5  thread 0
+Runtime Symex: 0.0089503s
+size of program expression: 370 steps
+simple slicing removed 3 assignments
+Generated 3 VCC(s), 1 remaining after simplification
+Runtime Postprocess Equation: 2.12e-05s
+Passing problem to string refinement loop with MiniSAT 2.2.1 without simplifier
+converting SSA
+Runtime Convert SSA: 0.0009146s
+Running string refinement loop with MiniSAT 2.2.1 without simplifier
+BV-Refinement: post-processing
+BV-Refinement: iteration 1
+5026 variables, 6928 clauses
+SAT checker: instance is SATISFIABLE
+BV-Refinement: got SAT, and it simulates => SAT
+Total iterations: 1
+Runtime Solver: 0.0023636s
+Runtime decision procedure: 0.0033244s
+Building error trace
+Counterexample:
+
+State 3 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  __CPROVER_rounding_mode=0 (00000000 00000000 00000000 00000000)
+
+State 5 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  $assertionsDisabled=false (00000000)
+
+State 6 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  OOPFeatures.IllegalCasting@class_model.@class_identifier="java::java.lang.Class" (?)
+
+State 7 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  OOPFeatures_IllegalCasting__CPROVER_clinit_state=(byte)0 (00000000)
+
+State 8 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  OOPFeatures_IllegalCasting__CPROVER_clinit_threadlocal_state=(byte)0 (00000000)
+
+Assumption:
+  nondet_array_length >= 0
+
+Assumption:
+  nondet_array_length <= 5
+
+State 22 file OOPFeatures/IllegalCasting.java function __CPROVER__start line 14 thread 0
+----------------------------------------------------
+  dynamic_object1={ .@java.lang.Object={ .@class_identifier="java::java.lang.Class" },
+    .length=0, .data=null, .@element_class_identifier="java::java.lang.Class",
+    .@array_dimensions=0 } ({ { ? }, 00000000 00000000 00000000 00000000, ?, ?, 00000000 00000000 00000000 00000000 })
+
+State 23 file OOPFeatures/IllegalCasting.java function __CPROVER__start line 14 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.@class_identifier="java::java.lang.Class" (?)
+
+State 24 file OOPFeatures/IllegalCasting.java function __CPROVER__start line 14 thread 0
+----------------------------------------------------
+  dynamic_object1.length=0 (00000000 00000000 00000000 00000000)
+
+State 25 file OOPFeatures/IllegalCasting.java function __CPROVER__start line 14 thread 0
+----------------------------------------------------
+  dynamic_object1.data=null (?)
+
+State 26 file OOPFeatures/IllegalCasting.java function __CPROVER__start line 14 thread 0
+----------------------------------------------------
+  dynamic_object1.@element_class_identifier="java::java.lang.Class" (?)
+
+State 27 file OOPFeatures/IllegalCasting.java function __CPROVER__start line 14 thread 0
+----------------------------------------------------
+  dynamic_object1.@array_dimensions=0 (00000000 00000000 00000000 00000000)
+
+State 29 file OOPFeatures/IllegalCasting.java function __CPROVER__start line 14 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.@class_identifier="java::array[reference]" (?)
+
+State 30 file OOPFeatures/IllegalCasting.java function __CPROVER__start line 14 thread 0
+----------------------------------------------------
+  dynamic_object1.length=0 (00000000 00000000 00000000 00000000)
+
+State 31 file OOPFeatures/IllegalCasting.java function __CPROVER__start line 14 thread 0
+----------------------------------------------------
+  dynamic_object1.data=null (?)
+
+State 32 file OOPFeatures/IllegalCasting.java function __CPROVER__start line 14 thread 0
+----------------------------------------------------
+  dynamic_object1.@element_class_identifier="" (?)
+
+State 33 file OOPFeatures/IllegalCasting.java function __CPROVER__start line 14 thread 0
+----------------------------------------------------
+  dynamic_object1.@array_dimensions=0 (00000000 00000000 00000000 00000000)
+
+State 34 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object1.@array_dimensions=1 (00000000 00000000 00000000 00000001)
+
+State 35 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object1.@element_class_identifier="java::java.lang.String" (?)
+
+State 36 file OOPFeatures/IllegalCasting.java function __CPROVER__start line 14 thread 0
+----------------------------------------------------
+  dynamic_object1.length=5 (00000000 00000000 00000000 00000101)
+
+State 39 file OOPFeatures/IllegalCasting.java function __CPROVER__start line 14 thread 0
+----------------------------------------------------
+  dynamic_object1.data=&((void *)dynamic_2_array[0L]) (?)
+
+State 40 file OOPFeatures/IllegalCasting.java function __CPROVER__start line 14 thread 0
+----------------------------------------------------
+  dynamic_2_array={ null, null, null, null, null } ({ ?, ?, ?, ?, ? })
+
+State 41 file OOPFeatures/IllegalCasting.java function __CPROVER__start line 14 thread 0
+----------------------------------------------------
+  dynamic_2_array[0L]=null (?)
+
+State 42 file OOPFeatures/IllegalCasting.java function __CPROVER__start line 14 thread 0
+----------------------------------------------------
+  dynamic_2_array[1L]=null (?)
+
+State 43 file OOPFeatures/IllegalCasting.java function __CPROVER__start line 14 thread 0
+----------------------------------------------------
+  dynamic_2_array[2L]=null (?)
+
+State 44 file OOPFeatures/IllegalCasting.java function __CPROVER__start line 14 thread 0
+----------------------------------------------------
+  dynamic_2_array[3L]=null (?)
+
+State 45 file OOPFeatures/IllegalCasting.java function __CPROVER__start line 14 thread 0
+----------------------------------------------------
+  dynamic_2_array[4L]=null (?)
+
+State 50 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object3={ .@java.lang.Object={ .@class_identifier="java::java.lang.Class" },
+    .length=0, .data=null } ({ { ? }, 00000000 00000000 00000000 00000000, ? })
+
+State 51 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object3.@java.lang.Object.@class_identifier="java::java.lang.Class" (?)
+
+State 52 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object3.length=0 (00000000 00000000 00000000 00000000)
+
+State 53 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object3.data=null (?)
+
+Assumption:
+  tmp_object_factory >= 0
+
+Assumption:
+  tmp_object_factory <= 67108863
+
+State 60 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object4=dynamic_object4#1 (?)
+
+State 62 file OOPFeatures/IllegalCasting.java function __CPROVER__start line 14 thread 0
+----------------------------------------------------
+  dynamic_object4={ '?' } ({ 00000000 00111111 })
+
+State 67 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object3.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 68 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object3.length=1 (00000000 00000000 00000000 00000001)
+
+State 69 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object3.data=dynamic_object4 (?)
+
+State 70 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_2_array[0L]=&dynamic_object3 (?)
+
+State 75 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object5={ .@java.lang.Object={ .@class_identifier="java::java.lang.Class" },
+    .length=0, .data=null } ({ { ? }, 00000000 00000000 00000000 00000000, ? })
+
+State 76 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object5.@java.lang.Object.@class_identifier="java::java.lang.Class" (?)
+
+State 77 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object5.length=0 (00000000 00000000 00000000 00000000)
+
+State 78 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object5.data=null (?)
+
+Assumption:
+  tmp_object_factory >= 0
+
+Assumption:
+  tmp_object_factory <= 67108863
+
+State 85 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object6=dynamic_object6#1 (?)
+
+State 87 file OOPFeatures/IllegalCasting.java function __CPROVER__start line 14 thread 0
+----------------------------------------------------
+  dynamic_object6={ '?' } ({ 00000000 00111111 })
+
+State 92 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object5.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 93 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object5.length=1 (00000000 00000000 00000000 00000001)
+
+State 94 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object5.data=dynamic_object6 (?)
+
+State 95 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_2_array[1L]=&dynamic_object5 (?)
+
+State 100 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object7={ .@java.lang.Object={ .@class_identifier="java::java.lang.Class" },
+    .length=0, .data=null } ({ { ? }, 00000000 00000000 00000000 00000000, ? })
+
+State 101 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object7.@java.lang.Object.@class_identifier="java::java.lang.Class" (?)
+
+State 102 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object7.length=0 (00000000 00000000 00000000 00000000)
+
+State 103 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object7.data=null (?)
+
+Assumption:
+  tmp_object_factory >= 0
+
+Assumption:
+  tmp_object_factory <= 67108863
+
+State 110 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object8=dynamic_object8#1 (?)
+
+State 112 file OOPFeatures/IllegalCasting.java function __CPROVER__start line 14 thread 0
+----------------------------------------------------
+  dynamic_object8={ '?' } ({ 00000000 00111111 })
+
+State 117 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object7.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 118 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object7.length=1 (00000000 00000000 00000000 00000001)
+
+State 119 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object7.data=dynamic_object8 (?)
+
+State 120 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_2_array[2L]=&dynamic_object7 (?)
+
+State 125 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object9={ .@java.lang.Object={ .@class_identifier="java::java.lang.Class" },
+    .length=0, .data=null } ({ { ? }, 00000000 00000000 00000000 00000000, ? })
+
+State 126 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object9.@java.lang.Object.@class_identifier="java::java.lang.Class" (?)
+
+State 127 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object9.length=0 (00000000 00000000 00000000 00000000)
+
+State 128 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object9.data=null (?)
+
+Assumption:
+  tmp_object_factory >= 0
+
+Assumption:
+  tmp_object_factory <= 67108863
+
+State 135 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object10=dynamic_object10#1 (?)
+
+State 137 file OOPFeatures/IllegalCasting.java function __CPROVER__start line 14 thread 0
+----------------------------------------------------
+  dynamic_object10={ '?' } ({ 00000000 00111111 })
+
+State 142 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object9.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 143 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object9.length=1 (00000000 00000000 00000000 00000001)
+
+State 144 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object9.data=dynamic_object10 (?)
+
+State 145 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_2_array[3L]=&dynamic_object9 (?)
+
+State 150 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object11={ .@java.lang.Object={ .@class_identifier="java::java.lang.Class" },
+    .length=0, .data=null } ({ { ? }, 00000000 00000000 00000000 00000000, ? })
+
+State 151 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object11.@java.lang.Object.@class_identifier="java::java.lang.Class" (?)
+
+State 152 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object11.length=0 (00000000 00000000 00000000 00000000)
+
+State 153 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object11.data=null (?)
+
+Assumption:
+  tmp_object_factory >= 0
+
+Assumption:
+  tmp_object_factory <= 67108863
+
+State 160 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object12=dynamic_object12#1 (?)
+
+State 162 file OOPFeatures/IllegalCasting.java function __CPROVER__start line 14 thread 0
+----------------------------------------------------
+  dynamic_object12={ '?' } ({ 00000000 00111111 })
+
+State 167 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object11.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 168 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object11.length=1 (00000000 00000000 00000000 00000001)
+
+State 169 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object11.data=dynamic_object12 (?)
+
+State 170 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_2_array[4L]=&dynamic_object11 (?)
+
+State 174 file OOPFeatures/IllegalCasting.java function __CPROVER__start line 14 thread 0
+----------------------------------------------------
+  INPUT arg0a: &dynamic_object1 (?)
+
+State 177 file OOPFeatures/IllegalCasting.java function __CPROVER__start line 14 thread 0
+----------------------------------------------------
+  arg0a=&dynamic_object1 (?)
+
+State 178 function OOPFeatures.IllegalCasting.main(java.lang.String[]) thread 0
+----------------------------------------------------
+  anonlocal::2a=null (?)
+
+State 179 function OOPFeatures.IllegalCasting.main(java.lang.String[]) thread 0
+----------------------------------------------------
+  anonlocal::1a=null (?)
+
+State 181 file OOPFeatures/IllegalCasting.java function OOPFeatures.IllegalCasting.main(java.lang.String[]) line 14 thread 0
+----------------------------------------------------
+  dynamic_object13={ .@java.lang.Object={ .@class_identifier="java::java.lang.Class" } } ({ { ? } })
+
+State 182 file OOPFeatures/IllegalCasting.java function OOPFeatures.IllegalCasting.main(java.lang.String[]) line 14 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Object.@class_identifier="java::java.lang.Class" (?)
+
+State 184 file OOPFeatures/IllegalCasting.java function OOPFeatures.IllegalCasting.main(java.lang.String[]) line 14 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Object.@class_identifier="java::OOPFeatures.C" (?)
+
+State 187 file OOPFeatures/IllegalCasting.java function OOPFeatures.IllegalCasting.main(java.lang.String[]) line 14 thread 0
+----------------------------------------------------
+  this=&dynamic_object13 (?)
+
+State 190 file OOPFeatures/IllegalCasting.java function OOPFeatures.C() line 4 thread 0
+----------------------------------------------------
+  this=&dynamic_object13.@java.lang.Object (?)
+
+State 194 file OOPFeatures/IllegalCasting.java function OOPFeatures.IllegalCasting.main(java.lang.String[]) line 14 thread 0
+----------------------------------------------------
+  anonlocal::1a=(void *)&dynamic_object13.@java.lang.Object.@class_identifier (?)
+
+Violated property:
+  file OOPFeatures/IllegalCasting.java function OOPFeatures.IllegalCasting.main(java.lang.String[]) line 16 thread 0
+  Dynamic cast check
+  anonlocal::1a != null && ((struct java.lang.Object *)anonlocal::1a)->@class_identifier == "java::OOPFeatures.D"
+
+
+VERIFICATION FAILED

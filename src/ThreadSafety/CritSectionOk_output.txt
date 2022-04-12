@@ -1,0 +1,1522 @@
+JBMC version 5.54.0 (cbmc-5.54.0) 64-bit x86_64 linux
+Parsing ...
+Trying to load Java main class: ThreadSafety.CritSectionOk
+Found Java main class: ThreadSafety.CritSectionOk
+Converting
+Java: added 2264 String or Class constant symbols
+Generating GOTO Program
+Running GOTO functions transformation passes
+Running with 16 object bits, 48 offset bits (default)
+Starting Bounded Model Checking
+Unwinding loop __CPROVER__start.0 iteration 1  thread 0
+Unwinding loop __CPROVER__start.0 iteration 2  thread 0
+Unwinding loop __CPROVER__start.0 iteration 3  thread 0
+Unwinding loop __CPROVER__start.0 iteration 4  thread 0
+Unwinding loop __CPROVER__start.0 iteration 5  thread 0
+Unwinding recursion java::ThreadSafety.CritSectionOk$MySafeThread.<clinit_wrapper> iteration 1
+Unwinding recursion java::ThreadSafety.CritSectionOk.<clinit_wrapper> iteration 1
+Unwinding recursion java::ThreadSafety.CritSectionOk$MySafeThread.<clinit_wrapper> iteration 1
+aborting path on assume(false) at file ThreadSafety/CritSectionOk.java line 17 function java::ThreadSafety.CritSectionOk$MySafeThread.run:()V bytecode-index 26 thread 1
+Unwinding recursion java::ThreadSafety.CritSectionOk.<clinit_wrapper> iteration 1
+Unwinding recursion java::ThreadSafety.CritSectionOk$MySafeThread.<clinit_wrapper> iteration 1
+aborting path on assume(false) at file ThreadSafety/CritSectionOk.java line 17 function java::ThreadSafety.CritSectionOk$MySafeThread.run:()V bytecode-index 26 thread 2
+Unwinding recursion java::ThreadSafety.CritSectionOk.<clinit_wrapper> iteration 1
+Unwinding recursion java::ThreadSafety.CritSectionOk$MySafeThread.<clinit_wrapper> iteration 1
+aborting path on assume(false) at file ThreadSafety/CritSectionOk.java line 17 function java::ThreadSafety.CritSectionOk$MySafeThread.run:()V bytecode-index 26 thread 3
+Runtime Symex: 0.0452657s
+Adding SC constraints
+Shared java::ThreadSafety.CritSectionOk.inCritical: 147R/4W
+Shared java::ThreadSafety.CritSectionOk$MySafeThread.$assertionsDisabled: 3R/5W
+Shared java::ThreadSafety.CritSectionOk__CPROVER_clinit_state: 3R/7W
+Shared java::ThreadSafety.CritSectionOk$MySafeThread__CPROVER_clinit_state: 3R/9W
+Shared __CPROVER__next_thread_id: 3R/4W
+Shared java::ThreadSafety.CritSectionOk@class_model..@java.lang.Object..@class_identifier: 3R/1W
+Shared java::ThreadSafety.CritSectionOk@class_model..@java.lang.Object..cproverMonitorCount: 6R/7W
+Shared java::ThreadSafety.CritSectionOk@class_model..name: 3R/2W
+Shared java::ThreadSafety.CritSectionOk@class_model..cproverIsAnnotation: 3R/2W
+Shared java::ThreadSafety.CritSectionOk@class_model..cproverIsArray: 3R/2W
+Shared java::ThreadSafety.CritSectionOk@class_model..cproverIsInterface: 3R/2W
+Shared java::ThreadSafety.CritSectionOk@class_model..cproverIsSynthetic: 3R/2W
+Shared java::ThreadSafety.CritSectionOk@class_model..cproverIsLocalClass: 3R/2W
+Shared java::ThreadSafety.CritSectionOk@class_model..cproverIsMemberClass: 3R/2W
+Shared java::ThreadSafety.CritSectionOk@class_model..cproverIsEnum: 3R/2W
+Shared java::ThreadSafety.CritSectionOk@class_model..enumConstantDirectory: 3R/1W
+Shared symex_dynamic::dynamic_object13..@java.lang.Thread..@java.lang.Object..@class_identifier: 1R/2W
+Shared symex_dynamic::dynamic_object13..@java.lang.Thread..target: 3R/3W
+Shared symex_dynamic::dynamic_object13..id: 12R/3W
+Shared symex_dynamic::dynamic_object14..@java.lang.Thread..@java.lang.Object..@class_identifier: 1R/2W
+Shared symex_dynamic::dynamic_object14..@java.lang.Thread..target: 3R/3W
+Shared symex_dynamic::dynamic_object14..id: 12R/3W
+Shared symex_dynamic::dynamic_object15..@java.lang.Thread..@java.lang.Object..@class_identifier: 1R/2W
+Shared symex_dynamic::dynamic_object15..@java.lang.Thread..target: 3R/3W
+Shared symex_dynamic::dynamic_object15..id: 12R/3W
+Shared symex_dynamic::dynamic_object16..length: 36R/4W
+Shared symex_dynamic::dynamic_object16..data: 34R/4W
+Shared symex_dynamic::dynamic_17_array[[0]]: 16R/9W
+Shared symex_dynamic::dynamic_17_array[[1]]: 16R/9W
+Shared symex_dynamic::dynamic_17_array[[2]]: 16R/9W
+Shared symex_dynamic::dynamic_object19..length: 26R/4W
+Shared symex_dynamic::dynamic_object19..data: 27R/4W
+Shared symex_dynamic::dynamic_20_array[[0]]: 11R/7W
+Shared symex_dynamic::dynamic_20_array[[1]]: 11R/7W
+Shared symex_dynamic::dynamic_20_array[[2]]: 11R/7W
+Shared symex_dynamic::dynamic_object22..length: 16R/4W
+Shared symex_dynamic::dynamic_object22..data: 18R/4W
+Shared symex_dynamic::dynamic_23_array[[0]]: 6R/5W
+Shared symex_dynamic::dynamic_23_array[[1]]: 6R/5W
+Shared symex_dynamic::dynamic_23_array[[2]]: 6R/5W
+size of program expression: 15298 steps
+no slicing due to threads
+Generated 171 VCC(s), 57 remaining after simplification
+Runtime Postprocess Equation: 0.327105s
+Passing problem to string refinement loop with MiniSAT 2.2.1 without simplifier
+converting SSA
+Runtime Convert SSA: 0.0202743s
+Running string refinement loop with MiniSAT 2.2.1 without simplifier
+BV-Refinement: post-processing
+BV-Refinement: iteration 1
+203647 variables, 980840 clauses
+SAT checker: instance is SATISFIABLE
+BV-Refinement: got SAT, and it simulates => SAT
+Total iterations: 1
+Runtime Solver: 3.93022s
+Runtime decision procedure: 3.95349s
+Building error trace
+Counterexample:
+
+State 1 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  __CPROVER__next_thread_id=0 (00000000 00000000 00000000 00000000)
+
+State 2 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  __CPROVER__thread_id=0 (00000000 00000000 00000000 00000000)
+
+State 4 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  $assertionsDisabled=false (00000000)
+
+State 5 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_CritSectionOk$MySafeThread__CPROVER_clinit_state=(byte)0 (00000000)
+
+State 6 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_CritSectionOk$MySafeThread__CPROVER_clinit_threadlocal_state=(byte)0 (00000000)
+
+State 7 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  inCritical=null (?)
+
+State 8 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety.CritSectionOk@class_model.@java.lang.Object.@class_identifier="java::java.lang.Class" (?)
+
+State 9 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety.CritSectionOk@class_model.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 10 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety.CritSectionOk@class_model.name=null (?)
+
+State 11 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety.CritSectionOk@class_model.cproverIsAnnotation=false (00000000)
+
+State 12 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety.CritSectionOk@class_model.cproverIsArray=false (00000000)
+
+State 13 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety.CritSectionOk@class_model.cproverIsInterface=false (00000000)
+
+State 14 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety.CritSectionOk@class_model.cproverIsSynthetic=false (00000000)
+
+State 15 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety.CritSectionOk@class_model.cproverIsLocalClass=false (00000000)
+
+State 16 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety.CritSectionOk@class_model.cproverIsMemberClass=false (00000000)
+
+State 17 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety.CritSectionOk@class_model.cproverIsEnum=false (00000000)
+
+State 18 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety.CritSectionOk@class_model.enumConstantDirectory=null (?)
+
+State 21 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  this=&ThreadSafety.CritSectionOk@class_model (?)
+
+State 22 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  name=&ThreadSafety_2eCritSectionOk (?)
+
+State 23 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isAnnotation=false (00000000)
+
+State 24 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isArray=false (00000000)
+
+State 25 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isInterface=false (00000000)
+
+State 26 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isSynthetic=false (00000000)
+
+State 27 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isLocalClass=false (00000000)
+
+State 28 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isMemberClass=false (00000000)
+
+State 29 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isEnum=false (00000000)
+
+State 30 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 473 thread 0
+----------------------------------------------------
+  ThreadSafety.CritSectionOk@class_model.name=&ThreadSafety_2eCritSectionOk (?)
+
+State 31 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 474 thread 0
+----------------------------------------------------
+  ThreadSafety.CritSectionOk@class_model.cproverIsAnnotation=false (00000000)
+
+State 32 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 475 thread 0
+----------------------------------------------------
+  ThreadSafety.CritSectionOk@class_model.cproverIsArray=false (00000000)
+
+State 33 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 476 thread 0
+----------------------------------------------------
+  ThreadSafety.CritSectionOk@class_model.cproverIsInterface=false (00000000)
+
+State 34 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 477 thread 0
+----------------------------------------------------
+  ThreadSafety.CritSectionOk@class_model.cproverIsSynthetic=false (00000000)
+
+State 35 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 478 thread 0
+----------------------------------------------------
+  ThreadSafety.CritSectionOk@class_model.cproverIsLocalClass=false (00000000)
+
+State 36 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 479 thread 0
+----------------------------------------------------
+  ThreadSafety.CritSectionOk@class_model.cproverIsMemberClass=false (00000000)
+
+State 37 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 480 thread 0
+----------------------------------------------------
+  ThreadSafety.CritSectionOk@class_model.cproverIsEnum=false (00000000)
+
+State 39 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_CritSectionOk__CPROVER_clinit_state=(byte)0 (00000000)
+
+State 40 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_CritSectionOk__CPROVER_clinit_threadlocal_state=(byte)0 (00000000)
+
+State 41 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  threadSeqNumber=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 42 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 43 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 44 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk.length=26 (00000000 00000000 00000000 00011010)
+
+State 45 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk.data=ThreadSafety_2eCritSectionOk_constarray (?)
+
+State 46 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_constarray={ 'T', 'h', 'r', 'e', 'a', 'd', 'S', 'a', 'f', 'e', 't', 'y', '.', 'C', 'r', 'i', 't', 'S', 'e', 'c', 't', 'i', 'o', 'n', 'O', 'k' } ({ 00000000 01010100, 00000000 01101000, 00000000 01110010, 00000000 01100101, 00000000 01100001, 00000000 01100100, 00000000 01010011, 00000000 01100001, 00000000 01100110, 00000000 01100101, 00000000 01110100, 00000000 01111001, 00000000 00101110, 00000000 01000011, 00000000 01110010, 00000000 01101001, 00000000 01110100, 00000000 01010011, 00000000 01100101, 00000000 01100011, 00000000 01110100, 00000000 01101001, 00000000 01101111, 00000000 01101110, 00000000 01001111, 00000000 01101011 })
+
+State 47 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_constarray[0L]='T' (00000000 01010100)
+
+State 48 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_constarray[1L]='h' (00000000 01101000)
+
+State 49 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_constarray[2L]='r' (00000000 01110010)
+
+State 50 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_constarray[3L]='e' (00000000 01100101)
+
+State 51 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_constarray[4L]='a' (00000000 01100001)
+
+State 52 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_constarray[5L]='d' (00000000 01100100)
+
+State 53 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_constarray[6L]='S' (00000000 01010011)
+
+State 54 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_constarray[7L]='a' (00000000 01100001)
+
+State 55 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_constarray[8L]='f' (00000000 01100110)
+
+State 56 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_constarray[9L]='e' (00000000 01100101)
+
+State 57 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_constarray[10L]='t' (00000000 01110100)
+
+State 58 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_constarray[11L]='y' (00000000 01111001)
+
+State 59 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_constarray[12L]='.' (00000000 00101110)
+
+State 60 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_constarray[13L]='C' (00000000 01000011)
+
+State 61 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_constarray[14L]='r' (00000000 01110010)
+
+State 62 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_constarray[15L]='i' (00000000 01101001)
+
+State 63 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_constarray[16L]='t' (00000000 01110100)
+
+State 64 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_constarray[17L]='S' (00000000 01010011)
+
+State 65 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_constarray[18L]='e' (00000000 01100101)
+
+State 66 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_constarray[19L]='c' (00000000 01100011)
+
+State 67 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_constarray[20L]='t' (00000000 01110100)
+
+State 68 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_constarray[21L]='i' (00000000 01101001)
+
+State 69 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_constarray[22L]='o' (00000000 01101111)
+
+State 70 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_constarray[23L]='n' (00000000 01101110)
+
+State 71 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_constarray[24L]='O' (00000000 01001111)
+
+State 72 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_constarray[25L]='k' (00000000 01101011)
+
+State 73 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ThreadSafety_2eCritSectionOk_return_value=0 (00000000 00000000 00000000 00000000)
+
+Assumption:
+  nondet_array_length >= 0
+
+Assumption:
+  nondet_array_length <= 5
+
+State 87 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_object1={ .@java.lang.Object={ .@class_identifier="java::ThreadSafety.CritSectionOk$MySafeThread",
+    .cproverMonitorCount=0 },
+    .length=0, .data=null, .@element_class_identifier="java::ThreadSafety.CritSectionOk$MySafeThread",
+    .@array_dimensions=0 } ({ { ?, 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000000 00000000, ?, ?, 00000000 00000000 00000000 00000000 })
+
+State 88 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.@class_identifier="java::ThreadSafety.CritSectionOk$MySafeThread" (?)
+
+State 89 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 90 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_object1.length=0 (00000000 00000000 00000000 00000000)
+
+State 91 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_object1.data=null (?)
+
+State 92 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_object1.@element_class_identifier="java::ThreadSafety.CritSectionOk$MySafeThread" (?)
+
+State 93 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_object1.@array_dimensions=0 (00000000 00000000 00000000 00000000)
+
+State 95 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.@class_identifier="java::array[reference]" (?)
+
+State 96 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 97 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_object1.length=0 (00000000 00000000 00000000 00000000)
+
+State 98 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_object1.data=null (?)
+
+State 99 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_object1.@element_class_identifier="" (?)
+
+State 100 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_object1.@array_dimensions=0 (00000000 00000000 00000000 00000000)
+
+State 101 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object1.@array_dimensions=1 (00000000 00000000 00000000 00000001)
+
+State 102 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object1.@element_class_identifier="java::java.lang.String" (?)
+
+State 103 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_object1.length=4 (00000000 00000000 00000000 00000100)
+
+State 106 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_object1.data=&((void *)dynamic_2_array[0L]) (?)
+
+State 107 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_2_array={ null, null, null, null, null } ({ ?, ?, ?, ?, ? })
+
+State 108 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_2_array[0L]=null (?)
+
+State 109 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_2_array[1L]=null (?)
+
+State 110 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_2_array[2L]=null (?)
+
+State 111 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_2_array[3L]=null (?)
+
+State 112 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_2_array[4L]=null (?)
+
+State 117 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object3={ .@java.lang.Object={ .@class_identifier="java::ThreadSafety.CritSectionOk$MySafeThread",
+    .cproverMonitorCount=0 },
+    .length=0, .data=null } ({ { ?, 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000000 00000000, ? })
+
+State 118 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object3.@java.lang.Object.@class_identifier="java::ThreadSafety.CritSectionOk$MySafeThread" (?)
+
+State 119 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object3.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 120 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object3.length=0 (00000000 00000000 00000000 00000000)
+
+State 121 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object3.data=null (?)
+
+Assumption:
+  tmp_object_factory >= 0
+
+Assumption:
+  tmp_object_factory <= 67108863
+
+State 128 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object4=dynamic_object4#1 (?)
+
+State 130 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_object4={ '?', '?', '?', '?', '?', '?', '?', '?' } ({ 00000000 00111111, 00000000 00111111, 00000000 00111111, 00000000 00111111, 00000000 00111111, 00000000 00111111, 00000000 00111111, 00000000 00111111 })
+
+State 135 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object3.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 136 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object3.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 137 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object3.length=8 (00000000 00000000 00000000 00001000)
+
+State 138 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object3.data=dynamic_object4 (?)
+
+State 139 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_object3.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 140 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_2_array[0L]=&dynamic_object3 (?)
+
+State 145 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object5={ .@java.lang.Object={ .@class_identifier="java::ThreadSafety.CritSectionOk$MySafeThread",
+    .cproverMonitorCount=0 },
+    .length=0, .data=null } ({ { ?, 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000000 00000000, ? })
+
+State 146 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object5.@java.lang.Object.@class_identifier="java::ThreadSafety.CritSectionOk$MySafeThread" (?)
+
+State 147 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object5.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 148 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object5.length=0 (00000000 00000000 00000000 00000000)
+
+State 149 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object5.data=null (?)
+
+Assumption:
+  tmp_object_factory >= 0
+
+Assumption:
+  tmp_object_factory <= 67108863
+
+State 156 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object6=dynamic_object6#1 (?)
+
+State 158 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_object6={ '?', '?', '?', '?', '?', '?', '?', '?' } ({ 00000000 00111111, 00000000 00111111, 00000000 00111111, 00000000 00111111, 00000000 00111111, 00000000 00111111, 00000000 00111111, 00000000 00111111 })
+
+State 163 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object5.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 164 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object5.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 165 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object5.length=8 (00000000 00000000 00000000 00001000)
+
+State 166 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object5.data=dynamic_object6 (?)
+
+State 167 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_object5.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 168 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_2_array[1L]=&dynamic_object5 (?)
+
+State 173 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object7={ .@java.lang.Object={ .@class_identifier="java::ThreadSafety.CritSectionOk$MySafeThread",
+    .cproverMonitorCount=0 },
+    .length=0, .data=null } ({ { ?, 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000000 00000000, ? })
+
+State 174 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object7.@java.lang.Object.@class_identifier="java::ThreadSafety.CritSectionOk$MySafeThread" (?)
+
+State 175 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object7.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 176 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object7.length=0 (00000000 00000000 00000000 00000000)
+
+State 177 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object7.data=null (?)
+
+Assumption:
+  tmp_object_factory >= 0
+
+Assumption:
+  tmp_object_factory <= 67108863
+
+State 184 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object8=dynamic_object8#1 (?)
+
+State 186 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_object8={  } ( })
+
+State 191 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object7.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 192 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object7.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 193 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object7.length=0 (00000000 00000000 00000000 00000000)
+
+State 194 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object7.data=dynamic_object8 (?)
+
+State 195 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_object7.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 196 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_2_array[2L]=&dynamic_object7 (?)
+
+State 201 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object9={ .@java.lang.Object={ .@class_identifier="java::ThreadSafety.CritSectionOk$MySafeThread",
+    .cproverMonitorCount=0 },
+    .length=0, .data=null } ({ { ?, 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000000 00000000, ? })
+
+State 202 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object9.@java.lang.Object.@class_identifier="java::ThreadSafety.CritSectionOk$MySafeThread" (?)
+
+State 203 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object9.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 204 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object9.length=0 (00000000 00000000 00000000 00000000)
+
+State 205 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object9.data=null (?)
+
+Assumption:
+  tmp_object_factory >= 0
+
+Assumption:
+  tmp_object_factory <= 67108863
+
+State 212 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object10=dynamic_object10#1 (?)
+
+State 214 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_object10={ '?' } ({ 00000000 00111111 })
+
+State 219 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object9.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 220 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object9.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 221 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object9.length=1 (00000000 00000000 00000000 00000001)
+
+State 222 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object9.data=dynamic_object10 (?)
+
+State 223 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  dynamic_object9.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 224 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_2_array[3L]=&dynamic_object9 (?)
+
+State 228 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  INPUT arg0a: &dynamic_object1 (?)
+
+State 231 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  arg0a=&dynamic_object1 (?)
+
+State 232 function ThreadSafety.CritSectionOk.main(java.lang.String[]) thread 0
+----------------------------------------------------
+  anonlocal::3a=null (?)
+
+State 233 function ThreadSafety.CritSectionOk.main(java.lang.String[]) thread 0
+----------------------------------------------------
+  anonlocal::2a=null (?)
+
+State 234 function ThreadSafety.CritSectionOk.main(java.lang.String[]) thread 0
+----------------------------------------------------
+  anonlocal::1a=null (?)
+
+State 240 function java::ThreadSafety.CritSectionOk$MySafeThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$ThreadSafety_CritSectionOk$MySafeThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 242 function java::ThreadSafety.CritSectionOk$MySafeThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  ThreadSafety_CritSectionOk$MySafeThread__CPROVER_clinit_threadlocal_state=(byte)2 (00000010)
+
+State 244 function java::ThreadSafety.CritSectionOk$MySafeThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  ThreadSafety_CritSectionOk$MySafeThread__CPROVER_clinit_state=(byte)1 (00000001)
+
+State 245 function java::ThreadSafety.CritSectionOk$MySafeThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$ThreadSafety_CritSectionOk$MySafeThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 254 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.<clinit>() line 7 thread 0
+----------------------------------------------------
+  this=&ThreadSafety.CritSectionOk@class_model (?)
+
+State 255 function java.lang.Class.desiredAssertionStatus() thread 0
+----------------------------------------------------
+  loader=null (?)
+
+State 259 file java/lang/Class.java function java.lang.Class.desiredAssertionStatus() line 421 thread 0
+----------------------------------------------------
+  this=&ThreadSafety.CritSectionOk@class_model (?)
+
+State 260 function java.lang.Class.getClassLoader() thread 0
+----------------------------------------------------
+  cl=null (?)
+
+State 264 file java/lang/Class.java function java.lang.Class.getClassLoader() line 191 thread 0
+----------------------------------------------------
+  this=&ThreadSafety.CritSectionOk@class_model (?)
+
+State 268 file java/lang/Class.java function java.lang.Class.getClassLoader() line 191 thread 0
+----------------------------------------------------
+  cl=null (?)
+
+State 274 file java/lang/Class.java function java.lang.Class.desiredAssertionStatus() line 421 thread 0
+----------------------------------------------------
+  loader=null (?)
+
+State 279 file java/lang/Class.java function java.lang.Class.desiredAssertionStatus() line 424 thread 0
+----------------------------------------------------
+  clazz=&ThreadSafety.CritSectionOk@class_model (?)
+
+State 293 function java::ThreadSafety.CritSectionOk$MySafeThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$ThreadSafety_CritSectionOk$MySafeThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 298 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.<clinit>() line 7 thread 0
+----------------------------------------------------
+  $assertionsDisabled=false (00000000)
+
+State 301 function java::ThreadSafety.CritSectionOk$MySafeThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  ThreadSafety_CritSectionOk$MySafeThread__CPROVER_clinit_state=(byte)2 (00000010)
+
+State 304 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object13={ .@java.lang.Thread={ .@java.lang.Object={ .@class_identifier="java::ThreadSafety.CritSectionOk$MySafeThread",
+    .cproverMonitorCount=0 },
+    .target=(struct java.lang.Runnable *)((byte *)&dynamic_object13 + 17592186044416L),
+    .tid=0L },
+    .id=1024 } ({ { { ?, 00000000 00000000 00000000 00000000 }, ?, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000100 00000000 })
+
+State 305 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Thread.@java.lang.Object.@class_identifier="java::ThreadSafety.CritSectionOk$MySafeThread" (?)
+
+State 306 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 307 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Thread.target=(struct java.lang.Runnable *)((byte *)&dynamic_object13 + 17592186044416L) (?)
+
+State 308 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Thread.tid=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 309 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object13.id=1024 (00000000 00000000 00000100 00000000)
+
+State 311 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Thread.@java.lang.Object.@class_identifier="java::ThreadSafety.CritSectionOk$MySafeThread" (?)
+
+State 312 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 313 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Thread.target=null (?)
+
+State 314 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Thread.tid=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 315 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object13.id=0 (00000000 00000000 00000000 00000000)
+
+State 318 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  this=&dynamic_object13 (?)
+
+State 319 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  arg1i=0 (00000000 00000000 00000000 00000000)
+
+State 322 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread(int) line 8 thread 0
+----------------------------------------------------
+  this=&dynamic_object13.@java.lang.Thread (?)
+
+State 326 file java/lang/Thread.java function java.lang.Thread() line 399 thread 0
+----------------------------------------------------
+  this=&dynamic_object13.@java.lang.Thread.@java.lang.Object (?)
+
+State 327 file java/lang/Object.java function java.lang.Object() line 40 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 329 file java/lang/Thread.java function java.lang.Thread() line 400 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Thread.target=(struct java.lang.Runnable *)&dynamic_object13.@java.lang.Thread.@java.lang.Object (?)
+
+State 333 function java.lang.Thread.nextThreadID() thread 0
+----------------------------------------------------
+  result=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 335 file java/lang/Thread.java function java.lang.Thread.nextThreadID() line 208 thread 0
+----------------------------------------------------
+  threadSeqNumber=1L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001)
+
+State 336 file java/lang/Thread.java function java.lang.Thread.nextThreadID() line 208 thread 0
+----------------------------------------------------
+  result=1L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001)
+
+State 340 file java/lang/Thread.java function java.lang.Thread() line 401 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Thread.tid=1L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001)
+
+State 342 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread(int) line 9 thread 0
+----------------------------------------------------
+  dynamic_object13.id=0 (00000000 00000000 00000000 00000000)
+
+State 344 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  anonlocal::1a=(void *)&dynamic_object13.@java.lang.Thread.@java.lang.Object.@class_identifier (?)
+
+State 347 function java::ThreadSafety.CritSectionOk$MySafeThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$ThreadSafety_CritSectionOk$MySafeThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 352 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object14={ .@java.lang.Thread={ .@java.lang.Object={ .@class_identifier="", .cproverMonitorCount=0 },
+    .target=(struct java.lang.Runnable *)&ThreadSafety.CritSectionOk@class_model.@java.lang.Object,
+    .tid=0L },
+    .id=0 } ({ { { ?, 00000000 00000000 00000000 00000000 }, ?, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000000 00000000 })
+
+State 353 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object14.@java.lang.Thread.@java.lang.Object.@class_identifier="" (?)
+
+State 354 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object14.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 355 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object14.@java.lang.Thread.target=(struct java.lang.Runnable *)&ThreadSafety.CritSectionOk@class_model.@java.lang.Object (?)
+
+State 356 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object14.@java.lang.Thread.tid=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 357 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object14.id=0 (00000000 00000000 00000000 00000000)
+
+State 359 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object14.@java.lang.Thread.@java.lang.Object.@class_identifier="java::ThreadSafety.CritSectionOk$MySafeThread" (?)
+
+State 360 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object14.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 361 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object14.@java.lang.Thread.target=null (?)
+
+State 362 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object14.@java.lang.Thread.tid=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 363 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object14.id=0 (00000000 00000000 00000000 00000000)
+
+State 366 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  this=&dynamic_object14 (?)
+
+State 367 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  arg1i=1 (00000000 00000000 00000000 00000001)
+
+State 370 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread(int) line 8 thread 0
+----------------------------------------------------
+  this=&dynamic_object14.@java.lang.Thread (?)
+
+State 374 file java/lang/Thread.java function java.lang.Thread() line 399 thread 0
+----------------------------------------------------
+  this=&dynamic_object14.@java.lang.Thread.@java.lang.Object (?)
+
+State 375 file java/lang/Object.java function java.lang.Object() line 40 thread 0
+----------------------------------------------------
+  dynamic_object14.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 377 file java/lang/Thread.java function java.lang.Thread() line 400 thread 0
+----------------------------------------------------
+  dynamic_object14.@java.lang.Thread.target=(struct java.lang.Runnable *)&dynamic_object14.@java.lang.Thread.@java.lang.Object (?)
+
+State 381 function java.lang.Thread.nextThreadID() thread 0
+----------------------------------------------------
+  result=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 383 file java/lang/Thread.java function java.lang.Thread.nextThreadID() line 208 thread 0
+----------------------------------------------------
+  threadSeqNumber=2L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000010)
+
+State 384 file java/lang/Thread.java function java.lang.Thread.nextThreadID() line 208 thread 0
+----------------------------------------------------
+  result=2L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000010)
+
+State 388 file java/lang/Thread.java function java.lang.Thread() line 401 thread 0
+----------------------------------------------------
+  dynamic_object14.@java.lang.Thread.tid=2L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000010)
+
+State 390 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread(int) line 9 thread 0
+----------------------------------------------------
+  dynamic_object14.id=1 (00000000 00000000 00000000 00000001)
+
+State 392 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  anonlocal::2a=(void *)&dynamic_object14.@java.lang.Thread.@java.lang.Object.@class_identifier (?)
+
+State 395 function java::ThreadSafety.CritSectionOk$MySafeThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$ThreadSafety_CritSectionOk$MySafeThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 400 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object15={ .@java.lang.Thread={ .@java.lang.Object={ .@class_identifier="", .cproverMonitorCount=0 },
+    .target=(struct java.lang.Runnable *)&dynamic_object15.@java.lang.Thread.@java.lang.Object,
+    .tid=0L },
+    .id=2 } ({ { { ?, 00000000 00000000 00000000 00000000 }, ?, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000000 00000010 })
+
+State 401 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.@java.lang.Object.@class_identifier="" (?)
+
+State 402 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 403 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.target=(struct java.lang.Runnable *)&dynamic_object15.@java.lang.Thread.@java.lang.Object (?)
+
+State 404 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.tid=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 405 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object15.id=2 (00000000 00000000 00000000 00000010)
+
+State 407 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.@java.lang.Object.@class_identifier="java::ThreadSafety.CritSectionOk$MySafeThread" (?)
+
+State 408 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 409 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.target=null (?)
+
+State 410 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.tid=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 411 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  dynamic_object15.id=0 (00000000 00000000 00000000 00000000)
+
+State 414 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  this=&dynamic_object15 (?)
+
+State 415 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  arg1i=2 (00000000 00000000 00000000 00000010)
+
+State 418 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread(int) line 8 thread 0
+----------------------------------------------------
+  this=&dynamic_object15.@java.lang.Thread (?)
+
+State 422 file java/lang/Thread.java function java.lang.Thread() line 399 thread 0
+----------------------------------------------------
+  this=&dynamic_object15.@java.lang.Thread.@java.lang.Object (?)
+
+State 423 file java/lang/Object.java function java.lang.Object() line 40 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 425 file java/lang/Thread.java function java.lang.Thread() line 400 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.target=(struct java.lang.Runnable *)&dynamic_object15.@java.lang.Thread.@java.lang.Object (?)
+
+State 429 function java.lang.Thread.nextThreadID() thread 0
+----------------------------------------------------
+  result=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 431 file java/lang/Thread.java function java.lang.Thread.nextThreadID() line 208 thread 0
+----------------------------------------------------
+  threadSeqNumber=3L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000011)
+
+State 432 file java/lang/Thread.java function java.lang.Thread.nextThreadID() line 208 thread 0
+----------------------------------------------------
+  result=3L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000011)
+
+State 436 file java/lang/Thread.java function java.lang.Thread() line 401 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.tid=3L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000011)
+
+State 438 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread(int) line 9 thread 0
+----------------------------------------------------
+  dynamic_object15.id=2 (00000000 00000000 00000000 00000010)
+
+State 440 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 24 thread 0
+----------------------------------------------------
+  anonlocal::3a=(void *)&dynamic_object15.@java.lang.Thread.@java.lang.Object.@class_identifier (?)
+
+State 443 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 25 thread 0
+----------------------------------------------------
+  this=&dynamic_object13.@java.lang.Thread (?)
+
+State 472 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 26 thread 0
+----------------------------------------------------
+  this=&dynamic_object14.@java.lang.Thread (?)
+
+State 501 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 27 thread 0
+----------------------------------------------------
+  this=&dynamic_object15.@java.lang.Thread (?)
+
+State 531 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  OUTPUT arg0a: &dynamic_object1 (?)
+
+State 532 file ThreadSafety/CritSectionOk.java function __CPROVER__start line 24 thread 0
+----------------------------------------------------
+  OUTPUT uncaught_exception': null (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 534 function __CPROVER__start thread 1
+----------------------------------------------------
+  __CPROVER__next_thread_id=1 (00000000 00000000 00000000 00000001)
+
+State 535 function __CPROVER__start thread 1
+----------------------------------------------------
+  __CPROVER__thread_id=1 (00000000 00000000 00000000 00000001)
+
+State 537 function ThreadSafety.CritSectionOk.main(java.lang.String[]) thread 2
+----------------------------------------------------
+  __CPROVER__next_thread_id=2 (00000000 00000000 00000000 00000010)
+
+State 538 function ThreadSafety.CritSectionOk.main(java.lang.String[]) thread 2
+----------------------------------------------------
+  __CPROVER__thread_id=2 (00000000 00000000 00000000 00000010)
+
+State 545 file java/lang/Thread.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 663 thread 2
+----------------------------------------------------
+  this=&dynamic_object14 (?)
+
+State 546 function ThreadSafety.CritSectionOk$MySafeThread.run() thread 2
+----------------------------------------------------
+  anonlocal::2a=null (?)
+
+State 547 function ThreadSafety.CritSectionOk$MySafeThread.run() thread 2
+----------------------------------------------------
+  anonlocal::1a=null (?)
+
+State 548 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 15 thread 2
+----------------------------------------------------
+  anonlocal::1a=(void *)&ThreadSafety.CritSectionOk@class_model.@java.lang.Object.@class_identifier (?)
+
+State 551 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 15 thread 2
+----------------------------------------------------
+  object=&ThreadSafety.CritSectionOk@class_model.@java.lang.Object (?)
+
+State 557 file java/lang/Object.java function java.lang.Object.monitorenter(java.lang.Object) line 128 thread 2
+----------------------------------------------------
+  ThreadSafety.CritSectionOk@class_model.@java.lang.Object.cproverMonitorCount=1 (00000000 00000000 00000000 00000001)
+
+State 562 function java::ThreadSafety.CritSectionOk.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$ThreadSafety_CritSectionOk__CPROVER_clinit_wrapper$$init_complete=true (1)
+
+State 564 function java::ThreadSafety.CritSectionOk.<clinit_wrapper> thread 2
+----------------------------------------------------
+  ThreadSafety_CritSectionOk__CPROVER_clinit_threadlocal_state=(byte)2 (00000010)
+
+State 566 function java::ThreadSafety.CritSectionOk.<clinit_wrapper> thread 2
+----------------------------------------------------
+  ThreadSafety_CritSectionOk__CPROVER_clinit_state=(byte)1 (00000001)
+
+State 567 function java::ThreadSafety.CritSectionOk.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$ThreadSafety_CritSectionOk__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 573 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.<clinit>() line 5 thread 2
+----------------------------------------------------
+  dynamic_object19={ .@java.lang.Object={ .@class_identifier="java::ThreadSafety.CritSectionOk$MySafeThread",
+    .cproverMonitorCount=0 },
+    .length=-2147483645, .data=dynamic_20_array } ({ { ?, 00000000 00000000 00000000 00000000 }, 10000000 00000000 00000000 00000011, ? })
+
+State 574 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.<clinit>() line 5 thread 2
+----------------------------------------------------
+  dynamic_object19.@java.lang.Object.@class_identifier="java::ThreadSafety.CritSectionOk$MySafeThread" (?)
+
+State 575 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.<clinit>() line 5 thread 2
+----------------------------------------------------
+  dynamic_object19.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 576 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.<clinit>() line 5 thread 2
+----------------------------------------------------
+  dynamic_object19.length=-2147483645 (10000000 00000000 00000000 00000011)
+
+State 577 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.<clinit>() line 5 thread 2
+----------------------------------------------------
+  dynamic_object19.data=dynamic_20_array (?)
+
+State 579 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.<clinit>() line 5 thread 2
+----------------------------------------------------
+  dynamic_object19.@java.lang.Object.@class_identifier="java::array[boolean]" (?)
+
+State 580 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.<clinit>() line 5 thread 2
+----------------------------------------------------
+  dynamic_object19.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 581 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.<clinit>() line 5 thread 2
+----------------------------------------------------
+  dynamic_object19.length=0 (00000000 00000000 00000000 00000000)
+
+State 582 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.<clinit>() line 5 thread 2
+----------------------------------------------------
+  dynamic_object19.data=null (?)
+
+State 583 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.<clinit>() line 5 thread 2
+----------------------------------------------------
+  dynamic_object19.length=3 (00000000 00000000 00000000 00000011)
+
+State 586 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.<clinit>() line 5 thread 2
+----------------------------------------------------
+  dynamic_object19.data=dynamic_20_array (?)
+
+State 587 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.<clinit>() line 5 thread 2
+----------------------------------------------------
+  dynamic_20_array={ false, false, false } ({ 00000000, 00000000, 00000000 })
+
+State 588 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.<clinit>() line 5 thread 2
+----------------------------------------------------
+  dynamic_20_array[0L]=false (00000000)
+
+State 589 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.<clinit>() line 5 thread 2
+----------------------------------------------------
+  dynamic_20_array[1L]=false (00000000)
+
+State 590 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.<clinit>() line 5 thread 2
+----------------------------------------------------
+  dynamic_20_array[2L]=false (00000000)
+
+State 592 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.<clinit>() line 5 thread 2
+----------------------------------------------------
+  dynamic_20_array[0L]=false (00000000)
+
+State 594 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.<clinit>() line 5 thread 2
+----------------------------------------------------
+  dynamic_20_array[1L]=false (00000000)
+
+State 596 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.<clinit>() line 5 thread 2
+----------------------------------------------------
+  dynamic_20_array[2L]=false (00000000)
+
+State 599 function java::ThreadSafety.CritSectionOk.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$ThreadSafety_CritSectionOk__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 603 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk.<clinit>() line 5 thread 2
+----------------------------------------------------
+  inCritical=&dynamic_object19 (?)
+
+State 605 function java::ThreadSafety.CritSectionOk.<clinit_wrapper> thread 2
+----------------------------------------------------
+  ThreadSafety_CritSectionOk__CPROVER_clinit_state=(byte)2 (00000010)
+
+State 612 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 16 thread 2
+----------------------------------------------------
+  dynamic_20_array[POINTER_OFFSET(dynamic_20_array + 1L)]={ false, true, false }[POINTER_OFFSET(dynamic_20_array + 1L)] (?)
+
+State 613 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 16 thread 2
+----------------------------------------------------
+  dynamic_20_array[0L]=false (00000000)
+
+State 615 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 16 thread 2
+----------------------------------------------------
+  dynamic_20_array[1L]=true (00000001)
+
+State 616 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 16 thread 2
+----------------------------------------------------
+  dynamic_20_array[2L]=false (00000000)
+
+State 617 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 16 thread 2
+----------------------------------------------------
+  dynamic_17_array[0L]=true (00000001)
+
+State 618 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 16 thread 2
+----------------------------------------------------
+  dynamic_17_array[1L]=true (00001000)
+
+State 619 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 16 thread 2
+----------------------------------------------------
+  dynamic_17_array[2L]=false (00000000)
+
+State 622 function java::ThreadSafety.CritSectionOk$MySafeThread.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$ThreadSafety_CritSectionOk$MySafeThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 624 function java::ThreadSafety.CritSectionOk$MySafeThread.<clinit_wrapper> thread 2
+----------------------------------------------------
+  ThreadSafety_CritSectionOk$MySafeThread__CPROVER_clinit_threadlocal_state=(byte)2 (00000010)
+
+State 627 function java::ThreadSafety.CritSectionOk$MySafeThread.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$ThreadSafety_CritSectionOk$MySafeThread__CPROVER_clinit_wrapper$$init_complete=true (1)
+
+State 635 function java::ThreadSafety.CritSectionOk.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$ThreadSafety_CritSectionOk__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 643 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  __CPROVER_rounding_mode=0 (00000000 00000000 00000000 00000000)
+
+State 647 function java::ThreadSafety.CritSectionOk.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$ThreadSafety_CritSectionOk__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 651 function ThreadSafety.CritSectionOk.main(java.lang.String[]) thread 3
+----------------------------------------------------
+  __CPROVER__next_thread_id=3 (00000000 00000000 00000000 00000011)
+
+State 652 function ThreadSafety.CritSectionOk.main(java.lang.String[]) thread 3
+----------------------------------------------------
+  __CPROVER__thread_id=3 (00000000 00000000 00000000 00000011)
+
+State 659 file java/lang/Thread.java function ThreadSafety.CritSectionOk.main(java.lang.String[]) line 663 thread 3
+----------------------------------------------------
+  this=&dynamic_object15 (?)
+
+State 660 function ThreadSafety.CritSectionOk$MySafeThread.run() thread 3
+----------------------------------------------------
+  anonlocal::2a=null (?)
+
+State 661 function ThreadSafety.CritSectionOk$MySafeThread.run() thread 3
+----------------------------------------------------
+  anonlocal::1a=null (?)
+
+State 662 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 15 thread 3
+----------------------------------------------------
+  anonlocal::1a=(void *)&ThreadSafety.CritSectionOk@class_model.@java.lang.Object.@class_identifier (?)
+
+State 665 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 15 thread 3
+----------------------------------------------------
+  object=&ThreadSafety.CritSectionOk@class_model.@java.lang.Object (?)
+
+State 676 file java/lang/Thread.java function __CPROVER__start line 663 thread 1
+----------------------------------------------------
+  this=&dynamic_object13 (?)
+
+State 677 function ThreadSafety.CritSectionOk$MySafeThread.run() thread 1
+----------------------------------------------------
+  anonlocal::2a=null (?)
+
+State 678 function ThreadSafety.CritSectionOk$MySafeThread.run() thread 1
+----------------------------------------------------
+  anonlocal::1a=null (?)
+
+State 679 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 15 thread 1
+----------------------------------------------------
+  anonlocal::1a=(void *)&ThreadSafety.CritSectionOk@class_model.@java.lang.Object.@class_identifier (?)
+
+State 682 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 15 thread 1
+----------------------------------------------------
+  object=&ThreadSafety.CritSectionOk@class_model.@java.lang.Object (?)
+
+State 686 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 18 thread 2
+----------------------------------------------------
+  dynamic_20_array[POINTER_OFFSET(dynamic_20_array + 1L)]={ false, false, false }[POINTER_OFFSET(dynamic_20_array + 1L)] (?)
+
+State 687 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 18 thread 2
+----------------------------------------------------
+  dynamic_20_array[0L]=false (00000000)
+
+State 688 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 18 thread 2
+----------------------------------------------------
+  dynamic_20_array[1L]=false (00000000)
+
+State 689 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 18 thread 2
+----------------------------------------------------
+  dynamic_20_array[2L]=false (00000000)
+
+State 690 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 18 thread 2
+----------------------------------------------------
+  dynamic_17_array[0L]=true (00000001)
+
+State 691 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 18 thread 2
+----------------------------------------------------
+  dynamic_17_array[1L]=true (00001000)
+
+State 692 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 18 thread 2
+----------------------------------------------------
+  dynamic_17_array[2L]=false (00000000)
+
+State 695 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 19 thread 2
+----------------------------------------------------
+  object=&ThreadSafety.CritSectionOk@class_model.@java.lang.Object (?)
+
+State 696 file java/lang/Object.java function java.lang.Object.monitorexit(java.lang.Object) line 152 thread 2
+----------------------------------------------------
+  ThreadSafety.CritSectionOk@class_model.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 706 file java/lang/Object.java function java.lang.Object.monitorenter(java.lang.Object) line 128 thread 3
+----------------------------------------------------
+  ThreadSafety.CritSectionOk@class_model.@java.lang.Object.cproverMonitorCount=1 (00000000 00000000 00000000 00000001)
+
+State 711 function java::ThreadSafety.CritSectionOk.<clinit_wrapper> thread 3
+----------------------------------------------------
+  java$$ThreadSafety_CritSectionOk__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 713 function java::ThreadSafety.CritSectionOk.<clinit_wrapper> thread 3
+----------------------------------------------------
+  ThreadSafety_CritSectionOk__CPROVER_clinit_threadlocal_state=(byte)2 (00000010)
+
+State 716 function java::ThreadSafety.CritSectionOk.<clinit_wrapper> thread 3
+----------------------------------------------------
+  java$$ThreadSafety_CritSectionOk__CPROVER_clinit_wrapper$$init_complete=true (1)
+
+State 725 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 16 thread 3
+----------------------------------------------------
+  dynamic_23_array[0L]=false (00000000)
+
+State 726 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 16 thread 3
+----------------------------------------------------
+  dynamic_23_array[1L]=false (00000000)
+
+State 727 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 16 thread 3
+----------------------------------------------------
+  dynamic_23_array[2L]=false (00000000)
+
+State 728 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 16 thread 3
+----------------------------------------------------
+  dynamic_20_array[POINTER_OFFSET(dynamic_20_array + 2L)]={ false, false, true }[POINTER_OFFSET(dynamic_20_array + 2L)] (?)
+
+State 729 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 16 thread 3
+----------------------------------------------------
+  dynamic_20_array[0L]=false (00000000)
+
+State 730 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 16 thread 3
+----------------------------------------------------
+  dynamic_20_array[1L]=false (00000000)
+
+State 731 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 16 thread 3
+----------------------------------------------------
+  dynamic_20_array[2L]=true (00000001)
+
+State 732 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 16 thread 3
+----------------------------------------------------
+  dynamic_17_array[0L]=true (00000001)
+
+State 733 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 16 thread 3
+----------------------------------------------------
+  dynamic_17_array[1L]=true (00001000)
+
+State 734 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 16 thread 3
+----------------------------------------------------
+  dynamic_17_array[2L]=false (00000000)
+
+State 737 function java::ThreadSafety.CritSectionOk$MySafeThread.<clinit_wrapper> thread 3
+----------------------------------------------------
+  java$$ThreadSafety_CritSectionOk$MySafeThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 739 function java::ThreadSafety.CritSectionOk$MySafeThread.<clinit_wrapper> thread 3
+----------------------------------------------------
+  ThreadSafety_CritSectionOk$MySafeThread__CPROVER_clinit_threadlocal_state=(byte)2 (00000010)
+
+State 742 function java::ThreadSafety.CritSectionOk$MySafeThread.<clinit_wrapper> thread 3
+----------------------------------------------------
+  java$$ThreadSafety_CritSectionOk$MySafeThread__CPROVER_clinit_wrapper$$init_complete=true (1)
+
+State 750 function java::ThreadSafety.CritSectionOk.<clinit_wrapper> thread 3
+----------------------------------------------------
+  java$$ThreadSafety_CritSectionOk__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 759 function java::ThreadSafety.CritSectionOk.<clinit_wrapper> thread 3
+----------------------------------------------------
+  java$$ThreadSafety_CritSectionOk__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 768 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 18 thread 3
+----------------------------------------------------
+  dynamic_23_array[0L]=false (00000000)
+
+State 769 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 18 thread 3
+----------------------------------------------------
+  dynamic_23_array[1L]=false (00000000)
+
+State 770 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 18 thread 3
+----------------------------------------------------
+  dynamic_23_array[2L]=false (00000000)
+
+State 771 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 18 thread 3
+----------------------------------------------------
+  dynamic_20_array[POINTER_OFFSET(dynamic_20_array + 2L)]={ false, false, false }[POINTER_OFFSET(dynamic_20_array + 2L)] (?)
+
+State 772 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 18 thread 3
+----------------------------------------------------
+  dynamic_20_array[0L]=false (00000000)
+
+State 773 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 18 thread 3
+----------------------------------------------------
+  dynamic_20_array[1L]=false (00000000)
+
+State 774 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 18 thread 3
+----------------------------------------------------
+  dynamic_20_array[2L]=false (00000000)
+
+State 775 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 18 thread 3
+----------------------------------------------------
+  dynamic_17_array[0L]=true (00000001)
+
+State 776 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 18 thread 3
+----------------------------------------------------
+  dynamic_17_array[1L]=true (00001000)
+
+State 777 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 18 thread 3
+----------------------------------------------------
+  dynamic_17_array[2L]=false (00000000)
+
+State 780 file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 19 thread 3
+----------------------------------------------------
+  object=&ThreadSafety.CritSectionOk@class_model.@java.lang.Object (?)
+
+State 781 file java/lang/Object.java function java.lang.Object.monitorexit(java.lang.Object) line 152 thread 3
+----------------------------------------------------
+  ThreadSafety.CritSectionOk@class_model.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 791 file java/lang/Object.java function java.lang.Object.monitorenter(java.lang.Object) line 128 thread 1
+----------------------------------------------------
+  ThreadSafety.CritSectionOk@class_model.@java.lang.Object.cproverMonitorCount=1 (00000000 00000000 00000000 00000001)
+
+State 796 function java::ThreadSafety.CritSectionOk.<clinit_wrapper> thread 1
+----------------------------------------------------
+  java$$ThreadSafety_CritSectionOk__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 798 function java::ThreadSafety.CritSectionOk.<clinit_wrapper> thread 1
+----------------------------------------------------
+  ThreadSafety_CritSectionOk__CPROVER_clinit_threadlocal_state=(byte)2 (00000010)
+
+State 801 function java::ThreadSafety.CritSectionOk.<clinit_wrapper> thread 1
+----------------------------------------------------
+  java$$ThreadSafety_CritSectionOk__CPROVER_clinit_wrapper$$init_complete=true (1)
+
+Violated property:
+  file ThreadSafety/CritSectionOk.java function ThreadSafety.CritSectionOk$MySafeThread.run() line 16 thread 1
+  Array index should be < length
+  this->id < inCritical->length
+
+
+VERIFICATION FAILED

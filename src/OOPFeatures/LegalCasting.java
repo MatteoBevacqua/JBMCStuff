@@ -1,6 +1,5 @@
 package OOPFeatures;
-
-import static common.CommonMethods.assertLineUnreachable;
+ 
 
 class A {
 
@@ -15,7 +14,7 @@ class B  extends A {
         try {
            A otherObj = (A) object;
         } catch (ClassCastException e) {
-            assertLineUnreachable();
+            assert false;
         }
     }
 }

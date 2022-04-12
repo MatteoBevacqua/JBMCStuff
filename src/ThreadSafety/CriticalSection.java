@@ -2,8 +2,7 @@ package ThreadSafety;
 
 
 import java.util.concurrent.TimeUnit;
-
-import static ThreadSafety.CriticalSection.inCritical;
+ 
 
 public class CriticalSection {
     public static boolean[] inCritical = {false, false,false};
@@ -19,9 +18,9 @@ public class CriticalSection {
         r3.join();
 
     }
-}
 
-class MyThread extends Thread {
+
+static class MyThread extends Thread {
     public MyThread(int id) {
         this.id = id;
     }
@@ -33,4 +32,5 @@ class MyThread extends Thread {
         assert !(inCritical[0] && inCritical[1] && inCritical[2]);
         inCritical[id] = false;
     }
+}
 }

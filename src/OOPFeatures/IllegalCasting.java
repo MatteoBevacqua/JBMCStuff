@@ -1,6 +1,5 @@
 package OOPFeatures;
-
-import static common.CommonMethods.assertLineUnreachable;
+ 
 
 class C {
 
@@ -16,7 +15,7 @@ public class IllegalCasting {
         try {
             D otherObj = (D) objC;
         } catch (Exception e) {
-            assertLineUnreachable();
+            assert false;
         }
     }
 }

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <key attr.name="originFileName" attr.type="string" for="edge" id="originfile">
+    <default>&lt;command-line&gt;</default>
+  </key>
+  <key attr.name="invariant" attr.type="string" for="node" id="invariant"/>
+  <key attr.name="invariant.scope" attr.type="string" for="node" id="invariant.scope"/>
+  <key attr.name="isViolationNode" attr.type="boolean" for="node" id="violation">
+    <default>false</default>
+  </key>
+  <key attr.name="isEntryNode" attr.type="boolean" for="node" id="entry">
+    <default>false</default>
+  </key>
+  <key attr.name="isSinkNode" attr.type="boolean" for="node" id="sink">
+    <default>false</default>
+  </key>
+  <key attr.name="enterLoopHead" attr.type="boolean" for="edge" id="enterLoopHead">
+    <default>false</default>
+  </key>
+  <key attr.name="cyclehead" attr.type="boolean" for="node" id="cyclehead">
+    <default>false</default>
+  </key>
+  <key attr.name="threadId" attr.type="int" for="edge" id="threadId">
+    <default>0</default>
+  </key>
+  <key attr.name="createThread" attr.type="int" for="edge" id="createThread">
+    <default>0</default>
+  </key>
+  <key attr.name="sourcecodeLanguage" attr.type="string" for="graph" id="sourcecodelang"/>
+  <key attr.name="programFile" attr.type="string" for="graph" id="programfile"/>
+  <key attr.name="programHash" attr.type="string" for="graph" id="programhash"/>
+  <key attr.name="specification" attr.type="string" for="graph" id="specification"/>
+  <key attr.name="architecture" attr.type="string" for="graph" id="architecture"/>
+  <key attr.name="producer" attr.type="string" for="graph" id="producer"/>
+  <key attr.name="creationtime" attr.type="string" for="graph" id="creationtime"/>
+  <key attr.name="startline" attr.type="int" for="edge" id="startline"/>
+  <key attr.name="control" attr.type="string" for="edge" id="control"/>
+  <key attr.name="assumption" attr.type="string" for="edge" id="assumption"/>
+  <key attr.name="assumption.resultfunction" attr.type="string" for="edge" id="assumption.resultfunction"/>
+  <key attr.name="assumption.scope" attr.type="string" for="edge" id="assumption.scope"/>
+  <key attr.name="enterFunction" attr.type="string" for="edge" id="enterFunction"/>
+  <key attr.name="returnFromFunction" attr.type="string" for="edge" id="returnFrom"/>
+  <key attr.name="witness-type" attr.type="string" for="graph" id="witness-type"/>
+  <graph edgedefault="directed">
+    <data key="sourcecodelang">C</data>
+    <node id="sink"/>
+    <node id="331.56">
+      <data key="entry">true</data>
+    </node>
+    <edge source="331.56" target="2.88">
+      <data key="originfile">ArrayViolations/BoundsViolation.java</data>
+      <data key="startline">8</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="2.88"/>
+    <edge source="2.88" target="29.102">
+      <data key="originfile">ArrayViolations/BoundsViolation.java</data>
+      <data key="startline">8</data>
+      <data key="threadId">0</data>
+      <data key="assumption">anonlocal::1i = 0;</data>
+      <data key="assumption.scope">java::ArrayViolations.BoundsViolation.main:([Ljava/lang/String;)V</data>
+    </edge>
+    <node id="29.102"/>
+    <edge source="29.102" target="44.124">
+      <data key="originfile">ArrayViolations/BoundsViolation.java</data>
+      <data key="startline">5</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="44.124"/>
+    <edge source="44.124" target="51.125">
+      <data key="originfile">ArrayViolations/BoundsViolation.java</data>
+      <data key="startline">5</data>
+      <data key="threadId">0</data>
+      <data key="assumption">(void *)dynamic_14_array[0L] = (void *)&amp;formal;</data>
+      <data key="assumption.scope">java::ArrayViolations.BoundsViolation.&lt;clinit&gt;:()V</data>
+    </edge>
+    <node id="51.125"/>
+    <edge source="51.125" target="58.126">
+      <data key="originfile">ArrayViolations/BoundsViolation.java</data>
+      <data key="startline">5</data>
+      <data key="threadId">0</data>
+      <data key="assumption">(void *)dynamic_14_array[1L] = (void *)&amp;methods;</data>
+      <data key="assumption.scope">java::ArrayViolations.BoundsViolation.&lt;clinit&gt;:()V</data>
+    </edge>
+    <node id="58.126"/>
+    <edge source="58.126" target="60.133">
+      <data key="originfile">ArrayViolations/BoundsViolation.java</data>
+      <data key="startline">5</data>
+      <data key="threadId">0</data>
+      <data key="assumption">(void *)dynamic_14_array[2L] = (void *)&amp;jbmc;</data>
+      <data key="assumption.scope">java::ArrayViolations.BoundsViolation.&lt;clinit&gt;:()V</data>
+    </edge>
+    <node id="60.133"/>
+    <edge source="60.133" target="6.137">
+      <data key="originfile">ArrayViolations/BoundsViolation.java</data>
+      <data key="startline">5</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="6.137"/>
+    <edge source="6.137" target="9.138">
+      <data key="originfile">ArrayViolations/BoundsViolation.java</data>
+      <data key="startline">8</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="9.138"/>
+    <edge source="9.138" target="20.168">
+      <data key="originfile">ArrayViolations/BoundsViolation.java</data>
+      <data key="startline">9</data>
+      <data key="threadId">0</data>
+      <data key="assumption">anonlocal::1i = 1;</data>
+      <data key="assumption.scope">java::ArrayViolations.BoundsViolation.main:([Ljava/lang/String;)V</data>
+    </edge>
+    <node id="20.168"/>
+    <edge source="20.168" target="21.171">
+      <data key="originfile">ArrayViolations/BoundsViolation.java</data>
+      <data key="startline">10</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="21.171"/>
+    <edge source="21.171" target="6.179">
+      <data key="originfile">ArrayViolations/BoundsViolation.java</data>
+      <data key="startline">8</data>
+      <data key="threadId">0</data>
+      <data key="assumption">anonlocal::1i = 2;</data>
+      <data key="assumption.scope">java::ArrayViolations.BoundsViolation.main:([Ljava/lang/String;)V</data>
+    </edge>
+    <node id="6.179"/>
+    <edge source="6.179" target="9.180">
+      <data key="originfile">ArrayViolations/BoundsViolation.java</data>
+      <data key="startline">8</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="9.180"/>
+    <edge source="9.180" target="16.193">
+      <data key="originfile">ArrayViolations/BoundsViolation.java</data>
+      <data key="startline">9</data>
+      <data key="threadId">0</data>
+      <data key="assumption">anonlocal::1i = 3;</data>
+      <data key="assumption.scope">java::ArrayViolations.BoundsViolation.main:([Ljava/lang/String;)V</data>
+    </edge>
+    <node id="16.193">
+      <data key="violation">true</data>
+    </node>
+  </graph>
+</graphml>

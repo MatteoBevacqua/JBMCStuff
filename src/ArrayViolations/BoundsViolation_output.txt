@@ -1,0 +1,498 @@
+JBMC version 5.54.0 (cbmc-5.54.0) 64-bit x86_64 windows
+Parsing ...
+Trying to load Java main class: ArrayViolations.BoundsViolation
+Found Java main class: ArrayViolations.BoundsViolation
+Converting
+Java: added 10 String or Class constant symbols
+Generating GOTO Program
+Running GOTO functions transformation passes
+Running with 16 object bits, 48 offset bits (default)
+Starting Bounded Model Checking
+Unwinding loop __CPROVER__start.0 iteration 1  thread 0
+Unwinding loop __CPROVER__start.0 iteration 2  thread 0
+Unwinding loop __CPROVER__start.0 iteration 3  thread 0
+Unwinding loop __CPROVER__start.0 iteration 4  thread 0
+Unwinding loop __CPROVER__start.0 iteration 5  thread 0
+Unwinding recursion java::ArrayViolations.BoundsViolation.<clinit_wrapper> iteration 1
+Unwinding loop java::ArrayViolations.BoundsViolation.main:([Ljava/lang/String;)V.0 iteration 1 file ArrayViolations/BoundsViolation.java line 8 function java::ArrayViolations.BoundsViolation.main:([Ljava/lang/String;)V bytecode-index 13 thread 0
+Runtime Symex: 0.013171s
+size of program expression: 556 steps
+simple slicing removed 3 assignments
+Generated 19 VCC(s), 1 remaining after simplification
+Runtime Postprocess Equation: 4.18e-05s
+Passing problem to string refinement loop with MiniSAT 2.2.1 without simplifier
+converting SSA
+Runtime Convert SSA: 0.0011545s
+Running string refinement loop with MiniSAT 2.2.1 without simplifier
+BV-Refinement: post-processing
+BV-Refinement: iteration 1
+5367 variables, 7060 clauses
+SAT checker: instance is SATISFIABLE
+BV-Refinement: got SAT, and it simulates => SAT
+Total iterations: 1
+Runtime Solver: 0.0027622s
+Runtime decision procedure: 0.0039651s
+Building error trace
+Counterexample:
+
+State 3 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  __CPROVER_rounding_mode=0 (00000000 00000000 00000000 00000000)
+
+State 5 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  strings=null (?)
+
+State 6 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ArrayViolations_BoundsViolation__CPROVER_clinit_state=(byte)0 (00000000)
+
+State 7 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  ArrayViolations_BoundsViolation__CPROVER_clinit_threadlocal_state=(byte)0 (00000000)
+
+State 8 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  formal.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 9 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  formal.length=6 (00000000 00000000 00000000 00000110)
+
+State 10 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  formal.data=formal_constarray (?)
+
+State 11 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  formal_constarray={ 'f', 'o', 'r', 'm', 'a', 'l' } ({ 00000000 01100110, 00000000 01101111, 00000000 01110010, 00000000 01101101, 00000000 01100001, 00000000 01101100 })
+
+State 12 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  formal_constarray[0L]='f' (00000000 01100110)
+
+State 13 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  formal_constarray[1L]='o' (00000000 01101111)
+
+State 14 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  formal_constarray[2L]='r' (00000000 01110010)
+
+State 15 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  formal_constarray[3L]='m' (00000000 01101101)
+
+State 16 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  formal_constarray[4L]='a' (00000000 01100001)
+
+State 17 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  formal_constarray[5L]='l' (00000000 01101100)
+
+State 18 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  formal_return_value=0 (00000000 00000000 00000000 00000000)
+
+State 19 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  jbmc.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 20 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  jbmc.length=4 (00000000 00000000 00000000 00000100)
+
+State 21 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  jbmc.data=jbmc_constarray (?)
+
+State 22 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  jbmc_constarray={ 'j', 'b', 'm', 'c' } ({ 00000000 01101010, 00000000 01100010, 00000000 01101101, 00000000 01100011 })
+
+State 23 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  jbmc_constarray[0L]='j' (00000000 01101010)
+
+State 24 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  jbmc_constarray[1L]='b' (00000000 01100010)
+
+State 25 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  jbmc_constarray[2L]='m' (00000000 01101101)
+
+State 26 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  jbmc_constarray[3L]='c' (00000000 01100011)
+
+State 27 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  jbmc_return_value=0 (00000000 00000000 00000000 00000000)
+
+State 28 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  methods.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 29 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  methods.length=7 (00000000 00000000 00000000 00000111)
+
+State 30 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  methods.data=methods_constarray (?)
+
+State 31 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  methods_constarray={ 'm', 'e', 't', 'h', 'o', 'd', 's' } ({ 00000000 01101101, 00000000 01100101, 00000000 01110100, 00000000 01101000, 00000000 01101111, 00000000 01100100, 00000000 01110011 })
+
+State 32 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  methods_constarray[0L]='m' (00000000 01101101)
+
+State 33 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  methods_constarray[1L]='e' (00000000 01100101)
+
+State 34 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  methods_constarray[2L]='t' (00000000 01110100)
+
+State 35 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  methods_constarray[3L]='h' (00000000 01101000)
+
+State 36 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  methods_constarray[4L]='o' (00000000 01101111)
+
+State 37 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  methods_constarray[5L]='d' (00000000 01100100)
+
+State 38 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  methods_constarray[6L]='s' (00000000 01110011)
+
+State 39 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  methods_return_value=0 (00000000 00000000 00000000 00000000)
+
+State 40 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  out=null (?)
+
+State 41 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  java_lang_System__CPROVER_clinit_state=(byte)0 (00000000)
+
+State 42 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  java_lang_System__CPROVER_clinit_threadlocal_state=(byte)0 (00000000)
+
+Assumption:
+  nondet_array_length >= 0
+
+Assumption:
+  nondet_array_length <= 5
+
+State 56 file ArrayViolations/BoundsViolation.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1={ .@java.lang.Object={ .@class_identifier="java::java.lang.String" },
+    .length=0, .data=null, .@element_class_identifier="java::java.lang.String",
+    .@array_dimensions=0 } ({ { ? }, 00000000 00000000 00000000 00000000, ?, ?, 00000000 00000000 00000000 00000000 })
+
+State 57 file ArrayViolations/BoundsViolation.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 58 file ArrayViolations/BoundsViolation.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1.length=0 (00000000 00000000 00000000 00000000)
+
+State 59 file ArrayViolations/BoundsViolation.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1.data=null (?)
+
+State 60 file ArrayViolations/BoundsViolation.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1.@element_class_identifier="java::java.lang.String" (?)
+
+State 61 file ArrayViolations/BoundsViolation.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1.@array_dimensions=0 (00000000 00000000 00000000 00000000)
+
+State 63 file ArrayViolations/BoundsViolation.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.@class_identifier="java::array[reference]" (?)
+
+State 64 file ArrayViolations/BoundsViolation.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1.length=0 (00000000 00000000 00000000 00000000)
+
+State 65 file ArrayViolations/BoundsViolation.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1.data=null (?)
+
+State 66 file ArrayViolations/BoundsViolation.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1.@element_class_identifier="" (?)
+
+State 67 file ArrayViolations/BoundsViolation.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1.@array_dimensions=0 (00000000 00000000 00000000 00000000)
+
+State 68 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object1.@array_dimensions=1 (00000000 00000000 00000000 00000001)
+
+State 69 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object1.@element_class_identifier="java::java.lang.String" (?)
+
+State 70 file ArrayViolations/BoundsViolation.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1.length=0 (00000000 00000000 00000000 00000000)
+
+State 73 file ArrayViolations/BoundsViolation.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_object1.data=&((void *)dynamic_2_array[0L]) (?)
+
+State 74 file ArrayViolations/BoundsViolation.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_2_array={ null, null, null, null, null } ({ ?, ?, ?, ?, ? })
+
+State 75 file ArrayViolations/BoundsViolation.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_2_array[0L]=null (?)
+
+State 76 file ArrayViolations/BoundsViolation.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_2_array[1L]=null (?)
+
+State 77 file ArrayViolations/BoundsViolation.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_2_array[2L]=null (?)
+
+State 78 file ArrayViolations/BoundsViolation.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_2_array[3L]=null (?)
+
+State 79 file ArrayViolations/BoundsViolation.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  dynamic_2_array[4L]=null (?)
+
+State 83 file ArrayViolations/BoundsViolation.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  INPUT arg0a: &dynamic_object1 (?)
+
+State 86 file ArrayViolations/BoundsViolation.java function __CPROVER__start line 8 thread 0
+----------------------------------------------------
+  arg0a=&dynamic_object1 (?)
+
+State 87 function ArrayViolations.BoundsViolation.main(java.lang.String[]) thread 0
+----------------------------------------------------
+  anonlocal::1i=0 (00000000 00000000 00000000 00000000)
+
+State 88 file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.main(java.lang.String[]) line 8 thread 0
+----------------------------------------------------
+  anonlocal::1i=0 (00000000 00000000 00000000 00000000)
+
+State 91 function java::ArrayViolations.BoundsViolation.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$ArrayViolations_BoundsViolation__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 93 function java::ArrayViolations.BoundsViolation.<clinit_wrapper> thread 0
+----------------------------------------------------
+  ArrayViolations_BoundsViolation__CPROVER_clinit_threadlocal_state=(byte)2 (00000010)
+
+State 95 function java::ArrayViolations.BoundsViolation.<clinit_wrapper> thread 0
+----------------------------------------------------
+  ArrayViolations_BoundsViolation__CPROVER_clinit_state=(byte)1 (00000001)
+
+State 96 function java::ArrayViolations.BoundsViolation.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$ArrayViolations_BoundsViolation__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 102 file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.<clinit>() line 5 thread 0
+----------------------------------------------------
+  dynamic_object13={ .@java.lang.Object={ .@class_identifier="java::java.lang.String" },
+    .length=0, .data=null, .@element_class_identifier="java::java.lang.String",
+    .@array_dimensions=0 } ({ { ? }, 00000000 00000000 00000000 00000000, ?, ?, 00000000 00000000 00000000 00000000 })
+
+State 103 file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.<clinit>() line 5 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 104 file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.<clinit>() line 5 thread 0
+----------------------------------------------------
+  dynamic_object13.length=0 (00000000 00000000 00000000 00000000)
+
+State 105 file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.<clinit>() line 5 thread 0
+----------------------------------------------------
+  dynamic_object13.data=null (?)
+
+State 106 file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.<clinit>() line 5 thread 0
+----------------------------------------------------
+  dynamic_object13.@element_class_identifier="java::java.lang.String" (?)
+
+State 107 file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.<clinit>() line 5 thread 0
+----------------------------------------------------
+  dynamic_object13.@array_dimensions=0 (00000000 00000000 00000000 00000000)
+
+State 109 file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.<clinit>() line 5 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Object.@class_identifier="java::array[reference]" (?)
+
+State 110 file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.<clinit>() line 5 thread 0
+----------------------------------------------------
+  dynamic_object13.length=0 (00000000 00000000 00000000 00000000)
+
+State 111 file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.<clinit>() line 5 thread 0
+----------------------------------------------------
+  dynamic_object13.data=null (?)
+
+State 112 file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.<clinit>() line 5 thread 0
+----------------------------------------------------
+  dynamic_object13.@element_class_identifier="" (?)
+
+State 113 file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.<clinit>() line 5 thread 0
+----------------------------------------------------
+  dynamic_object13.@array_dimensions=0 (00000000 00000000 00000000 00000000)
+
+State 114 function ArrayViolations.BoundsViolation.<clinit>() thread 0
+----------------------------------------------------
+  dynamic_object13.@array_dimensions=1 (00000000 00000000 00000000 00000001)
+
+State 115 function ArrayViolations.BoundsViolation.<clinit>() thread 0
+----------------------------------------------------
+  dynamic_object13.@element_class_identifier="java::java.lang.String" (?)
+
+State 116 file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.<clinit>() line 5 thread 0
+----------------------------------------------------
+  dynamic_object13.length=3 (00000000 00000000 00000000 00000011)
+
+State 119 file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.<clinit>() line 5 thread 0
+----------------------------------------------------
+  dynamic_object13.data=&((void *)dynamic_14_array[0L]) (?)
+
+State 120 file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.<clinit>() line 5 thread 0
+----------------------------------------------------
+  dynamic_14_array={ null, null, null } ({ ?, ?, ? })
+
+State 121 file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.<clinit>() line 5 thread 0
+----------------------------------------------------
+  dynamic_14_array[0L]=null (?)
+
+State 122 file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.<clinit>() line 5 thread 0
+----------------------------------------------------
+  dynamic_14_array[1L]=null (?)
+
+State 123 file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.<clinit>() line 5 thread 0
+----------------------------------------------------
+  dynamic_14_array[2L]=null (?)
+
+State 124 file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.<clinit>() line 5 thread 0
+----------------------------------------------------
+  (void *)dynamic_14_array[0L]=(void *)&formal (?)
+
+State 125 file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.<clinit>() line 5 thread 0
+----------------------------------------------------
+  (void *)dynamic_14_array[1L]=(void *)&methods (?)
+
+State 126 file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.<clinit>() line 5 thread 0
+----------------------------------------------------
+  (void *)dynamic_14_array[2L]=(void *)&jbmc (?)
+
+State 129 function java::ArrayViolations.BoundsViolation.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$ArrayViolations_BoundsViolation__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 133 file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.<clinit>() line 5 thread 0
+----------------------------------------------------
+  strings=&dynamic_object13 (?)
+
+State 135 function java::ArrayViolations.BoundsViolation.<clinit_wrapper> thread 0
+----------------------------------------------------
+  ArrayViolations_BoundsViolation__CPROVER_clinit_state=(byte)2 (00000010)
+
+State 138 file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.main(java.lang.String[]) line 9 thread 0
+----------------------------------------------------
+  anonlocal::1i=1 (00000000 00000000 00000000 00000001)
+
+State 141 function java::java.lang.System.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$java_lang_System__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 143 function java::java.lang.System.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java_lang_System__CPROVER_clinit_threadlocal_state=(byte)2 (00000010)
+
+State 145 function java::java.lang.System.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java_lang_System__CPROVER_clinit_state=(byte)1 (00000001)
+
+State 146 function java::java.lang.System.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$java_lang_System__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 152 function java::java.lang.System.<clinit>:()V thread 0
+----------------------------------------------------
+  dynamic_object15={ .@class_identifier="java::java.lang.String" } ({ ? })
+
+State 153 function java::java.lang.System.<clinit>:()V thread 0
+----------------------------------------------------
+  dynamic_object15.@class_identifier="java::java.lang.String" (?)
+
+State 155 function java::java.lang.System.<clinit>:()V thread 0
+----------------------------------------------------
+  out=&dynamic_object15 (?)
+
+State 156 function java::java.lang.System.<clinit>:()V thread 0
+----------------------------------------------------
+  dynamic_object15.@class_identifier="java::java.io.PrintStream" (?)
+
+State 158 function java::java.lang.System.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java_lang_System__CPROVER_clinit_state=(byte)2 (00000010)
+
+State 162 function java::ArrayViolations.BoundsViolation.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$ArrayViolations_BoundsViolation__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 168 file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.main(java.lang.String[]) line 10 thread 0
+----------------------------------------------------
+  this=&dynamic_object15 (?)
+
+State 169 file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.main(java.lang.String[]) line 10 thread 0
+----------------------------------------------------
+  stub_ignored_arg1=&methods (?)
+
+State 171 file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.main(java.lang.String[]) line 8 thread 0
+----------------------------------------------------
+  anonlocal::1i=2 (00000000 00000000 00000000 00000010)
+
+State 175 function java::ArrayViolations.BoundsViolation.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$ArrayViolations_BoundsViolation__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 180 file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.main(java.lang.String[]) line 9 thread 0
+----------------------------------------------------
+  anonlocal::1i=3 (00000000 00000000 00000000 00000011)
+
+State 183 function java::java.lang.System.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$java_lang_System__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 189 function java::ArrayViolations.BoundsViolation.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$ArrayViolations_BoundsViolation__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+Violated property:
+  file ArrayViolations/BoundsViolation.java function ArrayViolations.BoundsViolation.main(java.lang.String[]) line 10 thread 0
+  Array index should be < length
+  anonlocal::1i < ((struct java::array[reference] *)strings)->length
+
+
+VERIFICATION FAILED

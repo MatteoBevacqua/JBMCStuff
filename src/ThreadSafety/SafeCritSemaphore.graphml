@@ -55,15 +55,7 @@
     <edge source="N1" target="N2">
       <data key="createThread">1</data>
     </edge>
-    <node id="N2"/>
-    <edge source="N2" target="N3">
-      <data key="createThread">2</data>
-    </edge>
-    <node id="N3"/>
-    <edge source="N3" target="N4">
-      <data key="createThread">3</data>
-    </edge>
-    <node id="N4">
+    <node id="N2">
       <data key="violation">true</data>
     </node>
   </graph>

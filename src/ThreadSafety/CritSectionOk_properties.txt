@@ -1,0 +1,358 @@
+JBMC version 5.54.0 (cbmc-5.54.0) 64-bit x86_64 linux
+Parsing ...
+Trying to load Java main class: ThreadSafety.CritSectionOk
+Found Java main class: ThreadSafety.CritSectionOk
+Converting
+Java: added 2264 String or Class constant symbols
+Generating GOTO Program
+Running GOTO functions transformation passes
+Property java::java.lang.Object.<init>:()V.null-pointer-exception.1:
+  file java/lang/Object.java line 40 function java::java.lang.Object.<init>:()V bytecode-index 2
+  Null pointer check
+  !(this == null)
+
+Property java::ThreadSafety.CritSectionOk$MySafeThread.<init>:(I)V.null-pointer-exception.1:
+  file ThreadSafety/CritSectionOk.java line 8 function java::ThreadSafety.CritSectionOk$MySafeThread.<init>:(I)V bytecode-index 1
+  Null pointer check
+  !(&this->@java.lang.Thread == null)
+
+Property java::ThreadSafety.CritSectionOk$MySafeThread.<init>:(I)V.null-pointer-exception.2:
+  file ThreadSafety/CritSectionOk.java line 9 function java::ThreadSafety.CritSectionOk$MySafeThread.<init>:(I)V bytecode-index 4
+  Null pointer check
+  !(this == null)
+
+Property java::java.lang.Thread.start:()V.null-pointer-exception.1:
+  file java/lang/Thread.java line 663 function java::java.lang.Thread.start:()V bytecode-index 4
+  Null pointer check
+  !(this == null)
+
+Property java::java.lang.Thread.start:()V.null-pointer-exception.2:
+  file java/lang/Thread.java line 663 function java::java.lang.Thread.start:()V bytecode-index 4
+  Null pointer check
+  !(this->target == null)
+
+Property java::ThreadSafety.CritSectionOk.main:([Ljava/lang/String;)V.null-pointer-exception.1:
+  file ThreadSafety/CritSectionOk.java line 24 function java::ThreadSafety.CritSectionOk.main:([Ljava/lang/String;)V bytecode-index 3
+  Null pointer check
+  !(new_tmp0 == null)
+
+Property java::ThreadSafety.CritSectionOk.main:([Ljava/lang/String;)V.null-pointer-exception.2:
+  file ThreadSafety/CritSectionOk.java line 24 function java::ThreadSafety.CritSectionOk.main:([Ljava/lang/String;)V bytecode-index 8
+  Null pointer check
+  !(new_tmp1 == null)
+
+Property java::ThreadSafety.CritSectionOk.main:([Ljava/lang/String;)V.null-pointer-exception.3:
+  file ThreadSafety/CritSectionOk.java line 25 function java::ThreadSafety.CritSectionOk.main:([Ljava/lang/String;)V bytecode-index 11
+  Null pointer check
+  !((struct java.lang.Thread *)anonlocal::1a == null)
+
+Property java::ThreadSafety.CritSectionOk.main:([Ljava/lang/String;)V.null-pointer-exception.4:
+  file ThreadSafety/CritSectionOk.java line 26 function java::ThreadSafety.CritSectionOk.main:([Ljava/lang/String;)V bytecode-index 13
+  Null pointer check
+  !((struct java.lang.Thread *)anonlocal::2a == null)
+
+Property java::ThreadSafety.CritSectionOk.<clinit>:()V.array-create-negative-size.1:
+  file ThreadSafety/CritSectionOk.java line 5 function java::ThreadSafety.CritSectionOk.<clinit>:()V bytecode-index 1
+  Array size should be >= 0
+  2 >= 0
+
+Property java::ThreadSafety.CritSectionOk.<clinit>:()V.null-pointer-exception.1:
+  file ThreadSafety/CritSectionOk.java line 5 function java::ThreadSafety.CritSectionOk.<clinit>:()V bytecode-index 5
+  Null pointer check
+  !(newarray_tmp0 == null)
+
+Property java::ThreadSafety.CritSectionOk.<clinit>:()V.array-index-out-of-bounds-low.1:
+  file ThreadSafety/CritSectionOk.java line 5 function java::ThreadSafety.CritSectionOk.<clinit>:()V bytecode-index 5
+  Array index should be >= 0
+  0 >= 0
+
+Property java::ThreadSafety.CritSectionOk.<clinit>:()V.array-index-out-of-bounds-high.1:
+  file ThreadSafety/CritSectionOk.java line 5 function java::ThreadSafety.CritSectionOk.<clinit>:()V bytecode-index 5
+  Array index should be < length
+  0 < newarray_tmp0->length
+
+Property java::ThreadSafety.CritSectionOk.<clinit>:()V.null-pointer-exception.2:
+  file ThreadSafety/CritSectionOk.java line 5 function java::ThreadSafety.CritSectionOk.<clinit>:()V bytecode-index 9
+  Null pointer check
+  !(newarray_tmp0 == null)
+
+Property java::ThreadSafety.CritSectionOk.<clinit>:()V.array-index-out-of-bounds-low.2:
+  file ThreadSafety/CritSectionOk.java line 5 function java::ThreadSafety.CritSectionOk.<clinit>:()V bytecode-index 9
+  Array index should be >= 0
+  1 >= 0
+
+Property java::ThreadSafety.CritSectionOk.<clinit>:()V.array-index-out-of-bounds-high.2:
+  file ThreadSafety/CritSectionOk.java line 5 function java::ThreadSafety.CritSectionOk.<clinit>:()V bytecode-index 9
+  Array index should be < length
+  1 < newarray_tmp0->length
+
+Property java::java.lang.Thread.<init>:()V.null-pointer-exception.1:
+  file java/lang/Thread.java line 399 function java::java.lang.Thread.<init>:()V bytecode-index 1
+  Null pointer check
+  !(&this->@java.lang.Object == null)
+
+Property java::java.lang.Thread.<init>:()V.null-pointer-exception.2:
+  file java/lang/Thread.java line 400 function java::java.lang.Thread.<init>:()V bytecode-index 4
+  Null pointer check
+  !(this == null)
+
+Property java::java.lang.Thread.<init>:()V.null-pointer-exception.3:
+  file java/lang/Thread.java line 401 function java::java.lang.Thread.<init>:()V bytecode-index 7
+  Null pointer check
+  !(this == null)
+
+Property java::java.lang.Throwable.<init>:()V.null-pointer-exception.1:
+  file java/lang/Throwable.java line 264 function java::java.lang.Throwable.<init>:()V bytecode-index 1
+  Null pointer check
+  !(&this->@java.lang.Object == null)
+
+Property java::java.lang.Throwable.<init>:()V.null-pointer-exception.2:
+  file java/lang/Throwable.java line 201 function java::java.lang.Throwable.<init>:()V bytecode-index 4
+  Null pointer check
+  !(this == null)
+
+Property java::java.lang.Throwable.<init>:()V.null-pointer-exception.3:
+  file java/lang/Throwable.java line 266 function java::java.lang.Throwable.<init>:()V bytecode-index 7
+  Null pointer check
+  !(this == null)
+
+Property array-create-negative-size.1:
+  
+  Array size should be >= 0
+  this->length >= 0
+
+Property java::java.lang.Class.getName:()Ljava/lang/String;.null-pointer-exception.1:
+  file java/lang/Class.java line 158 function java::java.lang.Class.getName:()Ljava/lang/String; bytecode-index 2
+  Null pointer check
+  !(this == null)
+
+Property java::java.lang.Class.getClassLoader:()Ljava/lang/ClassLoader;.null-pointer-exception.1:
+  file java/lang/Class.java line 191 function java::java.lang.Class.getClassLoader:()Ljava/lang/ClassLoader; bytecode-index 1
+  Null pointer check
+  !(this == null)
+
+Property java::java.lang.Class.desiredAssertionStatus:()Z.null-pointer-exception.1:
+  file java/lang/Class.java line 421 function java::java.lang.Class.desiredAssertionStatus:()Z bytecode-index 1
+  Null pointer check
+  !(this == null)
+
+Property java::java.lang.Class.desiredAssertionStatus:()Z.null-pointer-exception.2:
+  file java/lang/Class.java line 428 function java::java.lang.Class.desiredAssertionStatus:()Z bytecode-index 11
+  Null pointer check
+  !(loader == null)
+
+Property java::java.lang.Class.desiredAssertionStatus:()Z.null-pointer-exception.3:
+  file java/lang/Class.java line 429 function java::java.lang.Class.desiredAssertionStatus:()Z bytecode-index 15
+  Null pointer check
+  !(loader == null)
+
+Property java::java.lang.Class.desiredAssertionStatus:()Z.null-pointer-exception.4:
+  file java/lang/Class.java line 430 function java::java.lang.Class.desiredAssertionStatus:()Z bytecode-index 18
+  Null pointer check
+  !(this == null)
+
+Property java::java.lang.Class.desiredAssertionStatus:()Z.null-pointer-exception.5:
+  file java/lang/Class.java line 430 function java::java.lang.Class.desiredAssertionStatus:()Z bytecode-index 19
+  Null pointer check
+  !(loader == null)
+
+Property java::java.lang.Class.desiredAssertionStatus:()Z.null-pointer-exception.6:
+  file java/lang/Class.java line 432 function java::java.lang.Class.desiredAssertionStatus:()Z bytecode-index 30
+  Null pointer check
+  !(anonlocal::3a == null)
+
+Property java::java.lang.Class.cproverNondetInitialize:()V.null-pointer-exception.1:
+  file java/lang/Class.java line 454 function java::java.lang.Class.cproverNondetInitialize:()V bytecode-index 2
+  Null pointer check
+  !(this == null)
+
+Property java::java.lang.Class.cproverNondetInitialize:()V.null-pointer-exception.2:
+  file java/lang/Class.java line 455 function java::java.lang.Class.cproverNondetInitialize:()V bytecode-index 9
+  Null pointer check
+  !(this == null)
+
+Property java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V.null-pointer-exception.1:
+  file java/lang/Class.java line 473 function java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V bytecode-index 2
+  Null pointer check
+  !(this == null)
+
+Property java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V.null-pointer-exception.2:
+  file java/lang/Class.java line 474 function java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V bytecode-index 5
+  Null pointer check
+  !(this == null)
+
+Property java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V.null-pointer-exception.3:
+  file java/lang/Class.java line 475 function java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V bytecode-index 8
+  Null pointer check
+  !(this == null)
+
+Property java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V.null-pointer-exception.4:
+  file java/lang/Class.java line 476 function java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V bytecode-index 11
+  Null pointer check
+  !(this == null)
+
+Property java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V.null-pointer-exception.5:
+  file java/lang/Class.java line 477 function java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V bytecode-index 14
+  Null pointer check
+  !(this == null)
+
+Property java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V.null-pointer-exception.6:
+  file java/lang/Class.java line 478 function java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V bytecode-index 17
+  Null pointer check
+  !(this == null)
+
+Property java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V.null-pointer-exception.7:
+  file java/lang/Class.java line 479 function java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V bytecode-index 20
+  Null pointer check
+  !(this == null)
+
+Property java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V.null-pointer-exception.8:
+  file java/lang/Class.java line 480 function java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V bytecode-index 23
+  Null pointer check
+  !(this == null)
+
+Property java::java.lang.Error.<init>:()V.null-pointer-exception.1:
+  file java/lang/Error.java line 58 function java::java.lang.Error.<init>:()V bytecode-index 1
+  Null pointer check
+  !(&this->@java.lang.Throwable == null)
+
+Property java::java.lang.AssertionError.<init>:()V.null-pointer-exception.1:
+  file java/lang/AssertionError.java line 49 function java::java.lang.AssertionError.<init>:()V bytecode-index 1
+  Null pointer check
+  !(&this->@java.lang.Error == null)
+
+Property java::ThreadSafety.CritSectionOk$MySafeThread.run:()V.null-pointer-exception.1:
+  file ThreadSafety/CritSectionOk.java line 16 function java::ThreadSafety.CritSectionOk$MySafeThread.run:()V bytecode-index 8
+  Null pointer check
+  !(inCritical == null)
+
+Property java::ThreadSafety.CritSectionOk$MySafeThread.run:()V.null-pointer-exception.2:
+  file ThreadSafety/CritSectionOk.java line 16 function java::ThreadSafety.CritSectionOk$MySafeThread.run:()V bytecode-index 8
+  Null pointer check
+  !(this == null)
+
+Property java::ThreadSafety.CritSectionOk$MySafeThread.run:()V.array-index-out-of-bounds-low.1:
+  file ThreadSafety/CritSectionOk.java line 16 function java::ThreadSafety.CritSectionOk$MySafeThread.run:()V bytecode-index 8
+  Array index should be >= 0
+  this->id >= 0
+
+Property java::ThreadSafety.CritSectionOk$MySafeThread.run:()V.array-index-out-of-bounds-high.1:
+  file ThreadSafety/CritSectionOk.java line 16 function java::ThreadSafety.CritSectionOk$MySafeThread.run:()V bytecode-index 8
+  Array index should be < length
+  this->id < inCritical->length
+
+Property java::ThreadSafety.CritSectionOk$MySafeThread.run:()V.null-pointer-exception.3:
+  file ThreadSafety/CritSectionOk.java line 17 function java::ThreadSafety.CritSectionOk$MySafeThread.run:()V bytecode-index 14
+  Null pointer check
+  !(inCritical == null)
+
+Property java::ThreadSafety.CritSectionOk$MySafeThread.run:()V.array-index-out-of-bounds-low.2:
+  file ThreadSafety/CritSectionOk.java line 17 function java::ThreadSafety.CritSectionOk$MySafeThread.run:()V bytecode-index 14
+  Array index should be >= 0
+  0 >= 0
+
+Property java::ThreadSafety.CritSectionOk$MySafeThread.run:()V.array-index-out-of-bounds-high.2:
+  file ThreadSafety/CritSectionOk.java line 17 function java::ThreadSafety.CritSectionOk$MySafeThread.run:()V bytecode-index 14
+  Array index should be < length
+  0 < inCritical->length
+
+Property java::ThreadSafety.CritSectionOk$MySafeThread.run:()V.null-pointer-exception.4:
+  file ThreadSafety/CritSectionOk.java line 17 function java::ThreadSafety.CritSectionOk$MySafeThread.run:()V bytecode-index 18
+  Null pointer check
+  !(inCritical == null)
+
+Property java::ThreadSafety.CritSectionOk$MySafeThread.run:()V.array-index-out-of-bounds-low.3:
+  file ThreadSafety/CritSectionOk.java line 17 function java::ThreadSafety.CritSectionOk$MySafeThread.run:()V bytecode-index 18
+  Array index should be >= 0
+  1 >= 0
+
+Property java::ThreadSafety.CritSectionOk$MySafeThread.run:()V.array-index-out-of-bounds-high.3:
+  file ThreadSafety/CritSectionOk.java line 17 function java::ThreadSafety.CritSectionOk$MySafeThread.run:()V bytecode-index 18
+  Array index should be < length
+  1 < inCritical->length
+
+Property java::ThreadSafety.CritSectionOk$MySafeThread.run:()V.null-pointer-exception.5:
+  file ThreadSafety/CritSectionOk.java line 17 function java::ThreadSafety.CritSectionOk$MySafeThread.run:()V bytecode-index 21
+  Null pointer check
+  !(new_tmp0 == null)
+
+Property java::ThreadSafety.CritSectionOk$MySafeThread.run:()V.assertion.1:
+  file ThreadSafety/CritSectionOk.java line 17 function java::ThreadSafety.CritSectionOk$MySafeThread.run:()V bytecode-index 22
+  assertion at file ThreadSafety/CritSectionOk.java line 17 function java::ThreadSafety.CritSectionOk$MySafeThread.run:()V bytecode-index 22
+  false
+
+Property java::ThreadSafety.CritSectionOk$MySafeThread.run:()V.null-pointer-exception.6:
+  file ThreadSafety/CritSectionOk.java line 18 function java::ThreadSafety.CritSectionOk$MySafeThread.run:()V bytecode-index 27
+  Null pointer check
+  !(inCritical == null)
+
+Property java::ThreadSafety.CritSectionOk$MySafeThread.run:()V.null-pointer-exception.7:
+  file ThreadSafety/CritSectionOk.java line 18 function java::ThreadSafety.CritSectionOk$MySafeThread.run:()V bytecode-index 27
+  Null pointer check
+  !(this == null)
+
+Property java::ThreadSafety.CritSectionOk$MySafeThread.run:()V.array-index-out-of-bounds-low.4:
+  file ThreadSafety/CritSectionOk.java line 18 function java::ThreadSafety.CritSectionOk$MySafeThread.run:()V bytecode-index 27
+  Array index should be >= 0
+  this->id >= 0
+
+Property java::ThreadSafety.CritSectionOk$MySafeThread.run:()V.array-index-out-of-bounds-high.4:
+  file ThreadSafety/CritSectionOk.java line 18 function java::ThreadSafety.CritSectionOk$MySafeThread.run:()V bytecode-index 27
+  Array index should be < length
+  this->id < inCritical->length
+
+Property java::ThreadSafety.CritSectionOk$MySafeThread.run:()V.null-pointer-exception.8:
+  file ThreadSafety/CritSectionOk.java line 19 function java::ThreadSafety.CritSectionOk$MySafeThread.run:()V bytecode-index 35
+  Null pointer check
+  !(anonlocal::2a == null)
+
+Property java::ThreadSafety.CritSectionOk$MySafeThread.<clinit>:()V.null-pointer-exception.1:
+  file ThreadSafety/CritSectionOk.java line 7 function java::ThreadSafety.CritSectionOk$MySafeThread.<clinit>:()V bytecode-index 1
+  Null pointer check
+  !(&ThreadSafety.CritSectionOk@class_model == null)
+
+Property array-create-negative-size.2:
+  
+  Array size should be >= 0
+  this->length >= 0
+
+Property array-create-negative-size.3:
+  
+  Array size should be >= 0
+  this->length >= 0
+
+Property array-create-negative-size.4:
+  
+  Array size should be >= 0
+  this->length >= 0
+
+Property array-create-negative-size.5:
+  
+  Array size should be >= 0
+  this->length >= 0
+
+Property array-create-negative-size.6:
+  
+  Array size should be >= 0
+  this->length >= 0
+
+Property array-create-negative-size.7:
+  
+  Array size should be >= 0
+  this->length >= 0
+
+Property array-create-negative-size.8:
+  
+  Array size should be >= 0
+  this->length >= 0
+
+Property array-create-negative-size.9:
+  
+  Array size should be >= 0
+  this->length >= 0
+
+Property java::ThreadSafety.CritSectionOk.main:([Ljava/lang/String;)V.1:
+  file ThreadSafety/CritSectionOk.java line 24 function java::ThreadSafety.CritSectionOk.main:([Ljava/lang/String;)V
+  no uncaught exception
+  uncaught_exception' == null
+

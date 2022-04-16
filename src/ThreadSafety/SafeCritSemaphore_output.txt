@@ -1,8 +1,0 @@
-JBMC version 5.54.0 (cbmc-5.54.0) 64-bit x86_64 linux
-Parsing ...
-Trying to load Java main class: ThreadSafety.SafeCritSemaphore
-Found Java main class: ThreadSafety.SafeCritSemaphore
-Converting
-Java: added 2264 String or Class constant symbols
-Generating GOTO Program
-Running GOTO functions transformation passes

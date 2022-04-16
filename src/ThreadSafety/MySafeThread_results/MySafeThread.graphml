@@ -1,0 +1,1944 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <key attr.name="originFileName" attr.type="string" for="edge" id="originfile">
+    <default>&lt;command-line&gt;</default>
+  </key>
+  <key attr.name="invariant" attr.type="string" for="node" id="invariant"/>
+  <key attr.name="invariant.scope" attr.type="string" for="node" id="invariant.scope"/>
+  <key attr.name="isViolationNode" attr.type="boolean" for="node" id="violation">
+    <default>false</default>
+  </key>
+  <key attr.name="isEntryNode" attr.type="boolean" for="node" id="entry">
+    <default>false</default>
+  </key>
+  <key attr.name="isSinkNode" attr.type="boolean" for="node" id="sink">
+    <default>false</default>
+  </key>
+  <key attr.name="enterLoopHead" attr.type="boolean" for="edge" id="enterLoopHead">
+    <default>false</default>
+  </key>
+  <key attr.name="cyclehead" attr.type="boolean" for="node" id="cyclehead">
+    <default>false</default>
+  </key>
+  <key attr.name="threadId" attr.type="int" for="edge" id="threadId">
+    <default>0</default>
+  </key>
+  <key attr.name="createThread" attr.type="int" for="edge" id="createThread">
+    <default>0</default>
+  </key>
+  <key attr.name="sourcecodeLanguage" attr.type="string" for="graph" id="sourcecodelang"/>
+  <key attr.name="programFile" attr.type="string" for="graph" id="programfile"/>
+  <key attr.name="programHash" attr.type="string" for="graph" id="programhash"/>
+  <key attr.name="specification" attr.type="string" for="graph" id="specification"/>
+  <key attr.name="architecture" attr.type="string" for="graph" id="architecture"/>
+  <key attr.name="producer" attr.type="string" for="graph" id="producer"/>
+  <key attr.name="creationtime" attr.type="string" for="graph" id="creationtime"/>
+  <key attr.name="startline" attr.type="int" for="edge" id="startline"/>
+  <key attr.name="control" attr.type="string" for="edge" id="control"/>
+  <key attr.name="assumption" attr.type="string" for="edge" id="assumption"/>
+  <key attr.name="assumption.resultfunction" attr.type="string" for="edge" id="assumption.resultfunction"/>
+  <key attr.name="assumption.scope" attr.type="string" for="edge" id="assumption.scope"/>
+  <key attr.name="enterFunction" attr.type="string" for="edge" id="enterFunction"/>
+  <key attr.name="returnFromFunction" attr.type="string" for="edge" id="returnFrom"/>
+  <key attr.name="witness-type" attr.type="string" for="graph" id="witness-type"/>
+  <graph edgedefault="directed">
+    <data key="sourcecodelang">C</data>
+    <node id="sink"/>
+    <node id="582.99">
+      <data key="entry">true</data>
+    </node>
+    <edge source="582.99" target="585.101">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">473</data>
+    </edge>
+    <node id="585.101">
+      <data key="invariant">MySafeThread@class_model.name = &amp;MySafeThread;</data>
+      <data key="invariant.scope">java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V</data>
+    </node>
+    <edge source="585.101" target="588.103">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">474</data>
+    </edge>
+    <node id="588.103">
+      <data key="invariant">MySafeThread@class_model.cproverIsAnnotation = false;</data>
+      <data key="invariant.scope">java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V</data>
+    </node>
+    <edge source="588.103" target="591.105">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">475</data>
+    </edge>
+    <node id="591.105">
+      <data key="invariant">MySafeThread@class_model.cproverIsArray = false;</data>
+      <data key="invariant.scope">java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V</data>
+    </node>
+    <edge source="591.105" target="594.107">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">476</data>
+    </edge>
+    <node id="594.107">
+      <data key="invariant">MySafeThread@class_model.cproverIsInterface = false;</data>
+      <data key="invariant.scope">java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V</data>
+    </node>
+    <edge source="594.107" target="597.109">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">477</data>
+    </edge>
+    <node id="597.109">
+      <data key="invariant">MySafeThread@class_model.cproverIsSynthetic = false;</data>
+      <data key="invariant.scope">java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V</data>
+    </node>
+    <edge source="597.109" target="600.111">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">478</data>
+    </edge>
+    <node id="600.111">
+      <data key="invariant">MySafeThread@class_model.cproverIsLocalClass = isLocalClass;</data>
+      <data key="invariant.scope">java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V</data>
+    </node>
+    <edge source="600.111" target="603.113">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">479</data>
+    </edge>
+    <node id="603.113">
+      <data key="invariant">MySafeThread@class_model.cproverIsMemberClass = isMemberClass;</data>
+      <data key="invariant.scope">java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V</data>
+    </node>
+    <edge source="603.113" target="864.168">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">480</data>
+    </edge>
+    <node id="864.168">
+      <data key="invariant">MySafeThread@class_model.cproverIsEnum = false;</data>
+      <data key="invariant.scope">java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V</data>
+    </node>
+    <edge source="864.168" target="865.183">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">21</data>
+    </edge>
+    <node id="864.170"/>
+    <node id="864.172"/>
+    <node id="864.174"/>
+    <node id="864.176"/>
+    <node id="864.178"/>
+    <node id="864.180"/>
+    <node id="865.183">
+      <data key="invariant">dynamic_object1 = nondet_symbol(symex::nondet3);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="865.183" target="868.199">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">21</data>
+    </edge>
+    <node id="865.185"/>
+    <node id="865.187"/>
+    <node id="865.189"/>
+    <node id="865.191"/>
+    <node id="865.193"/>
+    <node id="868.199">
+      <data key="invariant">dynamic_object1.@java.lang.Object.@class_identifier = "java::array[reference]";</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="868.199" target="871.203">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">21</data>
+    </edge>
+    <node id="871.203">
+      <data key="invariant">dynamic_object1.length = nondet_array_length;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="871.203" target="872.204">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">21</data>
+    </edge>
+    <node id="872.204">
+      <data key="invariant">dynamic_object1.data = (void **)dynamic_2_array;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="872.204" target="884.239">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">21</data>
+    </edge>
+    <node id="872.206"/>
+    <node id="872.208"/>
+    <node id="872.210"/>
+    <node id="872.212"/>
+    <node id="872.214"/>
+    <node id="884.239">
+      <data key="invariant">dynamic_2_array = ARRAY_OF(null);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="884.239" target="890.253">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">21</data>
+    </edge>
+    <node id="890.253">
+      <data key="invariant">dynamic_object4 = nondet_symbol(symex::nondet7);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="890.253" target="884.280">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">21</data>
+    </edge>
+    <node id="884.280">
+      <data key="invariant">dynamic_object3.@java.lang.Object.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="884.280" target="890.294">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">21</data>
+    </edge>
+    <node id="890.294">
+      <data key="invariant">dynamic_object6 = nondet_symbol(symex::nondet11);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="890.294" target="884.321">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">21</data>
+    </edge>
+    <node id="884.321">
+      <data key="invariant">dynamic_object5.@java.lang.Object.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="884.321" target="890.335">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">21</data>
+    </edge>
+    <node id="890.335">
+      <data key="invariant">dynamic_object8 = nondet_symbol(symex::nondet15);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="890.335" target="884.362">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">21</data>
+    </edge>
+    <node id="884.362">
+      <data key="invariant">dynamic_object7.@java.lang.Object.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="884.362" target="890.376">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">21</data>
+    </edge>
+    <node id="890.376">
+      <data key="invariant">dynamic_object10 = nondet_symbol(symex::nondet19);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="890.376" target="884.403">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">21</data>
+    </edge>
+    <node id="884.403">
+      <data key="invariant">dynamic_object9.@java.lang.Object.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="884.403" target="890.417">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">21</data>
+    </edge>
+    <node id="890.417">
+      <data key="invariant">dynamic_object12 = nondet_symbol(symex::nondet23);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="890.417" target="898.538">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">21</data>
+    </edge>
+    <node id="898.538">
+      <data key="invariant">dynamic_object11.@java.lang.Object.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="898.538" target="218.544">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">21</data>
+    </edge>
+    <node id="218.544">
+      <data key="invariant">arg0a = &amp;dynamic_object1;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="218.544" target="219.555">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">21</data>
+    </edge>
+    <node id="218.546"/>
+    <node id="218.548"/>
+    <node id="218.550"/>
+    <node id="218.552"/>
+    <node id="219.555">
+      <data key="invariant">dynamic_object13 = nondet_symbol(symex::nondet24);</data>
+      <data key="invariant.scope">java::MySafeThread.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="219.555" target="220.563">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">21</data>
+    </edge>
+    <node id="219.557"/>
+    <node id="219.559"/>
+    <node id="219.561"/>
+    <node id="220.563">
+      <data key="invariant">dynamic_object13.@java.lang.Object.@class_identifier = "java::array[boolean]";</data>
+      <data key="invariant.scope">java::MySafeThread.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="220.563" target="223.567">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">21</data>
+    </edge>
+    <node id="223.567">
+      <data key="invariant">dynamic_object13.length = 2;</data>
+      <data key="invariant.scope">java::MySafeThread.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="223.567" target="224.568">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">21</data>
+    </edge>
+    <node id="224.568">
+      <data key="invariant">dynamic_object13.data = dynamic_14_array;</data>
+      <data key="invariant.scope">java::MySafeThread.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="224.568" target="344.592">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">21</data>
+    </edge>
+    <node id="224.570"/>
+    <node id="224.572"/>
+    <node id="344.592">
+      <data key="invariant">dynamic_14_array = ARRAY_OF(false);</data>
+      <data key="invariant.scope">java::MySafeThread.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="344.592" target="31.597">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">2</data>
+    </edge>
+    <node id="31.597">
+      <data key="invariant">this = &amp;MySafeThread@class_model;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="31.597" target="530.602">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">421</data>
+    </edge>
+    <node id="530.602">
+      <data key="invariant">this = &amp;MySafeThread@class_model;</data>
+      <data key="invariant.scope">java::java.lang.Class.desiredAssertionStatus:()Z</data>
+    </node>
+    <edge source="530.602" target="533.606">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">191</data>
+    </edge>
+    <node id="533.606">
+      <data key="invariant">this = &amp;MySafeThread@class_model;</data>
+      <data key="invariant.scope">java::java.lang.Class.getClassLoader:()Ljava/lang/ClassLoader;</data>
+    </node>
+    <edge source="533.606" target="534.607">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">191</data>
+    </edge>
+    <node id="534.607">
+      <data key="invariant">cl = null;</data>
+      <data key="invariant.scope">java::java.lang.Class.getClassLoader:()Ljava/lang/ClassLoader;</data>
+    </node>
+    <edge source="534.607" target="34.612">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">192</data>
+    </edge>
+    <node id="34.612"/>
+    <edge source="34.612" target="35.613">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">421</data>
+    </edge>
+    <node id="35.613">
+      <data key="invariant">loader = null;</data>
+      <data key="invariant.scope">java::java.lang.Class.desiredAssertionStatus:()Z</data>
+    </node>
+    <edge source="35.613" target="40.617">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">423</data>
+    </edge>
+    <node id="40.617"/>
+    <edge source="40.617" target="345.624">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">424</data>
+    </edge>
+    <node id="345.624">
+      <data key="invariant">clazz = &amp;MySafeThread@class_model;</data>
+      <data key="invariant.scope">java::java.lang.Class.desiredAssertionStatus:()Z</data>
+    </node>
+    <edge source="345.624" target="361.637">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">2</data>
+    </edge>
+    <node id="361.637"/>
+    <edge source="361.637" target="367.639">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">2</data>
+    </edge>
+    <node id="367.639"/>
+    <edge source="367.639" target="369.646">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">2</data>
+    </edge>
+    <node id="369.646">
+      <data key="invariant">$assertionsDisabled = false;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="369.646" target="375.648">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">3</data>
+    </edge>
+    <node id="375.648"/>
+    <edge source="375.648" target="378.649">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">3</data>
+    </edge>
+    <node id="378.649">
+      <data key="invariant">inCrit = 0;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="378.649" target="379.660">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="378.651"/>
+    <node id="378.653"/>
+    <node id="378.655"/>
+    <node id="378.657"/>
+    <node id="379.660">
+      <data key="invariant">dynamic_object15 = nondet_symbol(symex::nondet25);</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="379.660" target="380.668">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="379.662"/>
+    <node id="379.664"/>
+    <node id="379.666"/>
+    <node id="380.668">
+      <data key="invariant">dynamic_object15.@java.lang.Object.@class_identifier = "java::array[boolean]";</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="380.668" target="383.672">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="383.672">
+      <data key="invariant">dynamic_object15.length = 2;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="383.672" target="384.673">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="384.673">
+      <data key="invariant">dynamic_object15.data = dynamic_16_array;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="384.673" target="391.679">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="384.675"/>
+    <node id="384.677"/>
+    <node id="391.679">
+      <data key="invariant">dynamic_16_array = ARRAY_OF(false);</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="391.679" target="398.681">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="398.681">
+      <data key="invariant">dynamic_16_array[0L] = false;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="398.681" target="400.688">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="400.688">
+      <data key="invariant">dynamic_16_array[1L] = false;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="400.688" target="407.690">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="407.690"/>
+    <edge source="407.690" target="408.691">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="408.691">
+      <data key="invariant">inCritical = &amp;dynamic_object15;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="408.691" target="409.698">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">5</data>
+    </edge>
+    <node id="408.693"/>
+    <node id="408.695"/>
+    <node id="409.698">
+      <data key="invariant">dynamic_object17 = nondet_symbol(symex::nondet26);</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="409.698" target="412.703">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">5</data>
+    </edge>
+    <node id="409.700"/>
+    <node id="412.703">
+      <data key="invariant">dynamic_object17.@class_identifier = "java::java.lang.Object";</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="412.703" target="117.705">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">5</data>
+    </edge>
+    <node id="117.705">
+      <data key="invariant">this = &amp;dynamic_object17;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="117.705" target="414.713">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">40</data>
+    </edge>
+    <node id="414.713">
+      <data key="invariant">dynamic_object17.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">java::java.lang.Object.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="414.713" target="421.715">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">5</data>
+    </edge>
+    <node id="421.715"/>
+    <edge source="421.715" target="226.723">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">5</data>
+    </edge>
+    <node id="226.723">
+      <data key="invariant">lock = &amp;dynamic_object17;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="226.723" target="234.725">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">21</data>
+    </edge>
+    <node id="234.725"/>
+    <edge source="234.725" target="236.732">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">21</data>
+    </edge>
+    <node id="236.732">
+      <data key="invariant">inCritical = &amp;dynamic_object13;</data>
+      <data key="invariant.scope">java::MySafeThread.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="236.732" target="250.734">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">22</data>
+    </edge>
+    <node id="250.734"/>
+    <edge source="250.734" target="252.741">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">22</data>
+    </edge>
+    <node id="252.741">
+      <data key="invariant">dynamic_14_array[0L] = false;</data>
+      <data key="invariant.scope">java::MySafeThread.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="252.741" target="266.743">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">23</data>
+    </edge>
+    <node id="266.743"/>
+    <edge source="266.743" target="268.750">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">23</data>
+    </edge>
+    <node id="268.750">
+      <data key="invariant">dynamic_14_array[1L] = false;</data>
+      <data key="invariant.scope">java::MySafeThread.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="268.750" target="276.751">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">24</data>
+    </edge>
+    <node id="276.751"/>
+    <edge source="276.751" target="277.764">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">24</data>
+    </edge>
+    <node id="276.753"/>
+    <node id="276.755"/>
+    <node id="276.757"/>
+    <node id="276.759"/>
+    <node id="276.761"/>
+    <node id="277.764">
+      <data key="invariant">dynamic_object18 = nondet_symbol(symex::nondet27);</data>
+      <data key="invariant.scope">java::MySafeThread.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="277.764" target="280.775">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">24</data>
+    </edge>
+    <node id="277.766"/>
+    <node id="277.768"/>
+    <node id="277.770"/>
+    <node id="277.772"/>
+    <node id="280.775">
+      <data key="invariant">dynamic_object18.@java.lang.Thread.@java.lang.Object.@class_identifier = "java::MySafeThread";</data>
+      <data key="invariant.scope">java::MySafeThread.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="280.775" target="21.779">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">24</data>
+    </edge>
+    <node id="280.776"/>
+    <node id="21.779">
+      <data key="invariant">this = &amp;dynamic_object18;</data>
+      <data key="invariant.scope">java::MySafeThread.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="21.779" target="3.783">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">6</data>
+    </edge>
+    <node id="3.783">
+      <data key="invariant">this = (struct java.lang.Thread *)&amp;dynamic_object18;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;init&gt;:(I)V</data>
+    </node>
+    <edge source="3.783" target="117.785">
+      <data key="originfile">java/lang/Thread.java</data>
+      <data key="startline">399</data>
+    </edge>
+    <node id="117.785">
+      <data key="invariant">this = (struct java.lang.Object *)&amp;dynamic_object18;</data>
+      <data key="invariant.scope">java::java.lang.Thread.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="117.785" target="6.788">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">40</data>
+    </edge>
+    <node id="6.788">
+      <data key="invariant">dynamic_object18.@java.lang.Thread.@java.lang.Object.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">java::java.lang.Object.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="6.788" target="613.795">
+      <data key="originfile">java/lang/Thread.java</data>
+      <data key="startline">400</data>
+    </edge>
+    <node id="613.795">
+      <data key="invariant">dynamic_object18.@java.lang.Thread.target = (struct java.lang.Runnable *)&amp;dynamic_object18;</data>
+      <data key="invariant.scope">java::java.lang.Thread.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="613.795" target="614.796">
+      <data key="originfile">java/lang/Thread.java</data>
+      <data key="startline">208</data>
+    </edge>
+    <node id="614.796">
+      <data key="invariant">threadSeqNumber = 1L;</data>
+      <data key="invariant.scope">java::java.lang.Thread.nextThreadID:()J</data>
+    </node>
+    <edge source="614.796" target="12.803">
+      <data key="originfile">java/lang/Thread.java</data>
+      <data key="startline">208</data>
+    </edge>
+    <node id="12.803">
+      <data key="invariant">result = 1L;</data>
+      <data key="invariant.scope">java::java.lang.Thread.nextThreadID:()J</data>
+    </node>
+    <edge source="12.803" target="24.806">
+      <data key="originfile">java/lang/Thread.java</data>
+      <data key="startline">401</data>
+    </edge>
+    <node id="24.806">
+      <data key="invariant">dynamic_object18.@java.lang.Thread.tid = 1L;</data>
+      <data key="invariant.scope">java::java.lang.Thread.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="24.806" target="281.808">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">7</data>
+    </edge>
+    <node id="281.808">
+      <data key="invariant">dynamic_object18.id = 0;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;init&gt;:(I)V</data>
+    </node>
+    <edge source="281.808" target="283.815">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">24</data>
+    </edge>
+    <node id="283.815">
+      <data key="invariant">anonlocal::1a = (void *)&amp;dynamic_object18;</data>
+      <data key="invariant.scope">java::MySafeThread.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="283.815" target="291.816">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">25</data>
+    </edge>
+    <node id="291.816"/>
+    <edge source="291.816" target="292.829">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">25</data>
+    </edge>
+    <node id="291.818"/>
+    <node id="291.820"/>
+    <node id="291.822"/>
+    <node id="291.824"/>
+    <node id="291.826"/>
+    <node id="292.829">
+      <data key="invariant">dynamic_object19 = nondet_symbol(symex::nondet28);</data>
+      <data key="invariant.scope">java::MySafeThread.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="292.829" target="295.840">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">25</data>
+    </edge>
+    <node id="292.831"/>
+    <node id="292.833"/>
+    <node id="292.835"/>
+    <node id="292.837"/>
+    <node id="295.840">
+      <data key="invariant">dynamic_object19.@java.lang.Thread.@java.lang.Object.@class_identifier = "java::MySafeThread";</data>
+      <data key="invariant.scope">java::MySafeThread.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="295.840" target="21.844">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">25</data>
+    </edge>
+    <node id="295.841"/>
+    <node id="21.844">
+      <data key="invariant">this = &amp;dynamic_object19;</data>
+      <data key="invariant.scope">java::MySafeThread.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="21.844" target="3.848">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">6</data>
+    </edge>
+    <node id="3.848">
+      <data key="invariant">this = (struct java.lang.Thread *)&amp;dynamic_object19;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;init&gt;:(I)V</data>
+    </node>
+    <edge source="3.848" target="117.850">
+      <data key="originfile">java/lang/Thread.java</data>
+      <data key="startline">399</data>
+    </edge>
+    <node id="117.850">
+      <data key="invariant">this = (struct java.lang.Object *)&amp;dynamic_object19;</data>
+      <data key="invariant.scope">java::java.lang.Thread.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="117.850" target="6.853">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">40</data>
+    </edge>
+    <node id="6.853">
+      <data key="invariant">dynamic_object19.@java.lang.Thread.@java.lang.Object.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">java::java.lang.Object.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="6.853" target="613.860">
+      <data key="originfile">java/lang/Thread.java</data>
+      <data key="startline">400</data>
+    </edge>
+    <node id="613.860">
+      <data key="invariant">dynamic_object19.@java.lang.Thread.target = (struct java.lang.Runnable *)&amp;dynamic_object19;</data>
+      <data key="invariant.scope">java::java.lang.Thread.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="613.860" target="614.861">
+      <data key="originfile">java/lang/Thread.java</data>
+      <data key="startline">208</data>
+    </edge>
+    <node id="614.861">
+      <data key="invariant">threadSeqNumber = 2L;</data>
+      <data key="invariant.scope">java::java.lang.Thread.nextThreadID:()J</data>
+    </node>
+    <edge source="614.861" target="12.868">
+      <data key="originfile">java/lang/Thread.java</data>
+      <data key="startline">208</data>
+    </edge>
+    <node id="12.868">
+      <data key="invariant">result = 2L;</data>
+      <data key="invariant.scope">java::java.lang.Thread.nextThreadID:()J</data>
+    </node>
+    <edge source="12.868" target="24.871">
+      <data key="originfile">java/lang/Thread.java</data>
+      <data key="startline">401</data>
+    </edge>
+    <node id="24.871">
+      <data key="invariant">dynamic_object19.@java.lang.Thread.tid = 2L;</data>
+      <data key="invariant.scope">java::java.lang.Thread.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="24.871" target="296.873">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">7</data>
+    </edge>
+    <node id="296.873">
+      <data key="invariant">dynamic_object19.id = 1;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;init&gt;:(I)V</data>
+    </node>
+    <edge source="296.873" target="299.876">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">25</data>
+    </edge>
+    <node id="299.876">
+      <data key="invariant">anonlocal::2a = (void *)&amp;dynamic_object19;</data>
+      <data key="invariant.scope">java::MySafeThread.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="299.876" target="300.902">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">26</data>
+    </edge>
+    <node id="300.902">
+      <data key="invariant">this = (struct java.lang.Thread *)&amp;dynamic_object18;</data>
+      <data key="invariant.scope">java::MySafeThread.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="300.902" target="310.905">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">26</data>
+    </edge>
+    <node id="310.905"/>
+    <edge source="310.905" target="311.931">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">27</data>
+    </edge>
+    <node id="311.931">
+      <data key="invariant">this = (struct java.lang.Thread *)&amp;dynamic_object19;</data>
+      <data key="invariant.scope">java::MySafeThread.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="311.931" target="324.934">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">27</data>
+    </edge>
+    <node id="324.934"/>
+    <edge source="324.934" target="328.938">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">29</data>
+    </edge>
+    <node id="328.938">
+      <data key="invariant">this = &amp;dynamic_object18;</data>
+      <data key="invariant.scope">java::MySafeThread.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="328.938" target="899.943">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">30</data>
+    </edge>
+    <node id="899.943">
+      <data key="invariant">this = &amp;dynamic_object19;</data>
+      <data key="invariant.scope">java::MySafeThread.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="899.943" target="630.956">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">21</data>
+    </edge>
+    <node id="630.956"/>
+    <edge source="630.956" target="635.962">
+      <data key="originfile">java/lang/Thread.java</data>
+      <data key="startline">663</data>
+    </edge>
+    <node id="635.962"/>
+    <edge source="635.962" target="636.966">
+      <data key="originfile">java/lang/Thread.java</data>
+      <data key="startline">663</data>
+    </edge>
+    <node id="636.966"/>
+    <edge source="636.966" target="638.972">
+      <data key="originfile">java/lang/Thread.java</data>
+      <data key="startline">663</data>
+    </edge>
+    <node id="638.972">
+      <data key="invariant">this = (struct java.lang.Thread *)this_argument;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="638.972" target="344.1005">
+      <data key="originfile">java/lang/Thread.java</data>
+      <data key="startline">663</data>
+    </edge>
+    <node id="344.1005">
+      <data key="invariant">this = (struct MySafeThread *)this_argument;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="344.1005" target="31.1010">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">2</data>
+    </edge>
+    <node id="31.1010">
+      <data key="invariant">this = &amp;MySafeThread@class_model;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="31.1010" target="530.1015">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">421</data>
+    </edge>
+    <node id="530.1015">
+      <data key="invariant">this = &amp;MySafeThread@class_model;</data>
+      <data key="invariant.scope">java::java.lang.Class.desiredAssertionStatus:()Z</data>
+    </node>
+    <edge source="530.1015" target="533.1019">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">191</data>
+    </edge>
+    <node id="533.1019">
+      <data key="invariant">this = &amp;MySafeThread@class_model;</data>
+      <data key="invariant.scope">java::java.lang.Class.getClassLoader:()Ljava/lang/ClassLoader;</data>
+    </node>
+    <edge source="533.1019" target="534.1020">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">191</data>
+    </edge>
+    <node id="534.1020">
+      <data key="invariant">cl = null;</data>
+      <data key="invariant.scope">java::java.lang.Class.getClassLoader:()Ljava/lang/ClassLoader;</data>
+    </node>
+    <edge source="534.1020" target="34.1025">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">192</data>
+    </edge>
+    <node id="34.1025"/>
+    <edge source="34.1025" target="35.1026">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">421</data>
+    </edge>
+    <node id="35.1026">
+      <data key="invariant">loader = null;</data>
+      <data key="invariant.scope">java::java.lang.Class.desiredAssertionStatus:()Z</data>
+    </node>
+    <edge source="35.1026" target="40.1030">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">423</data>
+    </edge>
+    <node id="40.1030"/>
+    <edge source="40.1030" target="345.1037">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">424</data>
+    </edge>
+    <node id="345.1037">
+      <data key="invariant">clazz = &amp;MySafeThread@class_model;</data>
+      <data key="invariant.scope">java::java.lang.Class.desiredAssertionStatus:()Z</data>
+    </node>
+    <edge source="345.1037" target="361.1050">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">2</data>
+    </edge>
+    <node id="361.1050"/>
+    <edge source="361.1050" target="367.1052">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">2</data>
+    </edge>
+    <node id="367.1052"/>
+    <edge source="367.1052" target="369.1059">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">2</data>
+    </edge>
+    <node id="369.1059">
+      <data key="invariant">$assertionsDisabled = false;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="369.1059" target="375.1061">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">3</data>
+    </edge>
+    <node id="375.1061"/>
+    <edge source="375.1061" target="378.1062">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">3</data>
+    </edge>
+    <node id="378.1062">
+      <data key="invariant">inCrit = 0;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="378.1062" target="379.1073">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="378.1064"/>
+    <node id="378.1066"/>
+    <node id="378.1068"/>
+    <node id="378.1070"/>
+    <node id="379.1073">
+      <data key="invariant">dynamic_object20 = nondet_symbol(symex::nondet29);</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="379.1073" target="380.1081">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="379.1075"/>
+    <node id="379.1077"/>
+    <node id="379.1079"/>
+    <node id="380.1081">
+      <data key="invariant">dynamic_object20.@java.lang.Object.@class_identifier = "java::array[boolean]";</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="380.1081" target="383.1085">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="383.1085">
+      <data key="invariant">dynamic_object20.length = 2;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="383.1085" target="384.1086">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="384.1086">
+      <data key="invariant">dynamic_object20.data = dynamic_21_array;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="384.1086" target="389.1092">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="384.1088"/>
+    <node id="384.1090"/>
+    <node id="389.1092">
+      <data key="invariant">dynamic_21_array = ARRAY_OF(false);</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="389.1092" target="391.1098">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="391.1098"/>
+    <edge source="391.1098" target="396.1102">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="396.1102">
+      <data key="invariant">dynamic_21_array[0L] = dynamic_object20.data == dynamic_21_array ? false : dynamic_21_array[0L];</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="396.1102" target="398.1108">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="398.1108"/>
+    <edge source="398.1108" target="400.1117">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="400.1117">
+      <data key="invariant">dynamic_21_array[1L] = POINTER_OBJECT(dynamic_object20.data) == POINTER_OBJECT(&amp;dynamic_21_array) ? false : dynamic_21_array[1L];</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="400.1117" target="407.1119">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="407.1119"/>
+    <edge source="407.1119" target="408.1120">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="408.1120">
+      <data key="invariant">inCritical = &amp;dynamic_object20;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="408.1120" target="409.1127">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">5</data>
+    </edge>
+    <node id="408.1122"/>
+    <node id="408.1124"/>
+    <node id="409.1127">
+      <data key="invariant">dynamic_object22 = nondet_symbol(symex::nondet30);</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="409.1127" target="412.1132">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">5</data>
+    </edge>
+    <node id="409.1129"/>
+    <node id="412.1132">
+      <data key="invariant">dynamic_object22.@class_identifier = "java::java.lang.Object";</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="412.1132" target="117.1134">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">5</data>
+    </edge>
+    <node id="117.1134">
+      <data key="invariant">this = &amp;dynamic_object22;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="117.1134" target="414.1142">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">40</data>
+    </edge>
+    <node id="414.1142">
+      <data key="invariant">dynamic_object22.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">java::java.lang.Object.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="414.1142" target="421.1144">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">5</data>
+    </edge>
+    <node id="421.1144"/>
+    <edge source="421.1144" target="122.1158">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">5</data>
+    </edge>
+    <node id="122.1158">
+      <data key="invariant">lock = &amp;dynamic_object22;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="122.1158" target="126.1160">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">13</data>
+    </edge>
+    <node id="126.1160"/>
+    <edge source="126.1160" target="127.1165">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">13</data>
+    </edge>
+    <node id="127.1165">
+      <data key="invariant">anonlocal::1a = (void *)lock;</data>
+      <data key="invariant.scope">java::MySafeThread.run:()V</data>
+    </node>
+    <edge source="127.1165" target="471.1167">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">13</data>
+    </edge>
+    <node id="471.1167">
+      <data key="invariant">object = lock;</data>
+      <data key="invariant.scope">java::MySafeThread.run:()V</data>
+    </node>
+    <edge source="471.1167" target="486.1169">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">121</data>
+    </edge>
+    <node id="486.1169"/>
+    <edge source="486.1169" target="488.1172">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">127</data>
+    </edge>
+    <node id="488.1172"/>
+    <edge source="488.1172" target="493.1182">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">127</data>
+    </edge>
+    <node id="493.1182"/>
+    <edge source="493.1182" target="495.1183">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">128</data>
+    </edge>
+    <node id="495.1183"/>
+    <edge source="495.1183" target="497.1184">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">128</data>
+    </edge>
+    <node id="497.1184"/>
+    <edge source="497.1184" target="128.1194">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">128</data>
+    </edge>
+    <node id="497.1185"/>
+    <node id="128.1194">
+      <data key="invariant">dynamic_object22.cproverMonitorCount = object == &amp;dynamic_object22 ? (object == &amp;dynamic_object22 ? dynamic_object22.cproverMonitorCount : dynamic_object17.cproverMonitorCount) + 1 : dynamic_object22.cproverMonitorCount;</data>
+      <data key="invariant.scope">java::java.lang.Object.monitorenter:(Ljava/lang/Object;)V</data>
+    </node>
+    <edge source="128.1194" target="133.1201">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">13</data>
+    </edge>
+    <node id="133.1201"/>
+    <edge source="133.1201" target="135.1203">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">14</data>
+    </edge>
+    <node id="135.1203"/>
+    <edge source="135.1203" target="137.1205">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">14</data>
+    </edge>
+    <node id="137.1205"/>
+    <edge source="137.1205" target="139.1207">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">14</data>
+    </edge>
+    <node id="139.1207"/>
+    <edge source="139.1207" target="141.1214">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">14</data>
+    </edge>
+    <node id="141.1214"/>
+    <edge source="141.1214" target="143.1235">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">14</data>
+    </edge>
+    <node id="143.1235"/>
+    <edge source="143.1235" target="145.1256">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">14</data>
+    </edge>
+    <node id="143.1237"/>
+    <node id="143.1239"/>
+    <node id="143.1244"/>
+    <node id="143.1246"/>
+    <node id="143.1248"/>
+    <node id="145.1256">
+      <data key="invariant">dynamic_21_array = POINTER_OBJECT(derefd_pointer) == POINTER_OBJECT(&amp;dynamic_21_array) ? { dynamic_21_array[0L], dynamic_21_array[1L] } WITH [POINTER_OFFSET(derefd_pointer):=true] : { dynamic_21_array[0L], dynamic_21_array[1L] };</data>
+      <data key="invariant.scope">java::MySafeThread.run:()V</data>
+    </node>
+    <edge source="145.1256" target="147.1258">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="147.1258"/>
+    <edge source="147.1258" target="149.1266">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="149.1266"/>
+    <edge source="149.1266" target="151.1268">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="151.1268"/>
+    <edge source="151.1268" target="155.1274">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="155.1274"/>
+    <edge source="155.1274" target="157.1285">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="157.1285"/>
+    <edge source="157.1285" target="159.1293">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="159.1293"/>
+    <edge source="159.1293" target="161.1295">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="161.1295"/>
+    <edge source="161.1295" target="165.1301">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="165.1301"/>
+    <edge source="165.1301" target="167.1317">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="167.1317"/>
+    <edge source="167.1317" target="169.1320">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="169.1320"/>
+    <edge source="169.1320" target="170.1331">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="169.1322"/>
+    <node id="169.1324"/>
+    <node id="169.1326"/>
+    <node id="169.1328"/>
+    <node id="170.1331">
+      <data key="invariant">dynamic_object23 = nondet_symbol(symex::nondet31);</data>
+      <data key="invariant.scope">java::MySafeThread.run:()V</data>
+    </node>
+    <edge source="170.1331" target="173.1340">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="170.1333"/>
+    <node id="170.1335"/>
+    <node id="170.1337"/>
+    <node id="173.1340">
+      <data key="invariant">dynamic_object23.@java.lang.Error.@java.lang.Throwable.@java.lang.Object.@class_identifier = "java::java.lang.AssertionError";</data>
+      <data key="invariant.scope">java::MySafeThread.run:()V</data>
+    </node>
+    <edge source="173.1340" target="17.1343">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="17.1343">
+      <data key="invariant">this = &amp;dynamic_object23;</data>
+      <data key="invariant.scope">java::MySafeThread.run:()V</data>
+    </node>
+    <edge source="17.1343" target="607.1346">
+      <data key="originfile">java/lang/AssertionError.java</data>
+      <data key="startline">49</data>
+    </edge>
+    <node id="607.1346">
+      <data key="invariant">this = (struct java.lang.Error *)&amp;dynamic_object23;</data>
+      <data key="invariant.scope">java::java.lang.AssertionError.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="607.1346" target="450.1349">
+      <data key="originfile">java/lang/Error.java</data>
+      <data key="startline">58</data>
+    </edge>
+    <node id="450.1349">
+      <data key="invariant">this = (struct java.lang.Throwable *)&amp;dynamic_object23;</data>
+      <data key="invariant.scope">java::java.lang.Error.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="450.1349" target="117.1351">
+      <data key="originfile">java/lang/Throwable.java</data>
+      <data key="startline">264</data>
+    </edge>
+    <node id="117.1351">
+      <data key="invariant">this = (struct java.lang.Object *)&amp;dynamic_object23;</data>
+      <data key="invariant.scope">java::java.lang.Throwable.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="117.1351" target="453.1354">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">40</data>
+    </edge>
+    <node id="453.1354">
+      <data key="invariant">dynamic_object23.@java.lang.Error.@java.lang.Throwable.@java.lang.Object.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">java::java.lang.Object.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="453.1354" target="456.1356">
+      <data key="originfile">java/lang/Throwable.java</data>
+      <data key="startline">201</data>
+    </edge>
+    <node id="456.1356">
+      <data key="invariant">dynamic_object23.@java.lang.Error.@java.lang.Throwable.cause = (struct java.lang.Throwable *)&amp;dynamic_object23;</data>
+      <data key="invariant.scope">java::java.lang.Throwable.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="456.1356" target="175.1360">
+      <data key="originfile">java/lang/Throwable.java</data>
+      <data key="startline">266</data>
+    </edge>
+    <node id="175.1360">
+      <data key="invariant">dynamic_object23.@java.lang.Error.@java.lang.Throwable.detailMessage = null;</data>
+      <data key="invariant.scope">java::java.lang.Throwable.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="175.1360" target="178.1369">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="178.1369"/>
+    <edge source="178.1369" target="181.1371">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">16</data>
+    </edge>
+    <node id="181.1371"/>
+    <edge source="181.1371" target="183.1373">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">16</data>
+    </edge>
+    <node id="183.1373"/>
+    <edge source="183.1373" target="185.1375">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">16</data>
+    </edge>
+    <node id="185.1375"/>
+    <edge source="185.1375" target="187.1382">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">16</data>
+    </edge>
+    <node id="187.1382"/>
+    <edge source="187.1382" target="189.1403">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">16</data>
+    </edge>
+    <node id="189.1403"/>
+    <edge source="189.1403" target="190.1420">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">16</data>
+    </edge>
+    <node id="189.1405"/>
+    <node id="189.1407"/>
+    <node id="189.1412"/>
+    <node id="189.1414"/>
+    <node id="189.1416"/>
+    <node id="190.1420">
+      <data key="invariant">dynamic_21_array = POINTER_OBJECT(derefd_pointer$1) == POINTER_OBJECT(&amp;dynamic_21_array) ? { dynamic_21_array[0L], dynamic_21_array[1L] } WITH [POINTER_OFFSET(derefd_pointer$1):=false] : { dynamic_21_array[0L], dynamic_21_array[1L] };</data>
+      <data key="invariant.scope">java::MySafeThread.run:()V</data>
+    </node>
+    <edge source="190.1420" target="502.1422">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">17</data>
+    </edge>
+    <node id="502.1422">
+      <data key="invariant">object = (struct java.lang.Object *)anonlocal::1a;</data>
+      <data key="invariant.scope">java::MySafeThread.run:()V</data>
+    </node>
+    <edge source="502.1422" target="504.1423">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">152</data>
+    </edge>
+    <node id="504.1423"/>
+    <edge source="504.1423" target="506.1426">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">152</data>
+    </edge>
+    <node id="506.1426"/>
+    <edge source="506.1426" target="639.1437">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">152</data>
+    </edge>
+    <node id="506.1427"/>
+    <node id="639.1437">
+      <data key="invariant">dynamic_object22.cproverMonitorCount = object == &amp;dynamic_object22 ? (object == &amp;dynamic_object22 ? dynamic_object22.cproverMonitorCount : dynamic_object17.cproverMonitorCount) + -1 : dynamic_object22.cproverMonitorCount;</data>
+      <data key="invariant.scope">java::java.lang.Object.monitorexit:(Ljava/lang/Object;)V</data>
+    </node>
+    <edge source="639.1437" target="630.1457">
+      <data key="originfile">java/lang/Thread.java</data>
+      <data key="startline">663</data>
+    </edge>
+    <node id="630.1457"/>
+    <edge source="630.1457" target="635.1463">
+      <data key="originfile">java/lang/Thread.java</data>
+      <data key="startline">663</data>
+    </edge>
+    <node id="635.1463"/>
+    <edge source="635.1463" target="636.1467">
+      <data key="originfile">java/lang/Thread.java</data>
+      <data key="startline">663</data>
+    </edge>
+    <node id="636.1467"/>
+    <edge source="636.1467" target="638.1473">
+      <data key="originfile">java/lang/Thread.java</data>
+      <data key="startline">663</data>
+    </edge>
+    <node id="638.1473">
+      <data key="invariant">this = (struct java.lang.Thread *)this_argument;</data>
+      <data key="invariant.scope">java::MySafeThread.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="638.1473" target="344.1506">
+      <data key="originfile">java/lang/Thread.java</data>
+      <data key="startline">663</data>
+    </edge>
+    <node id="344.1506">
+      <data key="invariant">this = (struct MySafeThread *)this_argument;</data>
+      <data key="invariant.scope">java::MySafeThread.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="344.1506" target="31.1511">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">2</data>
+    </edge>
+    <node id="31.1511">
+      <data key="invariant">this = &amp;MySafeThread@class_model;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="31.1511" target="530.1516">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">421</data>
+    </edge>
+    <node id="530.1516">
+      <data key="invariant">this = &amp;MySafeThread@class_model;</data>
+      <data key="invariant.scope">java::java.lang.Class.desiredAssertionStatus:()Z</data>
+    </node>
+    <edge source="530.1516" target="533.1520">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">191</data>
+    </edge>
+    <node id="533.1520">
+      <data key="invariant">this = &amp;MySafeThread@class_model;</data>
+      <data key="invariant.scope">java::java.lang.Class.getClassLoader:()Ljava/lang/ClassLoader;</data>
+    </node>
+    <edge source="533.1520" target="534.1521">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">191</data>
+    </edge>
+    <node id="534.1521">
+      <data key="invariant">cl = null;</data>
+      <data key="invariant.scope">java::java.lang.Class.getClassLoader:()Ljava/lang/ClassLoader;</data>
+    </node>
+    <edge source="534.1521" target="34.1526">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">192</data>
+    </edge>
+    <node id="34.1526"/>
+    <edge source="34.1526" target="35.1527">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">421</data>
+    </edge>
+    <node id="35.1527">
+      <data key="invariant">loader = null;</data>
+      <data key="invariant.scope">java::java.lang.Class.desiredAssertionStatus:()Z</data>
+    </node>
+    <edge source="35.1527" target="40.1531">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">423</data>
+    </edge>
+    <node id="40.1531"/>
+    <edge source="40.1531" target="345.1538">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">424</data>
+    </edge>
+    <node id="345.1538">
+      <data key="invariant">clazz = &amp;MySafeThread@class_model;</data>
+      <data key="invariant.scope">java::java.lang.Class.desiredAssertionStatus:()Z</data>
+    </node>
+    <edge source="345.1538" target="361.1551">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">2</data>
+    </edge>
+    <node id="361.1551"/>
+    <edge source="361.1551" target="367.1553">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">2</data>
+    </edge>
+    <node id="367.1553"/>
+    <edge source="367.1553" target="369.1560">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">2</data>
+    </edge>
+    <node id="369.1560">
+      <data key="invariant">$assertionsDisabled = false;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="369.1560" target="375.1562">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">3</data>
+    </edge>
+    <node id="375.1562"/>
+    <edge source="375.1562" target="378.1563">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">3</data>
+    </edge>
+    <node id="378.1563">
+      <data key="invariant">inCrit = 0;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="378.1563" target="379.1574">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="378.1565"/>
+    <node id="378.1567"/>
+    <node id="378.1569"/>
+    <node id="378.1571"/>
+    <node id="379.1574">
+      <data key="invariant">dynamic_object24 = nondet_symbol(symex::nondet32);</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="379.1574" target="380.1582">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="379.1576"/>
+    <node id="379.1578"/>
+    <node id="379.1580"/>
+    <node id="380.1582">
+      <data key="invariant">dynamic_object24.@java.lang.Object.@class_identifier = "java::array[boolean]";</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="380.1582" target="383.1586">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="383.1586">
+      <data key="invariant">dynamic_object24.length = 2;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="383.1586" target="384.1587">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="384.1587">
+      <data key="invariant">dynamic_object24.data = dynamic_25_array;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="384.1587" target="389.1593">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="384.1589"/>
+    <node id="384.1591"/>
+    <node id="389.1593">
+      <data key="invariant">dynamic_25_array = ARRAY_OF(false);</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="389.1593" target="391.1599">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="391.1599"/>
+    <edge source="391.1599" target="396.1603">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="396.1603">
+      <data key="invariant">dynamic_25_array[0L] = dynamic_object24.data == dynamic_25_array ? false : dynamic_25_array[0L];</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="396.1603" target="398.1609">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="398.1609"/>
+    <edge source="398.1609" target="400.1618">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="400.1618">
+      <data key="invariant">dynamic_25_array[1L] = POINTER_OBJECT(dynamic_object24.data) == POINTER_OBJECT(&amp;dynamic_25_array) ? false : dynamic_25_array[1L];</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="400.1618" target="407.1620">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="407.1620"/>
+    <edge source="407.1620" target="408.1621">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">4</data>
+    </edge>
+    <node id="408.1621">
+      <data key="invariant">inCritical = &amp;dynamic_object24;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="408.1621" target="409.1628">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">5</data>
+    </edge>
+    <node id="408.1623"/>
+    <node id="408.1625"/>
+    <node id="409.1628">
+      <data key="invariant">dynamic_object26 = nondet_symbol(symex::nondet33);</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="409.1628" target="412.1633">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">5</data>
+    </edge>
+    <node id="409.1630"/>
+    <node id="412.1633">
+      <data key="invariant">dynamic_object26.@class_identifier = "java::java.lang.Object";</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="412.1633" target="117.1635">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">5</data>
+    </edge>
+    <node id="117.1635">
+      <data key="invariant">this = &amp;dynamic_object26;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="117.1635" target="414.1643">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">40</data>
+    </edge>
+    <node id="414.1643">
+      <data key="invariant">dynamic_object26.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">java::java.lang.Object.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="414.1643" target="421.1645">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">5</data>
+    </edge>
+    <node id="421.1645"/>
+    <edge source="421.1645" target="122.1659">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">5</data>
+    </edge>
+    <node id="122.1659">
+      <data key="invariant">lock = &amp;dynamic_object26;</data>
+      <data key="invariant.scope">java::MySafeThread.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="122.1659" target="126.1661">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">13</data>
+    </edge>
+    <node id="126.1661"/>
+    <edge source="126.1661" target="127.1666">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">13</data>
+    </edge>
+    <node id="127.1666">
+      <data key="invariant">anonlocal::1a = (void *)lock;</data>
+      <data key="invariant.scope">java::MySafeThread.run:()V</data>
+    </node>
+    <edge source="127.1666" target="471.1668">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">13</data>
+    </edge>
+    <node id="471.1668">
+      <data key="invariant">object = lock;</data>
+      <data key="invariant.scope">java::MySafeThread.run:()V</data>
+    </node>
+    <edge source="471.1668" target="486.1670">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">121</data>
+    </edge>
+    <node id="486.1670"/>
+    <edge source="486.1670" target="488.1674">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">127</data>
+    </edge>
+    <node id="488.1674"/>
+    <edge source="488.1674" target="493.1686">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">127</data>
+    </edge>
+    <node id="493.1686"/>
+    <edge source="493.1686" target="495.1687">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">128</data>
+    </edge>
+    <node id="495.1687"/>
+    <edge source="495.1687" target="497.1688">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">128</data>
+    </edge>
+    <node id="497.1688"/>
+    <edge source="497.1688" target="128.1702">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">128</data>
+    </edge>
+    <node id="497.1689"/>
+    <node id="497.1690"/>
+    <node id="128.1702">
+      <data key="invariant">dynamic_object26.cproverMonitorCount = object == &amp;dynamic_object26 ? (object == &amp;dynamic_object26 ? dynamic_object26.cproverMonitorCount : (object == &amp;dynamic_object22 ? dynamic_object22.cproverMonitorCount : dynamic_object17.cproverMonitorCount)) + 1 : dynamic_object26.cproverMonitorCount;</data>
+      <data key="invariant.scope">java::java.lang.Object.monitorenter:(Ljava/lang/Object;)V</data>
+    </node>
+    <edge source="128.1702" target="133.1709">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">13</data>
+    </edge>
+    <node id="133.1709"/>
+    <edge source="133.1709" target="135.1711">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">14</data>
+    </edge>
+    <node id="135.1711"/>
+    <edge source="135.1711" target="137.1713">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">14</data>
+    </edge>
+    <node id="137.1713"/>
+    <edge source="137.1713" target="139.1715">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">14</data>
+    </edge>
+    <node id="139.1715"/>
+    <edge source="139.1715" target="141.1724">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">14</data>
+    </edge>
+    <node id="141.1724"/>
+    <edge source="141.1724" target="143.1752">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">14</data>
+    </edge>
+    <node id="143.1752"/>
+    <edge source="143.1752" target="145.1782">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">14</data>
+    </edge>
+    <node id="143.1754"/>
+    <node id="143.1756"/>
+    <node id="143.1761"/>
+    <node id="143.1763"/>
+    <node id="143.1765"/>
+    <node id="143.1770"/>
+    <node id="143.1772"/>
+    <node id="143.1774"/>
+    <node id="145.1782">
+      <data key="invariant">dynamic_25_array = POINTER_OBJECT(derefd_pointer$2) == POINTER_OBJECT(&amp;dynamic_25_array) ? { dynamic_25_array[0L], dynamic_25_array[1L] } WITH [POINTER_OFFSET(derefd_pointer$2):=true] : { dynamic_25_array[0L], dynamic_25_array[1L] };</data>
+      <data key="invariant.scope">java::MySafeThread.run:()V</data>
+    </node>
+    <edge source="145.1782" target="147.1784">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="147.1784"/>
+    <edge source="147.1784" target="149.1792">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="149.1792"/>
+    <edge source="149.1792" target="151.1794">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="151.1794"/>
+    <edge source="151.1794" target="155.1802">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="155.1802"/>
+    <edge source="155.1802" target="157.1819">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="157.1819"/>
+    <edge source="157.1819" target="159.1827">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="159.1827"/>
+    <edge source="159.1827" target="161.1829">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="161.1829"/>
+    <edge source="161.1829" target="165.1837">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="165.1837"/>
+    <edge source="165.1837" target="167.1861">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="167.1861"/>
+    <edge source="167.1861" target="169.1864">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="169.1864"/>
+    <edge source="169.1864" target="170.1875">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="169.1866"/>
+    <node id="169.1868"/>
+    <node id="169.1870"/>
+    <node id="169.1872"/>
+    <node id="170.1875">
+      <data key="invariant">dynamic_object27 = nondet_symbol(symex::nondet34);</data>
+      <data key="invariant.scope">java::MySafeThread.run:()V</data>
+    </node>
+    <edge source="170.1875" target="173.1884">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="170.1877"/>
+    <node id="170.1879"/>
+    <node id="170.1881"/>
+    <node id="173.1884">
+      <data key="invariant">dynamic_object27.@java.lang.Error.@java.lang.Throwable.@java.lang.Object.@class_identifier = "java::java.lang.AssertionError";</data>
+      <data key="invariant.scope">java::MySafeThread.run:()V</data>
+    </node>
+    <edge source="173.1884" target="17.1887">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="17.1887">
+      <data key="invariant">this = &amp;dynamic_object27;</data>
+      <data key="invariant.scope">java::MySafeThread.run:()V</data>
+    </node>
+    <edge source="17.1887" target="607.1890">
+      <data key="originfile">java/lang/AssertionError.java</data>
+      <data key="startline">49</data>
+    </edge>
+    <node id="607.1890">
+      <data key="invariant">this = (struct java.lang.Error *)&amp;dynamic_object27;</data>
+      <data key="invariant.scope">java::java.lang.AssertionError.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="607.1890" target="450.1893">
+      <data key="originfile">java/lang/Error.java</data>
+      <data key="startline">58</data>
+    </edge>
+    <node id="450.1893">
+      <data key="invariant">this = (struct java.lang.Throwable *)&amp;dynamic_object27;</data>
+      <data key="invariant.scope">java::java.lang.Error.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="450.1893" target="117.1895">
+      <data key="originfile">java/lang/Throwable.java</data>
+      <data key="startline">264</data>
+    </edge>
+    <node id="117.1895">
+      <data key="invariant">this = (struct java.lang.Object *)&amp;dynamic_object27;</data>
+      <data key="invariant.scope">java::java.lang.Throwable.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="117.1895" target="453.1898">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">40</data>
+    </edge>
+    <node id="453.1898">
+      <data key="invariant">dynamic_object27.@java.lang.Error.@java.lang.Throwable.@java.lang.Object.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">java::java.lang.Object.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="453.1898" target="456.1900">
+      <data key="originfile">java/lang/Throwable.java</data>
+      <data key="startline">201</data>
+    </edge>
+    <node id="456.1900">
+      <data key="invariant">dynamic_object27.@java.lang.Error.@java.lang.Throwable.cause = (struct java.lang.Throwable *)&amp;dynamic_object27;</data>
+      <data key="invariant.scope">java::java.lang.Throwable.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="456.1900" target="175.1904">
+      <data key="originfile">java/lang/Throwable.java</data>
+      <data key="startline">266</data>
+    </edge>
+    <node id="175.1904">
+      <data key="invariant">dynamic_object27.@java.lang.Error.@java.lang.Throwable.detailMessage = null;</data>
+      <data key="invariant.scope">java::java.lang.Throwable.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="175.1904" target="178.1913">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">15</data>
+    </edge>
+    <node id="178.1913"/>
+    <edge source="178.1913" target="181.1915">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">16</data>
+    </edge>
+    <node id="181.1915"/>
+    <edge source="181.1915" target="183.1917">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">16</data>
+    </edge>
+    <node id="183.1917"/>
+    <edge source="183.1917" target="185.1919">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">16</data>
+    </edge>
+    <node id="185.1919"/>
+    <edge source="185.1919" target="187.1928">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">16</data>
+    </edge>
+    <node id="187.1928"/>
+    <edge source="187.1928" target="189.1956">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">16</data>
+    </edge>
+    <node id="189.1956"/>
+    <edge source="189.1956" target="190.1982">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">16</data>
+    </edge>
+    <node id="189.1958"/>
+    <node id="189.1960"/>
+    <node id="189.1965"/>
+    <node id="189.1967"/>
+    <node id="189.1969"/>
+    <node id="189.1974"/>
+    <node id="189.1976"/>
+    <node id="189.1978"/>
+    <node id="190.1982">
+      <data key="invariant">dynamic_25_array = POINTER_OBJECT(derefd_pointer$4) == POINTER_OBJECT(&amp;dynamic_25_array) ? { dynamic_25_array[0L], dynamic_25_array[1L] } WITH [POINTER_OFFSET(derefd_pointer$4):=false] : { dynamic_25_array[0L], dynamic_25_array[1L] };</data>
+      <data key="invariant.scope">java::MySafeThread.run:()V</data>
+    </node>
+    <edge source="190.1982" target="502.1984">
+      <data key="originfile">MySafeThread.java</data>
+      <data key="startline">17</data>
+    </edge>
+    <node id="502.1984">
+      <data key="invariant">object = (struct java.lang.Object *)anonlocal::1a;</data>
+      <data key="invariant.scope">java::MySafeThread.run:()V</data>
+    </node>
+    <edge source="502.1984" target="504.1985">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">152</data>
+    </edge>
+    <node id="504.1985"/>
+    <edge source="504.1985" target="506.1989">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">152</data>
+    </edge>
+    <node id="506.1989"/>
+    <edge source="506.1989" target="639.2003">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">152</data>
+    </edge>
+    <node id="506.1990"/>
+    <node id="506.1991"/>
+    <node id="639.2003">
+      <data key="invariant">dynamic_object26.cproverMonitorCount = object == &amp;dynamic_object26 ? (object == &amp;dynamic_object26 ? dynamic_object26.cproverMonitorCount : (object == &amp;dynamic_object22 ? dynamic_object22.cproverMonitorCount : dynamic_object17.cproverMonitorCount)) + -1 : dynamic_object26.cproverMonitorCount;</data>
+      <data key="invariant.scope">java::java.lang.Object.monitorexit:(Ljava/lang/Object;)V</data>
+    </node>
+    <edge source="639.2003" target="sink">
+      <data key="originfile">java/lang/Thread.java</data>
+      <data key="startline">663</data>
+    </edge>
+  </graph>
+</graphml>

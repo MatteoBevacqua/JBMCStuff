@@ -1,4 +1,4 @@
-package NullPointers;
+ 
  
 //JBMC fail
 public class NullPointerException {

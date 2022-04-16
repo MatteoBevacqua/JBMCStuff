@@ -1,5 +1,4 @@
-package ArrayViolations;
-
+ 
 //OK
 public class BoundsViolation {
     private static String[] strings = {"formal", "methods", "jbmc"};

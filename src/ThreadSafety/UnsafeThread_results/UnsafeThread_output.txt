@@ -1,0 +1,890 @@
+JBMC version 5.54.0 (cbmc-5.54.0) 64-bit x86_64 linux
+Parsing ...
+Trying to load Java main class: UnsafeThread
+Found Java main class: UnsafeThread
+Converting
+Java: added 2264 String or Class constant symbols
+Generating GOTO Program
+Running GOTO functions transformation passes
+Running with 16 object bits, 48 offset bits (default)
+Starting Bounded Model Checking
+Unwinding loop __CPROVER__start.0 iteration 1  thread 0
+Unwinding loop __CPROVER__start.0 iteration 2  thread 0
+Unwinding loop __CPROVER__start.0 iteration 3  thread 0
+Unwinding loop __CPROVER__start.0 iteration 4  thread 0
+Unwinding loop __CPROVER__start.0 iteration 5  thread 0
+Unwinding recursion java::UnsafeThread.<clinit_wrapper> iteration 1
+Unwinding recursion java::UnsafeThread.<clinit_wrapper> iteration 1
+Unwinding recursion java::UnsafeThread.<clinit_wrapper> iteration 1
+Unwinding recursion java::UnsafeThread.<clinit_wrapper> iteration 1
+aborting path on assume(false) at file UnsafeThread.java line 29 function java::UnsafeThread.run:()V bytecode-index 18 thread 1
+Unwinding recursion java::UnsafeThread.<clinit_wrapper> iteration 1
+Unwinding recursion java::UnsafeThread.<clinit_wrapper> iteration 1
+aborting path on assume(false) at file UnsafeThread.java line 29 function java::UnsafeThread.run:()V bytecode-index 18 thread 2
+Runtime Symex: 0.0296001s
+Adding SC constraints
+Shared java::UnsafeThread.inCritical: 97R/4W
+Shared java::UnsafeThread.$assertionsDisabled: 2R/4W
+Shared java::UnsafeThread__CPROVER_clinit_state: 2R/7W
+Shared __CPROVER__next_thread_id: 2R/3W
+Shared symex_dynamic::dynamic_object13..length: 16R/3W
+Shared symex_dynamic::dynamic_object13..data: 12R/3W
+Shared symex_dynamic::dynamic_14_array[[0]]: 12R/5W
+Shared symex_dynamic::dynamic_14_array[[1]]: 10R/5W
+Shared symex_dynamic::dynamic_object15..@java.lang.Thread..@java.lang.Object..@class_identifier: 1R/2W
+Shared symex_dynamic::dynamic_object15..@java.lang.Thread..target: 3R/3W
+Shared symex_dynamic::dynamic_object15..id: 12R/3W
+Shared symex_dynamic::dynamic_object16..@java.lang.Thread..@java.lang.Object..@class_identifier: 1R/2W
+Shared symex_dynamic::dynamic_object16..@java.lang.Thread..target: 3R/3W
+Shared symex_dynamic::dynamic_object16..id: 12R/3W
+Shared symex_dynamic::dynamic_object17..length: 16R/4W
+Shared symex_dynamic::dynamic_object17..data: 14R/4W
+Shared symex_dynamic::dynamic_18_array[[0]]: 12R/6W
+Shared symex_dynamic::dynamic_18_array[[1]]: 10R/6W
+Shared symex_dynamic::dynamic_object20..length: 8R/4W
+Shared symex_dynamic::dynamic_object20..data: 7R/4W
+Shared symex_dynamic::dynamic_21_array[[0]]: 6R/4W
+Shared symex_dynamic::dynamic_21_array[[1]]: 5R/4W
+size of program expression: 6987 steps
+no slicing due to threads
+Generated 86 VCC(s), 28 remaining after simplification
+Runtime Postprocess Equation: 0.0833685s
+Passing problem to string refinement loop with MiniSAT 2.2.1 without simplifier
+converting SSA
+Runtime Convert SSA: 0.0104298s
+Running string refinement loop with MiniSAT 2.2.1 without simplifier
+BV-Refinement: post-processing
+BV-Refinement: iteration 1
+104205 variables, 449155 clauses
+SAT checker: instance is SATISFIABLE
+BV-Refinement: got SAT, and it simulates => SAT
+Total iterations: 1
+Runtime Solver: 1.82217s
+Runtime decision procedure: 1.83452s
+Building error trace
+Counterexample:
+
+State 1 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  __CPROVER__next_thread_id=0 (00000000 00000000 00000000 00000000)
+
+State 2 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  __CPROVER__thread_id=0 (00000000 00000000 00000000 00000000)
+
+State 4 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  $assertionsDisabled=false (00000000)
+
+State 5 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  inCritical=null (?)
+
+State 6 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread@class_model.@java.lang.Object.@class_identifier="java::java.lang.Class" (?)
+
+State 7 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread@class_model.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 8 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread@class_model.name=null (?)
+
+State 9 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread@class_model.cproverIsAnnotation=false (00000000)
+
+State 10 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread@class_model.cproverIsArray=false (00000000)
+
+State 11 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread@class_model.cproverIsInterface=false (00000000)
+
+State 12 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread@class_model.cproverIsSynthetic=false (00000000)
+
+State 13 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread@class_model.cproverIsLocalClass=false (00000000)
+
+State 14 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread@class_model.cproverIsMemberClass=false (00000000)
+
+State 15 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread@class_model.cproverIsEnum=false (00000000)
+
+State 16 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread@class_model.enumConstantDirectory=null (?)
+
+State 19 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  this=&UnsafeThread@class_model (?)
+
+State 20 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  name=&UnsafeThread (?)
+
+State 21 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isAnnotation=false (00000000)
+
+State 22 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isArray=false (00000000)
+
+State 23 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isInterface=false (00000000)
+
+State 24 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isSynthetic=false (00000000)
+
+State 25 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isLocalClass=false (00000000)
+
+State 26 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isMemberClass=false (00000000)
+
+State 27 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isEnum=false (00000000)
+
+State 28 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 473 thread 0
+----------------------------------------------------
+  UnsafeThread@class_model.name=&UnsafeThread (?)
+
+State 29 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 474 thread 0
+----------------------------------------------------
+  UnsafeThread@class_model.cproverIsAnnotation=false (00000000)
+
+State 30 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 475 thread 0
+----------------------------------------------------
+  UnsafeThread@class_model.cproverIsArray=false (00000000)
+
+State 31 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 476 thread 0
+----------------------------------------------------
+  UnsafeThread@class_model.cproverIsInterface=false (00000000)
+
+State 32 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 477 thread 0
+----------------------------------------------------
+  UnsafeThread@class_model.cproverIsSynthetic=false (00000000)
+
+State 33 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 478 thread 0
+----------------------------------------------------
+  UnsafeThread@class_model.cproverIsLocalClass=false (00000000)
+
+State 34 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 479 thread 0
+----------------------------------------------------
+  UnsafeThread@class_model.cproverIsMemberClass=false (00000000)
+
+State 35 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 480 thread 0
+----------------------------------------------------
+  UnsafeThread@class_model.cproverIsEnum=false (00000000)
+
+State 37 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread__CPROVER_clinit_state=(byte)0 (00000000)
+
+State 38 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread__CPROVER_clinit_threadlocal_state=(byte)0 (00000000)
+
+State 39 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  out=null (?)
+
+State 40 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  java_lang_System__CPROVER_clinit_state=(byte)0 (00000000)
+
+State 41 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  java_lang_System__CPROVER_clinit_threadlocal_state=(byte)0 (00000000)
+
+State 42 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  threadSeqNumber=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 43 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 44 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 45 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread.length=12 (00000000 00000000 00000000 00001100)
+
+State 46 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread.data=UnsafeThread_constarray (?)
+
+State 47 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread_constarray={ 'U', 'n', 's', 'a', 'f', 'e', 'T', 'h', 'r', 'e', 'a', 'd' } ({ 00000000 01010101, 00000000 01101110, 00000000 01110011, 00000000 01100001, 00000000 01100110, 00000000 01100101, 00000000 01010100, 00000000 01101000, 00000000 01110010, 00000000 01100101, 00000000 01100001, 00000000 01100100 })
+
+State 48 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread_constarray[0L]='U' (00000000 01010101)
+
+State 49 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread_constarray[1L]='n' (00000000 01101110)
+
+State 50 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread_constarray[2L]='s' (00000000 01110011)
+
+State 51 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread_constarray[3L]='a' (00000000 01100001)
+
+State 52 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread_constarray[4L]='f' (00000000 01100110)
+
+State 53 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread_constarray[5L]='e' (00000000 01100101)
+
+State 54 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread_constarray[6L]='T' (00000000 01010100)
+
+State 55 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread_constarray[7L]='h' (00000000 01101000)
+
+State 56 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread_constarray[8L]='r' (00000000 01110010)
+
+State 57 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread_constarray[9L]='e' (00000000 01100101)
+
+State 58 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread_constarray[10L]='a' (00000000 01100001)
+
+State 59 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread_constarray[11L]='d' (00000000 01100100)
+
+State 60 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  UnsafeThread_return_value=0 (00000000 00000000 00000000 00000000)
+
+Assumption:
+  nondet_array_length >= 0
+
+Assumption:
+  nondet_array_length <= 5
+
+State 74 file UnsafeThread.java function __CPROVER__start line 7 thread 0
+----------------------------------------------------
+  dynamic_object1={ .@java.lang.Object={ .@class_identifier="java::UnsafeThread",
+    .cproverMonitorCount=0 },
+    .length=0, .data=null, .@element_class_identifier="java::UnsafeThread",
+    .@array_dimensions=0 } ({ { ?, 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000000 00000000, ?, ?, 00000000 00000000 00000000 00000000 })
+
+State 75 file UnsafeThread.java function __CPROVER__start line 7 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.@class_identifier="java::UnsafeThread" (?)
+
+State 76 file UnsafeThread.java function __CPROVER__start line 7 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 77 file UnsafeThread.java function __CPROVER__start line 7 thread 0
+----------------------------------------------------
+  dynamic_object1.length=0 (00000000 00000000 00000000 00000000)
+
+State 78 file UnsafeThread.java function __CPROVER__start line 7 thread 0
+----------------------------------------------------
+  dynamic_object1.data=null (?)
+
+State 79 file UnsafeThread.java function __CPROVER__start line 7 thread 0
+----------------------------------------------------
+  dynamic_object1.@element_class_identifier="java::UnsafeThread" (?)
+
+State 80 file UnsafeThread.java function __CPROVER__start line 7 thread 0
+----------------------------------------------------
+  dynamic_object1.@array_dimensions=0 (00000000 00000000 00000000 00000000)
+
+State 82 file UnsafeThread.java function __CPROVER__start line 7 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.@class_identifier="java::array[reference]" (?)
+
+State 83 file UnsafeThread.java function __CPROVER__start line 7 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 84 file UnsafeThread.java function __CPROVER__start line 7 thread 0
+----------------------------------------------------
+  dynamic_object1.length=0 (00000000 00000000 00000000 00000000)
+
+State 85 file UnsafeThread.java function __CPROVER__start line 7 thread 0
+----------------------------------------------------
+  dynamic_object1.data=null (?)
+
+State 86 file UnsafeThread.java function __CPROVER__start line 7 thread 0
+----------------------------------------------------
+  dynamic_object1.@element_class_identifier="" (?)
+
+State 87 file UnsafeThread.java function __CPROVER__start line 7 thread 0
+----------------------------------------------------
+  dynamic_object1.@array_dimensions=0 (00000000 00000000 00000000 00000000)
+
+State 88 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object1.@array_dimensions=1 (00000000 00000000 00000000 00000001)
+
+State 89 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object1.@element_class_identifier="java::java.lang.String" (?)
+
+State 90 file UnsafeThread.java function __CPROVER__start line 7 thread 0
+----------------------------------------------------
+  dynamic_object1.length=0 (00000000 00000000 00000000 00000000)
+
+State 93 file UnsafeThread.java function __CPROVER__start line 7 thread 0
+----------------------------------------------------
+  dynamic_object1.data=&((void *)dynamic_2_array[0L]) (?)
+
+State 94 file UnsafeThread.java function __CPROVER__start line 7 thread 0
+----------------------------------------------------
+  dynamic_2_array={ null, null, null, null, null } ({ ?, ?, ?, ?, ? })
+
+State 95 file UnsafeThread.java function __CPROVER__start line 7 thread 0
+----------------------------------------------------
+  dynamic_2_array[0L]=null (?)
+
+State 96 file UnsafeThread.java function __CPROVER__start line 7 thread 0
+----------------------------------------------------
+  dynamic_2_array[1L]=null (?)
+
+State 97 file UnsafeThread.java function __CPROVER__start line 7 thread 0
+----------------------------------------------------
+  dynamic_2_array[2L]=null (?)
+
+State 98 file UnsafeThread.java function __CPROVER__start line 7 thread 0
+----------------------------------------------------
+  dynamic_2_array[3L]=null (?)
+
+State 99 file UnsafeThread.java function __CPROVER__start line 7 thread 0
+----------------------------------------------------
+  dynamic_2_array[4L]=null (?)
+
+State 103 file UnsafeThread.java function __CPROVER__start line 7 thread 0
+----------------------------------------------------
+  INPUT arg0a: &dynamic_object1 (?)
+
+State 106 file UnsafeThread.java function __CPROVER__start line 7 thread 0
+----------------------------------------------------
+  arg0a=&dynamic_object1 (?)
+
+State 107 function UnsafeThread.main(java.lang.String[]) thread 0
+----------------------------------------------------
+  anonlocal::2a=null (?)
+
+State 108 function UnsafeThread.main(java.lang.String[]) thread 0
+----------------------------------------------------
+  anonlocal::1a=null (?)
+
+State 113 function java::UnsafeThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$UnsafeThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 115 function java::UnsafeThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  UnsafeThread__CPROVER_clinit_threadlocal_state=(byte)2 (00000010)
+
+State 117 function java::UnsafeThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  UnsafeThread__CPROVER_clinit_state=(byte)1 (00000001)
+
+State 118 function java::UnsafeThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$UnsafeThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 127 file UnsafeThread.java function UnsafeThread.<clinit>() line 2 thread 0
+----------------------------------------------------
+  this=&UnsafeThread@class_model (?)
+
+State 128 function java.lang.Class.desiredAssertionStatus() thread 0
+----------------------------------------------------
+  loader=null (?)
+
+State 132 file java/lang/Class.java function java.lang.Class.desiredAssertionStatus() line 421 thread 0
+----------------------------------------------------
+  this=&UnsafeThread@class_model (?)
+
+State 133 function java.lang.Class.getClassLoader() thread 0
+----------------------------------------------------
+  cl=null (?)
+
+State 137 file java/lang/Class.java function java.lang.Class.getClassLoader() line 191 thread 0
+----------------------------------------------------
+  this=&UnsafeThread@class_model (?)
+
+State 141 file java/lang/Class.java function java.lang.Class.getClassLoader() line 191 thread 0
+----------------------------------------------------
+  cl=null (?)
+
+State 147 file java/lang/Class.java function java.lang.Class.desiredAssertionStatus() line 421 thread 0
+----------------------------------------------------
+  loader=null (?)
+
+State 152 file java/lang/Class.java function java.lang.Class.desiredAssertionStatus() line 424 thread 0
+----------------------------------------------------
+  clazz=&UnsafeThread@class_model (?)
+
+State 167 function java::UnsafeThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$UnsafeThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 172 file UnsafeThread.java function UnsafeThread.<clinit>() line 2 thread 0
+----------------------------------------------------
+  $assertionsDisabled=false (00000000)
+
+State 173 file UnsafeThread.java function UnsafeThread.<clinit>() line 3 thread 0
+----------------------------------------------------
+  dynamic_object13={ .@java.lang.Object={ .@class_identifier="java::UnsafeThread",
+    .cproverMonitorCount=0 },
+    .length=262144, .data=dynamic_14_array } ({ { ?, 00000000 00000000 00000000 00000000 }, 00000000 00000100 00000000 00000000, ? })
+
+State 174 file UnsafeThread.java function UnsafeThread.<clinit>() line 3 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Object.@class_identifier="java::UnsafeThread" (?)
+
+State 175 file UnsafeThread.java function UnsafeThread.<clinit>() line 3 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 176 file UnsafeThread.java function UnsafeThread.<clinit>() line 3 thread 0
+----------------------------------------------------
+  dynamic_object13.length=262144 (00000000 00000100 00000000 00000000)
+
+State 177 file UnsafeThread.java function UnsafeThread.<clinit>() line 3 thread 0
+----------------------------------------------------
+  dynamic_object13.data=dynamic_14_array (?)
+
+State 179 file UnsafeThread.java function UnsafeThread.<clinit>() line 3 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Object.@class_identifier="java::array[boolean]" (?)
+
+State 180 file UnsafeThread.java function UnsafeThread.<clinit>() line 3 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 181 file UnsafeThread.java function UnsafeThread.<clinit>() line 3 thread 0
+----------------------------------------------------
+  dynamic_object13.length=0 (00000000 00000000 00000000 00000000)
+
+State 182 file UnsafeThread.java function UnsafeThread.<clinit>() line 3 thread 0
+----------------------------------------------------
+  dynamic_object13.data=null (?)
+
+State 183 file UnsafeThread.java function UnsafeThread.<clinit>() line 3 thread 0
+----------------------------------------------------
+  dynamic_object13.length=2 (00000000 00000000 00000000 00000010)
+
+State 186 file UnsafeThread.java function UnsafeThread.<clinit>() line 3 thread 0
+----------------------------------------------------
+  dynamic_object13.data=dynamic_14_array (?)
+
+State 187 file UnsafeThread.java function UnsafeThread.<clinit>() line 3 thread 0
+----------------------------------------------------
+  dynamic_14_array={ false, false } ({ 00000000, 00000000 })
+
+State 188 file UnsafeThread.java function UnsafeThread.<clinit>() line 3 thread 0
+----------------------------------------------------
+  dynamic_14_array[0L]=false (00000000)
+
+State 189 file UnsafeThread.java function UnsafeThread.<clinit>() line 3 thread 0
+----------------------------------------------------
+  dynamic_14_array[1L]=false (00000000)
+
+State 192 function java::UnsafeThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$UnsafeThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 197 file UnsafeThread.java function UnsafeThread.<clinit>() line 3 thread 0
+----------------------------------------------------
+  inCritical=&dynamic_object13 (?)
+
+State 200 function java::UnsafeThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  UnsafeThread__CPROVER_clinit_state=(byte)2 (00000010)
+
+State 203 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  dynamic_object15={ .@java.lang.Thread={ .@java.lang.Object={ .@class_identifier="java::UnsafeThread",
+    .cproverMonitorCount=0 },
+    .target=(struct java.lang.Runnable *)((byte *)&dynamic_object15 + -140737488355328L),
+    .tid=0L },
+    .id=-2147483648 } ({ { { ?, 00000000 00000000 00000000 00000000 }, ?, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 }, 10000000 00000000 00000000 00000000 })
+
+State 204 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.@java.lang.Object.@class_identifier="java::UnsafeThread" (?)
+
+State 205 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 206 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.target=(struct java.lang.Runnable *)((byte *)&dynamic_object15 + -140737488355328L) (?)
+
+State 207 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.tid=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 208 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  dynamic_object15.id=-2147483648 (10000000 00000000 00000000 00000000)
+
+State 210 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.@java.lang.Object.@class_identifier="java::UnsafeThread" (?)
+
+State 211 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 212 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.target=null (?)
+
+State 213 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.tid=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 214 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  dynamic_object15.id=0 (00000000 00000000 00000000 00000000)
+
+State 217 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  this=&dynamic_object15 (?)
+
+State 218 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  arg1i=0 (00000000 00000000 00000000 00000000)
+
+State 221 file UnsafeThread.java function UnsafeThread(int) line 20 thread 0
+----------------------------------------------------
+  this=&dynamic_object15.@java.lang.Thread (?)
+
+State 225 file java/lang/Thread.java function java.lang.Thread() line 399 thread 0
+----------------------------------------------------
+  this=&dynamic_object15.@java.lang.Thread.@java.lang.Object (?)
+
+State 226 file java/lang/Object.java function java.lang.Object() line 40 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 228 file java/lang/Thread.java function java.lang.Thread() line 400 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.target=(struct java.lang.Runnable *)&dynamic_object15.@java.lang.Thread.@java.lang.Object (?)
+
+State 232 function java.lang.Thread.nextThreadID() thread 0
+----------------------------------------------------
+  result=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 234 file java/lang/Thread.java function java.lang.Thread.nextThreadID() line 208 thread 0
+----------------------------------------------------
+  threadSeqNumber=1L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001)
+
+State 235 file java/lang/Thread.java function java.lang.Thread.nextThreadID() line 208 thread 0
+----------------------------------------------------
+  result=1L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001)
+
+State 239 file java/lang/Thread.java function java.lang.Thread() line 401 thread 0
+----------------------------------------------------
+  dynamic_object15.@java.lang.Thread.tid=1L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001)
+
+State 241 file UnsafeThread.java function UnsafeThread(int) line 21 thread 0
+----------------------------------------------------
+  dynamic_object15.id=0 (00000000 00000000 00000000 00000000)
+
+State 243 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  anonlocal::1a=(void *)&dynamic_object15.@java.lang.Thread.@java.lang.Object.@class_identifier (?)
+
+State 246 function java::UnsafeThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$UnsafeThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 251 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  dynamic_object16={ .@java.lang.Thread={ .@java.lang.Object={ .@class_identifier="java::UnsafeThread",
+    .cproverMonitorCount=0 },
+    .target=(struct java.lang.Runnable *)((byte *)&dynamic_object16 + 4194304L),
+    .tid=0L },
+    .id=134217729 } ({ { { ?, 00000000 00000000 00000000 00000000 }, ?, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 }, 00001000 00000000 00000000 00000001 })
+
+State 252 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  dynamic_object16.@java.lang.Thread.@java.lang.Object.@class_identifier="java::UnsafeThread" (?)
+
+State 253 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  dynamic_object16.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 254 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  dynamic_object16.@java.lang.Thread.target=(struct java.lang.Runnable *)((byte *)&dynamic_object16 + 4194304L) (?)
+
+State 255 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  dynamic_object16.@java.lang.Thread.tid=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 256 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  dynamic_object16.id=134217729 (00001000 00000000 00000000 00000001)
+
+State 258 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  dynamic_object16.@java.lang.Thread.@java.lang.Object.@class_identifier="java::UnsafeThread" (?)
+
+State 259 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  dynamic_object16.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 260 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  dynamic_object16.@java.lang.Thread.target=null (?)
+
+State 261 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  dynamic_object16.@java.lang.Thread.tid=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 262 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  dynamic_object16.id=0 (00000000 00000000 00000000 00000000)
+
+State 265 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  this=&dynamic_object16 (?)
+
+State 266 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  arg1i=1 (00000000 00000000 00000000 00000001)
+
+State 269 file UnsafeThread.java function UnsafeThread(int) line 20 thread 0
+----------------------------------------------------
+  this=&dynamic_object16.@java.lang.Thread (?)
+
+State 273 file java/lang/Thread.java function java.lang.Thread() line 399 thread 0
+----------------------------------------------------
+  this=&dynamic_object16.@java.lang.Thread.@java.lang.Object (?)
+
+State 274 file java/lang/Object.java function java.lang.Object() line 40 thread 0
+----------------------------------------------------
+  dynamic_object16.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 276 file java/lang/Thread.java function java.lang.Thread() line 400 thread 0
+----------------------------------------------------
+  dynamic_object16.@java.lang.Thread.target=(struct java.lang.Runnable *)&dynamic_object16.@java.lang.Thread.@java.lang.Object (?)
+
+State 280 function java.lang.Thread.nextThreadID() thread 0
+----------------------------------------------------
+  result=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 282 file java/lang/Thread.java function java.lang.Thread.nextThreadID() line 208 thread 0
+----------------------------------------------------
+  threadSeqNumber=2L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000010)
+
+State 283 file java/lang/Thread.java function java.lang.Thread.nextThreadID() line 208 thread 0
+----------------------------------------------------
+  result=2L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000010)
+
+State 287 file java/lang/Thread.java function java.lang.Thread() line 401 thread 0
+----------------------------------------------------
+  dynamic_object16.@java.lang.Thread.tid=2L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000010)
+
+State 289 file UnsafeThread.java function UnsafeThread(int) line 21 thread 0
+----------------------------------------------------
+  dynamic_object16.id=1 (00000000 00000000 00000000 00000001)
+
+State 291 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 7 thread 0
+----------------------------------------------------
+  anonlocal::2a=(void *)&dynamic_object16.@java.lang.Thread.@java.lang.Object.@class_identifier (?)
+
+State 294 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 8 thread 0
+----------------------------------------------------
+  this=&dynamic_object15.@java.lang.Thread (?)
+
+State 323 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 9 thread 0
+----------------------------------------------------
+  this=&dynamic_object16.@java.lang.Thread (?)
+
+State 352 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 11 thread 0
+----------------------------------------------------
+  this=&dynamic_object15 (?)
+
+State 356 file UnsafeThread.java function UnsafeThread.main(java.lang.String[]) line 12 thread 0
+----------------------------------------------------
+  this=&dynamic_object16 (?)
+
+State 363 file UnsafeThread.java function __CPROVER__start line 7 thread 0
+----------------------------------------------------
+  OUTPUT arg0a: &dynamic_object1 (?)
+
+State 364 file UnsafeThread.java function __CPROVER__start line 7 thread 0
+----------------------------------------------------
+  OUTPUT uncaught_exception': null (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 366 function __CPROVER__start thread 1
+----------------------------------------------------
+  __CPROVER__next_thread_id=1 (00000000 00000000 00000000 00000001)
+
+State 367 function __CPROVER__start thread 1
+----------------------------------------------------
+  __CPROVER__thread_id=1 (00000000 00000000 00000000 00000001)
+
+State 374 file java/lang/Thread.java function __CPROVER__start line 663 thread 1
+----------------------------------------------------
+  this=&dynamic_object15 (?)
+
+State 377 function java::UnsafeThread.<clinit_wrapper> thread 1
+----------------------------------------------------
+  java$$UnsafeThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 379 function java::UnsafeThread.<clinit_wrapper> thread 1
+----------------------------------------------------
+  UnsafeThread__CPROVER_clinit_threadlocal_state=(byte)2 (00000010)
+
+State 382 function java::UnsafeThread.<clinit_wrapper> thread 1
+----------------------------------------------------
+  java$$UnsafeThread__CPROVER_clinit_wrapper$$init_complete=true (1)
+
+State 392 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  __CPROVER_rounding_mode=0 (00000000 00000000 00000000 00000000)
+
+State 393 function UnsafeThread.main(java.lang.String[]) thread 2
+----------------------------------------------------
+  __CPROVER__next_thread_id=2 (00000000 00000000 00000000 00000010)
+
+State 394 function UnsafeThread.main(java.lang.String[]) thread 2
+----------------------------------------------------
+  __CPROVER__thread_id=2 (00000000 00000000 00000000 00000010)
+
+State 401 file java/lang/Thread.java function UnsafeThread.main(java.lang.String[]) line 663 thread 2
+----------------------------------------------------
+  this=&dynamic_object16 (?)
+
+State 404 function java::UnsafeThread.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$UnsafeThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 406 function java::UnsafeThread.<clinit_wrapper> thread 2
+----------------------------------------------------
+  UnsafeThread__CPROVER_clinit_threadlocal_state=(byte)2 (00000010)
+
+State 409 function java::UnsafeThread.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$UnsafeThread__CPROVER_clinit_wrapper$$init_complete=true (1)
+
+State 416 file UnsafeThread.java function UnsafeThread.run() line 28 thread 1
+----------------------------------------------------
+  dynamic_18_array[0L]=false (00000000)
+
+State 417 file UnsafeThread.java function UnsafeThread.run() line 28 thread 1
+----------------------------------------------------
+  dynamic_18_array[1L]=true (00000001)
+
+State 418 file UnsafeThread.java function UnsafeThread.run() line 28 thread 1
+----------------------------------------------------
+  dynamic_14_array[POINTER_OFFSET(dynamic_14_array)]={ true, false }[POINTER_OFFSET(dynamic_14_array)] (?)
+
+State 419 file UnsafeThread.java function UnsafeThread.run() line 28 thread 1
+----------------------------------------------------
+  dynamic_14_array[0L]=true (00000001)
+
+State 420 file UnsafeThread.java function UnsafeThread.run() line 28 thread 1
+----------------------------------------------------
+  dynamic_14_array[1L]=false (00000000)
+
+State 423 function java::UnsafeThread.<clinit_wrapper> thread 1
+----------------------------------------------------
+  java$$UnsafeThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 431 function java::UnsafeThread.<clinit_wrapper> thread 1
+----------------------------------------------------
+  java$$UnsafeThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 442 file UnsafeThread.java function UnsafeThread.run() line 28 thread 2
+----------------------------------------------------
+  dynamic_21_array[0L]=false (00000000)
+
+State 443 file UnsafeThread.java function UnsafeThread.run() line 28 thread 2
+----------------------------------------------------
+  dynamic_21_array[1L]=true (00000001)
+
+State 444 file UnsafeThread.java function UnsafeThread.run() line 28 thread 2
+----------------------------------------------------
+  dynamic_18_array[0L]=false (00000000)
+
+State 445 file UnsafeThread.java function UnsafeThread.run() line 28 thread 2
+----------------------------------------------------
+  dynamic_18_array[1L]=true (00000001)
+
+State 446 file UnsafeThread.java function UnsafeThread.run() line 28 thread 2
+----------------------------------------------------
+  dynamic_14_array[POINTER_OFFSET(dynamic_14_array + 1L)]={ true, true }[POINTER_OFFSET(dynamic_14_array + 1L)] (?)
+
+State 447 file UnsafeThread.java function UnsafeThread.run() line 28 thread 2
+----------------------------------------------------
+  dynamic_14_array[0L]=true (00000001)
+
+State 448 file UnsafeThread.java function UnsafeThread.run() line 28 thread 2
+----------------------------------------------------
+  dynamic_14_array[1L]=true (00000001)
+
+State 451 function java::UnsafeThread.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$UnsafeThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 459 function java::UnsafeThread.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$UnsafeThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 469 function java::UnsafeThread.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$UnsafeThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+Violated property:
+  file UnsafeThread.java function UnsafeThread.run() line 29 thread 2
+  Array index should be < length
+  2 < inCritical->length
+
+
+State 480 function java::UnsafeThread.<clinit_wrapper> thread 1
+----------------------------------------------------
+  java$$UnsafeThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+Violated property:
+  file UnsafeThread.java function UnsafeThread.run() line 29 thread 1
+  Array index should be < length
+  2 < inCritical->length
+
+
+VERIFICATION FAILED

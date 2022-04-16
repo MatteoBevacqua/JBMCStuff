@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <key attr.name="originFileName" attr.type="string" for="edge" id="originfile">
+    <default>&lt;command-line&gt;</default>
+  </key>
+  <key attr.name="invariant" attr.type="string" for="node" id="invariant"/>
+  <key attr.name="invariant.scope" attr.type="string" for="node" id="invariant.scope"/>
+  <key attr.name="isViolationNode" attr.type="boolean" for="node" id="violation">
+    <default>false</default>
+  </key>
+  <key attr.name="isEntryNode" attr.type="boolean" for="node" id="entry">
+    <default>false</default>
+  </key>
+  <key attr.name="isSinkNode" attr.type="boolean" for="node" id="sink">
+    <default>false</default>
+  </key>
+  <key attr.name="enterLoopHead" attr.type="boolean" for="edge" id="enterLoopHead">
+    <default>false</default>
+  </key>
+  <key attr.name="cyclehead" attr.type="boolean" for="node" id="cyclehead">
+    <default>false</default>
+  </key>
+  <key attr.name="threadId" attr.type="int" for="edge" id="threadId">
+    <default>0</default>
+  </key>
+  <key attr.name="createThread" attr.type="int" for="edge" id="createThread">
+    <default>0</default>
+  </key>
+  <key attr.name="sourcecodeLanguage" attr.type="string" for="graph" id="sourcecodelang"/>
+  <key attr.name="programFile" attr.type="string" for="graph" id="programfile"/>
+  <key attr.name="programHash" attr.type="string" for="graph" id="programhash"/>
+  <key attr.name="specification" attr.type="string" for="graph" id="specification"/>
+  <key attr.name="architecture" attr.type="string" for="graph" id="architecture"/>
+  <key attr.name="producer" attr.type="string" for="graph" id="producer"/>
+  <key attr.name="creationtime" attr.type="string" for="graph" id="creationtime"/>
+  <key attr.name="startline" attr.type="int" for="edge" id="startline"/>
+  <key attr.name="control" attr.type="string" for="edge" id="control"/>
+  <key attr.name="assumption" attr.type="string" for="edge" id="assumption"/>
+  <key attr.name="assumption.resultfunction" attr.type="string" for="edge" id="assumption.resultfunction"/>
+  <key attr.name="assumption.scope" attr.type="string" for="edge" id="assumption.scope"/>
+  <key attr.name="enterFunction" attr.type="string" for="edge" id="enterFunction"/>
+  <key attr.name="returnFromFunction" attr.type="string" for="edge" id="returnFrom"/>
+  <key attr.name="witness-type" attr.type="string" for="graph" id="witness-type"/>
+  <graph edgedefault="directed">
+    <data key="sourcecodelang">C</data>
+    <node id="sink"/>
+    <node id="245.28">
+      <data key="entry">true</data>
+    </node>
+    <edge source="245.28" target="248.29">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">473</data>
+      <data key="threadId">0</data>
+      <data key="assumption">IllegalCasting.name = &amp;IllegalCasting;</data>
+      <data key="assumption.scope">java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V</data>
+    </edge>
+    <node id="248.29"/>
+    <edge source="248.29" target="251.30">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">474</data>
+      <data key="threadId">0</data>
+      <data key="assumption">IllegalCasting.cproverIsAnnotation = false;</data>
+      <data key="assumption.scope">java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V</data>
+    </edge>
+    <node id="251.30"/>
+    <edge source="251.30" target="254.31">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">475</data>
+      <data key="threadId">0</data>
+      <data key="assumption">IllegalCasting.cproverIsArray = false;</data>
+      <data key="assumption.scope">java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V</data>
+    </edge>
+    <node id="254.31"/>
+    <edge source="254.31" target="257.32">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">476</data>
+      <data key="threadId">0</data>
+      <data key="assumption">IllegalCasting.cproverIsInterface = false;</data>
+      <data key="assumption.scope">java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V</data>
+    </edge>
+    <node id="257.32"/>
+    <edge source="257.32" target="260.33">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">477</data>
+      <data key="threadId">0</data>
+      <data key="assumption">IllegalCasting.cproverIsSynthetic = false;</data>
+      <data key="assumption.scope">java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V</data>
+    </edge>
+    <node id="260.33"/>
+    <edge source="260.33" target="263.34">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">478</data>
+      <data key="threadId">0</data>
+      <data key="assumption">IllegalCasting.cproverIsLocalClass = false;</data>
+      <data key="assumption.scope">java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V</data>
+    </edge>
+    <node id="263.34"/>
+    <edge source="263.34" target="266.35">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">479</data>
+      <data key="threadId">0</data>
+      <data key="assumption">IllegalCasting.cproverIsMemberClass = false;</data>
+      <data key="assumption.scope">java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V</data>
+    </edge>
+    <node id="266.35"/>
+    <edge source="266.35" target="566.72">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">480</data>
+      <data key="threadId">0</data>
+      <data key="assumption">IllegalCasting.cproverIsEnum = false;</data>
+      <data key="assumption.scope">java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V</data>
+    </edge>
+    <node id="566.72"/>
+    <edge source="566.72" target="103.220">
+      <data key="originfile">IllegalCasting.java</data>
+      <data key="startline">13</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="103.220"/>
+    <edge source="103.220" target="107.228">
+      <data key="originfile">IllegalCasting.java</data>
+      <data key="startline">13</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="107.228"/>
+    <edge source="107.228" target="6.231">
+      <data key="originfile">IllegalCasting.java</data>
+      <data key="startline">13</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="6.231"/>
+    <edge source="6.231" target="2.232">
+      <data key="originfile">IllegalCasting.java</data>
+      <data key="startline">3</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="2.232"/>
+    <edge source="2.232" target="108.235">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">40</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="108.235"/>
+    <edge source="108.235" target="111.237">
+      <data key="originfile">IllegalCasting.java</data>
+      <data key="startline">13</data>
+      <data key="threadId">0</data>
+    </edge>
+    <node id="111.237">
+      <data key="violation">true</data>
+    </node>
+  </graph>
+</graphml>

@@ -1,4 +1,3 @@
-package OOPFeatures;
  
 
 class C {

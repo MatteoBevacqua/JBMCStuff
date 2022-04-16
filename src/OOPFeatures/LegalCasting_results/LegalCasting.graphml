@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <key attr.name="originFileName" attr.type="string" for="edge" id="originfile">
+    <default>&lt;command-line&gt;</default>
+  </key>
+  <key attr.name="invariant" attr.type="string" for="node" id="invariant"/>
+  <key attr.name="invariant.scope" attr.type="string" for="node" id="invariant.scope"/>
+  <key attr.name="isViolationNode" attr.type="boolean" for="node" id="violation">
+    <default>false</default>
+  </key>
+  <key attr.name="isEntryNode" attr.type="boolean" for="node" id="entry">
+    <default>false</default>
+  </key>
+  <key attr.name="isSinkNode" attr.type="boolean" for="node" id="sink">
+    <default>false</default>
+  </key>
+  <key attr.name="enterLoopHead" attr.type="boolean" for="edge" id="enterLoopHead">
+    <default>false</default>
+  </key>
+  <key attr.name="cyclehead" attr.type="boolean" for="node" id="cyclehead">
+    <default>false</default>
+  </key>
+  <key attr.name="threadId" attr.type="int" for="edge" id="threadId">
+    <default>0</default>
+  </key>
+  <key attr.name="createThread" attr.type="int" for="edge" id="createThread">
+    <default>0</default>
+  </key>
+  <key attr.name="sourcecodeLanguage" attr.type="string" for="graph" id="sourcecodelang"/>
+  <key attr.name="programFile" attr.type="string" for="graph" id="programfile"/>
+  <key attr.name="programHash" attr.type="string" for="graph" id="programhash"/>
+  <key attr.name="specification" attr.type="string" for="graph" id="specification"/>
+  <key attr.name="architecture" attr.type="string" for="graph" id="architecture"/>
+  <key attr.name="producer" attr.type="string" for="graph" id="producer"/>
+  <key attr.name="creationtime" attr.type="string" for="graph" id="creationtime"/>
+  <key attr.name="startline" attr.type="int" for="edge" id="startline"/>
+  <key attr.name="control" attr.type="string" for="edge" id="control"/>
+  <key attr.name="assumption" attr.type="string" for="edge" id="assumption"/>
+  <key attr.name="assumption.resultfunction" attr.type="string" for="edge" id="assumption.resultfunction"/>
+  <key attr.name="assumption.scope" attr.type="string" for="edge" id="assumption.scope"/>
+  <key attr.name="enterFunction" attr.type="string" for="edge" id="enterFunction"/>
+  <key attr.name="returnFromFunction" attr.type="string" for="edge" id="returnFrom"/>
+  <key attr.name="witness-type" attr.type="string" for="graph" id="witness-type"/>
+  <graph edgedefault="directed">
+    <data key="sourcecodelang">C</data>
+    <node id="sink">
+      <data key="invariant">anonlocal::2a = (void *)&amp;dynamic_object13;</data>
+      <data key="invariant.scope">java::LegalCasting.main:([Ljava/lang/String;)V</data>
+    </node>
+    <node id="247.18">
+      <data key="entry">true</data>
+    </node>
+    <edge source="247.18" target="248.33">
+      <data key="originfile">LegalCasting.java</data>
+      <data key="startline">11</data>
+    </edge>
+    <node id="247.20"/>
+    <node id="247.22"/>
+    <node id="247.24"/>
+    <node id="247.26"/>
+    <node id="247.28"/>
+    <node id="247.30"/>
+    <node id="248.33">
+      <data key="invariant">dynamic_object1 = nondet_symbol(symex::nondet1);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="248.33" target="251.49">
+      <data key="originfile">LegalCasting.java</data>
+      <data key="startline">11</data>
+    </edge>
+    <node id="248.35"/>
+    <node id="248.37"/>
+    <node id="248.39"/>
+    <node id="248.41"/>
+    <node id="248.43"/>
+    <node id="251.49">
+      <data key="invariant">dynamic_object1.@java.lang.Object.@class_identifier = "java::array[reference]";</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="251.49" target="254.53">
+      <data key="originfile">LegalCasting.java</data>
+      <data key="startline">11</data>
+    </edge>
+    <node id="254.53">
+      <data key="invariant">dynamic_object1.length = nondet_array_length;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="254.53" target="255.54">
+      <data key="originfile">LegalCasting.java</data>
+      <data key="startline">11</data>
+    </edge>
+    <node id="255.54">
+      <data key="invariant">dynamic_object1.data = (void **)dynamic_2_array;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="255.54" target="267.89">
+      <data key="originfile">LegalCasting.java</data>
+      <data key="startline">11</data>
+    </edge>
+    <node id="255.56"/>
+    <node id="255.58"/>
+    <node id="255.60"/>
+    <node id="255.62"/>
+    <node id="255.64"/>
+    <node id="267.89">
+      <data key="invariant">dynamic_2_array = ARRAY_OF(null);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="267.89" target="273.103">
+      <data key="originfile">LegalCasting.java</data>
+      <data key="startline">11</data>
+    </edge>
+    <node id="273.103">
+      <data key="invariant">dynamic_object4 = nondet_symbol(symex::nondet5);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="273.103" target="267.130">
+      <data key="originfile">LegalCasting.java</data>
+      <data key="startline">11</data>
+    </edge>
+    <node id="267.130">
+      <data key="invariant">dynamic_object3.@java.lang.Object.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="267.130" target="273.144">
+      <data key="originfile">LegalCasting.java</data>
+      <data key="startline">11</data>
+    </edge>
+    <node id="273.144">
+      <data key="invariant">dynamic_object6 = nondet_symbol(symex::nondet9);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="273.144" target="267.171">
+      <data key="originfile">LegalCasting.java</data>
+      <data key="startline">11</data>
+    </edge>
+    <node id="267.171">
+      <data key="invariant">dynamic_object5.@java.lang.Object.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="267.171" target="273.185">
+      <data key="originfile">LegalCasting.java</data>
+      <data key="startline">11</data>
+    </edge>
+    <node id="273.185">
+      <data key="invariant">dynamic_object8 = nondet_symbol(symex::nondet13);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="273.185" target="267.212">
+      <data key="originfile">LegalCasting.java</data>
+      <data key="startline">11</data>
+    </edge>
+    <node id="267.212">
+      <data key="invariant">dynamic_object7.@java.lang.Object.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="267.212" target="273.226">
+      <data key="originfile">LegalCasting.java</data>
+      <data key="startline">11</data>
+    </edge>
+    <node id="273.226">
+      <data key="invariant">dynamic_object10 = nondet_symbol(symex::nondet17);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="273.226" target="267.253">
+      <data key="originfile">LegalCasting.java</data>
+      <data key="startline">11</data>
+    </edge>
+    <node id="267.253">
+      <data key="invariant">dynamic_object9.@java.lang.Object.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="267.253" target="273.267">
+      <data key="originfile">LegalCasting.java</data>
+      <data key="startline">11</data>
+    </edge>
+    <node id="273.267">
+      <data key="invariant">dynamic_object12 = nondet_symbol(symex::nondet21);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="273.267" target="281.388">
+      <data key="originfile">LegalCasting.java</data>
+      <data key="startline">11</data>
+    </edge>
+    <node id="281.388">
+      <data key="invariant">dynamic_object11.@java.lang.Object.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="281.388" target="10.391">
+      <data key="originfile">LegalCasting.java</data>
+      <data key="startline">11</data>
+    </edge>
+    <node id="10.391">
+      <data key="invariant">arg0a = &amp;dynamic_object1;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="10.391" target="11.398">
+      <data key="originfile">LegalCasting.java</data>
+      <data key="startline">11</data>
+    </edge>
+    <node id="10.393"/>
+    <node id="10.395"/>
+    <node id="11.398">
+      <data key="invariant">dynamic_object13 = nondet_symbol(symex::nondet22);</data>
+      <data key="invariant.scope">java::LegalCasting.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="11.398" target="14.403">
+      <data key="originfile">LegalCasting.java</data>
+      <data key="startline">11</data>
+    </edge>
+    <node id="11.400"/>
+    <node id="14.403">
+      <data key="invariant">dynamic_object13.@A.@java.lang.Object.@class_identifier = "java::B";</data>
+      <data key="invariant.scope">java::LegalCasting.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="14.403" target="6.406">
+      <data key="originfile">LegalCasting.java</data>
+      <data key="startline">11</data>
+    </edge>
+    <node id="6.406">
+      <data key="invariant">this = &amp;dynamic_object13;</data>
+      <data key="invariant.scope">java::LegalCasting.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="6.406" target="69.409">
+      <data key="originfile">LegalCasting.java</data>
+      <data key="startline">6</data>
+    </edge>
+    <node id="69.409">
+      <data key="invariant">this = (struct A *)&amp;dynamic_object13;</data>
+      <data key="invariant.scope">java::B.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="69.409" target="2.411">
+      <data key="originfile">LegalCasting.java</data>
+      <data key="startline">2</data>
+    </edge>
+    <node id="2.411">
+      <data key="invariant">this = (struct java.lang.Object *)&amp;dynamic_object13;</data>
+      <data key="invariant.scope">java::A.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="2.411" target="15.415">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">40</data>
+    </edge>
+    <node id="15.415">
+      <data key="invariant">dynamic_object13.@A.@java.lang.Object.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">java::java.lang.Object.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="15.415" target="18.417">
+      <data key="originfile">LegalCasting.java</data>
+      <data key="startline">11</data>
+    </edge>
+    <node id="18.417">
+      <data key="invariant">anonlocal::1a = (void *)&amp;dynamic_object13;</data>
+      <data key="invariant.scope">java::LegalCasting.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="18.417" target="sink">
+      <data key="originfile">LegalCasting.java</data>
+      <data key="startline">13</data>
+    </edge>
+  </graph>
+</graphml>

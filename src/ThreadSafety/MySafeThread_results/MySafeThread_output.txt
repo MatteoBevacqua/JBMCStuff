@@ -1,0 +1,77 @@
+JBMC version 5.54.0 (cbmc-5.54.0) 64-bit x86_64 linux
+Parsing ...
+Trying to load Java main class: MySafeThread
+Found Java main class: MySafeThread
+Converting
+Java: added 2264 String or Class constant symbols
+Generating GOTO Program
+Running GOTO functions transformation passes
+Running with 16 object bits, 48 offset bits (default)
+Starting Bounded Model Checking
+Unwinding loop __CPROVER__start.0 iteration 1  thread 0
+Unwinding loop __CPROVER__start.0 iteration 2  thread 0
+Unwinding loop __CPROVER__start.0 iteration 3  thread 0
+Unwinding loop __CPROVER__start.0 iteration 4  thread 0
+Unwinding loop __CPROVER__start.0 iteration 5  thread 0
+Unwinding recursion java::MySafeThread.<clinit_wrapper> iteration 1
+Unwinding recursion java::MySafeThread.<clinit_wrapper> iteration 1
+Unwinding recursion java::MySafeThread.<clinit_wrapper> iteration 1
+Unwinding recursion java::MySafeThread.<clinit_wrapper> iteration 1
+Unwinding recursion java::MySafeThread.<clinit_wrapper> iteration 1
+Unwinding recursion java::MySafeThread.<clinit_wrapper> iteration 1
+Unwinding recursion java::MySafeThread.<clinit_wrapper> iteration 1
+Unwinding recursion java::MySafeThread.<clinit_wrapper> iteration 1
+aborting path on assume(false) at file MySafeThread.java line 15 function java::MySafeThread.run:()V bytecode-index 22 thread 1
+Unwinding recursion java::MySafeThread.<clinit_wrapper> iteration 1
+Unwinding recursion java::MySafeThread.<clinit_wrapper> iteration 1
+Unwinding recursion java::MySafeThread.<clinit_wrapper> iteration 1
+Unwinding recursion java::MySafeThread.<clinit_wrapper> iteration 1
+aborting path on assume(false) at file MySafeThread.java line 15 function java::MySafeThread.run:()V bytecode-index 22 thread 2
+Runtime Symex: 0.0352761s
+Adding SC constraints
+Shared java::MySafeThread.inCritical: 97R/5W
+Shared java::MySafeThread.lock: 6R/4W
+Shared java::MySafeThread.$assertionsDisabled: 2R/4W
+Shared java::MySafeThread__CPROVER_clinit_state: 2R/7W
+Shared __CPROVER__next_thread_id: 2R/3W
+Shared symex_dynamic::dynamic_object13..length: 16R/3W
+Shared symex_dynamic::dynamic_object13..data: 12R/3W
+Shared symex_dynamic::dynamic_14_array[[0]]: 10R/6W
+Shared symex_dynamic::dynamic_14_array[[1]]: 10R/6W
+Shared symex_dynamic::dynamic_object17..@class_identifier: 2R/2W
+Shared symex_dynamic::dynamic_object17..cproverMonitorCount: 4R/7W
+Shared symex_dynamic::dynamic_object18..@java.lang.Thread..@java.lang.Object..@class_identifier: 1R/2W
+Shared symex_dynamic::dynamic_object18..@java.lang.Thread..target: 3R/3W
+Shared symex_dynamic::dynamic_object18..id: 12R/3W
+Shared symex_dynamic::dynamic_object19..@java.lang.Thread..@java.lang.Object..@class_identifier: 1R/2W
+Shared symex_dynamic::dynamic_object19..@java.lang.Thread..target: 3R/3W
+Shared symex_dynamic::dynamic_object19..id: 12R/3W
+Shared symex_dynamic::dynamic_object20..length: 20R/4W
+Shared symex_dynamic::dynamic_object20..data: 20R/4W
+Shared symex_dynamic::dynamic_21_array[[0]]: 11R/7W
+Shared symex_dynamic::dynamic_21_array[[1]]: 11R/7W
+Shared symex_dynamic::dynamic_object22..@class_identifier: 2R/3W
+Shared symex_dynamic::dynamic_object22..cproverMonitorCount: 4R/8W
+Shared symex_dynamic::dynamic_object24..length: 12R/4W
+Shared symex_dynamic::dynamic_object24..data: 13R/4W
+Shared symex_dynamic::dynamic_25_array[[0]]: 6R/5W
+Shared symex_dynamic::dynamic_25_array[[1]]: 6R/5W
+Shared symex_dynamic::dynamic_object26..@class_identifier: 1R/3W
+Shared symex_dynamic::dynamic_object26..cproverMonitorCount: 2R/6W
+size of program expression: 9516 steps
+no slicing due to threads
+Generated 127 VCC(s), 42 remaining after simplification
+Runtime Postprocess Equation: 0.15111s
+Passing problem to string refinement loop with MiniSAT 2.2.1 without simplifier
+converting SSA
+Runtime Convert SSA: 0.0130416s
+Running string refinement loop with MiniSAT 2.2.1 without simplifier
+BV-Refinement: post-processing
+BV-Refinement: iteration 1
+132699 variables, 603828 clauses
+SAT checker: instance is UNSATISFIABLE
+BV-Refinement: got UNSAT, and the proof passes => UNSAT
+Total iterations: 1
+Runtime Solver: 3.51573s
+Runtime decision procedure: 3.53099s
+VERIFICATION SUCCESSFUL

@@ -1,5 +1,4 @@
-package OOPFeatures;
-
+ 
 class A1 {
     int firstInt;
 

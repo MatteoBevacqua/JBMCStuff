@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <key attr.name="originFileName" attr.type="string" for="edge" id="originfile">
+    <default>&lt;command-line&gt;</default>
+  </key>
+  <key attr.name="invariant" attr.type="string" for="node" id="invariant"/>
+  <key attr.name="invariant.scope" attr.type="string" for="node" id="invariant.scope"/>
+  <key attr.name="isViolationNode" attr.type="boolean" for="node" id="violation">
+    <default>false</default>
+  </key>
+  <key attr.name="isEntryNode" attr.type="boolean" for="node" id="entry">
+    <default>false</default>
+  </key>
+  <key attr.name="isSinkNode" attr.type="boolean" for="node" id="sink">
+    <default>false</default>
+  </key>
+  <key attr.name="enterLoopHead" attr.type="boolean" for="edge" id="enterLoopHead">
+    <default>false</default>
+  </key>
+  <key attr.name="cyclehead" attr.type="boolean" for="node" id="cyclehead">
+    <default>false</default>
+  </key>
+  <key attr.name="threadId" attr.type="int" for="edge" id="threadId">
+    <default>0</default>
+  </key>
+  <key attr.name="createThread" attr.type="int" for="edge" id="createThread">
+    <default>0</default>
+  </key>
+  <key attr.name="sourcecodeLanguage" attr.type="string" for="graph" id="sourcecodelang"/>
+  <key attr.name="programFile" attr.type="string" for="graph" id="programfile"/>
+  <key attr.name="programHash" attr.type="string" for="graph" id="programhash"/>
+  <key attr.name="specification" attr.type="string" for="graph" id="specification"/>
+  <key attr.name="architecture" attr.type="string" for="graph" id="architecture"/>
+  <key attr.name="producer" attr.type="string" for="graph" id="producer"/>
+  <key attr.name="creationtime" attr.type="string" for="graph" id="creationtime"/>
+  <key attr.name="startline" attr.type="int" for="edge" id="startline"/>
+  <key attr.name="control" attr.type="string" for="edge" id="control"/>
+  <key attr.name="assumption" attr.type="string" for="edge" id="assumption"/>
+  <key attr.name="assumption.resultfunction" attr.type="string" for="edge" id="assumption.resultfunction"/>
+  <key attr.name="assumption.scope" attr.type="string" for="edge" id="assumption.scope"/>
+  <key attr.name="enterFunction" attr.type="string" for="edge" id="enterFunction"/>
+  <key attr.name="returnFromFunction" attr.type="string" for="edge" id="returnFrom"/>
+  <key attr.name="witness-type" attr.type="string" for="graph" id="witness-type"/>
+  <graph edgedefault="directed">
+    <data key="sourcecodelang">C</data>
+    <node id="sink"/>
+    <node id="277.41">
+      <data key="entry">true</data>
+    </node>
+    <edge source="277.41" target="280.43">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">473</data>
+    </edge>
+    <node id="280.43">
+      <data key="invariant">ConstructorChaining@class_model.name = &amp;ConstructorChaining;</data>
+      <data key="invariant.scope">java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V</data>
+    </node>
+    <edge source="280.43" target="283.45">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">474</data>
+    </edge>
+    <node id="283.45">
+      <data key="invariant">ConstructorChaining@class_model.cproverIsAnnotation = false;</data>
+      <data key="invariant.scope">java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V</data>
+    </node>
+    <edge source="283.45" target="286.47">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">475</data>
+    </edge>
+    <node id="286.47">
+      <data key="invariant">ConstructorChaining@class_model.cproverIsArray = false;</data>
+      <data key="invariant.scope">java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V</data>
+    </node>
+    <edge source="286.47" target="289.49">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">476</data>
+    </edge>
+    <node id="289.49">
+      <data key="invariant">ConstructorChaining@class_model.cproverIsInterface = false;</data>
+      <data key="invariant.scope">java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V</data>
+    </node>
+    <edge source="289.49" target="292.51">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">477</data>
+    </edge>
+    <node id="292.51">
+      <data key="invariant">ConstructorChaining@class_model.cproverIsSynthetic = false;</data>
+      <data key="invariant.scope">java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V</data>
+    </node>
+    <edge source="292.51" target="295.53">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">478</data>
+    </edge>
+    <node id="295.53">
+      <data key="invariant">ConstructorChaining@class_model.cproverIsLocalClass = isLocalClass;</data>
+      <data key="invariant.scope">java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V</data>
+    </node>
+    <edge source="295.53" target="298.55">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">479</data>
+    </edge>
+    <node id="298.55">
+      <data key="invariant">ConstructorChaining@class_model.cproverIsMemberClass = isMemberClass;</data>
+      <data key="invariant.scope">java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V</data>
+    </node>
+    <edge source="298.55" target="612.122">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">480</data>
+    </edge>
+    <node id="612.122">
+      <data key="invariant">ConstructorChaining@class_model.cproverIsEnum = false;</data>
+      <data key="invariant.scope">java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V</data>
+    </node>
+    <edge source="612.122" target="613.137">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">28</data>
+    </edge>
+    <node id="612.124"/>
+    <node id="612.126"/>
+    <node id="612.128"/>
+    <node id="612.130"/>
+    <node id="612.132"/>
+    <node id="612.134"/>
+    <node id="613.137">
+      <data key="invariant">dynamic_object1 = nondet_symbol(symex::nondet3);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="613.137" target="616.153">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">28</data>
+    </edge>
+    <node id="613.139"/>
+    <node id="613.141"/>
+    <node id="613.143"/>
+    <node id="613.145"/>
+    <node id="613.147"/>
+    <node id="616.153">
+      <data key="invariant">dynamic_object1.@java.lang.Object.@class_identifier = "java::array[reference]";</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="616.153" target="619.157">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">28</data>
+    </edge>
+    <node id="619.157">
+      <data key="invariant">dynamic_object1.length = nondet_array_length;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="619.157" target="620.158">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">28</data>
+    </edge>
+    <node id="620.158">
+      <data key="invariant">dynamic_object1.data = (void **)dynamic_2_array;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="620.158" target="632.193">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">28</data>
+    </edge>
+    <node id="620.160"/>
+    <node id="620.162"/>
+    <node id="620.164"/>
+    <node id="620.166"/>
+    <node id="620.168"/>
+    <node id="632.193">
+      <data key="invariant">dynamic_2_array = ARRAY_OF(null);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="632.193" target="638.207">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">28</data>
+    </edge>
+    <node id="638.207">
+      <data key="invariant">dynamic_object4 = nondet_symbol(symex::nondet7);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="638.207" target="632.234">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">28</data>
+    </edge>
+    <node id="632.234">
+      <data key="invariant">dynamic_object3.@java.lang.Object.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="632.234" target="638.248">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">28</data>
+    </edge>
+    <node id="638.248">
+      <data key="invariant">dynamic_object6 = nondet_symbol(symex::nondet11);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="638.248" target="632.275">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">28</data>
+    </edge>
+    <node id="632.275">
+      <data key="invariant">dynamic_object5.@java.lang.Object.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="632.275" target="638.289">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">28</data>
+    </edge>
+    <node id="638.289">
+      <data key="invariant">dynamic_object8 = nondet_symbol(symex::nondet15);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="638.289" target="632.316">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">28</data>
+    </edge>
+    <node id="632.316">
+      <data key="invariant">dynamic_object7.@java.lang.Object.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="632.316" target="638.330">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">28</data>
+    </edge>
+    <node id="638.330">
+      <data key="invariant">dynamic_object10 = nondet_symbol(symex::nondet19);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="638.330" target="632.357">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">28</data>
+    </edge>
+    <node id="632.357">
+      <data key="invariant">dynamic_object9.@java.lang.Object.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="632.357" target="638.371">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">28</data>
+    </edge>
+    <node id="638.371">
+      <data key="invariant">dynamic_object12 = nondet_symbol(symex::nondet23);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="638.371" target="646.492">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">28</data>
+    </edge>
+    <node id="646.492">
+      <data key="invariant">dynamic_object11.@java.lang.Object.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="646.492" target="105.495">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">28</data>
+    </edge>
+    <node id="105.495">
+      <data key="invariant">arg0a = &amp;dynamic_object1;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="105.495" target="106.508">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">28</data>
+    </edge>
+    <node id="105.497"/>
+    <node id="105.499"/>
+    <node id="105.501"/>
+    <node id="105.503"/>
+    <node id="105.505"/>
+    <node id="106.508">
+      <data key="invariant">dynamic_object13 = nondet_symbol(symex::nondet24);</data>
+      <data key="invariant.scope">java::ConstructorChaining.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="106.508" target="109.519">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">28</data>
+    </edge>
+    <node id="106.510"/>
+    <node id="106.512"/>
+    <node id="106.514"/>
+    <node id="106.516"/>
+    <node id="109.519">
+      <data key="invariant">dynamic_object13.@B2.@A1.@java.lang.Object.@class_identifier = "java::C3";</data>
+      <data key="invariant.scope">java::ConstructorChaining.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="109.519" target="6.522">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">28</data>
+    </edge>
+    <node id="6.522">
+      <data key="invariant">this = &amp;dynamic_object13;</data>
+      <data key="invariant.scope">java::ConstructorChaining.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="6.522" target="389.525">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">21</data>
+    </edge>
+    <node id="389.525">
+      <data key="invariant">this = (struct B2 *)&amp;dynamic_object13;</data>
+      <data key="invariant.scope">java::C3.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="389.525" target="396.528">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">13</data>
+    </edge>
+    <node id="396.528">
+      <data key="invariant">this = (struct A1 *)&amp;dynamic_object13;</data>
+      <data key="invariant.scope">java::B2.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="396.528" target="2.530">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">5</data>
+    </edge>
+    <node id="2.530">
+      <data key="invariant">this = (struct java.lang.Object *)&amp;dynamic_object13;</data>
+      <data key="invariant.scope">java::A1.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="2.530" target="399.533">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">40</data>
+    </edge>
+    <node id="399.533">
+      <data key="invariant">dynamic_object13.@B2.@A1.@java.lang.Object.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">java::java.lang.Object.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="399.533" target="392.536">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">6</data>
+    </edge>
+    <node id="392.536">
+      <data key="invariant">dynamic_object13.@B2.@A1.firstInt = 1;</data>
+      <data key="invariant.scope">java::A1.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="392.536" target="9.539">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">14</data>
+    </edge>
+    <node id="9.539">
+      <data key="invariant">dynamic_object13.@B2.anotherInt = 2;</data>
+      <data key="invariant.scope">java::B2.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="9.539" target="110.541">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">22</data>
+    </edge>
+    <node id="110.541">
+      <data key="invariant">dynamic_object13.lastInt = 3;</data>
+      <data key="invariant.scope">java::C3.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="110.541" target="182.561">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">28</data>
+    </edge>
+    <node id="182.561">
+      <data key="invariant">anonlocal::1a = (void *)&amp;dynamic_object13;</data>
+      <data key="invariant.scope">java::ConstructorChaining.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="182.561" target="19.566">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">26</data>
+    </edge>
+    <node id="19.566">
+      <data key="invariant">this = &amp;ConstructorChaining@class_model;</data>
+      <data key="invariant.scope">java::ConstructorChaining.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="19.566" target="225.571">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">421</data>
+    </edge>
+    <node id="225.571">
+      <data key="invariant">this = &amp;ConstructorChaining@class_model;</data>
+      <data key="invariant.scope">java::java.lang.Class.desiredAssertionStatus:()Z</data>
+    </node>
+    <edge source="225.571" target="228.575">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">191</data>
+    </edge>
+    <node id="228.575">
+      <data key="invariant">this = &amp;ConstructorChaining@class_model;</data>
+      <data key="invariant.scope">java::java.lang.Class.getClassLoader:()Ljava/lang/ClassLoader;</data>
+    </node>
+    <edge source="228.575" target="229.576">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">191</data>
+    </edge>
+    <node id="229.576">
+      <data key="invariant">cl = null;</data>
+      <data key="invariant.scope">java::java.lang.Class.getClassLoader:()Ljava/lang/ClassLoader;</data>
+    </node>
+    <edge source="229.576" target="22.581">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">192</data>
+    </edge>
+    <node id="22.581"/>
+    <edge source="22.581" target="23.582">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">421</data>
+    </edge>
+    <node id="23.582">
+      <data key="invariant">loader = null;</data>
+      <data key="invariant.scope">java::java.lang.Class.desiredAssertionStatus:()Z</data>
+    </node>
+    <edge source="23.582" target="28.586">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">423</data>
+    </edge>
+    <node id="28.586"/>
+    <edge source="28.586" target="183.593">
+      <data key="originfile">java/lang/Class.java</data>
+      <data key="startline">424</data>
+    </edge>
+    <node id="183.593">
+      <data key="invariant">clazz = &amp;ConstructorChaining@class_model;</data>
+      <data key="invariant.scope">java::java.lang.Class.desiredAssertionStatus:()Z</data>
+    </node>
+    <edge source="183.593" target="197.604">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">26</data>
+    </edge>
+    <node id="197.604"/>
+    <edge source="197.604" target="201.606">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">26</data>
+    </edge>
+    <node id="201.606"/>
+    <edge source="201.606" target="112.614">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">26</data>
+    </edge>
+    <node id="112.614">
+      <data key="invariant">$assertionsDisabled = false;</data>
+      <data key="invariant.scope">java::ConstructorChaining.&lt;clinit&gt;:()V</data>
+    </node>
+    <edge source="112.614" target="116.615">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">29</data>
+    </edge>
+    <node id="116.615"/>
+    <edge source="116.615" target="122.616">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">29</data>
+    </edge>
+    <node id="122.616"/>
+    <edge source="122.616" target="133.623">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">29</data>
+    </edge>
+    <node id="133.623"/>
+    <edge source="133.623" target="141.625">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">30</data>
+    </edge>
+    <node id="141.625"/>
+    <edge source="141.625" target="152.632">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">30</data>
+    </edge>
+    <node id="152.632"/>
+    <edge source="152.632" target="158.633">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">31</data>
+    </edge>
+    <node id="158.633"/>
+    <edge source="158.633" target="647.638">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">31</data>
+    </edge>
+    <node id="647.638"/>
+    <edge source="647.638" target="sink">
+      <data key="originfile">ConstructorChaining.java</data>
+      <data key="startline">28</data>
+    </edge>
+  </graph>
+</graphml>

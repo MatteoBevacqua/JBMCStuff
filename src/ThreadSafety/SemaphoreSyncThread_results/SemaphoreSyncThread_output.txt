@@ -1,0 +1,999 @@
+JBMC version 5.54.0 (cbmc-5.54.0) 64-bit x86_64 linux
+Parsing ...
+Trying to load Java main class: SemaphoreSyncThread
+Found Java main class: SemaphoreSyncThread
+Converting
+Java: added 2264 String or Class constant symbols
+Generating GOTO Program
+Running GOTO functions transformation passes
+Running with 16 object bits, 48 offset bits (default)
+Starting Bounded Model Checking
+Unwinding loop __CPROVER__start.0 iteration 1  thread 0
+Unwinding loop __CPROVER__start.0 iteration 2  thread 0
+Unwinding loop __CPROVER__start.0 iteration 3  thread 0
+Unwinding loop __CPROVER__start.0 iteration 4  thread 0
+Unwinding loop __CPROVER__start.0 iteration 5  thread 0
+Unwinding recursion java::SemaphoreSyncThread.<clinit_wrapper> iteration 1
+Unwinding recursion java::SemaphoreSyncThread.<clinit_wrapper> iteration 1
+aborting path on assume(false) at file SemaphoreSyncThread.java line 20 function java::SemaphoreSyncThread.run:()V bytecode-index 22 thread 1
+Unwinding recursion java::SemaphoreSyncThread.<clinit_wrapper> iteration 1
+aborting path on assume(false) at file SemaphoreSyncThread.java line 20 function java::SemaphoreSyncThread.run:()V bytecode-index 22 thread 2
+Runtime Symex: 0.024649s
+Adding SC constraints
+Shared java::SemaphoreSyncThread.inCritical: 40R/2W
+Shared java::SemaphoreSyncThread.semaphore: 16R/2W
+Shared java::SemaphoreSyncThread.$assertionsDisabled: 2R/4W
+Shared java::SemaphoreSyncThread__CPROVER_clinit_state: 2R/7W
+Shared __CPROVER__next_thread_id: 2R/3W
+Shared symex_dynamic::dynamic_object13..length: 16R/3W
+Shared symex_dynamic::dynamic_14_array[[0]]: 6R/6W
+Shared symex_dynamic::dynamic_14_array[[1]]: 6R/6W
+Shared symex_dynamic::dynamic_object16..@java.lang.Thread..@java.lang.Object..@class_identifier: 1R/2W
+Shared symex_dynamic::dynamic_object16..@java.lang.Thread..target: 3R/3W
+Shared symex_dynamic::dynamic_object16..id: 12R/3W
+Shared symex_dynamic::dynamic_object17..@java.lang.Thread..@java.lang.Object..@class_identifier: 1R/2W
+Shared symex_dynamic::dynamic_object17..@java.lang.Thread..target: 3R/3W
+Shared symex_dynamic::dynamic_object17..id: 12R/3W
+size of program expression: 3430 steps
+no slicing due to threads
+Generated 95 VCC(s), 32 remaining after simplification
+Runtime Postprocess Equation: 0.02074s
+Passing problem to string refinement loop with MiniSAT 2.2.1 without simplifier
+converting SSA
+Runtime Convert SSA: 0.00552289s
+Running string refinement loop with MiniSAT 2.2.1 without simplifier
+BV-Refinement: post-processing
+BV-Refinement: iteration 1
+48940 variables, 173252 clauses
+SAT checker: instance is SATISFIABLE
+BV-Refinement: got SAT, and it simulates => SAT
+Total iterations: 1
+Runtime Solver: 0.476653s
+Runtime decision procedure: 0.483449s
+Building error trace
+Counterexample:
+
+State 1 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  __CPROVER__next_thread_id=0 (00000000 00000000 00000000 00000000)
+
+State 2 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  __CPROVER__thread_id=0 (00000000 00000000 00000000 00000000)
+
+State 4 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  $assertionsDisabled=false (00000000)
+
+State 5 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  inCritical=null (?)
+
+State 6 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  semaphore=null (?)
+
+State 7 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread@class_model.@java.lang.Object.@class_identifier="java::java.lang.Class" (?)
+
+State 8 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread@class_model.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 9 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread@class_model.name=null (?)
+
+State 10 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread@class_model.cproverIsAnnotation=false (00000000)
+
+State 11 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread@class_model.cproverIsArray=false (00000000)
+
+State 12 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread@class_model.cproverIsInterface=false (00000000)
+
+State 13 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread@class_model.cproverIsSynthetic=false (00000000)
+
+State 14 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread@class_model.cproverIsLocalClass=false (00000000)
+
+State 15 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread@class_model.cproverIsMemberClass=false (00000000)
+
+State 16 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread@class_model.cproverIsEnum=false (00000000)
+
+State 17 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread@class_model.enumConstantDirectory=null (?)
+
+State 20 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  this=&SemaphoreSyncThread@class_model (?)
+
+State 21 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  name=&SemaphoreSyncThread (?)
+
+State 22 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isAnnotation=false (00000000)
+
+State 23 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isArray=false (00000000)
+
+State 24 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isInterface=false (00000000)
+
+State 25 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isSynthetic=false (00000000)
+
+State 26 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isLocalClass=false (00000000)
+
+State 27 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isMemberClass=false (00000000)
+
+State 28 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  isEnum=false (00000000)
+
+State 29 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 473 thread 0
+----------------------------------------------------
+  SemaphoreSyncThread@class_model.name=&SemaphoreSyncThread (?)
+
+State 30 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 474 thread 0
+----------------------------------------------------
+  SemaphoreSyncThread@class_model.cproverIsAnnotation=false (00000000)
+
+State 31 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 475 thread 0
+----------------------------------------------------
+  SemaphoreSyncThread@class_model.cproverIsArray=false (00000000)
+
+State 32 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 476 thread 0
+----------------------------------------------------
+  SemaphoreSyncThread@class_model.cproverIsInterface=false (00000000)
+
+State 33 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 477 thread 0
+----------------------------------------------------
+  SemaphoreSyncThread@class_model.cproverIsSynthetic=false (00000000)
+
+State 34 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 478 thread 0
+----------------------------------------------------
+  SemaphoreSyncThread@class_model.cproverIsLocalClass=false (00000000)
+
+State 35 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 479 thread 0
+----------------------------------------------------
+  SemaphoreSyncThread@class_model.cproverIsMemberClass=false (00000000)
+
+State 36 file java/lang/Class.java function java.lang.Class.cproverInitializeClassLiteral(java.lang.String, boolean, boolean, boolean, boolean, boolean, boolean, boolean) line 480 thread 0
+----------------------------------------------------
+  SemaphoreSyncThread@class_model.cproverIsEnum=false (00000000)
+
+State 38 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread__CPROVER_clinit_state=(byte)0 (00000000)
+
+State 39 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread__CPROVER_clinit_threadlocal_state=(byte)0 (00000000)
+
+State 40 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  threadSeqNumber=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 41 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+
+State 42 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 43 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread.length=19 (00000000 00000000 00000000 00010011)
+
+State 44 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread.data=SemaphoreSyncThread_constarray (?)
+
+State 45 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread_constarray={ 'S', 'e', 'm', 'a', 'p', 'h', 'o', 'r', 'e', 'S', 'y', 'n', 'c', 'T', 'h', 'r', 'e', 'a', 'd' } ({ 00000000 01010011, 00000000 01100101, 00000000 01101101, 00000000 01100001, 00000000 01110000, 00000000 01101000, 00000000 01101111, 00000000 01110010, 00000000 01100101, 00000000 01010011, 00000000 01111001, 00000000 01101110, 00000000 01100011, 00000000 01010100, 00000000 01101000, 00000000 01110010, 00000000 01100101, 00000000 01100001, 00000000 01100100 })
+
+State 46 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread_constarray[0L]='S' (00000000 01010011)
+
+State 47 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread_constarray[1L]='e' (00000000 01100101)
+
+State 48 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread_constarray[2L]='m' (00000000 01101101)
+
+State 49 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread_constarray[3L]='a' (00000000 01100001)
+
+State 50 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread_constarray[4L]='p' (00000000 01110000)
+
+State 51 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread_constarray[5L]='h' (00000000 01101000)
+
+State 52 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread_constarray[6L]='o' (00000000 01101111)
+
+State 53 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread_constarray[7L]='r' (00000000 01110010)
+
+State 54 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread_constarray[8L]='e' (00000000 01100101)
+
+State 55 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread_constarray[9L]='S' (00000000 01010011)
+
+State 56 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread_constarray[10L]='y' (00000000 01111001)
+
+State 57 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread_constarray[11L]='n' (00000000 01101110)
+
+State 58 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread_constarray[12L]='c' (00000000 01100011)
+
+State 59 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread_constarray[13L]='T' (00000000 01010100)
+
+State 60 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread_constarray[14L]='h' (00000000 01101000)
+
+State 61 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread_constarray[15L]='r' (00000000 01110010)
+
+State 62 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread_constarray[16L]='e' (00000000 01100101)
+
+State 63 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread_constarray[17L]='a' (00000000 01100001)
+
+State 64 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread_constarray[18L]='d' (00000000 01100100)
+
+State 65 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  SemaphoreSyncThread_return_value=0 (00000000 00000000 00000000 00000000)
+
+Assumption:
+  nondet_array_length >= 0
+
+Assumption:
+  nondet_array_length <= 5
+
+State 79 file SemaphoreSyncThread.java function __CPROVER__start line 27 thread 0
+----------------------------------------------------
+  dynamic_object1={ .@java.lang.Object={ .@class_identifier="java::SemaphoreSyncThread",
+    .cproverMonitorCount=0 },
+    .length=0, .data=null, .@element_class_identifier="java::SemaphoreSyncThread",
+    .@array_dimensions=0 } ({ { ?, 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000000 00000000, ?, ?, 00000000 00000000 00000000 00000000 })
+
+State 80 file SemaphoreSyncThread.java function __CPROVER__start line 27 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.@class_identifier="java::SemaphoreSyncThread" (?)
+
+State 81 file SemaphoreSyncThread.java function __CPROVER__start line 27 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 82 file SemaphoreSyncThread.java function __CPROVER__start line 27 thread 0
+----------------------------------------------------
+  dynamic_object1.length=0 (00000000 00000000 00000000 00000000)
+
+State 83 file SemaphoreSyncThread.java function __CPROVER__start line 27 thread 0
+----------------------------------------------------
+  dynamic_object1.data=null (?)
+
+State 84 file SemaphoreSyncThread.java function __CPROVER__start line 27 thread 0
+----------------------------------------------------
+  dynamic_object1.@element_class_identifier="java::SemaphoreSyncThread" (?)
+
+State 85 file SemaphoreSyncThread.java function __CPROVER__start line 27 thread 0
+----------------------------------------------------
+  dynamic_object1.@array_dimensions=0 (00000000 00000000 00000000 00000000)
+
+State 87 file SemaphoreSyncThread.java function __CPROVER__start line 27 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.@class_identifier="java::array[reference]" (?)
+
+State 88 file SemaphoreSyncThread.java function __CPROVER__start line 27 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 89 file SemaphoreSyncThread.java function __CPROVER__start line 27 thread 0
+----------------------------------------------------
+  dynamic_object1.length=0 (00000000 00000000 00000000 00000000)
+
+State 90 file SemaphoreSyncThread.java function __CPROVER__start line 27 thread 0
+----------------------------------------------------
+  dynamic_object1.data=null (?)
+
+State 91 file SemaphoreSyncThread.java function __CPROVER__start line 27 thread 0
+----------------------------------------------------
+  dynamic_object1.@element_class_identifier="" (?)
+
+State 92 file SemaphoreSyncThread.java function __CPROVER__start line 27 thread 0
+----------------------------------------------------
+  dynamic_object1.@array_dimensions=0 (00000000 00000000 00000000 00000000)
+
+State 93 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object1.@array_dimensions=1 (00000000 00000000 00000000 00000001)
+
+State 94 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object1.@element_class_identifier="java::java.lang.String" (?)
+
+State 95 file SemaphoreSyncThread.java function __CPROVER__start line 27 thread 0
+----------------------------------------------------
+  dynamic_object1.length=0 (00000000 00000000 00000000 00000000)
+
+State 98 file SemaphoreSyncThread.java function __CPROVER__start line 27 thread 0
+----------------------------------------------------
+  dynamic_object1.data=&((void *)dynamic_2_array[0L]) (?)
+
+State 99 file SemaphoreSyncThread.java function __CPROVER__start line 27 thread 0
+----------------------------------------------------
+  dynamic_2_array={ null, null, null, null, null } ({ ?, ?, ?, ?, ? })
+
+State 100 file SemaphoreSyncThread.java function __CPROVER__start line 27 thread 0
+----------------------------------------------------
+  dynamic_2_array[0L]=null (?)
+
+State 101 file SemaphoreSyncThread.java function __CPROVER__start line 27 thread 0
+----------------------------------------------------
+  dynamic_2_array[1L]=null (?)
+
+State 102 file SemaphoreSyncThread.java function __CPROVER__start line 27 thread 0
+----------------------------------------------------
+  dynamic_2_array[2L]=null (?)
+
+State 103 file SemaphoreSyncThread.java function __CPROVER__start line 27 thread 0
+----------------------------------------------------
+  dynamic_2_array[3L]=null (?)
+
+State 104 file SemaphoreSyncThread.java function __CPROVER__start line 27 thread 0
+----------------------------------------------------
+  dynamic_2_array[4L]=null (?)
+
+State 108 file SemaphoreSyncThread.java function __CPROVER__start line 27 thread 0
+----------------------------------------------------
+  INPUT arg0a: &dynamic_object1 (?)
+
+State 111 file SemaphoreSyncThread.java function __CPROVER__start line 27 thread 0
+----------------------------------------------------
+  arg0a=&dynamic_object1 (?)
+
+State 112 function SemaphoreSyncThread.main(java.lang.String[]) thread 0
+----------------------------------------------------
+  anonlocal::2a=null (?)
+
+State 113 function SemaphoreSyncThread.main(java.lang.String[]) thread 0
+----------------------------------------------------
+  anonlocal::1a=null (?)
+
+State 118 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 27 thread 0
+----------------------------------------------------
+  dynamic_object13={ .@java.lang.Object={ .@class_identifier="java::SemaphoreSyncThread",
+    .cproverMonitorCount=0 },
+    .length=262146, .data=null } ({ { ?, 00000000 00000000 00000000 00000000 }, 00000000 00000100 00000000 00000010, ? })
+
+State 119 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 27 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Object.@class_identifier="java::SemaphoreSyncThread" (?)
+
+State 120 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 27 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 121 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 27 thread 0
+----------------------------------------------------
+  dynamic_object13.length=262146 (00000000 00000100 00000000 00000010)
+
+State 122 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 27 thread 0
+----------------------------------------------------
+  dynamic_object13.data=null (?)
+
+State 124 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 27 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Object.@class_identifier="java::array[boolean]" (?)
+
+State 125 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 27 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 126 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 27 thread 0
+----------------------------------------------------
+  dynamic_object13.length=0 (00000000 00000000 00000000 00000000)
+
+State 127 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 27 thread 0
+----------------------------------------------------
+  dynamic_object13.data=null (?)
+
+State 128 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 27 thread 0
+----------------------------------------------------
+  dynamic_object13.length=2 (00000000 00000000 00000000 00000010)
+
+State 131 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 27 thread 0
+----------------------------------------------------
+  dynamic_object13.data=dynamic_14_array (?)
+
+State 132 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 27 thread 0
+----------------------------------------------------
+  dynamic_14_array={ false, false } ({ 00000000, 00000000 })
+
+State 133 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 27 thread 0
+----------------------------------------------------
+  dynamic_14_array[0L]=false (00000000)
+
+State 134 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 27 thread 0
+----------------------------------------------------
+  dynamic_14_array[1L]=false (00000000)
+
+State 137 function java::SemaphoreSyncThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$SemaphoreSyncThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 139 function java::SemaphoreSyncThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  SemaphoreSyncThread__CPROVER_clinit_threadlocal_state=(byte)2 (00000010)
+
+State 141 function java::SemaphoreSyncThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  SemaphoreSyncThread__CPROVER_clinit_state=(byte)1 (00000001)
+
+State 142 function java::SemaphoreSyncThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$SemaphoreSyncThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 151 file SemaphoreSyncThread.java function SemaphoreSyncThread.<clinit>() line 3 thread 0
+----------------------------------------------------
+  this=&SemaphoreSyncThread@class_model (?)
+
+State 152 function java.lang.Class.desiredAssertionStatus() thread 0
+----------------------------------------------------
+  loader=null (?)
+
+State 156 file java/lang/Class.java function java.lang.Class.desiredAssertionStatus() line 421 thread 0
+----------------------------------------------------
+  this=&SemaphoreSyncThread@class_model (?)
+
+State 157 function java.lang.Class.getClassLoader() thread 0
+----------------------------------------------------
+  cl=null (?)
+
+State 161 file java/lang/Class.java function java.lang.Class.getClassLoader() line 191 thread 0
+----------------------------------------------------
+  this=&SemaphoreSyncThread@class_model (?)
+
+State 165 file java/lang/Class.java function java.lang.Class.getClassLoader() line 191 thread 0
+----------------------------------------------------
+  cl=null (?)
+
+State 171 file java/lang/Class.java function java.lang.Class.desiredAssertionStatus() line 421 thread 0
+----------------------------------------------------
+  loader=null (?)
+
+State 176 file java/lang/Class.java function java.lang.Class.desiredAssertionStatus() line 424 thread 0
+----------------------------------------------------
+  clazz=&SemaphoreSyncThread@class_model (?)
+
+State 190 function java::SemaphoreSyncThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$SemaphoreSyncThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 195 file SemaphoreSyncThread.java function SemaphoreSyncThread.<clinit>() line 3 thread 0
+----------------------------------------------------
+  $assertionsDisabled=false (00000000)
+
+State 198 function java::SemaphoreSyncThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  SemaphoreSyncThread__CPROVER_clinit_state=(byte)2 (00000010)
+
+State 201 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 27 thread 0
+----------------------------------------------------
+  inCritical=&dynamic_object13 (?)
+
+State 204 function java::SemaphoreSyncThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$SemaphoreSyncThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 209 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 28 thread 0
+----------------------------------------------------
+  dynamic_14_array[0L]=false (00000000)
+
+State 212 function java::SemaphoreSyncThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$SemaphoreSyncThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 217 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 29 thread 0
+----------------------------------------------------
+  dynamic_14_array[1L]=false (00000000)
+
+State 218 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object15={ .@class_identifier="java::SemaphoreSyncThread" } ({ ? })
+
+State 219 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object15.@class_identifier="java::SemaphoreSyncThread" (?)
+
+State 221 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  dynamic_object15.@class_identifier="java::java.util.concurrent.Semaphore" (?)
+
+State 224 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  this=&dynamic_object15 (?)
+
+State 225 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  stub_ignored_arg1=1 (00000000 00000000 00000000 00000001)
+
+State 230 function java::SemaphoreSyncThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$SemaphoreSyncThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 235 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 30 thread 0
+----------------------------------------------------
+  semaphore=&dynamic_object15 (?)
+
+State 238 function java::SemaphoreSyncThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$SemaphoreSyncThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 243 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  dynamic_object16={ .@java.lang.Thread={ .@java.lang.Object={ .@class_identifier="java::SemaphoreSyncThread",
+    .cproverMonitorCount=0 },
+    .target=(struct java.lang.Runnable *)&dynamic_object18.@java.lang.Error.@java.lang.Throwable.@java.lang.Object,
+    .tid=0L },
+    .id=0 } ({ { { ?, 00000000 00000000 00000000 00000000 }, ?, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000000 00000000 })
+
+State 244 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  dynamic_object16.@java.lang.Thread.@java.lang.Object.@class_identifier="java::SemaphoreSyncThread" (?)
+
+State 245 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  dynamic_object16.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 246 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  dynamic_object16.@java.lang.Thread.target=(struct java.lang.Runnable *)&dynamic_object18.@java.lang.Error.@java.lang.Throwable.@java.lang.Object (?)
+
+State 247 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  dynamic_object16.@java.lang.Thread.tid=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 248 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  dynamic_object16.id=0 (00000000 00000000 00000000 00000000)
+
+State 250 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  dynamic_object16.@java.lang.Thread.@java.lang.Object.@class_identifier="java::SemaphoreSyncThread" (?)
+
+State 251 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  dynamic_object16.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 252 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  dynamic_object16.@java.lang.Thread.target=null (?)
+
+State 253 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  dynamic_object16.@java.lang.Thread.tid=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 254 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  dynamic_object16.id=0 (00000000 00000000 00000000 00000000)
+
+State 257 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  this=&dynamic_object16 (?)
+
+State 258 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  arg1i=0 (00000000 00000000 00000000 00000000)
+
+State 261 file SemaphoreSyncThread.java function SemaphoreSyncThread(int) line 8 thread 0
+----------------------------------------------------
+  this=&dynamic_object16.@java.lang.Thread (?)
+
+State 265 file java/lang/Thread.java function java.lang.Thread() line 399 thread 0
+----------------------------------------------------
+  this=&dynamic_object16.@java.lang.Thread.@java.lang.Object (?)
+
+State 266 file java/lang/Object.java function java.lang.Object() line 40 thread 0
+----------------------------------------------------
+  dynamic_object16.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 268 file java/lang/Thread.java function java.lang.Thread() line 400 thread 0
+----------------------------------------------------
+  dynamic_object16.@java.lang.Thread.target=(struct java.lang.Runnable *)&dynamic_object16.@java.lang.Thread.@java.lang.Object (?)
+
+State 272 function java.lang.Thread.nextThreadID() thread 0
+----------------------------------------------------
+  result=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 274 file java/lang/Thread.java function java.lang.Thread.nextThreadID() line 208 thread 0
+----------------------------------------------------
+  threadSeqNumber=1L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001)
+
+State 275 file java/lang/Thread.java function java.lang.Thread.nextThreadID() line 208 thread 0
+----------------------------------------------------
+  result=1L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001)
+
+State 279 file java/lang/Thread.java function java.lang.Thread() line 401 thread 0
+----------------------------------------------------
+  dynamic_object16.@java.lang.Thread.tid=1L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001)
+
+State 281 file SemaphoreSyncThread.java function SemaphoreSyncThread(int) line 9 thread 0
+----------------------------------------------------
+  dynamic_object16.id=0 (00000000 00000000 00000000 00000000)
+
+State 283 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  anonlocal::1a=(void *)&dynamic_object16.@java.lang.Thread.@java.lang.Object.@class_identifier (?)
+
+State 286 function java::SemaphoreSyncThread.<clinit_wrapper> thread 0
+----------------------------------------------------
+  java$$SemaphoreSyncThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 291 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  dynamic_object17={ .@java.lang.Thread={ .@java.lang.Object={ .@class_identifier="java::SemaphoreSyncThread",
+    .cproverMonitorCount=0 },
+    .target=(struct java.lang.Runnable *)&dynamic_object17.@java.lang.Thread.@java.lang.Object,
+    .tid=0L },
+    .id=0 } ({ { { ?, 00000000 00000000 00000000 00000000 }, ?, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000000 00000000 })
+
+State 292 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  dynamic_object17.@java.lang.Thread.@java.lang.Object.@class_identifier="java::SemaphoreSyncThread" (?)
+
+State 293 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  dynamic_object17.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 294 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  dynamic_object17.@java.lang.Thread.target=(struct java.lang.Runnable *)&dynamic_object17.@java.lang.Thread.@java.lang.Object (?)
+
+State 295 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  dynamic_object17.@java.lang.Thread.tid=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 296 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  dynamic_object17.id=0 (00000000 00000000 00000000 00000000)
+
+State 298 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  dynamic_object17.@java.lang.Thread.@java.lang.Object.@class_identifier="java::SemaphoreSyncThread" (?)
+
+State 299 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  dynamic_object17.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 300 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  dynamic_object17.@java.lang.Thread.target=null (?)
+
+State 301 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  dynamic_object17.@java.lang.Thread.tid=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 302 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  dynamic_object17.id=0 (00000000 00000000 00000000 00000000)
+
+State 305 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  this=&dynamic_object17 (?)
+
+State 306 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  arg1i=1 (00000000 00000000 00000000 00000001)
+
+State 309 file SemaphoreSyncThread.java function SemaphoreSyncThread(int) line 8 thread 0
+----------------------------------------------------
+  this=&dynamic_object17.@java.lang.Thread (?)
+
+State 313 file java/lang/Thread.java function java.lang.Thread() line 399 thread 0
+----------------------------------------------------
+  this=&dynamic_object17.@java.lang.Thread.@java.lang.Object (?)
+
+State 314 file java/lang/Object.java function java.lang.Object() line 40 thread 0
+----------------------------------------------------
+  dynamic_object17.@java.lang.Thread.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 316 file java/lang/Thread.java function java.lang.Thread() line 400 thread 0
+----------------------------------------------------
+  dynamic_object17.@java.lang.Thread.target=(struct java.lang.Runnable *)&dynamic_object17.@java.lang.Thread.@java.lang.Object (?)
+
+State 320 function java.lang.Thread.nextThreadID() thread 0
+----------------------------------------------------
+  result=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 322 file java/lang/Thread.java function java.lang.Thread.nextThreadID() line 208 thread 0
+----------------------------------------------------
+  threadSeqNumber=2L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000010)
+
+State 323 file java/lang/Thread.java function java.lang.Thread.nextThreadID() line 208 thread 0
+----------------------------------------------------
+  result=2L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000010)
+
+State 327 file java/lang/Thread.java function java.lang.Thread() line 401 thread 0
+----------------------------------------------------
+  dynamic_object17.@java.lang.Thread.tid=2L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000010)
+
+State 329 file SemaphoreSyncThread.java function SemaphoreSyncThread(int) line 9 thread 0
+----------------------------------------------------
+  dynamic_object17.id=1 (00000000 00000000 00000000 00000001)
+
+State 331 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 31 thread 0
+----------------------------------------------------
+  anonlocal::2a=(void *)&dynamic_object17.@java.lang.Thread.@java.lang.Object.@class_identifier (?)
+
+State 334 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 32 thread 0
+----------------------------------------------------
+  this=&dynamic_object16.@java.lang.Thread (?)
+
+State 362 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 33 thread 0
+----------------------------------------------------
+  this=&dynamic_object17.@java.lang.Thread (?)
+
+State 390 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 35 thread 0
+----------------------------------------------------
+  this=&dynamic_object16 (?)
+
+State 394 file SemaphoreSyncThread.java function SemaphoreSyncThread.main(java.lang.String[]) line 36 thread 0
+----------------------------------------------------
+  this=&dynamic_object17 (?)
+
+State 399 file SemaphoreSyncThread.java function __CPROVER__start line 27 thread 0
+----------------------------------------------------
+  OUTPUT arg0a: &dynamic_object1 (?)
+
+State 400 file SemaphoreSyncThread.java function __CPROVER__start line 27 thread 0
+----------------------------------------------------
+  OUTPUT uncaught_exception': null (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 402 function __CPROVER__start thread 1
+----------------------------------------------------
+  __CPROVER__next_thread_id=1 (00000000 00000000 00000000 00000001)
+
+State 403 function __CPROVER__start thread 1
+----------------------------------------------------
+  __CPROVER__thread_id=1 (00000000 00000000 00000000 00000001)
+
+State 410 file java/lang/Thread.java function __CPROVER__start line 663 thread 1
+----------------------------------------------------
+  this=&dynamic_object16 (?)
+
+State 413 function java::SemaphoreSyncThread.<clinit_wrapper> thread 1
+----------------------------------------------------
+  java$$SemaphoreSyncThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 415 function java::SemaphoreSyncThread.<clinit_wrapper> thread 1
+----------------------------------------------------
+  SemaphoreSyncThread__CPROVER_clinit_threadlocal_state=(byte)2 (00000010)
+
+State 418 function java::SemaphoreSyncThread.<clinit_wrapper> thread 1
+----------------------------------------------------
+  java$$SemaphoreSyncThread__CPROVER_clinit_wrapper$$init_complete=true (1)
+
+State 426 file SemaphoreSyncThread.java function SemaphoreSyncThread.run() line 15 thread 1
+----------------------------------------------------
+  this=&dynamic_object15 (?)
+
+State 431 function java::SemaphoreSyncThread.<clinit_wrapper> thread 1
+----------------------------------------------------
+  java$$SemaphoreSyncThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 440 file SemaphoreSyncThread.java function SemaphoreSyncThread.run() line 19 thread 1
+----------------------------------------------------
+  dynamic_14_array[0L]=true (00000001)
+
+State 441 file SemaphoreSyncThread.java function SemaphoreSyncThread.run() line 19 thread 1
+----------------------------------------------------
+  dynamic_14_array[0L]=true (00000001)
+
+State 442 file SemaphoreSyncThread.java function SemaphoreSyncThread.run() line 19 thread 1
+----------------------------------------------------
+  dynamic_14_array[1L]=false (00000000)
+
+State 445 function java::SemaphoreSyncThread.<clinit_wrapper> thread 1
+----------------------------------------------------
+  java$$SemaphoreSyncThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 453 function java::SemaphoreSyncThread.<clinit_wrapper> thread 1
+----------------------------------------------------
+  java$$SemaphoreSyncThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 463 function java::SemaphoreSyncThread.<clinit_wrapper> thread 1
+----------------------------------------------------
+  java$$SemaphoreSyncThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 473 function java::SemaphoreSyncThread.<clinit_wrapper> thread 1
+----------------------------------------------------
+  java$$SemaphoreSyncThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 480 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  __CPROVER_rounding_mode=0 (00000000 00000000 00000000 00000000)
+
+State 481 function SemaphoreSyncThread.main(java.lang.String[]) thread 2
+----------------------------------------------------
+  __CPROVER__next_thread_id=2 (00000000 00000000 00000000 00000010)
+
+State 482 function SemaphoreSyncThread.main(java.lang.String[]) thread 2
+----------------------------------------------------
+  __CPROVER__thread_id=2 (00000000 00000000 00000000 00000010)
+
+State 489 file java/lang/Thread.java function SemaphoreSyncThread.main(java.lang.String[]) line 663 thread 2
+----------------------------------------------------
+  this=&dynamic_object17 (?)
+
+State 492 function java::SemaphoreSyncThread.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$SemaphoreSyncThread__CPROVER_clinit_wrapper$$init_complete=true (1)
+
+State 494 function java::SemaphoreSyncThread.<clinit_wrapper> thread 2
+----------------------------------------------------
+  SemaphoreSyncThread__CPROVER_clinit_threadlocal_state=(byte)2 (00000010)
+
+State 497 function java::SemaphoreSyncThread.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$SemaphoreSyncThread__CPROVER_clinit_wrapper$$init_complete=true (1)
+
+State 505 file SemaphoreSyncThread.java function SemaphoreSyncThread.run() line 15 thread 2
+----------------------------------------------------
+  this=&dynamic_object15 (?)
+
+State 510 function java::SemaphoreSyncThread.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$SemaphoreSyncThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 519 file SemaphoreSyncThread.java function SemaphoreSyncThread.run() line 19 thread 2
+----------------------------------------------------
+  dynamic_14_array[1L]=true (00000001)
+
+State 520 file SemaphoreSyncThread.java function SemaphoreSyncThread.run() line 19 thread 2
+----------------------------------------------------
+  dynamic_14_array[0L]=true (00000001)
+
+State 521 file SemaphoreSyncThread.java function SemaphoreSyncThread.run() line 19 thread 2
+----------------------------------------------------
+  dynamic_14_array[1L]=true (00000001)
+
+State 524 function java::SemaphoreSyncThread.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$SemaphoreSyncThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 532 function java::SemaphoreSyncThread.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$SemaphoreSyncThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 542 function java::SemaphoreSyncThread.<clinit_wrapper> thread 2
+----------------------------------------------------
+  java$$SemaphoreSyncThread__CPROVER_clinit_wrapper$$init_complete=false (0)
+
+State 551 file SemaphoreSyncThread.java function SemaphoreSyncThread.run() line 20 thread 2
+----------------------------------------------------
+  dynamic_object19={ .@java.lang.Error={ .@java.lang.Throwable={ .@java.lang.Object={ .@class_identifier="java::SemaphoreSyncThread",
+    .cproverMonitorCount=0 },
+    .detailMessage=null, .cause=null } } } ({ { { { ?, 00000000 00000000 00000000 00000000 }, ?, ? } } })
+
+State 552 file SemaphoreSyncThread.java function SemaphoreSyncThread.run() line 20 thread 2
+----------------------------------------------------
+  dynamic_object19.@java.lang.Error.@java.lang.Throwable.@java.lang.Object.@class_identifier="java::SemaphoreSyncThread" (?)
+
+State 553 file SemaphoreSyncThread.java function SemaphoreSyncThread.run() line 20 thread 2
+----------------------------------------------------
+  dynamic_object19.@java.lang.Error.@java.lang.Throwable.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 554 file SemaphoreSyncThread.java function SemaphoreSyncThread.run() line 20 thread 2
+----------------------------------------------------
+  dynamic_object19.@java.lang.Error.@java.lang.Throwable.detailMessage=null (?)
+
+State 555 file SemaphoreSyncThread.java function SemaphoreSyncThread.run() line 20 thread 2
+----------------------------------------------------
+  dynamic_object19.@java.lang.Error.@java.lang.Throwable.cause=null (?)
+
+State 557 file SemaphoreSyncThread.java function SemaphoreSyncThread.run() line 20 thread 2
+----------------------------------------------------
+  dynamic_object19.@java.lang.Error.@java.lang.Throwable.@java.lang.Object.@class_identifier="java::java.lang.AssertionError" (?)
+
+State 558 file SemaphoreSyncThread.java function SemaphoreSyncThread.run() line 20 thread 2
+----------------------------------------------------
+  dynamic_object19.@java.lang.Error.@java.lang.Throwable.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 559 file SemaphoreSyncThread.java function SemaphoreSyncThread.run() line 20 thread 2
+----------------------------------------------------
+  dynamic_object19.@java.lang.Error.@java.lang.Throwable.detailMessage=null (?)
+
+State 560 file SemaphoreSyncThread.java function SemaphoreSyncThread.run() line 20 thread 2
+----------------------------------------------------
+  dynamic_object19.@java.lang.Error.@java.lang.Throwable.cause=null (?)
+
+State 563 file SemaphoreSyncThread.java function SemaphoreSyncThread.run() line 20 thread 2
+----------------------------------------------------
+  this=&dynamic_object19 (?)
+
+State 566 file java/lang/AssertionError.java function java.lang.AssertionError() line 49 thread 2
+----------------------------------------------------
+  this=&dynamic_object19.@java.lang.Error (?)
+
+State 569 file java/lang/Error.java function java.lang.Error() line 58 thread 2
+----------------------------------------------------
+  this=&dynamic_object19.@java.lang.Error.@java.lang.Throwable (?)
+
+State 572 file java/lang/Throwable.java function java.lang.Throwable() line 264 thread 2
+----------------------------------------------------
+  this=&dynamic_object19.@java.lang.Error.@java.lang.Throwable.@java.lang.Object (?)
+
+State 573 file java/lang/Object.java function java.lang.Object() line 40 thread 2
+----------------------------------------------------
+  dynamic_object19.@java.lang.Error.@java.lang.Throwable.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 575 file java/lang/Throwable.java function java.lang.Throwable() line 201 thread 2
+----------------------------------------------------
+  dynamic_object19.@java.lang.Error.@java.lang.Throwable.cause=&dynamic_object19.@java.lang.Error.@java.lang.Throwable (?)
+
+State 576 file java/lang/Throwable.java function java.lang.Throwable() line 266 thread 2
+----------------------------------------------------
+  dynamic_object19.@java.lang.Error.@java.lang.Throwable.detailMessage=null (?)
+
+Violated property:
+  file SemaphoreSyncThread.java function SemaphoreSyncThread.run() line 20 thread 2
+  assertion at file SemaphoreSyncThread.java line 20 function java::SemaphoreSyncThread.run:()V bytecode-index 22
+  false
+
+
+VERIFICATION FAILED

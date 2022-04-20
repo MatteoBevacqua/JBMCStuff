@@ -1,18 +1,9 @@
- 
-class A {
+class A {}
+class B  extends A {}
 
-}
-
-class B  extends A {
-
-}
- public class LegalCasting {
+public class LegalCasting {
     public static void main(String[] args) {
         B object = new B();
-        try {
-           A otherObj = (A) object;
-        } catch (ClassCastException e) {
-            assert false;
-        }
+        A otherObj = (A) object;
     }
 }

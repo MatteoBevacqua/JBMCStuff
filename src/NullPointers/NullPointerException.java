@@ -1,12 +1,9 @@
- 
- 
-//JBMC fail
+//JBMC fail due to nullpointer exeption
 public class NullPointerException {
     public static void main(String[] args) {
         Object o = null;
         try {
             o.hashCode();
-            assert false; //???
         } catch (java.lang.NullPointerException e) {
             assert true;
         }

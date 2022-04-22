@@ -12,7 +12,7 @@ for f in $files; do
 	out="${file}_output.txt"
 	jbmc $file --classpath "/lib/core-models.jar":"$folder": --show-vcc --outfile "$folder/${file}_formula.txt" -java-threading > /dev/null
 	jbmc $file --classpath "/lib/core-models.jar":"$folder": --show-properties --outfile "$folder/${file}_formula.txt" -java-threading > "${folder}/${file}_properties.txt"
-	jbmc $file --classpath "/lib/core-models.jar":"$folder": --property java::NullPointerException.main:([Ljava/lang/String;)V.null-pointer-exception.2 --string-printable --disable-uncaught-exception-check --stop-on-fail --java-threading --trace --graphml-witness "$folder/${file}.graphml"> $folder/$out
+	jbmc $file --classpath "/lib/core-models.jar":"$folder": --string-printable --disable-uncaught-exception-check --stop-on-fail --java-threading --trace --graphml-witness "$folder/${file}.graphml"> $folder/$out
 done
 
 

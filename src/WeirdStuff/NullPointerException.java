@@ -1,11 +1,11 @@
 //JBMC fail due to nullpointer exeption
 public class NullPointerException {
     public static void main(String[] args) {
-        Object o = null;
+         
         try{
-            o.hashCode();
+            throw new IllegalArgumentException();
         } catch(Exception e){
-            if(o != null) assert false;
+            assert true;
         }
     }
 }

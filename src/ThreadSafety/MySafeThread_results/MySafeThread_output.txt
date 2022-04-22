@@ -27,9 +27,9 @@ Unwinding recursion java::MySafeThread.<clinit_wrapper> iteration 1
 Unwinding recursion java::MySafeThread.<clinit_wrapper> iteration 1
 Unwinding recursion java::MySafeThread.<clinit_wrapper> iteration 1
 aborting path on assume(false) at file MySafeThread.java line 15 function java::MySafeThread.run:()V bytecode-index 22 thread 2
-Runtime Symex: 0.0352761s
+Runtime Symex: 0.0370644s
 Adding SC constraints
-Shared java::MySafeThread.inCritical: 97R/5W
+Shared java::MySafeThread.inCritical: 97R/4W
 Shared java::MySafeThread.lock: 6R/4W
 Shared java::MySafeThread.$assertionsDisabled: 2R/4W
 Shared java::MySafeThread__CPROVER_clinit_state: 2R/7W
@@ -38,40 +38,40 @@ Shared symex_dynamic::dynamic_object13..length: 16R/3W
 Shared symex_dynamic::dynamic_object13..data: 12R/3W
 Shared symex_dynamic::dynamic_14_array[[0]]: 10R/6W
 Shared symex_dynamic::dynamic_14_array[[1]]: 10R/6W
-Shared symex_dynamic::dynamic_object17..@class_identifier: 2R/2W
-Shared symex_dynamic::dynamic_object17..cproverMonitorCount: 4R/7W
-Shared symex_dynamic::dynamic_object18..@java.lang.Thread..@java.lang.Object..@class_identifier: 1R/2W
-Shared symex_dynamic::dynamic_object18..@java.lang.Thread..target: 3R/3W
-Shared symex_dynamic::dynamic_object18..id: 12R/3W
-Shared symex_dynamic::dynamic_object19..@java.lang.Thread..@java.lang.Object..@class_identifier: 1R/2W
-Shared symex_dynamic::dynamic_object19..@java.lang.Thread..target: 3R/3W
-Shared symex_dynamic::dynamic_object19..id: 12R/3W
-Shared symex_dynamic::dynamic_object20..length: 20R/4W
-Shared symex_dynamic::dynamic_object20..data: 20R/4W
-Shared symex_dynamic::dynamic_21_array[[0]]: 11R/7W
-Shared symex_dynamic::dynamic_21_array[[1]]: 11R/7W
-Shared symex_dynamic::dynamic_object22..@class_identifier: 2R/3W
-Shared symex_dynamic::dynamic_object22..cproverMonitorCount: 4R/8W
-Shared symex_dynamic::dynamic_object24..length: 12R/4W
-Shared symex_dynamic::dynamic_object24..data: 13R/4W
-Shared symex_dynamic::dynamic_25_array[[0]]: 6R/5W
-Shared symex_dynamic::dynamic_25_array[[1]]: 6R/5W
-Shared symex_dynamic::dynamic_object26..@class_identifier: 1R/3W
-Shared symex_dynamic::dynamic_object26..cproverMonitorCount: 2R/6W
-size of program expression: 9516 steps
+Shared symex_dynamic::dynamic_object15..@class_identifier: 2R/2W
+Shared symex_dynamic::dynamic_object15..cproverMonitorCount: 4R/7W
+Shared symex_dynamic::dynamic_object16..@java.lang.Thread..@java.lang.Object..@class_identifier: 1R/2W
+Shared symex_dynamic::dynamic_object16..@java.lang.Thread..target: 3R/3W
+Shared symex_dynamic::dynamic_object16..id: 12R/3W
+Shared symex_dynamic::dynamic_object17..@java.lang.Thread..@java.lang.Object..@class_identifier: 1R/2W
+Shared symex_dynamic::dynamic_object17..@java.lang.Thread..target: 3R/3W
+Shared symex_dynamic::dynamic_object17..id: 12R/3W
+Shared symex_dynamic::dynamic_object18..length: 20R/4W
+Shared symex_dynamic::dynamic_object18..data: 20R/4W
+Shared symex_dynamic::dynamic_19_array[[0]]: 11R/7W
+Shared symex_dynamic::dynamic_19_array[[1]]: 11R/7W
+Shared symex_dynamic::dynamic_object20..@class_identifier: 2R/3W
+Shared symex_dynamic::dynamic_object20..cproverMonitorCount: 4R/8W
+Shared symex_dynamic::dynamic_object22..length: 12R/4W
+Shared symex_dynamic::dynamic_object22..data: 13R/4W
+Shared symex_dynamic::dynamic_23_array[[0]]: 6R/5W
+Shared symex_dynamic::dynamic_23_array[[1]]: 6R/5W
+Shared symex_dynamic::dynamic_object24..@class_identifier: 1R/3W
+Shared symex_dynamic::dynamic_object24..cproverMonitorCount: 2R/6W
+size of program expression: 8664 steps
 no slicing due to threads
-Generated 127 VCC(s), 42 remaining after simplification
-Runtime Postprocess Equation: 0.15111s
+Generated 120 VCC(s), 42 remaining after simplification
+Runtime Postprocess Equation: 0.134456s
 Passing problem to string refinement loop with MiniSAT 2.2.1 without simplifier
 converting SSA
-Runtime Convert SSA: 0.0130416s
+Runtime Convert SSA: 0.0129769s
 Running string refinement loop with MiniSAT 2.2.1 without simplifier
 BV-Refinement: post-processing
 BV-Refinement: iteration 1
-132699 variables, 603828 clauses
+126891 variables, 563967 clauses
 SAT checker: instance is UNSATISFIABLE
 BV-Refinement: got UNSAT, and the proof passes => UNSAT
 Total iterations: 1
-Runtime Solver: 3.51573s
-Runtime decision procedure: 3.53099s
+Runtime Solver: 3.11222s
+Runtime decision procedure: 3.12653s
 VERIFICATION SUCCESSFUL

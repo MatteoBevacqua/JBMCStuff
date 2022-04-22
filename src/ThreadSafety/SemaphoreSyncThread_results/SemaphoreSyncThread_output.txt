@@ -18,7 +18,7 @@ Unwinding recursion java::SemaphoreSyncThread.<clinit_wrapper> iteration 1
 aborting path on assume(false) at file SemaphoreSyncThread.java line 20 function java::SemaphoreSyncThread.run:()V bytecode-index 22 thread 1
 Unwinding recursion java::SemaphoreSyncThread.<clinit_wrapper> iteration 1
 aborting path on assume(false) at file SemaphoreSyncThread.java line 20 function java::SemaphoreSyncThread.run:()V bytecode-index 22 thread 2
-Runtime Symex: 0.024649s
+Runtime Symex: 0.0273058s
 Adding SC constraints
 Shared java::SemaphoreSyncThread.inCritical: 40R/2W
 Shared java::SemaphoreSyncThread.semaphore: 16R/2W
@@ -37,10 +37,10 @@ Shared symex_dynamic::dynamic_object17..id: 12R/3W
 size of program expression: 3430 steps
 no slicing due to threads
 Generated 95 VCC(s), 32 remaining after simplification
-Runtime Postprocess Equation: 0.02074s
+Runtime Postprocess Equation: 0.0207934s
 Passing problem to string refinement loop with MiniSAT 2.2.1 without simplifier
 converting SSA
-Runtime Convert SSA: 0.00552289s
+Runtime Convert SSA: 0.0053649s
 Running string refinement loop with MiniSAT 2.2.1 without simplifier
 BV-Refinement: post-processing
 BV-Refinement: iteration 1
@@ -48,8 +48,8 @@ BV-Refinement: iteration 1
 SAT checker: instance is SATISFIABLE
 BV-Refinement: got SAT, and it simulates => SAT
 Total iterations: 1
-Runtime Solver: 0.476653s
-Runtime decision procedure: 0.483449s
+Runtime Solver: 0.500244s
+Runtime decision procedure: 0.506701s
 Building error trace
 Counterexample:
 

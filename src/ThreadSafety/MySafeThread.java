@@ -18,9 +18,6 @@ public class MySafeThread extends Thread {
 
         }    
         public static void main(String[] args) {
-            inCritical = new boolean[2];
-            inCritical[0] = false;
-            inCritical[1] = false;
             MySafeThread r1 = new MySafeThread(0); 
             MySafeThread r2 = new MySafeThread(1);
             r1.start();

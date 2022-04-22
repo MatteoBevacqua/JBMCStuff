@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <key attr.name="originFileName" attr.type="string" for="edge" id="originfile">
+    <default>&lt;command-line&gt;</default>
+  </key>
+  <key attr.name="invariant" attr.type="string" for="node" id="invariant"/>
+  <key attr.name="invariant.scope" attr.type="string" for="node" id="invariant.scope"/>
+  <key attr.name="isViolationNode" attr.type="boolean" for="node" id="violation">
+    <default>false</default>
+  </key>
+  <key attr.name="isEntryNode" attr.type="boolean" for="node" id="entry">
+    <default>false</default>
+  </key>
+  <key attr.name="isSinkNode" attr.type="boolean" for="node" id="sink">
+    <default>false</default>
+  </key>
+  <key attr.name="enterLoopHead" attr.type="boolean" for="edge" id="enterLoopHead">
+    <default>false</default>
+  </key>
+  <key attr.name="cyclehead" attr.type="boolean" for="node" id="cyclehead">
+    <default>false</default>
+  </key>
+  <key attr.name="threadId" attr.type="int" for="edge" id="threadId">
+    <default>0</default>
+  </key>
+  <key attr.name="createThread" attr.type="int" for="edge" id="createThread">
+    <default>0</default>
+  </key>
+  <key attr.name="sourcecodeLanguage" attr.type="string" for="graph" id="sourcecodelang"/>
+  <key attr.name="programFile" attr.type="string" for="graph" id="programfile"/>
+  <key attr.name="programHash" attr.type="string" for="graph" id="programhash"/>
+  <key attr.name="specification" attr.type="string" for="graph" id="specification"/>
+  <key attr.name="architecture" attr.type="string" for="graph" id="architecture"/>
+  <key attr.name="producer" attr.type="string" for="graph" id="producer"/>
+  <key attr.name="creationtime" attr.type="string" for="graph" id="creationtime"/>
+  <key attr.name="startline" attr.type="int" for="edge" id="startline"/>
+  <key attr.name="control" attr.type="string" for="edge" id="control"/>
+  <key attr.name="assumption" attr.type="string" for="edge" id="assumption"/>
+  <key attr.name="assumption.resultfunction" attr.type="string" for="edge" id="assumption.resultfunction"/>
+  <key attr.name="assumption.scope" attr.type="string" for="edge" id="assumption.scope"/>
+  <key attr.name="enterFunction" attr.type="string" for="edge" id="enterFunction"/>
+  <key attr.name="returnFromFunction" attr.type="string" for="edge" id="returnFrom"/>
+  <key attr.name="witness-type" attr.type="string" for="graph" id="witness-type"/>
+  <graph edgedefault="directed">
+    <data key="sourcecodelang">C</data>
+    <node id="sink"/>
+    <node id="263.18">
+      <data key="entry">true</data>
+    </node>
+    <edge source="263.18" target="264.33">
+      <data key="originfile">NullPointerException.java</data>
+      <data key="startline">6</data>
+    </edge>
+    <node id="263.20"/>
+    <node id="263.22"/>
+    <node id="263.24"/>
+    <node id="263.26"/>
+    <node id="263.28"/>
+    <node id="263.30"/>
+    <node id="264.33">
+      <data key="invariant">dynamic_object1 = nondet_symbol(symex::nondet1);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="264.33" target="267.49">
+      <data key="originfile">NullPointerException.java</data>
+      <data key="startline">6</data>
+    </edge>
+    <node id="264.35"/>
+    <node id="264.37"/>
+    <node id="264.39"/>
+    <node id="264.41"/>
+    <node id="264.43"/>
+    <node id="267.49">
+      <data key="invariant">dynamic_object1.@java.lang.Object.@class_identifier = "java::array[reference]";</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="267.49" target="270.53">
+      <data key="originfile">NullPointerException.java</data>
+      <data key="startline">6</data>
+    </edge>
+    <node id="270.53">
+      <data key="invariant">dynamic_object1.length = nondet_array_length;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="270.53" target="271.54">
+      <data key="originfile">NullPointerException.java</data>
+      <data key="startline">6</data>
+    </edge>
+    <node id="271.54">
+      <data key="invariant">dynamic_object1.data = (void **)dynamic_2_array;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="271.54" target="283.89">
+      <data key="originfile">NullPointerException.java</data>
+      <data key="startline">6</data>
+    </edge>
+    <node id="271.56"/>
+    <node id="271.58"/>
+    <node id="271.60"/>
+    <node id="271.62"/>
+    <node id="271.64"/>
+    <node id="283.89">
+      <data key="invariant">dynamic_2_array = ARRAY_OF(null);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="283.89" target="291.105">
+      <data key="originfile">NullPointerException.java</data>
+      <data key="startline">6</data>
+    </edge>
+    <node id="291.105">
+      <data key="invariant">dynamic_object4 = nondet_symbol(symex::nondet5);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="291.105" target="283.132">
+      <data key="originfile">NullPointerException.java</data>
+      <data key="startline">6</data>
+    </edge>
+    <node id="283.132">
+      <data key="invariant">dynamic_object3.@java.lang.Object.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="283.132" target="291.148">
+      <data key="originfile">NullPointerException.java</data>
+      <data key="startline">6</data>
+    </edge>
+    <node id="291.148">
+      <data key="invariant">dynamic_object6 = nondet_symbol(symex::nondet9);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="291.148" target="283.175">
+      <data key="originfile">NullPointerException.java</data>
+      <data key="startline">6</data>
+    </edge>
+    <node id="283.175">
+      <data key="invariant">dynamic_object5.@java.lang.Object.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="283.175" target="291.191">
+      <data key="originfile">NullPointerException.java</data>
+      <data key="startline">6</data>
+    </edge>
+    <node id="291.191">
+      <data key="invariant">dynamic_object8 = nondet_symbol(symex::nondet13);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="291.191" target="283.218">
+      <data key="originfile">NullPointerException.java</data>
+      <data key="startline">6</data>
+    </edge>
+    <node id="283.218">
+      <data key="invariant">dynamic_object7.@java.lang.Object.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="283.218" target="291.234">
+      <data key="originfile">NullPointerException.java</data>
+      <data key="startline">6</data>
+    </edge>
+    <node id="291.234">
+      <data key="invariant">dynamic_object10 = nondet_symbol(symex::nondet17);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="291.234" target="283.261">
+      <data key="originfile">NullPointerException.java</data>
+      <data key="startline">6</data>
+    </edge>
+    <node id="283.261">
+      <data key="invariant">dynamic_object9.@java.lang.Object.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="283.261" target="291.277">
+      <data key="originfile">NullPointerException.java</data>
+      <data key="startline">6</data>
+    </edge>
+    <node id="291.277">
+      <data key="invariant">dynamic_object12 = nondet_symbol(symex::nondet21);</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="291.277" target="300.398">
+      <data key="originfile">NullPointerException.java</data>
+      <data key="startline">6</data>
+    </edge>
+    <node id="300.398">
+      <data key="invariant">dynamic_object11.@java.lang.Object.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="300.398" target="9.400">
+      <data key="originfile">NullPointerException.java</data>
+      <data key="startline">6</data>
+    </edge>
+    <node id="9.400">
+      <data key="invariant">arg0a = &amp;dynamic_object1;</data>
+      <data key="invariant.scope">__CPROVER__start</data>
+    </node>
+    <edge source="9.400" target="10.411">
+      <data key="originfile">NullPointerException.java</data>
+      <data key="startline">6</data>
+    </edge>
+    <node id="9.402"/>
+    <node id="9.404"/>
+    <node id="9.406"/>
+    <node id="9.408"/>
+    <node id="10.411">
+      <data key="invariant">dynamic_object13 = nondet_symbol(symex::nondet22);</data>
+      <data key="invariant.scope">java::NullPointerException.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="10.411" target="13.420">
+      <data key="originfile">NullPointerException.java</data>
+      <data key="startline">6</data>
+    </edge>
+    <node id="10.413"/>
+    <node id="10.415"/>
+    <node id="10.417"/>
+    <node id="13.420">
+      <data key="invariant">dynamic_object13.@java.lang.RuntimeException.@java.lang.Exception.@java.lang.Throwable.@java.lang.Object.@class_identifier = "java::java.lang.IllegalArgumentException";</data>
+      <data key="invariant.scope">java::NullPointerException.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="13.420" target="6.423">
+      <data key="originfile">NullPointerException.java</data>
+      <data key="startline">6</data>
+    </edge>
+    <node id="6.423">
+      <data key="invariant">this = &amp;dynamic_object13;</data>
+      <data key="invariant.scope">java::NullPointerException.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="6.423" target="66.426">
+      <data key="originfile">java/lang/IllegalArgumentException.java</data>
+      <data key="startline">31</data>
+    </edge>
+    <node id="66.426">
+      <data key="invariant">this = (struct java.lang.RuntimeException *)&amp;dynamic_object13;</data>
+      <data key="invariant.scope">java::java.lang.IllegalArgumentException.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="66.426" target="40.429">
+      <data key="originfile">java/lang/RuntimeException.java</data>
+      <data key="startline">32</data>
+    </edge>
+    <node id="40.429">
+      <data key="invariant">this = (struct java.lang.Exception *)&amp;dynamic_object13;</data>
+      <data key="invariant.scope">java::java.lang.RuntimeException.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="40.429" target="30.432">
+      <data key="originfile">java/lang/Exception.java</data>
+      <data key="startline">54</data>
+    </edge>
+    <node id="30.432">
+      <data key="invariant">this = (struct java.lang.Throwable *)&amp;dynamic_object13;</data>
+      <data key="invariant.scope">java::java.lang.Exception.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="30.432" target="2.434">
+      <data key="originfile">java/lang/Throwable.java</data>
+      <data key="startline">264</data>
+    </edge>
+    <node id="2.434">
+      <data key="invariant">this = (struct java.lang.Object *)&amp;dynamic_object13;</data>
+      <data key="invariant.scope">java::java.lang.Throwable.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="2.434" target="33.437">
+      <data key="originfile">java/lang/Object.java</data>
+      <data key="startline">40</data>
+    </edge>
+    <node id="33.437">
+      <data key="invariant">dynamic_object13.@java.lang.RuntimeException.@java.lang.Exception.@java.lang.Throwable.@java.lang.Object.cproverMonitorCount = 0;</data>
+      <data key="invariant.scope">java::java.lang.Object.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="33.437" target="36.439">
+      <data key="originfile">java/lang/Throwable.java</data>
+      <data key="startline">201</data>
+    </edge>
+    <node id="36.439">
+      <data key="invariant">dynamic_object13.@java.lang.RuntimeException.@java.lang.Exception.@java.lang.Throwable.cause = (struct java.lang.Throwable *)&amp;dynamic_object13;</data>
+      <data key="invariant.scope">java::java.lang.Throwable.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="36.439" target="17.445">
+      <data key="originfile">java/lang/Throwable.java</data>
+      <data key="startline">266</data>
+    </edge>
+    <node id="17.445">
+      <data key="invariant">dynamic_object13.@java.lang.RuntimeException.@java.lang.Exception.@java.lang.Throwable.detailMessage = null;</data>
+      <data key="invariant.scope">java::java.lang.Throwable.&lt;init&gt;:()V</data>
+    </node>
+    <edge source="17.445" target="24.450">
+      <data key="originfile">NullPointerException.java</data>
+      <data key="startline">6</data>
+    </edge>
+    <node id="24.450"/>
+    <edge source="24.450" target="301.452">
+      <data key="originfile">NullPointerException.java</data>
+      <data key="startline">7</data>
+    </edge>
+    <node id="301.452">
+      <data key="invariant">anonlocal::1a = (void *)&amp;dynamic_object13;</data>
+      <data key="invariant.scope">java::NullPointerException.main:([Ljava/lang/String;)V</data>
+    </node>
+    <edge source="301.452" target="sink">
+      <data key="originfile">NullPointerException.java</data>
+      <data key="startline">6</data>
+    </edge>
+  </graph>
+</graphml>

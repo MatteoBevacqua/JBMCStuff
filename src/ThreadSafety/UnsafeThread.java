@@ -26,7 +26,7 @@ public class UnsafeThread extends Thread {
     public void run() {
         
             inCritical[id] = true;
-            assert !(inCritical[0] && inCritical[2]);
+            assert !(inCritical[0] && inCritical[1]);
             inCritical[id] = false;}
     
 

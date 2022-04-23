@@ -1,0 +1,92 @@
+JBMC version 5.54.0 (cbmc-5.54.0) 64-bit x86_64 linux
+Parsing ...
+Trying to load Java main class: PartialLoops
+Found Java main class: PartialLoops
+Converting
+Java: added 2264 String or Class constant symbols
+Generating GOTO Program
+Running GOTO functions transformation passes
+Running with 16 object bits, 48 offset bits (default)
+Starting Bounded Model Checking
+Not unwinding loop __CPROVER__start.0 iteration 1  thread 0
+Not unwinding loop java::PartialLoops.main:([Ljava/lang/String;)V.0 iteration 1 file PartialLoops.java line 16 function java::PartialLoops.main:([Ljava/lang/String;)V bytecode-index 21 thread 0
+Unwinding recursion java::PartialLoops.<clinit_wrapper> iteration 1
+Runtime Symex: 0.00513207s
+size of program expression: 338 steps
+simple slicing removed 0 assignments
+Generated 20 VCC(s), 0 remaining after simplification
+Runtime Postprocess Equation: 2.676e-05s
+
+** Results:
+[array-create-negative-size.1] Array size should be >= 0: SUCCESS
+[array-create-negative-size.2] Array size should be >= 0: SUCCESS
+[array-create-negative-size.3] Array size should be >= 0: SUCCESS
+[array-create-negative-size.4] Array size should be >= 0: SUCCESS
+[array-create-negative-size.5] Array size should be >= 0: SUCCESS
+[array-create-negative-size.6] Array size should be >= 0: SUCCESS
+[array-create-negative-size.7] Array size should be >= 0: SUCCESS
+[array-create-negative-size.8] Array size should be >= 0: SUCCESS
+[array-create-negative-size.9] Array size should be >= 0: SUCCESS
+PartialLoops.java function java::A.<init>:(I)V
+[java::A.<init>:(I)V.null-pointer-exception.1] line 5 Null pointer check: SUCCESS
+[java::A.<init>:(I)V.null-pointer-exception.2] line 6 Null pointer check: SUCCESS
+
+PartialLoops.java function java::PartialLoops.<clinit>:()V
+[java::PartialLoops.<clinit>:()V.null-pointer-exception.1] line 9 Null pointer check: SUCCESS
+
+PartialLoops.java function java::PartialLoops.main:([Ljava/lang/String;)V
+[java::PartialLoops.main:([Ljava/lang/String;)V.1] line 13 no uncaught exception: SUCCESS
+[java::PartialLoops.main:([Ljava/lang/String;)V.null-pointer-exception.1] line 13 Null pointer check: SUCCESS
+[java::PartialLoops.main:([Ljava/lang/String;)V.null-pointer-exception.2] line 14 Null pointer check: SUCCESS
+[java::PartialLoops.main:([Ljava/lang/String;)V.null-pointer-exception.3] line 17 Null pointer check: SUCCESS
+[java::PartialLoops.main:([Ljava/lang/String;)V.assertion.1] line 19 assertion at file PartialLoops.java line 19 function java::PartialLoops.main:([Ljava/lang/String;)V bytecode-index 31: SUCCESS
+[java::PartialLoops.main:([Ljava/lang/String;)V.null-pointer-exception.4] line 19 Null pointer check: SUCCESS
+[java::PartialLoops.main:([Ljava/lang/String;)V.null-pointer-exception.5] line 19 Null pointer check: SUCCESS
+
+java/lang/AssertionError.java function java::java.lang.AssertionError.<init>:()V
+[java::java.lang.AssertionError.<init>:()V.null-pointer-exception.1] line 49 Null pointer check: SUCCESS
+
+java/lang/Class.java function java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V
+[java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V.null-pointer-exception.1] line 473 Null pointer check: SUCCESS
+[java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V.null-pointer-exception.2] line 474 Null pointer check: SUCCESS
+[java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V.null-pointer-exception.3] line 475 Null pointer check: SUCCESS
+[java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V.null-pointer-exception.4] line 476 Null pointer check: SUCCESS
+[java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V.null-pointer-exception.5] line 477 Null pointer check: SUCCESS
+[java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V.null-pointer-exception.6] line 478 Null pointer check: SUCCESS
+[java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V.null-pointer-exception.7] line 479 Null pointer check: SUCCESS
+[java::java.lang.Class.cproverInitializeClassLiteral:(Ljava/lang/String;ZZZZZZZ)V.null-pointer-exception.8] line 480 Null pointer check: SUCCESS
+
+java/lang/Class.java function java::java.lang.Class.cproverNondetInitialize:()V
+[java::java.lang.Class.cproverNondetInitialize:()V.null-pointer-exception.1] line 454 Null pointer check: SUCCESS
+[java::java.lang.Class.cproverNondetInitialize:()V.null-pointer-exception.2] line 455 Null pointer check: SUCCESS
+
+java/lang/Class.java function java::java.lang.Class.desiredAssertionStatus:()Z
+[java::java.lang.Class.desiredAssertionStatus:()Z.null-pointer-exception.1] line 421 Null pointer check: SUCCESS
+[java::java.lang.Class.desiredAssertionStatus:()Z.null-pointer-exception.2] line 428 Null pointer check: SUCCESS
+[java::java.lang.Class.desiredAssertionStatus:()Z.null-pointer-exception.3] line 429 Null pointer check: SUCCESS
+[java::java.lang.Class.desiredAssertionStatus:()Z.null-pointer-exception.4] line 430 Null pointer check: SUCCESS
+[java::java.lang.Class.desiredAssertionStatus:()Z.null-pointer-exception.5] line 430 Null pointer check: SUCCESS
+[java::java.lang.Class.desiredAssertionStatus:()Z.null-pointer-exception.6] line 432 Null pointer check: SUCCESS
+
+java/lang/Class.java function java::java.lang.Class.getClassLoader:()Ljava/lang/ClassLoader;
+[java::java.lang.Class.getClassLoader:()Ljava/lang/ClassLoader;.null-pointer-exception.1] line 191 Null pointer check: SUCCESS
+
+java/lang/Class.java function java::java.lang.Class.getName:()Ljava/lang/String;
+[java::java.lang.Class.getName:()Ljava/lang/String;.null-pointer-exception.1] line 158 Null pointer check: SUCCESS
+
+java/lang/Error.java function java::java.lang.Error.<init>:()V
+[java::java.lang.Error.<init>:()V.null-pointer-exception.1] line 58 Null pointer check: SUCCESS
+
+java/lang/Object.java function java::java.lang.Object.<init>:()V
+[java::java.lang.Object.<init>:()V.null-pointer-exception.1] line 40 Null pointer check: SUCCESS
+
+java/lang/Throwable.java function java::java.lang.Throwable.<init>:()V
+[java::java.lang.Throwable.<init>:()V.null-pointer-exception.2] line 201 Null pointer check: SUCCESS
+[java::java.lang.Throwable.<init>:()V.null-pointer-exception.1] line 264 Null pointer check: SUCCESS
+[java::java.lang.Throwable.<init>:()V.null-pointer-exception.3] line 266 Null pointer check: SUCCESS
+
+java/util/Random.java function java::java.util.Random.<init>:()V
+[java::java.util.Random.<init>:()V.null-pointer-exception.1] line 116 Null pointer check: SUCCESS
+
+** 0 of 44 failed (1 iterations)
+VERIFICATION SUCCESSFUL

@@ -1,0 +1,2 @@
+--partial-loops -> priorità al codice che segue un ciclo
+--unwinding-assertions -> controlla se il loop è stato "unrolled" a sufficienza

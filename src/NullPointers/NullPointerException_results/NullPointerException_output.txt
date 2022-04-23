@@ -1,0 +1,262 @@
+JBMC version 5.54.0 (cbmc-5.54.0) 64-bit x86_64 linux
+Parsing ...
+Trying to load Java main class: NullPointerException
+Found Java main class: NullPointerException
+Converting
+Java: added 2263 String or Class constant symbols
+Generating GOTO Program
+Running GOTO functions transformation passes
+Running with 16 object bits, 48 offset bits (default)
+Starting Bounded Model Checking
+Unwinding loop __CPROVER__start.0 iteration 1  thread 0
+Unwinding loop __CPROVER__start.0 iteration 2  thread 0
+Unwinding loop __CPROVER__start.0 iteration 3  thread 0
+Unwinding loop __CPROVER__start.0 iteration 4  thread 0
+Unwinding loop __CPROVER__start.0 iteration 5  thread 0
+Runtime Symex: 0.00671439s
+size of program expression: 484 steps
+simple slicing removed 13 assignments
+Generated 8 VCC(s), 1 remaining after simplification
+Runtime Postprocess Equation: 3.4756e-05s
+Passing problem to string refinement loop with MiniSAT 2.2.1 without simplifier
+converting SSA
+Runtime Convert SSA: 0.000776375s
+Running string refinement loop with MiniSAT 2.2.1 without simplifier
+BV-Refinement: post-processing
+BV-Refinement: iteration 1
+5911 variables, 7650 clauses
+SAT checker: instance is SATISFIABLE
+BV-Refinement: got SAT, and it simulates => SAT
+Total iterations: 1
+Runtime Solver: 0.00302688s
+Runtime decision procedure: 0.00562328s
+Building error trace
+
+** Results:
+[array-create-negative-size.1] Array size should be >= 0: SUCCESS
+[array-create-negative-size.2] Array size should be >= 0: SUCCESS
+[array-create-negative-size.3] Array size should be >= 0: SUCCESS
+[array-create-negative-size.4] Array size should be >= 0: SUCCESS
+[array-create-negative-size.5] Array size should be >= 0: SUCCESS
+[array-create-negative-size.6] Array size should be >= 0: SUCCESS
+[array-create-negative-size.7] Array size should be >= 0: SUCCESS
+[array-create-negative-size.8] Array size should be >= 0: SUCCESS
+[array-create-negative-size.9] Array size should be >= 0: SUCCESS
+[null-pointer-exception.1] Null pointer check: SUCCESS
+[null-pointer-exception.2] Null pointer check: SUCCESS
+NullPointerException.java function java::NullPointerException.main:([Ljava/lang/String;)V
+[java::NullPointerException.main:([Ljava/lang/String;)V.1] line 5 no uncaught exception: SUCCESS
+[java::NullPointerException.main:([Ljava/lang/String;)V.null-pointer-exception.1] line 6 Null pointer check: SUCCESS
+[java::NullPointerException.main:([Ljava/lang/String;)V.null-pointer-exception.2] line 6 Null pointer check: SUCCESS
+[java::NullPointerException.main:([Ljava/lang/String;)V.null-pointer-exception.3] line 7 Null pointer check: SUCCESS
+[java::NullPointerException.main:([Ljava/lang/String;)V.null-pointer-exception.4] line 8 Null pointer check: FAILURE
+
+java/lang/Class.java function java::java.lang.Class.cproverNondetInitialize:()V
+[java::java.lang.Class.cproverNondetInitialize:()V.null-pointer-exception.1] line 454 Null pointer check: SUCCESS
+[java::java.lang.Class.cproverNondetInitialize:()V.null-pointer-exception.2] line 455 Null pointer check: SUCCESS
+
+java/lang/Object.java function java::java.lang.Object.<init>:()V
+[java::java.lang.Object.<init>:()V.null-pointer-exception.1] line 40 Null pointer check: SUCCESS
+
+java/lang/String.java function java::java.lang.String.hashCode:()I
+[java::java.lang.String.hashCode:()I.null-pointer-exception.1] line 2114 Null pointer check: SUCCESS
+
+java/lang/String.java function java::java.lang.String.length:()I
+[java::java.lang.String.length:()I.null-pointer-exception.1] line 847 Null pointer check: SUCCESS
+
+java/util/Random.java function java::java.util.Random.<init>:()V
+[java::java.util.Random.<init>:()V.null-pointer-exception.1] line 116 Null pointer check: SUCCESS
+
+Trace for java::NullPointerException.main:([Ljava/lang/String;)V.null-pointer-exception.4:
+
+State 3 function __CPROVER_initialize thread 0
+----------------------------------------------------
+  __CPROVER_rounding_mode=0 (00000000 00000000 00000000 00000000)
+
+Assumption:
+  nondet_array_length >= 0
+
+Assumption:
+  nondet_array_length <= 5
+
+State 18 file NullPointerException.java function __CPROVER__start line 5 thread 0
+----------------------------------------------------
+  dynamic_object1={ .@java.lang.Object={ .@class_identifier="java::array[reference]",
+    .cproverMonitorCount=0 },
+    .length=0, .data=null, .@element_class_identifier="java::array[reference]",
+    .@array_dimensions=0 } ({ { ?, 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000000 00000000, ?, ?, 00000000 00000000 00000000 00000000 })
+
+State 19 file NullPointerException.java function __CPROVER__start line 5 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.@class_identifier="java::array[reference]" (?)
+
+State 20 file NullPointerException.java function __CPROVER__start line 5 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 21 file NullPointerException.java function __CPROVER__start line 5 thread 0
+----------------------------------------------------
+  dynamic_object1.length=0 (00000000 00000000 00000000 00000000)
+
+State 22 file NullPointerException.java function __CPROVER__start line 5 thread 0
+----------------------------------------------------
+  dynamic_object1.data=null (?)
+
+State 23 file NullPointerException.java function __CPROVER__start line 5 thread 0
+----------------------------------------------------
+  dynamic_object1.@element_class_identifier="java::array[reference]" (?)
+
+State 24 file NullPointerException.java function __CPROVER__start line 5 thread 0
+----------------------------------------------------
+  dynamic_object1.@array_dimensions=0 (00000000 00000000 00000000 00000000)
+
+State 26 file NullPointerException.java function __CPROVER__start line 5 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.@class_identifier="java::array[reference]" (?)
+
+State 27 file NullPointerException.java function __CPROVER__start line 5 thread 0
+----------------------------------------------------
+  dynamic_object1.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 28 file NullPointerException.java function __CPROVER__start line 5 thread 0
+----------------------------------------------------
+  dynamic_object1.length=0 (00000000 00000000 00000000 00000000)
+
+State 29 file NullPointerException.java function __CPROVER__start line 5 thread 0
+----------------------------------------------------
+  dynamic_object1.data=null (?)
+
+State 30 file NullPointerException.java function __CPROVER__start line 5 thread 0
+----------------------------------------------------
+  dynamic_object1.@element_class_identifier="" (?)
+
+State 31 file NullPointerException.java function __CPROVER__start line 5 thread 0
+----------------------------------------------------
+  dynamic_object1.@array_dimensions=0 (00000000 00000000 00000000 00000000)
+
+State 32 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object1.@array_dimensions=1 (00000000 00000000 00000000 00000001)
+
+State 33 function __CPROVER__start thread 0
+----------------------------------------------------
+  dynamic_object1.@element_class_identifier="java::java.lang.String" (?)
+
+State 34 file NullPointerException.java function __CPROVER__start line 5 thread 0
+----------------------------------------------------
+  dynamic_object1.length=0 (00000000 00000000 00000000 00000000)
+
+State 37 file NullPointerException.java function __CPROVER__start line 5 thread 0
+----------------------------------------------------
+  dynamic_object1.data=&((void *)dynamic_2_array[0L]) (?)
+
+State 38 file NullPointerException.java function __CPROVER__start line 5 thread 0
+----------------------------------------------------
+  dynamic_2_array={ null, null, null, null, null } ({ ?, ?, ?, ?, ? })
+
+State 39 file NullPointerException.java function __CPROVER__start line 5 thread 0
+----------------------------------------------------
+  dynamic_2_array[0L]=null (?)
+
+State 40 file NullPointerException.java function __CPROVER__start line 5 thread 0
+----------------------------------------------------
+  dynamic_2_array[1L]=null (?)
+
+State 41 file NullPointerException.java function __CPROVER__start line 5 thread 0
+----------------------------------------------------
+  dynamic_2_array[2L]=null (?)
+
+State 42 file NullPointerException.java function __CPROVER__start line 5 thread 0
+----------------------------------------------------
+  dynamic_2_array[3L]=null (?)
+
+State 43 file NullPointerException.java function __CPROVER__start line 5 thread 0
+----------------------------------------------------
+  dynamic_2_array[4L]=null (?)
+
+State 47 file NullPointerException.java function __CPROVER__start line 5 thread 0
+----------------------------------------------------
+  INPUT arg0a: &dynamic_object1 (?)
+
+State 50 file NullPointerException.java function __CPROVER__start line 5 thread 0
+----------------------------------------------------
+  arg0a=&dynamic_object1 (?)
+
+State 51 function NullPointerException.main(java.lang.String[]) thread 0
+----------------------------------------------------
+  anonlocal::1a=null (?)
+
+State 52 function NullPointerException.main(java.lang.String[]) thread 0
+----------------------------------------------------
+  anonlocal::2i=0 (00000000 00000000 00000000 00000000)
+
+State 55 file NullPointerException.java function NullPointerException.main(java.lang.String[]) line 5 thread 0
+----------------------------------------------------
+  anonlocal::1a=null (?)
+
+State 56 file NullPointerException.java function NullPointerException.main(java.lang.String[]) line 6 thread 0
+----------------------------------------------------
+  dynamic_object13={ .@java.lang.Object={ .@class_identifier="java::array[reference]",
+    .cproverMonitorCount=0 } } ({ { ?, 00000000 00000000 00000000 00000000 } })
+
+State 57 file NullPointerException.java function NullPointerException.main(java.lang.String[]) line 6 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Object.@class_identifier="java::array[reference]" (?)
+
+State 58 file NullPointerException.java function NullPointerException.main(java.lang.String[]) line 6 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 60 file NullPointerException.java function NullPointerException.main(java.lang.String[]) line 6 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Object.@class_identifier="java::java.util.Random" (?)
+
+State 61 file NullPointerException.java function NullPointerException.main(java.lang.String[]) line 6 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 64 file NullPointerException.java function NullPointerException.main(java.lang.String[]) line 6 thread 0
+----------------------------------------------------
+  this=&dynamic_object13 (?)
+
+State 67 file java/util/Random.java function java.util.Random() line 116 thread 0
+----------------------------------------------------
+  this=&dynamic_object13.@java.lang.Object (?)
+
+State 68 file java/lang/Object.java function java.lang.Object() line 40 thread 0
+----------------------------------------------------
+  dynamic_object13.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+
+State 73 file NullPointerException.java function NullPointerException.main(java.lang.String[]) line 6 thread 0
+----------------------------------------------------
+  this=&dynamic_object13 (?)
+
+State 74 file NullPointerException.java function NullPointerException.main(java.lang.String[]) line 6 thread 0
+----------------------------------------------------
+  bound=100 (00000000 00000000 00000000 01100100)
+
+State 80 function java.util.Random.nextInt(int) thread 0
+----------------------------------------------------
+  result=0 (00000000 00000000 00000000 00000000)
+
+State 88 file java/util/Random.java function java.util.Random.nextInt(int) line 467 thread 0
+----------------------------------------------------
+  result=50 (00000000 00000000 00000000 00110010)
+
+Assumption:
+  file java/util/Random.java line 468 function java::java.util.Random.nextInt:(I)I bytecode-index 17
+  (__CPROVER_bool)$stack_tmp2
+
+State 97 file NullPointerException.java function NullPointerException.main(java.lang.String[]) line 6 thread 0
+----------------------------------------------------
+  anonlocal::2i=50 (00000000 00000000 00000000 00110010)
+
+Violated property:
+  file NullPointerException.java function NullPointerException.main(java.lang.String[]) line 8 thread 0
+  Null pointer check
+  !((struct java.lang.Object *)anonlocal::1a == null)
+
+
+
+** 1 of 22 failed (2 iterations)
+VERIFICATION FAILED

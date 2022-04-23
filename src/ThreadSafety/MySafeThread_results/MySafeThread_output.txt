@@ -19,15 +19,12 @@ Unwinding recursion java::MySafeThread.<clinit_wrapper> iteration 1
 Unwinding recursion java::MySafeThread.<clinit_wrapper> iteration 1
 Unwinding recursion java::MySafeThread.<clinit_wrapper> iteration 1
 Unwinding recursion java::MySafeThread.<clinit_wrapper> iteration 1
-Unwinding recursion java::MySafeThread.<clinit_wrapper> iteration 1
-Unwinding recursion java::MySafeThread.<clinit_wrapper> iteration 1
-aborting path on assume(false) at file MySafeThread.java line 15 function java::MySafeThread.run:()V bytecode-index 22 thread 1
-Unwinding recursion java::MySafeThread.<clinit_wrapper> iteration 1
+aborting path on assume(false) at file MySafeThread.java line 14 function java::MySafeThread.run:()V bytecode-index 22 thread 1
 Unwinding recursion java::MySafeThread.<clinit_wrapper> iteration 1
 Unwinding recursion java::MySafeThread.<clinit_wrapper> iteration 1
 Unwinding recursion java::MySafeThread.<clinit_wrapper> iteration 1
-aborting path on assume(false) at file MySafeThread.java line 15 function java::MySafeThread.run:()V bytecode-index 22 thread 2
-Runtime Symex: 0.0370644s
+aborting path on assume(false) at file MySafeThread.java line 14 function java::MySafeThread.run:()V bytecode-index 22 thread 2
+Runtime Symex: 0.0343535s
 Adding SC constraints
 Shared java::MySafeThread.inCritical: 97R/4W
 Shared java::MySafeThread.lock: 6R/4W
@@ -58,20 +55,20 @@ Shared symex_dynamic::dynamic_23_array[[0]]: 6R/5W
 Shared symex_dynamic::dynamic_23_array[[1]]: 6R/5W
 Shared symex_dynamic::dynamic_object24..@class_identifier: 1R/3W
 Shared symex_dynamic::dynamic_object24..cproverMonitorCount: 2R/6W
-size of program expression: 8664 steps
+size of program expression: 8609 steps
 no slicing due to threads
-Generated 120 VCC(s), 42 remaining after simplification
-Runtime Postprocess Equation: 0.134456s
+Generated 118 VCC(s), 42 remaining after simplification
+Runtime Postprocess Equation: 0.134765s
 Passing problem to string refinement loop with MiniSAT 2.2.1 without simplifier
 converting SSA
-Runtime Convert SSA: 0.0129769s
+Runtime Convert SSA: 0.0118625s
 Running string refinement loop with MiniSAT 2.2.1 without simplifier
 BV-Refinement: post-processing
 BV-Refinement: iteration 1
-126891 variables, 563967 clauses
+126361 variables, 562035 clauses
 SAT checker: instance is UNSATISFIABLE
 BV-Refinement: got UNSAT, and the proof passes => UNSAT
 Total iterations: 1
-Runtime Solver: 3.11222s
-Runtime decision procedure: 3.12653s
+Runtime Solver: 2.85522s
+Runtime decision procedure: 2.86973s
 VERIFICATION SUCCESSFUL

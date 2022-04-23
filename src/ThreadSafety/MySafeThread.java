@@ -1,6 +1,5 @@
 
 public class MySafeThread extends Thread {
-        private static int inCrit = 0;
         public static boolean[] inCritical = {false, false}; 
         public final static Object lock = new Object();    
         public MySafeThread(int id) {
@@ -22,12 +21,7 @@ public class MySafeThread extends Thread {
             MySafeThread r2 = new MySafeThread(1);
             r1.start();
             r2.start();
-            try{
-                r1.join();
-                r2.join();
-            } catch (Exception e) {
-                
-            }
+           
 
         }
     

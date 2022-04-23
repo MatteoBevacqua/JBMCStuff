@@ -17,23 +17,23 @@ Unwinding recursion java::java.lang.Float.<clinit_wrapper> iteration 1
 Unwinding recursion java::java.lang.Math.<clinit_wrapper> iteration 1
 Unwinding recursion java::java.lang.Double.<clinit_wrapper> iteration 1
 Unwinding recursion java::java.lang.Math.<clinit_wrapper> iteration 1
-Runtime Symex: 0.012987s
-size of program expression: 999 steps
+Runtime Symex: 0.0115764s
+size of program expression: 952 steps
 simple slicing removed 32 assignments
-Generated 15 VCC(s), 1 remaining after simplification
-Runtime Postprocess Equation: 9.1629e-05s
+Generated 16 VCC(s), 1 remaining after simplification
+Runtime Postprocess Equation: 5.3224e-05s
 Passing problem to string refinement loop with MiniSAT 2.2.1 without simplifier
 converting SSA
-Runtime Convert SSA: 0.00140849s
+Runtime Convert SSA: 0.00123525s
 Running string refinement loop with MiniSAT 2.2.1 without simplifier
 BV-Refinement: post-processing
 BV-Refinement: iteration 1
-8160 variables, 9222 clauses
+8153 variables, 9222 clauses
 SAT checker: instance is SATISFIABLE
 BV-Refinement: got SAT, and it simulates => SAT
 Total iterations: 1
-Runtime Solver: 0.00374696s
-Runtime decision procedure: 0.00616044s
+Runtime Solver: 0.00431547s
+Runtime decision procedure: 0.00743386s
 Building error trace
 Counterexample:
 
@@ -47,421 +47,409 @@ State 5 function __CPROVER_initialize thread 0
 
 State 6 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  java_lang_Double__CPROVER_clinit_state=(byte)0 (00000000)
+  java$$java_lang_Double$$clinit_already_run=false (0)
 
 State 7 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  java_lang_Double__CPROVER_clinit_threadlocal_state=(byte)0 (00000000)
+  TYPE=null (?)
 
 State 8 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  TYPE=null (?)
+  java$$java_lang_Float$$clinit_already_run=false (0)
 
 State 9 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  java_lang_Float__CPROVER_clinit_state=(byte)0 (00000000)
+  negativeZeroDoubleBits=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
 
 State 10 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  java_lang_Float__CPROVER_clinit_threadlocal_state=(byte)0 (00000000)
+  negativeZeroFloatBits=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
 
 State 11 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  negativeZeroDoubleBits=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  java$$java_lang_Math$$clinit_already_run=false (0)
 
 State 12 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  negativeZeroFloatBits=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  boolean.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
 
 State 13 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  java_lang_Math__CPROVER_clinit_state=(byte)0 (00000000)
+  boolean.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
 
 State 14 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  java_lang_Math__CPROVER_clinit_threadlocal_state=(byte)0 (00000000)
+  boolean.length=7 (00000000 00000000 00000000 00000111)
 
 State 15 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  boolean.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+  boolean.data=boolean_constarray (?)
 
 State 16 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  boolean.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+  boolean_constarray={ 'b', 'o', 'o', 'l', 'e', 'a', 'n' } ({ 00000000 01100010, 00000000 01101111, 00000000 01101111, 00000000 01101100, 00000000 01100101, 00000000 01100001, 00000000 01101110 })
 
 State 17 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  boolean.length=7 (00000000 00000000 00000000 00000111)
+  boolean_constarray[0L]='b' (00000000 01100010)
 
 State 18 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  boolean.data=boolean_constarray (?)
+  boolean_constarray[1L]='o' (00000000 01101111)
 
 State 19 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  boolean_constarray={ 'b', 'o', 'o', 'l', 'e', 'a', 'n' } ({ 00000000 01100010, 00000000 01101111, 00000000 01101111, 00000000 01101100, 00000000 01100101, 00000000 01100001, 00000000 01101110 })
+  boolean_constarray[2L]='o' (00000000 01101111)
 
 State 20 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  boolean_constarray[0L]='b' (00000000 01100010)
+  boolean_constarray[3L]='l' (00000000 01101100)
 
 State 21 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  boolean_constarray[1L]='o' (00000000 01101111)
+  boolean_constarray[4L]='e' (00000000 01100101)
 
 State 22 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  boolean_constarray[2L]='o' (00000000 01101111)
+  boolean_constarray[5L]='a' (00000000 01100001)
 
 State 23 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  boolean_constarray[3L]='l' (00000000 01101100)
+  boolean_constarray[6L]='n' (00000000 01101110)
 
 State 24 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  boolean_constarray[4L]='e' (00000000 01100101)
+  boolean_return_value=0 (00000000 00000000 00000000 00000000)
 
 State 25 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  boolean_constarray[5L]='a' (00000000 01100001)
+  byte.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
 
 State 26 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  boolean_constarray[6L]='n' (00000000 01101110)
+  byte.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
 
 State 27 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  boolean_return_value=0 (00000000 00000000 00000000 00000000)
+  byte.length=4 (00000000 00000000 00000000 00000100)
 
 State 28 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  byte.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+  byte.data=byte_constarray (?)
 
 State 29 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  byte.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+  byte_constarray={ 'b', 'y', 't', 'e' } ({ 00000000 01100010, 00000000 01111001, 00000000 01110100, 00000000 01100101 })
 
 State 30 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  byte.length=4 (00000000 00000000 00000000 00000100)
+  byte_constarray[0L]='b' (00000000 01100010)
 
 State 31 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  byte.data=byte_constarray (?)
+  byte_constarray[1L]='y' (00000000 01111001)
 
 State 32 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  byte_constarray={ 'b', 'y', 't', 'e' } ({ 00000000 01100010, 00000000 01111001, 00000000 01110100, 00000000 01100101 })
+  byte_constarray[2L]='t' (00000000 01110100)
 
 State 33 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  byte_constarray[0L]='b' (00000000 01100010)
+  byte_constarray[3L]='e' (00000000 01100101)
 
 State 34 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  byte_constarray[1L]='y' (00000000 01111001)
+  byte_return_value=0 (00000000 00000000 00000000 00000000)
 
 State 35 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  byte_constarray[2L]='t' (00000000 01110100)
+  char.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
 
 State 36 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  byte_constarray[3L]='e' (00000000 01100101)
+  char.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
 
 State 37 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  byte_return_value=0 (00000000 00000000 00000000 00000000)
+  char.length=4 (00000000 00000000 00000000 00000100)
 
 State 38 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  char.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+  char.data=char_constarray (?)
 
 State 39 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  char.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+  char_constarray={ 'c', 'h', 'a', 'r' } ({ 00000000 01100011, 00000000 01101000, 00000000 01100001, 00000000 01110010 })
 
 State 40 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  char.length=4 (00000000 00000000 00000000 00000100)
+  char_constarray[0L]='c' (00000000 01100011)
 
 State 41 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  char.data=char_constarray (?)
+  char_constarray[1L]='h' (00000000 01101000)
 
 State 42 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  char_constarray={ 'c', 'h', 'a', 'r' } ({ 00000000 01100011, 00000000 01101000, 00000000 01100001, 00000000 01110010 })
+  char_constarray[2L]='a' (00000000 01100001)
 
 State 43 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  char_constarray[0L]='c' (00000000 01100011)
+  char_constarray[3L]='r' (00000000 01110010)
 
 State 44 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  char_constarray[1L]='h' (00000000 01101000)
+  char_return_value=0 (00000000 00000000 00000000 00000000)
 
 State 45 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  char_constarray[2L]='a' (00000000 01100001)
+  double.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
 
 State 46 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  char_constarray[3L]='r' (00000000 01110010)
+  double.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
 
 State 47 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  char_return_value=0 (00000000 00000000 00000000 00000000)
+  double.length=6 (00000000 00000000 00000000 00000110)
 
 State 48 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  double.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+  double.data=double_constarray (?)
 
 State 49 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  double.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+  double_constarray={ 'd', 'o', 'u', 'b', 'l', 'e' } ({ 00000000 01100100, 00000000 01101111, 00000000 01110101, 00000000 01100010, 00000000 01101100, 00000000 01100101 })
 
 State 50 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  double.length=6 (00000000 00000000 00000000 00000110)
+  double_constarray[0L]='d' (00000000 01100100)
 
 State 51 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  double.data=double_constarray (?)
+  double_constarray[1L]='o' (00000000 01101111)
 
 State 52 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  double_constarray={ 'd', 'o', 'u', 'b', 'l', 'e' } ({ 00000000 01100100, 00000000 01101111, 00000000 01110101, 00000000 01100010, 00000000 01101100, 00000000 01100101 })
+  double_constarray[2L]='u' (00000000 01110101)
 
 State 53 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  double_constarray[0L]='d' (00000000 01100100)
+  double_constarray[3L]='b' (00000000 01100010)
 
 State 54 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  double_constarray[1L]='o' (00000000 01101111)
+  double_constarray[4L]='l' (00000000 01101100)
 
 State 55 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  double_constarray[2L]='u' (00000000 01110101)
+  double_constarray[5L]='e' (00000000 01100101)
 
 State 56 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  double_constarray[3L]='b' (00000000 01100010)
+  double_return_value=0 (00000000 00000000 00000000 00000000)
 
 State 57 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  double_constarray[4L]='l' (00000000 01101100)
+  float.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
 
 State 58 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  double_constarray[5L]='e' (00000000 01100101)
+  float.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
 
 State 59 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  double_return_value=0 (00000000 00000000 00000000 00000000)
+  float.length=5 (00000000 00000000 00000000 00000101)
 
 State 60 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  float.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+  float.data=float_constarray (?)
 
 State 61 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  float.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+  float_constarray={ 'f', 'l', 'o', 'a', 't' } ({ 00000000 01100110, 00000000 01101100, 00000000 01101111, 00000000 01100001, 00000000 01110100 })
 
 State 62 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  float.length=5 (00000000 00000000 00000000 00000101)
+  float_constarray[0L]='f' (00000000 01100110)
 
 State 63 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  float.data=float_constarray (?)
+  float_constarray[1L]='l' (00000000 01101100)
 
 State 64 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  float_constarray={ 'f', 'l', 'o', 'a', 't' } ({ 00000000 01100110, 00000000 01101100, 00000000 01101111, 00000000 01100001, 00000000 01110100 })
+  float_constarray[2L]='o' (00000000 01101111)
 
 State 65 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  float_constarray[0L]='f' (00000000 01100110)
+  float_constarray[3L]='a' (00000000 01100001)
 
 State 66 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  float_constarray[1L]='l' (00000000 01101100)
+  float_constarray[4L]='t' (00000000 01110100)
 
 State 67 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  float_constarray[2L]='o' (00000000 01101111)
+  float_return_value=0 (00000000 00000000 00000000 00000000)
 
 State 68 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  float_constarray[3L]='a' (00000000 01100001)
+  int.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
 
 State 69 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  float_constarray[4L]='t' (00000000 01110100)
+  int.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
 
 State 70 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  float_return_value=0 (00000000 00000000 00000000 00000000)
+  int.length=3 (00000000 00000000 00000000 00000011)
 
 State 71 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  int.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+  int.data=int_constarray (?)
 
 State 72 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  int.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+  int_constarray={ 'i', 'n', 't' } ({ 00000000 01101001, 00000000 01101110, 00000000 01110100 })
 
 State 73 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  int.length=3 (00000000 00000000 00000000 00000011)
+  int_constarray[0L]='i' (00000000 01101001)
 
 State 74 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  int.data=int_constarray (?)
+  int_constarray[1L]='n' (00000000 01101110)
 
 State 75 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  int_constarray={ 'i', 'n', 't' } ({ 00000000 01101001, 00000000 01101110, 00000000 01110100 })
+  int_constarray[2L]='t' (00000000 01110100)
 
 State 76 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  int_constarray[0L]='i' (00000000 01101001)
+  int_return_value=0 (00000000 00000000 00000000 00000000)
 
 State 77 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  int_constarray[1L]='n' (00000000 01101110)
+  long.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
 
 State 78 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  int_constarray[2L]='t' (00000000 01110100)
+  long.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
 
 State 79 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  int_return_value=0 (00000000 00000000 00000000 00000000)
+  long.length=4 (00000000 00000000 00000000 00000100)
 
 State 80 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  long.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+  long.data=long_constarray (?)
 
 State 81 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  long.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+  long_constarray={ 'l', 'o', 'n', 'g' } ({ 00000000 01101100, 00000000 01101111, 00000000 01101110, 00000000 01100111 })
 
 State 82 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  long.length=4 (00000000 00000000 00000000 00000100)
+  long_constarray[0L]='l' (00000000 01101100)
 
 State 83 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  long.data=long_constarray (?)
+  long_constarray[1L]='o' (00000000 01101111)
 
 State 84 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  long_constarray={ 'l', 'o', 'n', 'g' } ({ 00000000 01101100, 00000000 01101111, 00000000 01101110, 00000000 01100111 })
+  long_constarray[2L]='n' (00000000 01101110)
 
 State 85 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  long_constarray[0L]='l' (00000000 01101100)
+  long_constarray[3L]='g' (00000000 01100111)
 
 State 86 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  long_constarray[1L]='o' (00000000 01101111)
+  long_return_value=0 (00000000 00000000 00000000 00000000)
 
 State 87 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  long_constarray[2L]='n' (00000000 01101110)
+  short.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
 
 State 88 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  long_constarray[3L]='g' (00000000 01100111)
+  short.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
 
 State 89 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  long_return_value=0 (00000000 00000000 00000000 00000000)
+  short.length=5 (00000000 00000000 00000000 00000101)
 
 State 90 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  short.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+  short.data=short_constarray (?)
 
 State 91 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  short.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+  short_constarray={ 's', 'h', 'o', 'r', 't' } ({ 00000000 01110011, 00000000 01101000, 00000000 01101111, 00000000 01110010, 00000000 01110100 })
 
 State 92 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  short.length=5 (00000000 00000000 00000000 00000101)
+  short_constarray[0L]='s' (00000000 01110011)
 
 State 93 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  short.data=short_constarray (?)
+  short_constarray[1L]='h' (00000000 01101000)
 
 State 94 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  short_constarray={ 's', 'h', 'o', 'r', 't' } ({ 00000000 01110011, 00000000 01101000, 00000000 01101111, 00000000 01110010, 00000000 01110100 })
+  short_constarray[2L]='o' (00000000 01101111)
 
 State 95 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  short_constarray[0L]='s' (00000000 01110011)
+  short_constarray[3L]='r' (00000000 01110010)
 
 State 96 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  short_constarray[1L]='h' (00000000 01101000)
+  short_constarray[4L]='t' (00000000 01110100)
 
 State 97 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  short_constarray[2L]='o' (00000000 01101111)
+  short_return_value=0 (00000000 00000000 00000000 00000000)
 
 State 98 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  short_constarray[3L]='r' (00000000 01110010)
+  void.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
 
 State 99 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  short_constarray[4L]='t' (00000000 01110100)
+  void.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
 
 State 100 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  short_return_value=0 (00000000 00000000 00000000 00000000)
+  void.length=4 (00000000 00000000 00000000 00000100)
 
 State 101 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  void.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
+  void.data=void_constarray (?)
 
 State 102 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  void.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
+  void_constarray={ 'v', 'o', 'i', 'd' } ({ 00000000 01110110, 00000000 01101111, 00000000 01101001, 00000000 01100100 })
 
 State 103 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  void.length=4 (00000000 00000000 00000000 00000100)
+  void_constarray[0L]='v' (00000000 01110110)
 
 State 104 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  void.data=void_constarray (?)
+  void_constarray[1L]='o' (00000000 01101111)
 
 State 105 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  void_constarray={ 'v', 'o', 'i', 'd' } ({ 00000000 01110110, 00000000 01101111, 00000000 01101001, 00000000 01100100 })
+  void_constarray[2L]='i' (00000000 01101001)
 
 State 106 function __CPROVER_initialize thread 0
 ----------------------------------------------------
-  void_constarray[0L]='v' (00000000 01110110)
-
-State 107 function __CPROVER_initialize thread 0
-----------------------------------------------------
-  void_constarray[1L]='o' (00000000 01101111)
-
-State 108 function __CPROVER_initialize thread 0
-----------------------------------------------------
-  void_constarray[2L]='i' (00000000 01101001)
-
-State 109 function __CPROVER_initialize thread 0
-----------------------------------------------------
   void_constarray[3L]='d' (00000000 01100100)
 
-State 110 function __CPROVER_initialize thread 0
+State 107 function __CPROVER_initialize thread 0
 ----------------------------------------------------
   void_return_value=0 (00000000 00000000 00000000 00000000)
 
@@ -471,159 +459,159 @@ Assumption:
 Assumption:
   nondet_array_length <= 5
 
-State 124 file NonDetSize.java function __CPROVER__start line 8 thread 0
+State 121 file NonDetSize.java function __CPROVER__start line 5 thread 0
 ----------------------------------------------------
   dynamic_object1={ .@java.lang.Object={ .@class_identifier="java::java.lang.String",
     .cproverMonitorCount=0 },
     .length=0, .data=null, .@element_class_identifier="java::java.lang.String",
     .@array_dimensions=0 } ({ { ?, 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000000 00000000, ?, ?, 00000000 00000000 00000000 00000000 })
 
-State 125 file NonDetSize.java function __CPROVER__start line 8 thread 0
+State 122 file NonDetSize.java function __CPROVER__start line 5 thread 0
 ----------------------------------------------------
   dynamic_object1.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
 
-State 126 file NonDetSize.java function __CPROVER__start line 8 thread 0
+State 123 file NonDetSize.java function __CPROVER__start line 5 thread 0
 ----------------------------------------------------
   dynamic_object1.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
 
-State 127 file NonDetSize.java function __CPROVER__start line 8 thread 0
+State 124 file NonDetSize.java function __CPROVER__start line 5 thread 0
 ----------------------------------------------------
   dynamic_object1.length=0 (00000000 00000000 00000000 00000000)
 
-State 128 file NonDetSize.java function __CPROVER__start line 8 thread 0
+State 125 file NonDetSize.java function __CPROVER__start line 5 thread 0
 ----------------------------------------------------
   dynamic_object1.data=null (?)
 
-State 129 file NonDetSize.java function __CPROVER__start line 8 thread 0
+State 126 file NonDetSize.java function __CPROVER__start line 5 thread 0
 ----------------------------------------------------
   dynamic_object1.@element_class_identifier="java::java.lang.String" (?)
 
-State 130 file NonDetSize.java function __CPROVER__start line 8 thread 0
+State 127 file NonDetSize.java function __CPROVER__start line 5 thread 0
 ----------------------------------------------------
   dynamic_object1.@array_dimensions=0 (00000000 00000000 00000000 00000000)
 
-State 132 file NonDetSize.java function __CPROVER__start line 8 thread 0
+State 129 file NonDetSize.java function __CPROVER__start line 5 thread 0
 ----------------------------------------------------
   dynamic_object1.@java.lang.Object.@class_identifier="java::array[reference]" (?)
 
-State 133 file NonDetSize.java function __CPROVER__start line 8 thread 0
+State 130 file NonDetSize.java function __CPROVER__start line 5 thread 0
 ----------------------------------------------------
   dynamic_object1.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
 
-State 134 file NonDetSize.java function __CPROVER__start line 8 thread 0
+State 131 file NonDetSize.java function __CPROVER__start line 5 thread 0
 ----------------------------------------------------
   dynamic_object1.length=0 (00000000 00000000 00000000 00000000)
 
-State 135 file NonDetSize.java function __CPROVER__start line 8 thread 0
+State 132 file NonDetSize.java function __CPROVER__start line 5 thread 0
 ----------------------------------------------------
   dynamic_object1.data=null (?)
 
-State 136 file NonDetSize.java function __CPROVER__start line 8 thread 0
+State 133 file NonDetSize.java function __CPROVER__start line 5 thread 0
 ----------------------------------------------------
   dynamic_object1.@element_class_identifier="" (?)
 
-State 137 file NonDetSize.java function __CPROVER__start line 8 thread 0
+State 134 file NonDetSize.java function __CPROVER__start line 5 thread 0
 ----------------------------------------------------
   dynamic_object1.@array_dimensions=0 (00000000 00000000 00000000 00000000)
 
-State 138 function __CPROVER__start thread 0
+State 135 function __CPROVER__start thread 0
 ----------------------------------------------------
   dynamic_object1.@array_dimensions=1 (00000000 00000000 00000000 00000001)
 
-State 139 function __CPROVER__start thread 0
+State 136 function __CPROVER__start thread 0
 ----------------------------------------------------
   dynamic_object1.@element_class_identifier="java::java.lang.String" (?)
 
-State 140 file NonDetSize.java function __CPROVER__start line 8 thread 0
+State 137 file NonDetSize.java function __CPROVER__start line 5 thread 0
 ----------------------------------------------------
   dynamic_object1.length=0 (00000000 00000000 00000000 00000000)
 
-State 143 file NonDetSize.java function __CPROVER__start line 8 thread 0
+State 140 file NonDetSize.java function __CPROVER__start line 5 thread 0
 ----------------------------------------------------
   dynamic_object1.data=&((void *)dynamic_2_array[0L]) (?)
 
-State 144 file NonDetSize.java function __CPROVER__start line 8 thread 0
+State 141 file NonDetSize.java function __CPROVER__start line 5 thread 0
 ----------------------------------------------------
   dynamic_2_array={ null, null, null, null, null } ({ ?, ?, ?, ?, ? })
 
-State 145 file NonDetSize.java function __CPROVER__start line 8 thread 0
+State 142 file NonDetSize.java function __CPROVER__start line 5 thread 0
 ----------------------------------------------------
   dynamic_2_array[0L]=null (?)
 
-State 146 file NonDetSize.java function __CPROVER__start line 8 thread 0
+State 143 file NonDetSize.java function __CPROVER__start line 5 thread 0
 ----------------------------------------------------
   dynamic_2_array[1L]=null (?)
 
-State 147 file NonDetSize.java function __CPROVER__start line 8 thread 0
+State 144 file NonDetSize.java function __CPROVER__start line 5 thread 0
 ----------------------------------------------------
   dynamic_2_array[2L]=null (?)
 
-State 148 file NonDetSize.java function __CPROVER__start line 8 thread 0
+State 145 file NonDetSize.java function __CPROVER__start line 5 thread 0
 ----------------------------------------------------
   dynamic_2_array[3L]=null (?)
 
-State 149 file NonDetSize.java function __CPROVER__start line 8 thread 0
+State 146 file NonDetSize.java function __CPROVER__start line 5 thread 0
 ----------------------------------------------------
   dynamic_2_array[4L]=null (?)
 
-State 153 file NonDetSize.java function __CPROVER__start line 8 thread 0
+State 150 file NonDetSize.java function __CPROVER__start line 5 thread 0
 ----------------------------------------------------
   INPUT arg0a: &dynamic_object1 (?)
 
-State 156 file NonDetSize.java function __CPROVER__start line 8 thread 0
+State 153 file NonDetSize.java function __CPROVER__start line 5 thread 0
 ----------------------------------------------------
   arg0a=&dynamic_object1 (?)
 
-State 158 function NonDetSize.main(java.lang.String[]) thread 0
+State 155 function NonDetSize.main(java.lang.String[]) thread 0
 ----------------------------------------------------
   anonlocal::1i=0 (00000000 00000000 00000000 00000000)
 
-State 162 file NonDetSize.java function NonDetSize.main(java.lang.String[]) line 8 thread 0
+State 159 file NonDetSize.java function NonDetSize.main(java.lang.String[]) line 5 thread 0
 ----------------------------------------------------
   dynamic_object13={ .@java.lang.Object={ .@class_identifier="java::java.lang.String",
     .cproverMonitorCount=0 } } ({ { ?, 00000000 00000000 00000000 00000000 } })
 
-State 163 file NonDetSize.java function NonDetSize.main(java.lang.String[]) line 8 thread 0
+State 160 file NonDetSize.java function NonDetSize.main(java.lang.String[]) line 5 thread 0
 ----------------------------------------------------
   dynamic_object13.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
 
-State 164 file NonDetSize.java function NonDetSize.main(java.lang.String[]) line 8 thread 0
+State 161 file NonDetSize.java function NonDetSize.main(java.lang.String[]) line 5 thread 0
 ----------------------------------------------------
   dynamic_object13.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
 
-State 166 file NonDetSize.java function NonDetSize.main(java.lang.String[]) line 8 thread 0
+State 163 file NonDetSize.java function NonDetSize.main(java.lang.String[]) line 5 thread 0
 ----------------------------------------------------
   dynamic_object13.@java.lang.Object.@class_identifier="java::java.util.Random" (?)
 
-State 167 file NonDetSize.java function NonDetSize.main(java.lang.String[]) line 8 thread 0
+State 164 file NonDetSize.java function NonDetSize.main(java.lang.String[]) line 5 thread 0
 ----------------------------------------------------
   dynamic_object13.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
 
-State 170 file NonDetSize.java function NonDetSize.main(java.lang.String[]) line 8 thread 0
+State 167 file NonDetSize.java function NonDetSize.main(java.lang.String[]) line 5 thread 0
 ----------------------------------------------------
   this=&dynamic_object13 (?)
 
-State 173 file java/util/Random.java function java.util.Random() line 116 thread 0
+State 170 file java/util/Random.java function java.util.Random() line 116 thread 0
 ----------------------------------------------------
   this=&dynamic_object13.@java.lang.Object (?)
 
-State 174 file java/lang/Object.java function java.lang.Object() line 40 thread 0
+State 171 file java/lang/Object.java function java.lang.Object() line 40 thread 0
 ----------------------------------------------------
   dynamic_object13.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
 
-State 179 file NonDetSize.java function NonDetSize.main(java.lang.String[]) line 8 thread 0
+State 176 file NonDetSize.java function NonDetSize.main(java.lang.String[]) line 5 thread 0
 ----------------------------------------------------
   this=&dynamic_object13 (?)
 
-State 180 file NonDetSize.java function NonDetSize.main(java.lang.String[]) line 8 thread 0
+State 177 file NonDetSize.java function NonDetSize.main(java.lang.String[]) line 5 thread 0
 ----------------------------------------------------
   bound=100 (00000000 00000000 00000000 01100100)
 
-State 186 function java.util.Random.nextInt(int) thread 0
+State 183 function java.util.Random.nextInt(int) thread 0
 ----------------------------------------------------
   result=0 (00000000 00000000 00000000 00000000)
 
-State 194 file java/util/Random.java function java.util.Random.nextInt(int) line 467 thread 0
+State 191 file java/util/Random.java function java.util.Random.nextInt(int) line 467 thread 0
 ----------------------------------------------------
   result=64 (00000000 00000000 00000000 01000000)
 
@@ -631,55 +619,31 @@ Assumption:
   file java/util/Random.java line 468 function java::java.util.Random.nextInt:(I)I bytecode-index 17
   (__CPROVER_bool)$stack_tmp2
 
-State 203 file NonDetSize.java function NonDetSize.main(java.lang.String[]) line 8 thread 0
+State 200 file NonDetSize.java function NonDetSize.main(java.lang.String[]) line 5 thread 0
 ----------------------------------------------------
   anonlocal::1i=64 (00000000 00000000 00000000 01000000)
 
-State 206 function java::java.lang.Math.<clinit_wrapper> thread 0
+State 204 function java::java.lang.Math.<clinit_wrapper> thread 0
 ----------------------------------------------------
-  java$$java_lang_Math__CPROVER_clinit_wrapper$$init_complete=false (0)
+  java$$java_lang_Math$$clinit_already_run=true (1)
 
-State 208 function java::java.lang.Math.<clinit_wrapper> thread 0
+State 212 function java::java.lang.Float.<clinit_wrapper> thread 0
 ----------------------------------------------------
-  java_lang_Math__CPROVER_clinit_threadlocal_state=(byte)2 (00000010)
+  java$$java_lang_Float$$clinit_already_run=true (1)
 
-State 210 function java::java.lang.Math.<clinit_wrapper> thread 0
-----------------------------------------------------
-  java_lang_Math__CPROVER_clinit_state=(byte)1 (00000001)
-
-State 211 function java::java.lang.Math.<clinit_wrapper> thread 0
-----------------------------------------------------
-  java$$java_lang_Math__CPROVER_clinit_wrapper$$init_complete=false (0)
-
-State 220 function java::java.lang.Float.<clinit_wrapper> thread 0
-----------------------------------------------------
-  java$$java_lang_Float__CPROVER_clinit_wrapper$$init_complete=false (0)
-
-State 222 function java::java.lang.Float.<clinit_wrapper> thread 0
-----------------------------------------------------
-  java_lang_Float__CPROVER_clinit_threadlocal_state=(byte)2 (00000010)
-
-State 224 function java::java.lang.Float.<clinit_wrapper> thread 0
-----------------------------------------------------
-  java_lang_Float__CPROVER_clinit_state=(byte)1 (00000001)
-
-State 225 function java::java.lang.Float.<clinit_wrapper> thread 0
-----------------------------------------------------
-  java$$java_lang_Float__CPROVER_clinit_wrapper$$init_complete=false (0)
-
-State 233 file java/lang/Float.java function java.lang.Float.<clinit>() line 141 thread 0
+State 218 file java/lang/Float.java function java.lang.Float.<clinit>() line 141 thread 0
 ----------------------------------------------------
   i=7 (00000000 00000000 00000000 00000111)
 
-State 245 file java/lang/Class.java function java.lang.Class.getPrimitiveClass(int) line 370 thread 0
+State 230 file java/lang/Class.java function java.lang.Class.getPrimitiveClass(int) line 370 thread 0
 ----------------------------------------------------
   className=&double (?)
 
-State 247 function java.lang.Class.forName(java.lang.String) thread 0
+State 232 function java.lang.Class.forName(java.lang.String) thread 0
 ----------------------------------------------------
   c=null (?)
 
-State 248 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 233 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object14={ .@java.lang.Object={ .@class_identifier="java::java.lang.String",
     .cproverMonitorCount=0 },
@@ -689,171 +653,147 @@ State 248 file java/lang/Class.java function java.lang.Class.forName(java.lang.S
     .cproverIsMemberClass=false, .cproverIsEnum=false,
     .enumConstantDirectory=null } ({ { ?, 00000000 00000000 00000000 00000000 }, ?, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, ? })
 
-State 249 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 234 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object14.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
 
-State 250 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 235 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object14.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
 
-State 251 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 236 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object14.name=null (?)
 
-State 252 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 237 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object14.cproverIsAnnotation=false (00000000)
 
-State 253 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 238 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object14.cproverIsArray=false (00000000)
 
-State 254 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 239 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object14.cproverIsInterface=false (00000000)
 
-State 255 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 240 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object14.cproverIsSynthetic=false (00000000)
 
-State 256 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 241 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object14.cproverIsLocalClass=false (00000000)
 
-State 257 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 242 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object14.cproverIsMemberClass=false (00000000)
 
-State 258 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 243 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object14.cproverIsEnum=false (00000000)
 
-State 259 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 244 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object14.enumConstantDirectory=null (?)
 
-State 261 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 246 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object14.@java.lang.Object.@class_identifier="java::java.lang.Class" (?)
 
-State 262 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 247 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object14.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
 
-State 263 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 248 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object14.name=null (?)
 
-State 264 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 249 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object14.cproverIsAnnotation=false (00000000)
 
-State 265 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 250 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object14.cproverIsArray=false (00000000)
 
-State 266 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 251 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object14.cproverIsInterface=false (00000000)
 
-State 267 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 252 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object14.cproverIsSynthetic=false (00000000)
 
-State 268 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 253 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object14.cproverIsLocalClass=false (00000000)
 
-State 269 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 254 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object14.cproverIsMemberClass=false (00000000)
 
-State 270 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 255 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object14.cproverIsEnum=false (00000000)
 
-State 271 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 256 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object14.enumConstantDirectory=null (?)
 
-State 274 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 259 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   this=&dynamic_object14 (?)
 
-State 277 file java/lang/Class.java function java.lang.Class() line 44 thread 0
+State 262 file java/lang/Class.java function java.lang.Class() line 44 thread 0
 ----------------------------------------------------
   this=&dynamic_object14.@java.lang.Object (?)
 
-State 278 file java/lang/Object.java function java.lang.Object() line 40 thread 0
+State 263 file java/lang/Object.java function java.lang.Object() line 40 thread 0
 ----------------------------------------------------
   dynamic_object14.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
 
-State 280 file java/lang/Class.java function java.lang.Class() line 387 thread 0
+State 265 file java/lang/Class.java function java.lang.Class() line 387 thread 0
 ----------------------------------------------------
   dynamic_object14.enumConstantDirectory=null (?)
 
-State 282 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 267 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   c=&dynamic_object14 (?)
 
-State 283 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 115 thread 0
+State 268 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 115 thread 0
 ----------------------------------------------------
   dynamic_object14.name=&double (?)
 
-State 293 function java::java.lang.Float.<clinit_wrapper> thread 0
-----------------------------------------------------
-  java$$java_lang_Float__CPROVER_clinit_wrapper$$init_complete=false (0)
-
-State 297 file java/lang/Float.java function java.lang.Float.<clinit>() line 141 thread 0
+State 280 file java/lang/Float.java function java.lang.Float.<clinit>() line 141 thread 0
 ----------------------------------------------------
   TYPE=(struct java.lang.Class *)&dynamic_object14 (?)
 
-State 299 function java::java.lang.Float.<clinit_wrapper> thread 0
-----------------------------------------------------
-  java_lang_Float__CPROVER_clinit_state=(byte)2 (00000010)
-
-State 303 file java/lang/Math.java function java.lang.Math.<clinit>() line 1411 thread 0
+State 285 file java/lang/Math.java function java.lang.Math.<clinit>() line 1411 thread 0
 ----------------------------------------------------
   value=-0.0f (10000000 00000000 00000000 00000000)
 
-State 316 function java::java.lang.Math.<clinit_wrapper> thread 0
-----------------------------------------------------
-  java$$java_lang_Math__CPROVER_clinit_wrapper$$init_complete=false (0)
-
-State 320 file java/lang/Math.java function java.lang.Math.<clinit>() line 1411 thread 0
+State 300 file java/lang/Math.java function java.lang.Math.<clinit>() line 1411 thread 0
 ----------------------------------------------------
   negativeZeroFloatBits=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
 
-State 323 function java::java.lang.Double.<clinit_wrapper> thread 0
+State 304 function java::java.lang.Double.<clinit_wrapper> thread 0
 ----------------------------------------------------
-  java$$java_lang_Double__CPROVER_clinit_wrapper$$init_complete=false (0)
+  java$$java_lang_Double$$clinit_already_run=true (1)
 
-State 325 function java::java.lang.Double.<clinit_wrapper> thread 0
-----------------------------------------------------
-  java_lang_Double__CPROVER_clinit_threadlocal_state=(byte)2 (00000010)
-
-State 327 function java::java.lang.Double.<clinit_wrapper> thread 0
-----------------------------------------------------
-  java_lang_Double__CPROVER_clinit_state=(byte)1 (00000001)
-
-State 328 function java::java.lang.Double.<clinit_wrapper> thread 0
-----------------------------------------------------
-  java$$java_lang_Double__CPROVER_clinit_wrapper$$init_complete=false (0)
-
-State 336 file java/lang/Double.java function java.lang.Double.<clinit>() line 148 thread 0
+State 310 file java/lang/Double.java function java.lang.Double.<clinit>() line 148 thread 0
 ----------------------------------------------------
   i=7 (00000000 00000000 00000000 00000111)
 
-State 348 file java/lang/Class.java function java.lang.Class.getPrimitiveClass(int) line 370 thread 0
+State 322 file java/lang/Class.java function java.lang.Class.getPrimitiveClass(int) line 370 thread 0
 ----------------------------------------------------
   className=&double (?)
 
-State 350 function java.lang.Class.forName(java.lang.String) thread 0
+State 324 function java.lang.Class.forName(java.lang.String) thread 0
 ----------------------------------------------------
   c=null (?)
 
-State 351 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 325 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object15={ .@java.lang.Object={ .@class_identifier="java::java.lang.String",
     .cproverMonitorCount=0 },
@@ -863,160 +803,144 @@ State 351 file java/lang/Class.java function java.lang.Class.forName(java.lang.S
     .cproverIsMemberClass=false, .cproverIsEnum=false,
     .enumConstantDirectory=null } ({ { ?, 00000000 00000000 00000000 00000000 }, ?, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, ? })
 
-State 352 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 326 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object15.@java.lang.Object.@class_identifier="java::java.lang.String" (?)
 
-State 353 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 327 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object15.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
 
-State 354 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 328 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object15.name=null (?)
 
-State 355 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 329 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object15.cproverIsAnnotation=false (00000000)
 
-State 356 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 330 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object15.cproverIsArray=false (00000000)
 
-State 357 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 331 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object15.cproverIsInterface=false (00000000)
 
-State 358 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 332 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object15.cproverIsSynthetic=false (00000000)
 
-State 359 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 333 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object15.cproverIsLocalClass=false (00000000)
 
-State 360 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 334 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object15.cproverIsMemberClass=false (00000000)
 
-State 361 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 335 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object15.cproverIsEnum=false (00000000)
 
-State 362 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 336 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object15.enumConstantDirectory=null (?)
 
-State 364 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 338 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object15.@java.lang.Object.@class_identifier="java::java.lang.Class" (?)
 
-State 365 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 339 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object15.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
 
-State 366 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 340 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object15.name=null (?)
 
-State 367 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 341 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object15.cproverIsAnnotation=false (00000000)
 
-State 368 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 342 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object15.cproverIsArray=false (00000000)
 
-State 369 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 343 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object15.cproverIsInterface=false (00000000)
 
-State 370 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 344 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object15.cproverIsSynthetic=false (00000000)
 
-State 371 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 345 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object15.cproverIsLocalClass=false (00000000)
 
-State 372 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 346 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object15.cproverIsMemberClass=false (00000000)
 
-State 373 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 347 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object15.cproverIsEnum=false (00000000)
 
-State 374 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 348 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   dynamic_object15.enumConstantDirectory=null (?)
 
-State 377 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 351 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   this=&dynamic_object15 (?)
 
-State 380 file java/lang/Class.java function java.lang.Class() line 44 thread 0
+State 354 file java/lang/Class.java function java.lang.Class() line 44 thread 0
 ----------------------------------------------------
   this=&dynamic_object15.@java.lang.Object (?)
 
-State 381 file java/lang/Object.java function java.lang.Object() line 40 thread 0
+State 355 file java/lang/Object.java function java.lang.Object() line 40 thread 0
 ----------------------------------------------------
   dynamic_object15.@java.lang.Object.cproverMonitorCount=0 (00000000 00000000 00000000 00000000)
 
-State 383 file java/lang/Class.java function java.lang.Class() line 387 thread 0
+State 357 file java/lang/Class.java function java.lang.Class() line 387 thread 0
 ----------------------------------------------------
   dynamic_object15.enumConstantDirectory=null (?)
 
-State 385 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
+State 359 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 114 thread 0
 ----------------------------------------------------
   c=&dynamic_object15 (?)
 
-State 386 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 115 thread 0
+State 360 file java/lang/Class.java function java.lang.Class.forName(java.lang.String) line 115 thread 0
 ----------------------------------------------------
   dynamic_object15.name=&double (?)
 
-State 396 function java::java.lang.Double.<clinit_wrapper> thread 0
-----------------------------------------------------
-  java$$java_lang_Double__CPROVER_clinit_wrapper$$init_complete=false (0)
-
-State 400 file java/lang/Double.java function java.lang.Double.<clinit>() line 148 thread 0
+State 372 file java/lang/Double.java function java.lang.Double.<clinit>() line 148 thread 0
 ----------------------------------------------------
   TYPE=(struct java.lang.Class *)&dynamic_object15 (?)
 
-State 402 function java::java.lang.Double.<clinit_wrapper> thread 0
-----------------------------------------------------
-  java_lang_Double__CPROVER_clinit_state=(byte)2 (00000010)
-
-State 406 file java/lang/Math.java function java.lang.Math.<clinit>() line 1412 thread 0
+State 377 file java/lang/Math.java function java.lang.Math.<clinit>() line 1412 thread 0
 ----------------------------------------------------
   value=-0.0 (10000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
 
-State 419 function java::java.lang.Math.<clinit_wrapper> thread 0
-----------------------------------------------------
-  java$$java_lang_Math__CPROVER_clinit_wrapper$$init_complete=false (0)
-
-State 423 file java/lang/Math.java function java.lang.Math.<clinit>() line 1412 thread 0
+State 392 file java/lang/Math.java function java.lang.Math.<clinit>() line 1412 thread 0
 ----------------------------------------------------
   negativeZeroDoubleBits=0L (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
 
-State 425 function java::java.lang.Math.<clinit_wrapper> thread 0
-----------------------------------------------------
-  java_lang_Math__CPROVER_clinit_state=(byte)2 (00000010)
-
-State 445 function NonDetSize.main(java.lang.String[]) thread 0
+State 413 function NonDetSize.main(java.lang.String[]) thread 0
 ----------------------------------------------------
   anonlocal::2i=0 (00000000 00000000 00000000 00000000)
 
-State 446 function NonDetSize.main(java.lang.String[]) thread 0
+State 414 function NonDetSize.main(java.lang.String[]) thread 0
 ----------------------------------------------------
   anonlocal::3a=null (?)
 
-State 448 file NonDetSize.java function NonDetSize.main(java.lang.String[]) line 9 thread 0
+State 416 file NonDetSize.java function NonDetSize.main(java.lang.String[]) line 6 thread 0
 ----------------------------------------------------
   anonlocal::2i=-64 (11111111 11111111 11111111 11000000)
 
 Violated property:
-  file NonDetSize.java function NonDetSize.main(java.lang.String[]) line 10 thread 0
+  file NonDetSize.java function NonDetSize.main(java.lang.String[]) line 7 thread 0
   Array size should be >= 0
   anonlocal::2i >= 0
 

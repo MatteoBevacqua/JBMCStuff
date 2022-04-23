@@ -1,18 +1,27 @@
 files=$(ls *.java)
-dirs_to_remove=$(ls -d */)
-echo "Removing folders : $dirs_to_remove"
-rm -rf $dirs_to_remove
+RED='\033[0;31m'
+NC='\033[0m'
+GREEN='\033[0;32m'
+CC=0
 echo "Found files: " $files 
 package=$(basename "$PWD")
 for f in $files; do 
 	file=$(basename $f .java)
 	folder="${file}_results"
-	mkdir "${folder}"
+	if [[ ! -d $folder ]]; then
+		mkdir $folder
+	fi
 	echo $(javac $f -d $folder) 
 	out="${file}_output.txt"
-	jbmc $file --classpath "/lib/core-models.jar":"$folder": --show-vcc --outfile "$folder/${file}_formula.txt" -java-threading > /dev/null
-	jbmc $file --classpath "/lib/core-models.jar":"$folder": --show-properties --outfile "$folder/${file}_formula.txt" -java-threading > "${folder}/${file}_properties.txt"
-	jbmc $file --classpath "/lib/core-models.jar":"$folder": --property java::NullPointerException.main:([Ljava/lang/String;)V.null-pointer-exception.2 --string-printable --disable-uncaught-exception-check --stop-on-fail --java-threading --trace --graphml-witness "$folder/${file}.graphml"> $folder/$out
+ 	jbmc $file --classpath "/lib/core-models.jar:$folder" --trace > $folder/$out
+	line=$(cat $folder/$out | tail -n 1)
+	if [[ "$line" == *"FAILED"* ]]; then
+		CC=$RED
+	else
+		CC=$GREEN
+	fi
+	echo $f 
+	echo -e "${CC}Verification output: $line ${NC}"
 done
 
 

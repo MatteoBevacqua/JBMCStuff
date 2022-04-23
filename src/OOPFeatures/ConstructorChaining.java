@@ -6,24 +6,24 @@ class A1 {
 }
 
 class B2 extends A1 {
-    int anotherInt;
+    int secondInt;
     public B2() {
-        anotherInt = 2;
+        super();
+        secondInt = 2;
     }
 }
 
 class C3 extends B2 {
-    int lastInt;
+    int thirdInt;
     public C3() {
-        lastInt = 3;
+        super();
+        thirdInt = 3;
     }
 }
 
 public class ConstructorChaining {
     public static void main(String[] args) {
         C3 anObject = new C3();
-        assert anObject.firstInt == 1;
-        assert anObject.anotherInt == 2;
-        assert anObject.lastInt == 3;
+        assert anObject.firstInt == 1 && anObject.secondInt == 2 && anObject.thirdInt == 3;
     }
 }
